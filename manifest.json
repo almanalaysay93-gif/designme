@@ -1,0 +1,71 @@
+{
+  "creative_track": [
+    {
+      "repo": "CloudAI-X/threejs-skills",
+      "agent": "threejs-agent",
+      "role": "3D scenes, particles, shaders, GLTF, postprocessing"
+    },
+    {
+      "repo": "greensock/gsap-skills",
+      "agent": "gsap-agent",
+      "role": "Official GSAP: Timeline, ScrollTrigger, Flip, SplitText, useGSAP"
+    },
+    {
+      "repo": "zanwei/design-dna",
+      "agent": "design-dna-agent",
+      "role": "Extract tokens/style/effects from references into JSON"
+    },
+    {
+      "repo": "LottieFiles/motion-design-skill",
+      "agent": "motion-design-agent",
+      "role": "Timing, easing, choreography, Disney principles"
+    },
+    {
+      "repo": "AThevon/genjutsu",
+      "agent": "genjutsu-agent",
+      "role": "Thesis before code, anti-AI-slop audit, cast/paint/bunshin"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "agent": "hyperframes-agent",
+      "role": "HTML+CSS+JS => deterministic 4K MP4, final renderer"
+    }
+  ],
+  "engineering_track_from_tiktok": [
+    {
+      "repo": "obra/superpowers",
+      "agent": "superpowers-agent",
+      "role": "Brainstorming, planning, TDD, systematic debugging, /brainstorm /write-plan /execute-plan"
+    },
+    {
+      "repo": "anthropics/skills",
+      "agent": "find-skills-agent",
+      "role": "Discover/install best skills via skills.sh, verify by installs/stars"
+    },
+    {
+      "repo": "thedotmack/claude-mem",
+      "agent": "memory-agent",
+      "role": "Persistent memory across sessions, compress + re-inject context"
+    },
+    {
+      "repo": "vercel-labs/agent-browser",
+      "agent": "browser-agent",
+      "role": "Real Chrome browser for JS-heavy pages, click, login, verify visuals"
+    },
+    {
+      "repo": "anthropics/skills (skill-creator)",
+      "agent": "skill-creator-agent",
+      "role": "Turn user's private workflows into own skill"
+    },
+    {
+      "repo": "anthropics/skills (mcp-builder, frontend-design, webapp-testing)",
+      "agent": "tooling-agent",
+      "role": "Build MCPs, frontend-design anti-Inter rule, webapp-testing"
+    },
+    {
+      "repo": "glittercowboy/taste + gsd",
+      "agent": "taste-gsd-agent",
+      "role": "Taste = aesthetic gate, GSD = get-shit-done ultraplan + execution"
+    }
+  ]
+}
