@@ -2,6 +2,8 @@
 
 One skill that spawns a griller/planner, parallel creative and engineering agents, a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop.
 
+> **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. Blotato and Remotion references are used for prompt patterns only. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits.
+
 ## Invoke
 
 ```text
