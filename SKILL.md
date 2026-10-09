@@ -33,13 +33,13 @@ Check whether the dependencies are installed. If not, install the selected skill
 ```bash
 npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
-npx skills add remotion-dev/skills -g  # prompt/reference guidance only; do not enable paid services
+npx skills add remotion-dev/skills -g  # official prompt/reference guidance; local Remotion only
 npx skills add obra/superpowers vercel-labs/agent-browser thedotmack/claude-mem -g
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
 npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd -g
 ```
 
-Do not install Remotion as a second renderer for a HyperFrames composition. Use a Remotion-specific skill only when the brief explicitly requires a React/Remotion deliverable.
+Do not use Remotion as a second renderer for a HyperFrames composition. Activate `remotion-agent` only when the brief explicitly requires a React/Remotion deliverable, and record the renderer decision.
 
 ## Free-Only Execution Policy
 
@@ -62,6 +62,7 @@ Do not proceed until the user approves the thesis and brief.
 - `find-skills-agent` — discovers only missing, compatible skills.
 - `browser-agent` — captures reference screenshots with real Chrome.
 - `prompt-reference-agent` — curates free prompt patterns from Blotato and Remotion for briefs and future projects.
+- `remotion-agent` — conditionally builds explicit React/Remotion deliverables with local rendering only.
 
 **Wave 2 (needs brief and Wave 1 context):**
 
@@ -79,7 +80,8 @@ Do not proceed until the user approves the thesis and brief.
 
 **Wave 4 (needs all design and engineering outputs):**
 
-- `hyperframes-agent` — assembles the deterministic HTML composition and renders drafts.
+- `hyperframes-agent` — assembles the deterministic HTML composition and renders drafts by default.
+- `remotion-agent` — runs only when the brief explicitly requests React/Remotion; otherwise mark skipped.
 - `motion-craft-agent` — runs still/contact-sheet review, checks frame collisions and safe areas, wires code-generated or approved sound, and records fixes.
 
 Pass `brief.json` and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.

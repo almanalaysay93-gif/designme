@@ -49,6 +49,11 @@
       "repo": "Blotato-Inc/blotato-skills + remotion-dev/skills",
       "agent": "prompt-reference-agent",
       "role": "Free prompt references for brand intake, hooks, grading, repurposing, React/video composition, captions, and future project briefs"
+    },
+    {
+      "repo": "remotion-dev/remotion + remotion-dev/skills",
+      "agent": "remotion-agent",
+      "role": "Explicit React-to-video compositions, frame timing, captions, audio, and local Remotion rendering"
     }
   ],
   "engineering_track_from_tiktok": [
@@ -79,9 +84,9 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 17,
+    "subagent_count": 18,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. Prompt repositories are reference-only. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, publishing, scheduling, generation providers, or credits.",
+    "policy": "Free, local, open-source, and already-installed tools only. Remotion runs locally and only when explicitly requested. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -93,6 +98,9 @@
         "repo": "designme/internal",
         "role": "Final visual, motion, beat, audio, accessibility, and determinism gate"
       }
+    ],
+    "conditional_agents": [
+      "remotion-agent"
     ]
   },
   "reference_sources": {

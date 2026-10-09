@@ -10,7 +10,7 @@ One skill that spawns a griller/planner, parallel creative and engineering agent
 
 ## What was added
 
-The update keeps **HyperFrames as the only renderer** and adds compatible production skills from the supplied list:
+The update keeps **HyperFrames as the default renderer** and adds compatible production skills from the supplied list. Remotion is available through its dedicated conditional agent when explicitly requested:
 
 - `AbubakrChan/product-launch-motion` → `launch-director-agent`: competing directions, launch-film story, word-locked reveals, motivated camera language, look, and finishing.
 - `Sunwood-ai-labs/hyperframes-motion-reel-skill` → `beat-sync-agent`: BPM/frame grids, morphing transitions, deterministic timelines, and code-generated score planning.
@@ -19,15 +19,15 @@ The update keeps **HyperFrames as the only renderer** and adds compatible produc
 
 Blotato and Remotion are now included as **prompt/reference sources**. Blotato contributes brand intake, hooks, grading, and repurposing patterns. Remotion contributes composition, frame, React/video, captions, and prompt-gallery patterns. Their publishing, scheduling, generation-provider, Lambda, and paid-service paths remain disabled by the free-only policy.
 
-The following were intentionally **not** enabled as runtime systems because they duplicate or conflict with the repository’s current architecture:
+The following remain reference-only or disabled because they duplicate or conflict with the repository’s current architecture:
 
-- Remotion runtime/rendering is not enabled by default: its official skills and docs are used as prompt/reference material, while HyperFrames remains the default renderer.
+- Remotion cloud/runtime services are disabled by default. The local `remotion-agent` is available only when explicitly requested, while HyperFrames remains the default renderer for ordinary designme projects.
 - Generic motion catalogs and web-only Motion libraries: useful references, but not orchestration agents for this repo.
 - HyperFrames student/tutorial kits: overlapping packaging rather than a distinct designme responsibility.
 
 ## Free-only rule
 
-All 17 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing-enabled integrations, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative.
+All 18 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing-enabled integrations, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative.
 
 ## Structure
 
