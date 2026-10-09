@@ -14,7 +14,9 @@ File: `orchestrator.json` (written by main skill, updated by each agent)
   },
   "qa_loops": 0,
   "max_loops": 3,
+  "subagent_count": 16,
   "cost_estimate": "$0",
+  "free_only": true,
   "deterministic_hash": null,
   "audio": {"loudness_lufs": null, "true_peak_dbfs": null, "drift_ms": null}
 }

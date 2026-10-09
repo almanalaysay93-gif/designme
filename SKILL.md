@@ -40,6 +40,10 @@ npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd 
 
 Do not install Remotion as a second renderer for a HyperFrames composition. Use a Remotion-specific skill only when the brief explicitly requires a React/Remotion deliverable.
 
+## Free-Only Execution Policy
+
+Use only free, local, open-source, or already-installed tools and APIs. Never call a paid API, paid tier, metered SaaS endpoint, premium model, paid voice service, paid asset service, or billing-enabled integration. Never create a subscription, start a trial, enter payment details, or consume credits. Do not ask the user for API keys for a paid service. If a requested capability requires payment or a paid API, stop that part, explain the limitation, and propose a free/local alternative such as Python, FFmpeg, Chromium, Playwright, system tools, or deterministic code-generated assets.
+
 ### 1 — The Griller (1 agent) — ALWAYS FIRST — BLOCKING
 
 Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, and verification needs.

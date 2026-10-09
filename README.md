@@ -22,6 +22,10 @@ The following were intentionally **not** added because they duplicate or conflic
 - Generic motion catalogs and web-only Motion libraries: useful references, but not orchestration agents for this repo.
 - HyperFrames student/tutorial kits: overlapping packaging rather than a distinct designme responsibility.
 
+## Free-only rule
+
+All 16 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing-enabled integrations, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative.
+
 ## Structure
 
 - `SKILL.md` — `/designme` contract, install gate, dependency waves, and output contract

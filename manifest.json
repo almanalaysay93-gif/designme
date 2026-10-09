@@ -68,19 +68,26 @@
       "role": "Real Chrome browser for JS-heavy pages, click, login, verify visuals"
     },
     {
-      "repo": "anthropics/skills (skill-creator)",
-      "agent": "skill-creator-agent",
-      "role": "Turn user's private workflows into own skill"
-    },
-    {
-      "repo": "anthropics/skills (mcp-builder, frontend-design, webapp-testing)",
-      "agent": "tooling-agent",
-      "role": "Build MCPs, frontend-design anti-Inter rule, webapp-testing"
-    },
-    {
       "repo": "glittercowboy/taste + gsd",
       "agent": "taste-gsd-agent",
       "role": "Taste = aesthetic gate, GSD = get-shit-done ultraplan + execution"
     }
-  ]
+  ],
+  "orchestration": {
+    "subagent_count": 16,
+    "free_only": true,
+    "policy": "Free, local, open-source, and already-installed tools only. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, or credits.",
+    "agents": [
+      {
+        "agent": "planner-griller",
+        "repo": "designme/internal",
+        "role": "Blocking brief, thesis, story, audio, and verification intake"
+      },
+      {
+        "agent": "qa-anti-slop-agent",
+        "repo": "designme/internal",
+        "role": "Final visual, motion, beat, audio, accessibility, and determinism gate"
+      }
+    ]
+  }
 }
