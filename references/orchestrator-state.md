@@ -6,7 +6,7 @@ File: `orchestrator.json` (written by main skill, updated by each agent)
 {
   "brief_version": 2,
   "waves": {
-    "wave1": {"design-dna-agent": "pending", "memory-agent": "pending", "browser-agent": "pending", "find-skills-agent": "pending"},
+    "wave1": {"design-dna-agent": "pending", "memory-agent": "pending", "browser-agent": "pending", "find-skills-agent": "pending", "prompt-reference-agent": "pending"},
     "wave2": {"motion-design-agent": "pending", "launch-director-agent": "pending", "superpowers-agent": "pending"},
     "wave3": {"beat-sync-agent": "pending", "gsap-agent": "pending", "threejs-agent": "pending", "genjutsu-agent": "pending", "taste-gsd-agent": "pending"},
     "wave4": {"hyperframes-agent": "pending", "motion-craft-agent": "pending"},
@@ -14,7 +14,7 @@ File: `orchestrator.json` (written by main skill, updated by each agent)
   },
   "qa_loops": 0,
   "max_loops": 3,
-  "subagent_count": 16,
+  "subagent_count": 17,
   "cost_estimate": "$0",
   "free_only": true,
   "deterministic_hash": null,

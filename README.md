@@ -15,16 +15,19 @@ The update keeps **HyperFrames as the only renderer** and adds compatible produc
 - `AbubakrChan/product-launch-motion` → `launch-director-agent`: competing directions, launch-film story, word-locked reveals, motivated camera language, look, and finishing.
 - `Sunwood-ai-labs/hyperframes-motion-reel-skill` → `beat-sync-agent`: BPM/frame grids, morphing transitions, deterministic timelines, and code-generated score planning.
 - `whaleyxbt/claude-motion` → `motion-craft-agent`: contact-sheet self-review, frame-level checks, web-sim guidance, and deterministic code-authored sound.
+- `Blotato-Inc/blotato-skills` + `remotion-dev/skills` → `prompt-reference-agent`: free prompt patterns for brand intake, hooks, grading, repurposing, React/video composition, captions, and future projects.
 
-The following were intentionally **not** added because they duplicate or conflict with the repository’s current architecture:
+Blotato and Remotion are now included as **prompt/reference sources**. Blotato contributes brand intake, hooks, grading, and repurposing patterns. Remotion contributes composition, frame, React/video, captions, and prompt-gallery patterns. Their publishing, scheduling, generation-provider, Lambda, and paid-service paths remain disabled by the free-only policy.
 
-- Remotion engines and Remotion-only skills: a second renderer would split the HyperFrames contract.
+The following were intentionally **not** enabled as runtime systems because they duplicate or conflict with the repository’s current architecture:
+
+- Remotion runtime/rendering is not enabled by default: its official skills and docs are used as prompt/reference material, while HyperFrames remains the default renderer.
 - Generic motion catalogs and web-only Motion libraries: useful references, but not orchestration agents for this repo.
 - HyperFrames student/tutorial kits: overlapping packaging rather than a distinct designme responsibility.
 
 ## Free-only rule
 
-All 16 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing-enabled integrations, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative.
+All 17 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing-enabled integrations, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative.
 
 ## Structure
 

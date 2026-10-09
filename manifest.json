@@ -44,6 +44,11 @@
       "repo": "heygen-com/hyperframes",
       "agent": "hyperframes-agent",
       "role": "HTML+CSS+JS => deterministic 4K MP4, final renderer"
+    },
+    {
+      "repo": "Blotato-Inc/blotato-skills + remotion-dev/skills",
+      "agent": "prompt-reference-agent",
+      "role": "Free prompt references for brand intake, hooks, grading, repurposing, React/video composition, captions, and future project briefs"
     }
   ],
   "engineering_track_from_tiktok": [
@@ -74,9 +79,9 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 16,
+    "subagent_count": 17,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, or credits.",
+    "policy": "Free, local, open-source, and already-installed tools only. Prompt repositories are reference-only. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, publishing, scheduling, generation providers, or credits.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -89,5 +94,15 @@
         "role": "Final visual, motion, beat, audio, accessibility, and determinism gate"
       }
     ]
+  },
+  "reference_sources": {
+    "blotato_repo": "https://github.com/Blotato-Inc/blotato-skills",
+    "remotion_repo": "https://github.com/remotion-dev/remotion",
+    "remotion_skills": "https://github.com/remotion-dev/skills",
+    "remotion_docs": "https://www.remotion.dev/docs",
+    "remotion_fundamentals": "https://www.remotion.dev/docs/the-fundamentals",
+    "remotion_prompts": "https://www.remotion.dev/prompts",
+    "remotion_templates": "https://www.remotion.dev/templates",
+    "curated_prompts": "https://github.com/quriosity-agent/remotion-prompts"
   }
 }
