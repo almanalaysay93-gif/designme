@@ -21,6 +21,21 @@
       "role": "Timing, easing, choreography, Disney principles"
     },
     {
+      "repo": "AbubakrChan/product-launch-motion",
+      "agent": "launch-director-agent",
+      "role": "Competing creative directions, launch-film story, word sync, camera, look, and finishing"
+    },
+    {
+      "repo": "Sunwood-ai-labs/hyperframes-motion-reel-skill",
+      "agent": "beat-sync-agent",
+      "role": "Beat-grid timelines, morphing transitions, deterministic render checks, and code-generated score"
+    },
+    {
+      "repo": "whaleyxbt/claude-motion",
+      "agent": "motion-craft-agent",
+      "role": "Contact-sheet self-review, frame checks, deterministic web sims, and code-authored sound"
+    },
+    {
       "repo": "AThevon/genjutsu",
       "agent": "genjutsu-agent",
       "role": "Thesis before code, anti-AI-slop audit, cast/paint/bunshin"
