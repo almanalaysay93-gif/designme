@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, and deterministic HTML video. Combines Three.js, GSAP, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, and QA in one orchestrated command.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, and deterministic HTML video. Combines Three.js, GSAP, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, and QA in one orchestrated command.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -18,7 +18,8 @@ One command for brand-led, code-authored motion and interactive web visuals. Hyp
 - **Craft:** use GSAP for choreography, Three.js for hero 3D, and pure `render(t)` functions for seek-safe generative layers.
 - **Sound:** write code-generated cues or wire approved audio against the same timeline, then master and verify it.
 - **Review:** render stills/contact sheets at beats and inspect them before final MP4 rendering.
-- **QA:** run anti-slop, determinism, readability, audio, and final-frame checks with targeted feedback loops.
+- **Optional capabilities:** discuss Remotion and Hairline during grilling, recommend whether each is needed, and activate only the user-approved choices.
+- **QA:** run anti-slop, determinism, readability, audio, accessibility, and final-frame checks with targeted feedback loops.
 
 ## Invocation Contract
 
@@ -40,7 +41,7 @@ npx skills add https://github.com/anthropics/skills --skill frontend-design --sk
 npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd -g
 ```
 
-Do not use Remotion as a second renderer for a HyperFrames composition. Activate `remotion-agent` only when the brief explicitly requires a React/Remotion deliverable, and record the renderer decision.
+Do not use Remotion as a second renderer for a HyperFrames composition. Activate `remotion-agent` only when the brief explicitly requires a React/Remotion deliverable, and record the renderer decision. Activate `hairline-agent` only when the brief explicitly requests Hairline or an interactive figure.
 
 ## Free-Only Execution Policy
 
@@ -48,11 +49,20 @@ Use only free, local, open-source, or already-installed tools and APIs. Never ca
 
 ### 1 — The Griller (1 agent) — ALWAYS FIRST — BLOCKING
 
-Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, and verification needs.
+Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, and the optional-agent gate.
 
-Output: `brief.json` with `{goal,audience,vibe,references,antiSlop,duration,aspect,resolution,tech,audio,successMetric,interactionThesis,planMode}`.
+The griller must produce an explicit recommendation for both optional agents:
 
-Do not proceed until the user approves the thesis and brief.
+```json
+{
+  "optionalAgents": {
+    "remotion-agent": {"requested": false, "needed": false, "reason": "HyperFrames is sufficient"},
+    "hairline-agent": {"requested": false, "needed": false, "reason": "No interactive figure requested"}
+  }
+}
+```
+
+Show the thesis, renderer choice, optional-agent recommendations, and brief to the user. Do not proceed until the user approves them.
 
 ### 2 — Parallel Spawn — dependency-aware
 
@@ -63,8 +73,6 @@ Do not proceed until the user approves the thesis and brief.
 - `find-skills-agent` — discovers only missing, compatible skills.
 - `browser-agent` — captures reference screenshots with real Chrome.
 - `prompt-reference-agent` — curates free prompt patterns from Blotato and Remotion for briefs and future projects.
-- `remotion-agent` — conditionally builds explicit React/Remotion deliverables with local rendering only.
-- `hairline-agent` — conditionally builds accessible interactive line figures and pointer-responsive web visuals.
 
 **Wave 2 (needs brief and Wave 1 context):**
 
@@ -83,8 +91,8 @@ Do not proceed until the user approves the thesis and brief.
 **Wave 4 (needs all design and engineering outputs):**
 
 - `hyperframes-agent` — assembles the deterministic HTML composition and renders drafts by default.
-- `remotion-agent` — runs only when the brief explicitly requests React/Remotion; otherwise mark skipped.
-- `hairline-agent` — runs only when the brief explicitly requests Hairline or an interactive figure; otherwise mark skipped.
+- `remotion-agent` — runs only if `brief.json.optionalAgents.remotion-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
+- `hairline-agent` — runs only if `brief.json.optionalAgents.hairline-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
 - `motion-craft-agent` — runs still/contact-sheet review, checks frame collisions and safe areas, wires code-generated or approved sound, and records fixes.
 
 Pass `brief.json` and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.
@@ -102,7 +110,7 @@ npx hyperframes render --width <width> --height <height> --fps 60
 ffprobe -v error -show_streams -show_format output/final.mp4
 ```
 
-Compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift.
+Compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence.
 
 ## Output Contract
 

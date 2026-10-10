@@ -2,7 +2,7 @@
 
 One skill that spawns a griller/planner, parallel creative and engineering agents, a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop.
 
-> **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. Blotato and Remotion references are used for prompt patterns only. Hairline is an optional interactive web-visual capability, not a video renderer. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits.
+> **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. Blotato and Remotion references are used for prompt patterns only. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits.
 
 ## Invoke
 
@@ -10,32 +10,37 @@ One skill that spawns a griller/planner, parallel creative and engineering agent
 /designme premium 9:16 launch reel, Linear + Stripe refs, heavy physical feel, no AI purple slop
 ```
 
+## Optional-agent grilling gate
+
+During the first grilling session, `planner-griller` must recommend whether each optional agent is needed and ask for approval:
+
+| Optional agent | Use it when | Default recommendation |
+|---|---|---|
+| `remotion-agent` | The brief explicitly requires a React/Remotion video deliverable or Remotion-specific composition | Skip it and use HyperFrames |
+| `hairline-agent` | The brief requires an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual | Skip it unless the interaction needs it |
+
+The recommendation is stored in `brief.json.optionalAgents`. Optional agents are never silently activated. A user request can approve an agent even when it is not strictly necessary, with the tradeoff recorded.
+
 ## What was added
 
 The update keeps **HyperFrames as the default renderer** and adds compatible production skills from the supplied list. Remotion is available through its dedicated conditional agent when explicitly requested:
 
 - `AbubakrChan/product-launch-motion` → `launch-director-agent`: competing directions, launch-film story, word-locked reveals, motivated camera language, look, and finishing.
-- `Sunwood-ai-labs/hyperframes-motion-reel-skill` → `beat-sync-agent`: BPM/frame grids, morphing transitions, deterministic timelines, and code-generated score planning.
+- `Sunwood-ai-lab/hyperframes-motion-reel-skill` → `beat-sync-agent`: BPM/frame grids, morphing transitions, deterministic timelines, and code-generated score planning.
 - `whaleyxbt/claude-motion` → `motion-craft-agent`: contact-sheet self-review, frame-level checks, web-sim guidance, and deterministic code-authored sound.
 - `Blotato-Inc/blotato-skills` + `remotion-dev/skills` → `prompt-reference-agent`: free prompt patterns for brand intake, hooks, grading, repurposing, React/video composition, captions, and future projects.
-
-Blotato and Remotion are now included as **prompt/reference sources**. Blotato contributes brand intake, hooks, grading, and repurposing patterns. Remotion contributes composition, frame, React/video, captions, and prompt-gallery patterns. Their publishing, scheduling, generation-provider, Lambda, and paid-service paths remain disabled by the free-only policy.
-
-The following remain reference-only or disabled because they duplicate or conflict with the repository’s current architecture:
-
-- Remotion cloud/runtime services are disabled by default. The local `remotion-agent` is available only when explicitly requested, while HyperFrames remains the default renderer for ordinary designme projects.
-- Generic motion catalogs and web-only Motion libraries: useful references, but not orchestration agents for this repo.
-- HyperFrames student/tutorial kits: overlapping packaging rather than a distinct designme responsibility.
+- `remotion-dev/remotion` + `remotion-dev/skills` → `remotion-agent`: explicit local React-to-video builds with frame-accurate compositions, captions, audio, and still-frame QA.
+- `lucasmarkes/hairline` → `hairline-agent`: optional accessible interactive line figures and pointer-responsive web visuals, validated in a browser.
 
 ## Free-only rule
 
-All 19 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing-enabled integrations, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative.
+All 19 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative.
 
 ## Structure
 
-- `SKILL.md` — `/designme` contract, install gate, dependency waves, and output contract
-- `agents/` — creative direction, motion engineering, beat sync, craft review, and QA agents
-- `references/` — grilling questions, QA rubric, asset pipeline, missing checklist, and orchestration state
+- `SKILL.md` — `/designme` contract, install gate, dependency waves, optional-agent gate, and output contract
+- `agents/` — creative direction, motion engineering, optional Remotion/Hairline agents, craft review, and QA agents
+- `references/` — grilling questions, prompt sources, QA rubric, asset pipeline, missing checklist, and orchestration state
 - `manifest.json` — selected source repositories and agent responsibilities
 
 ## Install
@@ -43,6 +48,7 @@ All 19 agents are restricted to free, local, open-source, or already-installed t
 ```bash
 npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
+npx skills add remotion-dev/skills lucasmarkes/hairline -g
 npx skills add obra/superpowers vercel-labs/agent-browser thedotmack/claude-mem -g
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
 npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd -g

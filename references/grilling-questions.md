@@ -1,25 +1,39 @@
 # Grilling Questions — Get the Real Goal
 
-Don't accept first answer. Dig.
+Don't accept the first answer. Dig until the project, renderer, interactions, and optional capabilities are clear.
 
-1. **Goal:** What exact outcome? "30s launch video for X" not "cool animation"
-2. **Audience & Context:** Who sees it, where? (IG reel, landing hero, pitch?)
-3. **Vibe:** 3 adjectives + 2 reference links/screenshots. If none, ask for Dribbble, Are.na, Linear, Stripe?
-4. **Anti-Slop:** What do you HATE? Show 2 examples of AI-looking animations you don't want
-5. **Constraints:** Duration, aspect, res, tech stack (React/Next/Vanilla?), must include logo?
-6. **Story:** One sentence story arc. "From chaos to calm" "From sketch to product"
-7. **Success Metric:** What makes you say "this is premium, not AI"?
+1. **Goal:** What exact outcome? “30s launch video for X” not “cool animation”.
+2. **Audience & Context:** Who sees it, where? (IG reel, landing hero, pitch, product UI, interactive diagram?)
+3. **Vibe:** 3 adjectives + 2 reference links/screenshots. If none, ask for concrete references.
+4. **Anti-Slop:** What do you hate? Show 2 examples of AI-looking animation or UI you do not want.
+5. **Constraints:** Duration, aspect, resolution, tech stack (React/Next/Vanilla?), assets, logo, browser, and performance limits.
+6. **Story:** One sentence story arc. “From chaos to calm” or “From sketch to product”.
+7. **Success Metric:** What makes you say “this is premium, not AI”?
+8. **Optional-agent gate:** Should this project use either optional agent?
+   - **Remotion:** select only for an explicitly requested React/Remotion video deliverable. Otherwise use HyperFrames by default.
+   - **Hairline:** select only for an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual. Otherwise skip it.
+   - **Neither:** choose this when the default HyperFrames workflow is sufficient.
 
-Output: brief.json
+The planner must make a recommendation for each optional agent, explain why it is or is not needed, and ask the user to approve the selection before dispatch.
+
+Output: `brief.json`
+
+```json
 {
   "goal": "",
   "audience": "",
-  "vibe": ["","",""],
-  "references": ["url1","url2"],
+  "vibe": ["", "", ""],
+  "references": ["url1", "url2"],
   "antiSlop": ["no...", "no..."],
   "duration": "15s",
   "aspect": "9:16",
-  "tech": "Next.js + HyperFrames",
+  "resolution": "1080x1920",
+  "tech": "HTML + HyperFrames",
+  "optionalAgents": {
+    "remotion-agent": {"requested": false, "needed": false, "reason": ""},
+    "hairline-agent": {"requested": false, "needed": false, "reason": ""}
+  },
   "successMetric": "",
   "interactionThesis": ""
 }
+```

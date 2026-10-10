@@ -107,7 +107,22 @@
     "conditional_agents": [
       "remotion-agent",
       "hairline-agent"
-    ]
+    ],
+    "optional_agent_gate": {
+      "selection_phase": "planner-griller",
+      "requires_user_approval": true,
+      "default": "skip-unless-needed",
+      "agents": {
+        "remotion-agent": {
+          "use_when": "The brief explicitly requests a React/Remotion video deliverable or Remotion-specific composition.",
+          "default_recommendation": "skip; use HyperFrames by default."
+        },
+        "hairline-agent": {
+          "use_when": "The brief requests an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual.",
+          "default_recommendation": "skip unless the interaction requires it."
+        }
+      }
+    }
   },
   "reference_sources": {
     "blotato_repo": "https://github.com/Blotato-Inc/blotato-skills",
