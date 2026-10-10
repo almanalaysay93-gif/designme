@@ -10,7 +10,7 @@ Invoke: `/designme <brief>` — e.g. `/designme premium 9:16 launch reel, Linear
 
 ## What This Is
 
-One command for brand-led, code-authored motion. It keeps HyperFrames as the single renderer, while Blotato and Remotion are used as free prompt/reference sources for future projects. It adds only complementary production disciplines:
+One command for brand-led, code-authored motion and interactive web visuals. HyperFrames remains the default video renderer, Remotion is an optional local React-video renderer, and Hairline is an optional interactive-figure engine. Blotato and Remotion are also used as free prompt/reference sources for future projects. It adds only complementary production disciplines:
 
 - **Design DNA + motion principles:** extract a visual system and a motion doctrine before code.
 - **Direction:** develop competing creative directions, a one-claim story arc, camera language, and shot plan.
@@ -34,6 +34,7 @@ Check whether the dependencies are installed. If not, install the selected skill
 npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills -g  # official prompt/reference guidance; local Remotion only
+npx skills add lucasmarkes/hairline -g  # optional interactive figures; free/local only
 npx skills add obra/superpowers vercel-labs/agent-browser thedotmack/claude-mem -g
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
 npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd -g
@@ -63,6 +64,7 @@ Do not proceed until the user approves the thesis and brief.
 - `browser-agent` — captures reference screenshots with real Chrome.
 - `prompt-reference-agent` — curates free prompt patterns from Blotato and Remotion for briefs and future projects.
 - `remotion-agent` — conditionally builds explicit React/Remotion deliverables with local rendering only.
+- `hairline-agent` — conditionally builds accessible interactive line figures and pointer-responsive web visuals.
 
 **Wave 2 (needs brief and Wave 1 context):**
 
@@ -82,6 +84,7 @@ Do not proceed until the user approves the thesis and brief.
 
 - `hyperframes-agent` — assembles the deterministic HTML composition and renders drafts by default.
 - `remotion-agent` — runs only when the brief explicitly requests React/Remotion; otherwise mark skipped.
+- `hairline-agent` — runs only when the brief explicitly requests Hairline or an interactive figure; otherwise mark skipped.
 - `motion-craft-agent` — runs still/contact-sheet review, checks frame collisions and safe areas, wires code-generated or approved sound, and records fixes.
 
 Pass `brief.json` and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.
@@ -107,6 +110,6 @@ Compare two final renders by hash. If voice or music is present, verify captions
 - `/hyperframes/composition/` with `index.html`, `style.css`, `script.js`, `tokens.css`, and assets
 - `brief.json`, `design-dna.json`, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable
-- `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `brief-enhancements.md`, `contact-sheet.png`, and `audit.md`
+- `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `brief-enhancements.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
 
 No generic gradients, default purple-on-black SaaS styling, unmotivated bounce, or code-first production. Every visual and sound cue must have an intentional role in the approved thesis.

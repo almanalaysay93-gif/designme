@@ -2,7 +2,7 @@
 
 One skill that spawns a griller/planner, parallel creative and engineering agents, a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop.
 
-> **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. Blotato and Remotion references are used for prompt patterns only. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits.
+> **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. Blotato and Remotion references are used for prompt patterns only. Hairline is an optional interactive web-visual capability, not a video renderer. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits.
 
 ## Invoke
 
@@ -29,7 +29,7 @@ The following remain reference-only or disabled because they duplicate or confli
 
 ## Free-only rule
 
-All 18 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing-enabled integrations, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative.
+All 19 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing-enabled integrations, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative.
 
 ## Structure
 

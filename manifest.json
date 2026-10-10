@@ -54,6 +54,11 @@
       "repo": "remotion-dev/remotion + remotion-dev/skills",
       "agent": "remotion-agent",
       "role": "Explicit React-to-video compositions, frame timing, captions, audio, and local Remotion rendering"
+    },
+    {
+      "repo": "lucasmarkes/hairline",
+      "agent": "hairline-agent",
+      "role": "Optional accessible interactive line figures, pointer-responsive diagrams, and self-contained HTML visuals"
     }
   ],
   "engineering_track_from_tiktok": [
@@ -84,9 +89,9 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 18,
+    "subagent_count": 19,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. Remotion runs locally and only when explicitly requested. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits.",
+    "policy": "Free, local, open-source, and already-installed tools only. Remotion and Hairline run locally and only when explicitly requested. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -100,7 +105,8 @@
       }
     ],
     "conditional_agents": [
-      "remotion-agent"
+      "remotion-agent",
+      "hairline-agent"
     ]
   },
   "reference_sources": {
@@ -111,6 +117,8 @@
     "remotion_fundamentals": "https://www.remotion.dev/docs/the-fundamentals",
     "remotion_prompts": "https://www.remotion.dev/prompts",
     "remotion_templates": "https://www.remotion.dev/templates",
-    "curated_prompts": "https://github.com/quriosity-agent/remotion-prompts"
+    "curated_prompts": "https://github.com/quriosity-agent/remotion-prompts",
+    "hairline_repo": "https://github.com/lucasmarkes/hairline",
+    "hairline_skill": "https://github.com/lucasmarkes/hairline/tree/main/skills/hairline-create"
   }
 }

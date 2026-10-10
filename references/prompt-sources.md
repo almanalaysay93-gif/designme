@@ -23,3 +23,10 @@ Safe designme use: borrow prompt structures for composition briefs, frame/fps/du
 ## Free-only boundary
 
 Use only public repository/docs content and local or already-installed tools. Do not call Remotion Lambda, paid APIs, paid model providers, paid voice services, paid asset services, Blotato publishing, Kie.ai generation, subscriptions, trials, billing-enabled integrations, or credit-consuming services. When a prompt implies one of those services, rewrite it to use local code, FFmpeg, Chromium, Playwright, Python, HyperFrames, or approved user-provided assets.
+
+## Hairline
+
+- Repository: https://github.com/lucasmarkes/hairline
+- Skill: https://github.com/lucasmarkes/hairline/tree/main/skills/hairline-create
+
+Use Hairline for pointer-responsive interactive figures, technical diagrams, and self-contained line illustrations. Read its concepts and ten rules before creating a figure. Keep it separate from video rendering, use approved Design DNA tokens, and validate the browser result, accessibility, reduced-motion behavior, rest pose, and tour.
