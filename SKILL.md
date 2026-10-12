@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, and deterministic HTML video. Combines Three.js, GSAP, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, and QA in one orchestrated command.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, and deterministic HTML video. Combines Three.js, GSAP, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, and QA in one orchestrated command.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -19,7 +19,8 @@ One command for brand-led, code-authored motion and interactive web visuals. Hyp
 - **Sound:** write code-generated cues or wire approved audio against the same timeline, then master and verify it.
 - **Review:** render stills/contact sheets at beats and inspect them before final MP4 rendering.
 - **Motion skill packs:** route the approved iart-ai packs to the agents that need them; install only the smallest compatible set.
-- **Optional capabilities:** discuss Remotion, Hairline, motionmaxxing, and motion-skill pack selection during grilling, recommend what is needed, and activate only the user-approved choices.
+- **Optional capabilities:** discuss Remotion, Hairline, motionmaxxing, the Opus 5.5 video-prompt catalog, and motion-skill pack selection during grilling, recommend what is needed, and activate only the user-approved choices.
+- **Opus prompt research:** when approved, `opus5-videos-agent` reads a few matching prompts from the MIT catalog, credits the creators, and rewrites the craft for this brand. It never renders and never replaces the video renderer.
 - **Measured-motion film:** when approved, `motionmaxxing-agent` owns one brand-specific HTML film and must pass its G0–G5 gates locally. It never runs beside HyperFrames or Remotion, and it never calls ElevenLabs.
 - **QA:** run anti-slop, determinism, readability, audio, accessibility, and final-frame checks with targeted feedback loops.
 
@@ -39,6 +40,7 @@ npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood
 npx skills add remotion-dev/skills -g  # official prompt/reference guidance; local Remotion only
 npx skills add lucasmarkes/hairline -g  # optional interactive figures; free/local only
 npx skills add Tejashmakwana/motionmaxxing -g  # optional measured-motion films; free/local only, no ElevenLabs
+# opus5-videos-agent clones yihui-dev/awesome-opus5-5-videos on approval. It is a prompt catalog, not an npx skill.
 # Install only the approved iart-ai packs selected during grilling; see references/motion-skills-packs.md
 npx skills add obra/superpowers vercel-labs/agent-browser thedotmack/claude-mem -g
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
@@ -48,6 +50,8 @@ npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd 
 Do not use Remotion as a second renderer for a HyperFrames composition. Activate `remotion-agent` only when the brief explicitly requires a React/Remotion deliverable, and record the renderer decision. Activate `hairline-agent` only when the brief explicitly requests Hairline or an interactive figure.
 
 Do not use motionmaxxing as a second video renderer. Activate `motionmaxxing-agent` only when the brief explicitly requests its measured-motion HTML film (brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through its gates). When it owns the film, skip HyperFrames and Remotion. Exactly one video renderer runs. Read `references/motionmaxxing.md`.
+
+Activate `opus5-videos-agent` only when the user wants a starting prompt from the Opus 5.5 video catalog. It runs in Wave 1 and writes `opus-prompt-brief.md`. It is not a video renderer. Read `references/opus5-videos.md`.
 
 ## Free-Only Execution Policy
 
@@ -64,7 +68,8 @@ The griller must produce an explicit recommendation for every optional agent:
   "optionalAgents": {
     "remotion-agent": {"requested": false, "needed": false, "reason": "HyperFrames is sufficient"},
     "hairline-agent": {"requested": false, "needed": false, "reason": "No interactive figure requested"},
-    "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "HyperFrames is sufficient"}
+    "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "HyperFrames is sufficient"},
+    "opus5-videos-agent": {"requested": false, "needed": false, "reason": "No Opus 5.5 prompt catalog requested"}
   },
   "motionSkillPacks": []
 }
@@ -81,6 +86,7 @@ Show the thesis, renderer choice, optional-agent recommendations, and brief to t
 - `find-skills-agent` — discovers only missing, compatible skills.
 - `browser-agent` — captures reference screenshots with real Chrome.
 - `prompt-reference-agent` — curates free prompt patterns from Blotato and Remotion for briefs and future projects.
+- `opus5-videos-agent` — runs only if approved. Picks a few catalog prompts and writes `opus-prompt-brief.md` before direction. Otherwise mark skipped.
 - `find-skills-agent` — routes approved iart-ai motion-skill packs to the owning agents and records local installs.
 
 **Wave 2 (needs brief and Wave 1 context):**
@@ -131,7 +137,7 @@ ffprobe -v error -show_streams -show_format film/final.mp4
 
 Add `--audio` only when the mix is local or user-provided. Do not call ElevenLabs.
 
-Compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence. If motionmaxxing is selected, `film/NOTE.md` must quote G0–G5 and a fail is not a pass.
+Compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence. If motionmaxxing is selected, `film/NOTE.md` must quote G0–G5 and a fail is not a pass. If the Opus catalog was selected, `opus-prompt-brief.md` must credit its sources and the film must not be a shot-for-shot clone.
 
 ## Output Contract
 
@@ -141,6 +147,6 @@ Compare two final renders by hash. If voice or music is present, verify captions
 - `renderer-decision.md` when the video renderer is not HyperFrames
 - `brief.json`, `design-dna.json`, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable
-- `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `brief-enhancements.md`, `motion-skills-installed.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
+- `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `opus-prompt-brief.md` when applicable, `brief-enhancements.md`, `motion-skills-installed.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
 
 No generic gradients, default purple-on-black SaaS styling, unmotivated bounce, or code-first production. Every visual and sound cue must have an intentional role in the approved thesis.

@@ -27,6 +27,7 @@ Check:
 10. **Hairline (conditional):** if selected, the figure has one clear idea, follows the Hairline rules, responds to pointer/focus, has an intentional rest pose and tour, passes browser/look validation, and supports accessible labels and reduced motion.
 11. **Accessibility:** caption contrast >=4.5:1, reduced-motion/static fallback exists where relevant, and audio behavior is documented.
 12. **motionmaxxing (conditional):** if selected, it is the only video renderer, `film/NOTE.md` quotes G0–G5 from `look.py` and `lint.mjs`, G1 and G4 were judged on the contact sheet, page chrome is absent, and no ElevenLabs or other paid voice API was used. Audio, if present, is local or user-provided.
+13. **Opus 5.5 prompts (conditional):** if selected, `opus-prompt-brief.md` names 1–3 sources with author and post URL, says what was rejected, uses no paid generator from the source prompt, and the film is not a shot-for-shot clone.
 
 Scoring:
 - **PASS:** all musts meet the brief and evidence is recorded.

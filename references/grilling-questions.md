@@ -13,6 +13,7 @@ Don't accept the first answer. Dig until the project, renderer, interactions, an
    - **Remotion:** select only for an explicitly requested React/Remotion video deliverable. Otherwise use HyperFrames by default.
    - **Hairline:** select only for an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual. Otherwise skip it.
    - **motionmaxxing:** select only for an explicitly requested measured-motion HTML film (brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through G0–G5). Otherwise skip it. Do not select it together with Remotion. See `references/motionmaxxing.md`.
+   - **Opus 5.5 videos:** select only when the user wants a starting prompt from that code-video catalog. It does not change the renderer. See `references/opus5-videos.md`.
    - **None of the video swaps:** choose this when the default HyperFrames workflow is sufficient.
 
 9. **Motion-skills pack gate:** Which format and craft packs are needed? Use the smallest compatible set from `references/motion-skills-packs.md`—for example TikTok/Reels, data animation, explainer, kinetic typography, WebGL, or web animation.
@@ -35,7 +36,8 @@ Output: `brief.json`
   "optionalAgents": {
     "remotion-agent": {"requested": false, "needed": false, "reason": ""},
     "hairline-agent": {"requested": false, "needed": false, "reason": ""},
-    "motionmaxxing-agent": {"requested": false, "needed": false, "reason": ""}
+    "motionmaxxing-agent": {"requested": false, "needed": false, "reason": ""},
+    "opus5-videos-agent": {"requested": false, "needed": false, "reason": ""}
   },
   "motionSkillPacks": [
     {"pack": "iart-ai/motion-design-skills", "requested": false, "needed": false, "reason": ""}
