@@ -91,7 +91,7 @@
   "orchestration": {
     "subagent_count": 19,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. Remotion and Hairline run locally and only when explicitly requested. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits.",
+    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion and Hairline run locally and only when explicitly requested. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -122,6 +122,13 @@
           "default_recommendation": "skip unless the interaction requires it."
         }
       }
+    },
+    "motion_skill_pack_gate": {
+      "selection_phase": "planner-griller",
+      "requires_user_approval": true,
+      "default": "smallest-compatible-set",
+      "source": "references/motion-skills-packs.md",
+      "install_pattern": "npx skills add iart-ai/<approved-pack> -g"
     }
   },
   "reference_sources": {
@@ -134,6 +141,7 @@
     "remotion_templates": "https://www.remotion.dev/templates",
     "curated_prompts": "https://github.com/quriosity-agent/remotion-prompts",
     "hairline_repo": "https://github.com/lucasmarkes/hairline",
-    "hairline_skill": "https://github.com/lucasmarkes/hairline/tree/main/skills/hairline-create"
+    "hairline_skill": "https://github.com/lucasmarkes/hairline/tree/main/skills/hairline-create",
+    "iart_motion_skills": "https://github.com/iart-ai/motion-skills"
   }
 }

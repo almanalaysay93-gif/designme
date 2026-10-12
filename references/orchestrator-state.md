@@ -4,7 +4,7 @@ File: `orchestrator.json` (written by main skill, updated by each agent)
 
 ```json
 {
-  "brief_version": 3,
+  "brief_version": 4,
   "subagent_count": 19,
   "waves": {
     "wave1": {"design-dna-agent": "pending", "memory-agent": "pending", "browser-agent": "pending", "find-skills-agent": "pending", "prompt-reference-agent": "pending"},
@@ -13,6 +13,8 @@ File: `orchestrator.json` (written by main skill, updated by each agent)
     "wave4": {"hyperframes-agent": "pending", "remotion-agent": "skipped-unless-approved", "hairline-agent": "skipped-unless-approved", "motion-craft-agent": "pending"},
     "qa": {"qa-anti-slop-agent": "pending"}
   },
+  "motion_skill_packs": [],
+  "motion_skill_pack_approval": false,
   "optional_agents": {
     "remotion-agent": {"requested": false, "needed": false, "approved": false, "reason": ""},
     "hairline-agent": {"requested": false, "needed": false, "approved": false, "reason": ""}

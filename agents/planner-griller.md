@@ -15,8 +15,13 @@ Read `references/grilling-questions.md` and ask 5-8 sharp questions covering:
 - camera language, UI/product footage, 3D, and interaction requirements
 - voiceover/music/SFX, source files, BPM, transcript, and caption needs
 - renderer/stack, constraints, success metric, TDD, and browser verification
+- which iart-ai motion-skill packs fit the channel, artifact, data, and visual treatment
 - whether **Remotion** is explicitly requested for a React/video deliverable
 - whether **Hairline** is explicitly requested for an interactive figure or pointer-responsive visual
+
+## Motion-skills pack decision gate
+
+Read `references/motion-skills-packs.md`. Recommend the smallest compatible pack set. Map each approved pack to its owning designme agent, and do not install unrelated packs.
 
 ## Optional-agent decision gate
 
@@ -40,6 +45,7 @@ Synthesize:
   "resolution": "...",
   "tech": "...",
   "audio": {"voice": false, "music": false, "sfx": false, "bpm": null},
+  "motionSkillPacks": [{"pack": "iart-ai/motion-design-skills", "requested": false, "needed": false, "reason": "..."}],
   "optionalAgents": {
     "remotion-agent": {"requested": false, "needed": false, "reason": "..."},
     "hairline-agent": {"requested": false, "needed": false, "reason": "..."}
@@ -50,7 +56,7 @@ Synthesize:
 }
 ```
 
-Show the thesis, renderer, optional-agent recommendations, and brief to the user. Request approval before writing `brief.json` or spawning build agents.
+Show the thesis, renderer, optional-agent recommendations, motion-skill pack recommendations, and brief to the user. Request approval before writing `brief.json` or spawning build agents.
 
 Rules:
 - Propose thesis before code.

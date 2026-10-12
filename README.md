@@ -12,7 +12,7 @@ One skill that spawns a griller/planner, parallel creative and engineering agent
 
 ## Optional-agent grilling gate
 
-During the first grilling session, `planner-griller` must recommend whether each optional agent is needed and ask for approval:
+During the first grilling session, `planner-griller` must recommend whether each optional agent and iart-ai motion-skill pack is needed and ask for approval:
 
 | Optional agent | Use it when | Default recommendation |
 |---|---|---|
@@ -20,6 +20,12 @@ During the first grilling session, `planner-griller` must recommend whether each
 | `hairline-agent` | The brief requires an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual | Skip it unless the interaction needs it |
 
 The recommendation is stored in `brief.json.optionalAgents`. Optional agents are never silently activated. A user request can approve an agent even when it is not strictly necessary, with the tradeoff recorded.
+
+## iart-ai motion-skill packs
+
+The reel points to [`iart-ai/motion-skills`](https://github.com/iart-ai/motion-skills), a free MIT library of 51 skills across 15 packs. Designme routes the smallest compatible pack set to existing agents instead of blindly running every pack. The selected packs are recorded in `brief.json.motionSkillPacks`, installed only after approval, and verified through the normal render/screenshot/probe QA loop.
+
+See [`references/motion-skills-packs.md`](references/motion-skills-packs.md) for the complete pack matrix and agent ownership.
 
 ## What was added
 
@@ -30,6 +36,7 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 - `whaleyxbt/claude-motion` → `motion-craft-agent`: contact-sheet self-review, frame-level checks, web-sim guidance, and deterministic code-authored sound.
 - `Blotato-Inc/blotato-skills` + `remotion-dev/skills` → `prompt-reference-agent`: free prompt patterns for brand intake, hooks, grading, repurposing, React/video composition, captions, and future projects.
 - `remotion-dev/remotion` + `remotion-dev/skills` → `remotion-agent`: explicit local React-to-video builds with frame-accurate compositions, captions, audio, and still-frame QA.
+- `iart-ai/motion-skills` → routed pack library: short-form, data, explainer, web, kinetic typography, WebGL, Manim, map, ad, ecommerce, and generative-illustration workflows.
 - `lucasmarkes/hairline` → `hairline-agent`: optional accessible interactive line figures and pointer-responsive web visuals, validated in a browser.
 
 ## Free-only rule
@@ -40,7 +47,7 @@ All 19 agents are restricted to free, local, open-source, or already-installed t
 
 - `SKILL.md` — `/designme` contract, install gate, dependency waves, optional-agent gate, and output contract
 - `agents/` — creative direction, motion engineering, optional Remotion/Hairline agents, craft review, and QA agents
-- `references/` — grilling questions, prompt sources, QA rubric, asset pipeline, missing checklist, and orchestration state
+- `references/` — grilling questions, prompt sources, iart motion-pack routing, QA rubric, asset pipeline, missing checklist, and orchestration state
 - `manifest.json` — selected source repositories and agent responsibilities
 
 ## Install
@@ -49,6 +56,7 @@ All 19 agents are restricted to free, local, open-source, or already-installed t
 npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills lucasmarkes/hairline -g
+# Add only the iart-ai packs approved during grilling; see references/motion-skills-packs.md
 npx skills add obra/superpowers vercel-labs/agent-browser thedotmack/claude-mem -g
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
 npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd -g

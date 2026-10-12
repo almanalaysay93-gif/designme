@@ -14,7 +14,9 @@ Don't accept the first answer. Dig until the project, renderer, interactions, an
    - **Hairline:** select only for an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual. Otherwise skip it.
    - **Neither:** choose this when the default HyperFrames workflow is sufficient.
 
-The planner must make a recommendation for each optional agent, explain why it is or is not needed, and ask the user to approve the selection before dispatch.
+9. **Motion-skills pack gate:** Which format and craft packs are needed? Use the smallest compatible set from `references/motion-skills-packs.md`—for example TikTok/Reels, data animation, explainer, kinetic typography, WebGL, or web animation.
+
+The planner must make a recommendation for each optional agent and motion-skill pack, explain why it is or is not needed, and ask the user to approve the selection before dispatch.
 
 Output: `brief.json`
 
@@ -33,6 +35,9 @@ Output: `brief.json`
     "remotion-agent": {"requested": false, "needed": false, "reason": ""},
     "hairline-agent": {"requested": false, "needed": false, "reason": ""}
   },
+  "motionSkillPacks": [
+    {"pack": "iart-ai/motion-design-skills", "requested": false, "needed": false, "reason": ""}
+  ],
   "successMetric": "",
   "interactionThesis": ""
 }

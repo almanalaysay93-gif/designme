@@ -18,7 +18,8 @@ One command for brand-led, code-authored motion and interactive web visuals. Hyp
 - **Craft:** use GSAP for choreography, Three.js for hero 3D, and pure `render(t)` functions for seek-safe generative layers.
 - **Sound:** write code-generated cues or wire approved audio against the same timeline, then master and verify it.
 - **Review:** render stills/contact sheets at beats and inspect them before final MP4 rendering.
-- **Optional capabilities:** discuss Remotion and Hairline during grilling, recommend whether each is needed, and activate only the user-approved choices.
+- **Motion skill packs:** route the approved iart-ai packs to the agents that need them; install only the smallest compatible set.
+- **Optional capabilities:** discuss Remotion, Hairline, and motion-skill pack selection during grilling, recommend what is needed, and activate only the user-approved choices.
 - **QA:** run anti-slop, determinism, readability, audio, accessibility, and final-frame checks with targeted feedback loops.
 
 ## Invocation Contract
@@ -36,6 +37,7 @@ npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna 
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills -g  # official prompt/reference guidance; local Remotion only
 npx skills add lucasmarkes/hairline -g  # optional interactive figures; free/local only
+# Install only the approved iart-ai packs selected during grilling; see references/motion-skills-packs.md
 npx skills add obra/superpowers vercel-labs/agent-browser thedotmack/claude-mem -g
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
 npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd -g
@@ -49,7 +51,7 @@ Use only free, local, open-source, or already-installed tools and APIs. Never ca
 
 ### 1 — The Griller (1 agent) — ALWAYS FIRST — BLOCKING
 
-Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, and the optional-agent gate.
+Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, the optional-agent gate, and motion-skill pack selection.
 
 The griller must produce an explicit recommendation for both optional agents:
 
@@ -58,7 +60,8 @@ The griller must produce an explicit recommendation for both optional agents:
   "optionalAgents": {
     "remotion-agent": {"requested": false, "needed": false, "reason": "HyperFrames is sufficient"},
     "hairline-agent": {"requested": false, "needed": false, "reason": "No interactive figure requested"}
-  }
+  },
+  "motionSkillPacks": []
 }
 ```
 
@@ -73,6 +76,7 @@ Show the thesis, renderer choice, optional-agent recommendations, and brief to t
 - `find-skills-agent` — discovers only missing, compatible skills.
 - `browser-agent` — captures reference screenshots with real Chrome.
 - `prompt-reference-agent` — curates free prompt patterns from Blotato and Remotion for briefs and future projects.
+- `find-skills-agent` — routes approved iart-ai motion-skill packs to the owning agents and records local installs.
 
 **Wave 2 (needs brief and Wave 1 context):**
 
@@ -95,7 +99,7 @@ Show the thesis, renderer choice, optional-agent recommendations, and brief to t
 - `hairline-agent` — runs only if `brief.json.optionalAgents.hairline-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
 - `motion-craft-agent` — runs still/contact-sheet review, checks frame collisions and safe areas, wires code-generated or approved sound, and records fixes.
 
-Pass `brief.json` and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.
+Pass `brief.json`, the approved `motionSkillPacks`, and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.
 
 ### 3 — QA Anti-Slop Loop — ALWAYS LAST
 
@@ -118,6 +122,6 @@ Compare two final renders by hash. If voice or music is present, verify captions
 - `/hyperframes/composition/` with `index.html`, `style.css`, `script.js`, `tokens.css`, and assets
 - `brief.json`, `design-dna.json`, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable
-- `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `brief-enhancements.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
+- `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `brief-enhancements.md`, `motion-skills-installed.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
 
 No generic gradients, default purple-on-black SaaS styling, unmotivated bounce, or code-first production. Every visual and sound cue must have an intentional role in the approved thesis.

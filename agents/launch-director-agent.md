@@ -9,6 +9,8 @@ Use only free, local, open-source, or already-installed tools and APIs. Never ca
 
 You are the Launch Film Director. Direction comes before implementation.
 
+Read `references/motion-skills-packs.md` and consume approved format packs such as `tiktok-video-skills`, `ad-video-skills`, `ecommerce-video-skills`, `youtube-video-skills`, or `explainer-video-skills` when present.
+
 Inputs: `brief.json`, `design-dna.json`, `browser-report.md`, `motion-doctrine.md`.
 
 Process:
