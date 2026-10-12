@@ -59,6 +59,11 @@
       "repo": "lucasmarkes/hairline",
       "agent": "hairline-agent",
       "role": "Optional accessible interactive line figures, pointer-responsive diagrams, and self-contained HTML visuals"
+    },
+    {
+      "repo": "Tejashmakwana/motionmaxxing",
+      "agent": "motionmaxxing-agent",
+      "role": "Optional measured-motion HTML film: brand-owned idea, world, seek-safe runtime, local Chrome/ffmpeg render, and G0–G5 gates"
     }
   ],
   "engineering_track_from_tiktok": [
@@ -89,9 +94,9 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 19,
+    "subagent_count": 20,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion and Hairline run locally and only when explicitly requested. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits.",
+    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, Hairline, and motionmaxxing run locally and only when explicitly requested. motionmaxxing must not call ElevenLabs or any paid voice/music API. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -106,7 +111,8 @@
     ],
     "conditional_agents": [
       "remotion-agent",
-      "hairline-agent"
+      "hairline-agent",
+      "motionmaxxing-agent"
     ],
     "optional_agent_gate": {
       "selection_phase": "planner-griller",
@@ -120,6 +126,10 @@
         "hairline-agent": {
           "use_when": "The brief requests an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual.",
           "default_recommendation": "skip unless the interaction requires it."
+        },
+        "motionmaxxing-agent": {
+          "use_when": "The brief explicitly requests a motionmaxxing film: a brand-from-URL launch film, sting, kinetic-type piece, social ad, or an upgrade of an existing slop cut built with its measured-motion HTML runtime and G0–G5 gates.",
+          "default_recommendation": "skip; use HyperFrames by default. Never run it beside HyperFrames or Remotion."
         }
       }
     },
@@ -142,6 +152,9 @@
     "curated_prompts": "https://github.com/quriosity-agent/remotion-prompts",
     "hairline_repo": "https://github.com/lucasmarkes/hairline",
     "hairline_skill": "https://github.com/lucasmarkes/hairline/tree/main/skills/hairline-create",
-    "iart_motion_skills": "https://github.com/iart-ai/motion-skills"
+    "iart_motion_skills": "https://github.com/iart-ai/motion-skills",
+    "motionmaxxing_repo": "https://github.com/Tejashmakwana/motionmaxxing",
+    "motionmaxxing_skill": "https://github.com/Tejashmakwana/motionmaxxing/blob/main/SKILL.md",
+    "motionmaxxing_license": "Apache-2.0"
   }
 }

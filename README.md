@@ -2,7 +2,7 @@
 
 One skill that spawns a griller/planner, parallel creative and engineering agents, a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop.
 
-> **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. Blotato and Remotion references are used for prompt patterns only. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits.
+> **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. `motionmaxxing-agent` is optional and runs only when a project explicitly requests a measured-motion HTML film from [Tejashmakwana/motionmaxxing](https://github.com/Tejashmakwana/motionmaxxing). `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. Blotato and Remotion references are used for prompt patterns only. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits. motionmaxxing must not call ElevenLabs.
 
 ## Invoke
 
@@ -18,8 +18,9 @@ During the first grilling session, `planner-griller` must recommend whether each
 |---|---|---|
 | `remotion-agent` | The brief explicitly requires a React/Remotion video deliverable or Remotion-specific composition | Skip it and use HyperFrames |
 | `hairline-agent` | The brief requires an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual | Skip it unless the interaction needs it |
+| `motionmaxxing-agent` | The brief explicitly requires a motionmaxxing film: brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through its G0–G5 gates | Skip it and use HyperFrames. Never run it beside another video renderer |
 
-The recommendation is stored in `brief.json.optionalAgents`. Optional agents are never silently activated. A user request can approve an agent even when it is not strictly necessary, with the tradeoff recorded.
+The recommendation is stored in `brief.json.optionalAgents`. Optional agents are never silently activated. A user request can approve an agent even when it is not strictly necessary, with the tradeoff recorded. Exactly one video renderer runs: HyperFrames, Remotion, or motionmaxxing.
 
 ## iart-ai motion-skill packs
 
@@ -38,16 +39,17 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 - `remotion-dev/remotion` + `remotion-dev/skills` → `remotion-agent`: explicit local React-to-video builds with frame-accurate compositions, captions, audio, and still-frame QA.
 - `iart-ai/motion-skills` → routed pack library: short-form, data, explainer, web, kinetic typography, WebGL, Manim, map, ad, ecommerce, and generative-illustration workflows.
 - `lucasmarkes/hairline` → `hairline-agent`: optional accessible interactive line figures and pointer-responsive web visuals, validated in a browser.
+- `Tejashmakwana/motionmaxxing` → `motionmaxxing-agent`: optional measured-motion HTML film. Brand-owned idea, world, seek-safe runtime, local Chrome/ffmpeg render, and G0–G5 gates. See [`references/motionmaxxing.md`](references/motionmaxxing.md).
 
 ## Free-only rule
 
-All 19 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative.
+All 20 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off.
 
 ## Structure
 
 - `SKILL.md` — `/designme` contract, install gate, dependency waves, optional-agent gate, and output contract
-- `agents/` — creative direction, motion engineering, optional Remotion/Hairline agents, craft review, and QA agents
-- `references/` — grilling questions, prompt sources, iart motion-pack routing, QA rubric, asset pipeline, missing checklist, and orchestration state
+- `agents/` — creative direction, motion engineering, optional Remotion/Hairline/motionmaxxing agents, craft review, and QA agents
+- `references/` — grilling questions, prompt sources, iart motion-pack routing, motionmaxxing contract, QA rubric, asset pipeline, missing checklist, and orchestration state
 - `manifest.json` — selected source repositories and agent responsibilities
 
 ## Install
@@ -55,7 +57,7 @@ All 19 agents are restricted to free, local, open-source, or already-installed t
 ```bash
 npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
-npx skills add remotion-dev/skills lucasmarkes/hairline -g
+npx skills add remotion-dev/skills lucasmarkes/hairline Tejashmakwana/motionmaxxing -g
 # Add only the iart-ai packs approved during grilling; see references/motion-skills-packs.md
 npx skills add obra/superpowers vercel-labs/agent-browser thedotmack/claude-mem -g
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g

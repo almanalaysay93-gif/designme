@@ -18,6 +18,7 @@ Read `references/grilling-questions.md` and ask 5-8 sharp questions covering:
 - which iart-ai motion-skill packs fit the channel, artifact, data, and visual treatment
 - whether **Remotion** is explicitly requested for a React/video deliverable
 - whether **Hairline** is explicitly requested for an interactive figure or pointer-responsive visual
+- whether **motionmaxxing** is explicitly requested for a measured-motion HTML film
 
 ## Motion-skills pack decision gate
 
@@ -29,8 +30,11 @@ For each optional agent, make a recommendation before dispatch:
 
 - Recommend **Remotion** only when the user needs React/Remotion-specific composition or rendering. Otherwise recommend **skip** and keep HyperFrames as the default.
 - Recommend **Hairline** only when the user needs an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual. Otherwise recommend **skip**.
+- Recommend **motionmaxxing** only when the user explicitly wants a measured-motion HTML film: brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through its G0–G5 gates. Read `references/motionmaxxing.md`. Otherwise recommend **skip**.
+- Exactly one video renderer. Remotion and motionmaxxing cannot both be approved, and neither runs beside HyperFrames.
 - If the user requests an optional agent, include it even if it is not strictly necessary, but explain the tradeoff.
 - Never silently activate an optional agent. Show the selection and reason in the thesis/brief and ask for approval.
+- Voice inside a motionmaxxing film stays local. Do not plan ElevenLabs.
 
 Synthesize:
 ```json
@@ -48,7 +52,8 @@ Synthesize:
   "motionSkillPacks": [{"pack": "iart-ai/motion-design-skills", "requested": false, "needed": false, "reason": "..."}],
   "optionalAgents": {
     "remotion-agent": {"requested": false, "needed": false, "reason": "..."},
-    "hairline-agent": {"requested": false, "needed": false, "reason": "..."}
+    "hairline-agent": {"requested": false, "needed": false, "reason": "..."},
+    "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "..."}
   },
   "successMetric": "...",
   "interactionThesis": "...",

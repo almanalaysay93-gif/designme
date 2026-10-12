@@ -22,10 +22,11 @@ Check:
 5. **Beat sync:** cuts, impacts, captions, and the key visual land on the canonical beat/word map. No guessed voice timing.
 6. **Frame craft:** contact sheet has scene peaks, no clipping/collisions/unsafe text, no accidental flashes or pop frames, and transitions carry visual intent.
 7. **Audio:** 48 kHz, no drift, cues are audible, music/voice are not masked, true peak below -2 dBFS, and loudness is approximately -14 LUFS unless brief says otherwise.
-8. **HyperFrames:** no non-determinism, captions are readable, and two renders produce identical hashes.
+8. **HyperFrames:** no non-determinism, captions are readable, and two renders produce identical hashes. Skip this check when another video renderer owns the film.
 9. **Remotion (conditional):** if selected, renderer decision is documented, composition metadata is correct, frame 0/last frame are valid, local render succeeds, and no Lambda or paid service is used.
 10. **Hairline (conditional):** if selected, the figure has one clear idea, follows the Hairline rules, responds to pointer/focus, has an intentional rest pose and tour, passes browser/look validation, and supports accessible labels and reduced motion.
 11. **Accessibility:** caption contrast >=4.5:1, reduced-motion/static fallback exists where relevant, and audio behavior is documented.
+12. **motionmaxxing (conditional):** if selected, it is the only video renderer, `film/NOTE.md` quotes G0–G5 from `look.py` and `lint.mjs`, G1 and G4 were judged on the contact sheet, page chrome is absent, and no ElevenLabs or other paid voice API was used. Audio, if present, is local or user-provided.
 
 Scoring:
 - **PASS:** all musts meet the brief and evidence is recorded.
