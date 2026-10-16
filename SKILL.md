@@ -10,7 +10,7 @@ Invoke: `/designme <brief>` — e.g. `/designme premium 9:16 launch reel, Linear
 
 ## What This Is
 
-One command for brand-led, code-authored motion and interactive web visuals. HyperFrames remains the default video renderer, Remotion is an optional local React-video renderer, and Hairline is an optional interactive-figure engine. Blotato and Remotion are also used as free prompt/reference sources for future projects. It adds only complementary production disciplines:
+One command for brand-led, code-authored motion and interactive web visuals. HyperFrames remains the default video renderer, Remotion is an optional local React-video renderer, and Hairline is an optional interactive-figure engine; motionmaxxing is an optional local director/critic with strict G0-G5 gates. Blotato and Remotion are also used as free prompt/reference sources for future projects. It adds only complementary production disciplines:
 
 - **Design DNA + motion principles:** extract a visual system and a motion doctrine before code.
 - **Direction:** develop competing creative directions, a one-claim story arc, camera language, and shot plan.
@@ -19,6 +19,7 @@ One command for brand-led, code-authored motion and interactive web visuals. Hyp
 - **Sound:** write code-generated cues or wire approved audio against the same timeline, then master and verify it.
 - **Review:** render stills/contact sheets at beats and inspect them before final MP4 rendering.
 - **Motion skill packs:** route the approved iart-ai packs to the agents that need them; install only the smallest compatible set.
+- **Motionmaxxing:** optionally run brand-led idea/world direction, seek-safe craft checks, and evidence-based G0-G5 repair on launch films and motion promos.
 - **Optional capabilities:** discuss Remotion, Hairline, and motion-skill pack selection during grilling, recommend what is needed, and activate only the user-approved choices.
 - **QA:** run anti-slop, determinism, readability, audio, accessibility, and final-frame checks with targeted feedback loops.
 
@@ -37,13 +38,15 @@ npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna 
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills -g  # official prompt/reference guidance; local Remotion only
 npx skills add lucasmarkes/hairline -g  # optional interactive figures; free/local only
+# Install motionmaxxing locally; its installer checks requirements and installs nothing system-wide
+if [ ! -d "$HOME/.claude/skills/motionmaxxing" ]; then git clone https://github.com/Tejashmakwana/motionmaxxing "$HOME/.claude/skills/motionmaxxing"; fi
 # Install only the approved iart-ai packs selected during grilling; see references/motion-skills-packs.md
 npx skills add obra/superpowers vercel-labs/agent-browser thedotmack/claude-mem -g
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
 npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd -g
 ```
 
-Do not use Remotion as a second renderer for a HyperFrames composition. Activate `remotion-agent` only when the brief explicitly requires a React/Remotion deliverable, and record the renderer decision. Activate `hairline-agent` only when the brief explicitly requests Hairline or an interactive figure.
+Do not use Remotion as a second renderer for a HyperFrames composition. Activate `remotion-agent` only when the brief explicitly requires a React/Remotion deliverable, and record the renderer decision. Activate `hairline-agent` only when the brief explicitly requests Hairline or an interactive figure. Activate `motionmaxxing-agent` only when the user approves it or explicitly asks for motionmaxxing; keep its work local and free-only.
 
 ## Free-Only Execution Policy
 
@@ -53,13 +56,14 @@ Use only free, local, open-source, or already-installed tools and APIs. Never ca
 
 Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, the optional-agent gate, and motion-skill pack selection.
 
-The griller must produce an explicit recommendation for both optional agents:
+The griller must produce an explicit recommendation for all optional agents, including motionmaxxing:
 
 ```json
 {
   "optionalAgents": {
     "remotion-agent": {"requested": false, "needed": false, "reason": "HyperFrames is sufficient"},
-    "hairline-agent": {"requested": false, "needed": false, "reason": "No interactive figure requested"}
+    "hairline-agent": {"requested": false, "needed": false, "reason": "No interactive figure requested"},
+    "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "Existing HyperFrames + QA is sufficient"}
   },
   "motionSkillPacks": []
 }
@@ -97,7 +101,9 @@ Show the thesis, renderer choice, optional-agent recommendations, and brief to t
 - `hyperframes-agent` — assembles the deterministic HTML composition and renders drafts by default.
 - `remotion-agent` — runs only if `brief.json.optionalAgents.remotion-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
 - `hairline-agent` — runs only if `brief.json.optionalAgents.hairline-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
+- `motionmaxxing-agent` — runs only if `brief.json.optionalAgents.motionmaxxing-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
 - `motion-craft-agent` — runs still/contact-sheet review, checks frame collisions and safe areas, wires code-generated or approved sound, and records fixes.
+- `motionmaxxing-agent` — audits or repairs launch-film craft using local G0-G5 gates and writes evidence.
 
 Pass `brief.json`, the approved `motionSkillPacks`, and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.
 
@@ -114,7 +120,7 @@ npx hyperframes render --width <width> --height <height> --fps 60
 ffprobe -v error -show_streams -show_format output/final.mp4
 ```
 
-Compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence.
+Compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence. If motionmaxxing is selected, include `motionmaxxing-note.md`, gate evidence for G0-G5, and all skipped-provider substitutions.
 
 ## Output Contract
 

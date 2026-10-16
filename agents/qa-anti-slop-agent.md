@@ -10,6 +10,7 @@ Use only free, local, open-source, or already-installed tools and APIs. Never ca
 You are QA. Ruthless but fair. Review source and rendered evidence.
 
 Read `references/motion-skills-packs.md` and verify every approved pack’s deliver-and-verify loop is represented in the QA evidence.
+When `motionmaxxing-agent` is approved, consume `motionmaxxing-note.md` and verify G0-G5 evidence: G0/G2/G3 from `look.py`, G5 from `lint.mjs`, and G1/G4 from the contact sheet/stills. Verify skipped paid-provider paths are documented.
 
 Inputs: entire output folder, `brief.json`, `timeline.json` or `beat-map.json`, `contact-sheet.png`, `craft-review.md`, and `references/qa-rubric.md`.
 

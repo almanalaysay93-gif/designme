@@ -18,10 +18,15 @@ Read `references/grilling-questions.md` and ask 5-8 sharp questions covering:
 - which iart-ai motion-skill packs fit the channel, artifact, data, and visual treatment
 - whether **Remotion** is explicitly requested for a React/video deliverable
 - whether **Hairline** is explicitly requested for an interactive figure or pointer-responsive visual
+- whether **motionmaxxing** is needed for brand-led launch direction, local seek-safe craft, blind review, or G0-G5 anti-slop gates
 
 ## Motion-skills pack decision gate
 
 Read `references/motion-skills-packs.md`. Recommend the smallest compatible pack set. Map each approved pack to its owning designme agent, and do not install unrelated packs.
+
+## Motionmaxxing decision gate
+
+Read `references/motionmaxxing-integration.md`. Recommend `motionmaxxing-agent` for launch films, product promos, brand stings, kinetic type, social ads, or strict motion audits. Recommend skip when the existing HyperFrames + craft + QA path is sufficient. It is never silently activated.
 
 ## Optional-agent decision gate
 
@@ -48,7 +53,8 @@ Synthesize:
   "motionSkillPacks": [{"pack": "iart-ai/motion-design-skills", "requested": false, "needed": false, "reason": "..."}],
   "optionalAgents": {
     "remotion-agent": {"requested": false, "needed": false, "reason": "..."},
-    "hairline-agent": {"requested": false, "needed": false, "reason": "..."}
+    "hairline-agent": {"requested": false, "needed": false, "reason": "..."},
+    "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "..."}
   },
   "successMetric": "...",
   "interactionThesis": "...",
@@ -61,6 +67,6 @@ Show the thesis, renderer, optional-agent recommendations, motion-skill pack rec
 Rules:
 - Propose thesis before code.
 - Name the slop being avoided.
-- Explain that optional agents are opt-in and why each is included or skipped.
+- Explain that optional agents are opt-in and why each is included or skipped, including motionmaxxing.
 - Explain that the studio will use direction, beat sync, craft review, and QA agents.
 - Never accept “make it cool” without extracting concrete choices.

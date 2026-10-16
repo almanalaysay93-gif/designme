@@ -59,6 +59,11 @@
       "repo": "lucasmarkes/hairline",
       "agent": "hairline-agent",
       "role": "Optional accessible interactive line figures, pointer-responsive diagrams, and self-contained HTML visuals"
+    },
+    {
+      "repo": "Tejashmakwana/motionmaxxing",
+      "agent": "motionmaxxing-agent",
+      "role": "Optional brand-led motion director, seek-safe local craft workflow, G0-G5 gates, page-chrome lint, and blind review"
     }
   ],
   "engineering_track_from_tiktok": [
@@ -89,9 +94,9 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 19,
+    "subagent_count": 20,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion and Hairline run locally and only when explicitly requested. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits.",
+    "policy": "Free, local, open-source, and already-installed tools only. Motionmaxxing core uses local Node, Python, Chrome, FFmpeg, GSAP, Three.js, and HyperFrames. Skip its optional ElevenLabs and Codex image-generation paths. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, Hairline, and motionmaxxing run locally and only when explicitly requested. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -106,7 +111,8 @@
     ],
     "conditional_agents": [
       "remotion-agent",
-      "hairline-agent"
+      "hairline-agent",
+      "motionmaxxing-agent"
     ],
     "optional_agent_gate": {
       "selection_phase": "planner-griller",
@@ -120,6 +126,10 @@
         "hairline-agent": {
           "use_when": "The brief requests an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual.",
           "default_recommendation": "skip unless the interaction requires it."
+        },
+        "motionmaxxing-agent": {
+          "use_when": "The brief requests motionmaxxing or needs brand-led launch-film direction, strict G0-G5 motion gates, page-chrome lint, or audit/repair of an existing motion draft.",
+          "default_recommendation": "skip for simple UI/data motion; recommend for launch films and strict motion audits."
         }
       }
     },
@@ -142,6 +152,7 @@
     "curated_prompts": "https://github.com/quriosity-agent/remotion-prompts",
     "hairline_repo": "https://github.com/lucasmarkes/hairline",
     "hairline_skill": "https://github.com/lucasmarkes/hairline/tree/main/skills/hairline-create",
-    "iart_motion_skills": "https://github.com/iart-ai/motion-skills"
+    "iart_motion_skills": "https://github.com/iart-ai/motion-skills",
+    "motionmaxxing": "https://github.com/Tejashmakwana/motionmaxxing"
   }
 }
