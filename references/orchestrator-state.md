@@ -4,11 +4,11 @@ File: `orchestrator.json` (written by main skill, updated by each agent)
 
 ```json
 {
-  "brief_version": 7,
-  "subagent_count": 22,
+  "brief_version": 8,
+  "subagent_count": 23,
   "waves": {
     "wave1": {"design-dna-agent": "pending", "memory-agent": "pending", "browser-agent": "pending", "find-skills-agent": "pending", "prompt-reference-agent": "pending", "opus5-videos-agent": "skipped-unless-approved"},
-    "wave2": {"visual-style-agent": "pending", "motion-design-agent": "pending", "launch-director-agent": "pending", "superpowers-agent": "pending"},
+    "wave2": {"visual-style-agent": "pending", "ui-ux-pro-max-agent": "skipped-unless-approved", "motion-design-agent": "pending", "launch-director-agent": "pending", "superpowers-agent": "pending"},
     "wave3": {"beat-sync-agent": "pending", "gsap-agent": "pending", "threejs-agent": "pending", "genjutsu-agent": "pending", "taste-gsd-agent": "pending"},
     "wave4": {"hyperframes-agent": "pending", "remotion-agent": "skipped-unless-approved", "hairline-agent": "skipped-unless-approved", "motionmaxxing-agent": "skipped-unless-approved", "motion-craft-agent": "pending"},
     "qa": {"qa-anti-slop-agent": "pending"}
@@ -21,7 +21,8 @@ File: `orchestrator.json` (written by main skill, updated by each agent)
     "remotion-agent": {"requested": false, "needed": false, "approved": false, "reason": ""},
     "hairline-agent": {"requested": false, "needed": false, "approved": false, "reason": ""},
     "motionmaxxing-agent": {"requested": false, "needed": false, "approved": false, "reason": ""},
-    "opus5-videos-agent": {"requested": false, "needed": false, "approved": false, "reason": ""}
+    "opus5-videos-agent": {"requested": false, "needed": false, "approved": false, "reason": ""},
+    "ui-ux-pro-max-agent": {"requested": false, "needed": false, "approved": false, "reason": ""}
   },
   "qa_loops": 0,
   "max_loops": 3,

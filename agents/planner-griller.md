@@ -20,7 +20,12 @@ Read `references/grilling-questions.md` and ask 5-8 sharp questions covering:
 - whether **Hairline** is explicitly requested for an interactive figure or pointer-responsive visual
 - whether **motionmaxxing** is explicitly requested for a measured-motion HTML film
 - whether **Opus 5.5 videos** should supply a starting prompt from the code-video catalog
+- whether **UI/UX Pro Max** is needed for UI structure, design-system generation, stack guidance, interaction, or accessibility
 - which primary visual style, and at most one supporting style, should guide the project
+
+## UI/UX Pro Max decision gate
+
+Recommend `ui-ux-pro-max-agent` for UI-containing work: landing pages, dashboards, product demos, forms, navigation, charts, mobile UI, or UX/accessibility review. Read `references/ui-ux-pro-max-integration.md`. Require local search evidence and skip it for pure non-UI films.
 
 ## Visual-style decision gate
 
@@ -62,7 +67,8 @@ Synthesize:
     "remotion-agent": {"requested": false, "needed": false, "reason": "..."},
     "hairline-agent": {"requested": false, "needed": false, "reason": "..."},
     "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "..."},
-    "opus5-videos-agent": {"requested": false, "needed": false, "reason": "..."}
+    "opus5-videos-agent": {"requested": false, "needed": false, "reason": "..."},
+    "ui-ux-pro-max-agent": {"requested": false, "needed": false, "reason": "..."}
   },
   "successMetric": "...",
   "interactionThesis": "...",

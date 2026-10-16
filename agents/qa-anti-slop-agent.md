@@ -45,3 +45,5 @@ FIX: Reduce title scale by 8%; move the cue to beat-map frame 420; rerender the 
 Re-spawn only the named agent. Allow at most 3 loops. After PASS, write `audit.md` with evidence, hashes, measured audio values, and remaining tradeoffs.
 
 When `visual-style-agent` is active, verify `style-spec.md`: exactly one primary style and at most one supporting style, coherent material/palette/motion grammar, a visible hero beat tied to proof, readable text, deterministic procedural output, and no effect used without a stated role.
+
+When `ui-ux-pro-max-agent` is approved, verify `uiux-design-system.md` and `uiux-audit.md`: local search evidence, contrast, keyboard/focus, semantics, responsive wrapping, touch targets, reduced motion, icon discipline, and stack-specific checks.

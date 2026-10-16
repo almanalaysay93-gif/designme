@@ -14,6 +14,7 @@ Don't accept the first answer. Dig until the project, renderer, interactions, an
    - **Hairline:** select only for an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual. Otherwise skip it.
    - **motionmaxxing:** select only for an explicitly requested measured-motion HTML film (brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through G0–G5). Otherwise skip it. Do not select it together with Remotion. See `references/motionmaxxing.md`.
    - **Opus 5.5 videos:** select only when the user wants a starting prompt from that code-video catalog. It does not change the renderer. See `references/opus5-videos.md`.
+   - **UI/UX Pro Max:** select for UI, landing pages, dashboards, product demos, forms, navigation, charts, mobile UI, or UX/accessibility reviews. It uses local searchable data and does not render video. See `references/ui-ux-pro-max-integration.md`.
    - **None of the video swaps:** choose this when the default HyperFrames workflow is sufficient.
 
 9. **Visual-style gate:** Choose one primary style from `references/visual-style-library.md` and optionally one supporting style. Which of the 20 styles fits the brand and claim? The agent must recommend a style, material, motion grammar, hero beat, and anti-slop boundaries.
@@ -39,7 +40,8 @@ Output: `brief.json`
     "remotion-agent": {"requested": false, "needed": false, "reason": ""},
     "hairline-agent": {"requested": false, "needed": false, "reason": ""},
     "motionmaxxing-agent": {"requested": false, "needed": false, "reason": ""},
-    "opus5-videos-agent": {"requested": false, "needed": false, "reason": ""}
+    "opus5-videos-agent": {"requested": false, "needed": false, "reason": ""},
+    "ui-ux-pro-max-agent": {"requested": false, "needed": false, "reason": ""}
   },
   "motionSkillPacks": [
     {"pack": "iart-ai/motion-design-skills", "requested": false, "needed": false, "reason": ""}

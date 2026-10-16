@@ -104,9 +104,9 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 22,
+    "subagent_count": 23,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, Hairline, motionmaxxing, and the Opus 5.5 prompt catalog run locally and only when explicitly requested. motionmaxxing must not call ElevenLabs or any paid voice/music API. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets.",
+    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, Hairline, motionmaxxing, and the Opus 5.5 prompt catalog run locally and only when explicitly requested. motionmaxxing must not call ElevenLabs or any paid voice/music API. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -122,13 +122,19 @@
         "agent": "visual-style-agent",
         "repo": "designme/internal",
         "role": "Approved style selection, style-spec.md, implementation sample, and style-specific QA checks"
+      },
+      {
+        "agent": "ui-ux-pro-max-agent",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "role": "Optional local searchable UI/UX intelligence: styles, palettes, typography, UX rules, charts, icons, GSAP, stacks, and audits"
       }
     ],
     "conditional_agents": [
       "remotion-agent",
       "hairline-agent",
       "motionmaxxing-agent",
-      "opus5-videos-agent"
+      "opus5-videos-agent",
+      "ui-ux-pro-max-agent"
     ],
     "optional_agent_gate": {
       "selection_phase": "planner-griller",
@@ -150,6 +156,10 @@
         "opus5-videos-agent": {
           "use_when": "The brief explicitly wants a starting prompt from the Opus 5.5 code-authored video catalog.",
           "default_recommendation": "skip. It researches prompts only and does not render."
+        },
+        "ui-ux-pro-max-agent": {
+          "use_when": "The brief includes UI, landing pages, dashboards, product demos, forms, navigation, charts, mobile UI, or UX/accessibility review.",
+          "default_recommendation": "skip for pure non-UI films; recommend for any interface or interaction proof."
         }
       }
     },
@@ -178,6 +188,9 @@
     "motionmaxxing_license": "Apache-2.0",
     "opus5_videos_repo": "https://github.com/yihui-dev/awesome-opus5-5-videos",
     "opus5_videos_license": "MIT",
-    "visual_style_library": "references/visual-style-library.md"
+    "visual_style_library": "references/visual-style-library.md",
+    "ui_ux_pro_max_repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "ui_ux_pro_max_homepage": "https://uupm.cc",
+    "ui_ux_pro_max_license": "MIT"
   }
 }

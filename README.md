@@ -20,8 +20,15 @@ During the first grilling session, `planner-griller` must select a visual langua
 | `hairline-agent` | The brief requires an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual | Skip it unless the interaction needs it |
 | `motionmaxxing-agent` | The brief explicitly requires a motionmaxxing film: brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through its G0–G5 gates | Skip it and use HyperFrames. Never run it beside another video renderer |
 | `opus5-videos-agent` | The brief explicitly wants a starting prompt from the Opus 5.5 code-video catalog | Skip it. It researches prompts only and does not render |
+| `ui-ux-pro-max-agent` | UI, landing page, dashboard, product demo, forms, navigation, charts, mobile UI, or UX/accessibility review | Skip it for pure non-UI films |
 
 The recommendation is stored in `brief.json.optionalAgents`. Optional agents are never silently activated. A user request can approve an agent even when it is not strictly necessary, with the tradeoff recorded. Exactly one video renderer runs: HyperFrames, Remotion, or motionmaxxing.
+
+## UI/UX Pro Max design intelligence
+
+`ui-ux-pro-max-agent` adds the MIT-licensed [UI/UX Pro Max skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) as an optional local design-intelligence layer. It searches styles, palettes, typography, UX rules, charts, icons, GSAP presets, and stack guidance, then writes `uiux-design-system.md` and `uiux-audit.md`. It is selected during grilling for interface-containing projects and skipped for pure non-UI films.
+
+See [`references/ui-ux-pro-max-integration.md`](references/ui-ux-pro-max-integration.md).
 
 ## 20-style visual language library
 
@@ -51,13 +58,13 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 
 ## Free-only rule
 
-All 22 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off.
+All 23 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off.
 
 ## Structure
 
 - `SKILL.md` — `/designme` contract, install gate, dependency waves, optional-agent gate, and output contract
-- `agents/` — creative direction, motion engineering, visual-style direction, optional Remotion/Hairline/motionmaxxing/Opus-prompt agents, craft review, and QA agents
-- `references/` — grilling questions, prompt sources, iart motion-pack routing, motionmaxxing contract, Opus 5.5 prompt catalog, visual-style library, QA rubric, asset pipeline, missing checklist, and orchestration state
+- `agents/` — creative direction, motion engineering, visual-style direction, UI/UX Pro Max intelligence, optional Remotion/Hairline/motionmaxxing/Opus-prompt agents, craft review, and QA agents
+- `references/` — grilling questions, prompt sources, iart motion-pack routing, motionmaxxing contract, Opus 5.5 prompt catalog, visual-style library, UI/UX Pro Max integration, QA rubric, asset pipeline, missing checklist, and orchestration state
 - `manifest.json` — selected source repositories and agent responsibilities
 
 ## Install
@@ -66,6 +73,8 @@ All 22 agents are restricted to free, local, open-source, or already-installed t
 npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills lucasmarkes/hairline Tejashmakwana/motionmaxxing -g
+# Optional UI/UX Pro Max local skill (MIT, bundled data + Python search)
+npm install -g ui-ux-pro-max-cli && uipro init --ai claude --global
 # Opus prompt catalog is cloned by opus5-videos-agent when approved; see references/opus5-videos.md
 # Add only the iart-ai packs approved during grilling; see references/motion-skills-packs.md
 npx skills add obra/superpowers vercel-labs/agent-browser thedotmack/claude-mem -g
