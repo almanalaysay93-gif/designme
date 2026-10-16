@@ -1,6 +1,6 @@
 # /designme — invoke with /designme
 
-One skill that spawns a griller/planner, parallel creative and engineering agents, a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop.
+One skill that spawns a griller/planner, a visual-style director, parallel creative and engineering agents, a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop.
 
 > **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. `motionmaxxing-agent` is optional and runs only when a project explicitly requests a measured-motion HTML film from [Tejashmakwana/motionmaxxing](https://github.com/Tejashmakwana/motionmaxxing). `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. Blotato and Remotion references are used for prompt patterns only. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits. `opus5-videos-agent` is optional and only researches prompts from [yihui-dev/awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos). motionmaxxing must not call ElevenLabs.
 
@@ -12,7 +12,7 @@ One skill that spawns a griller/planner, parallel creative and engineering agent
 
 ## Optional-agent grilling gate
 
-During the first grilling session, `planner-griller` must recommend whether each optional agent and iart-ai motion-skill pack is needed and ask for approval:
+During the first grilling session, `planner-griller` must select a visual language from the 20-style library, then recommend whether each optional agent and iart-ai motion-skill pack is needed and ask for approval:
 
 | Optional agent | Use it when | Default recommendation |
 |---|---|---|
@@ -22,6 +22,12 @@ During the first grilling session, `planner-griller` must recommend whether each
 | `opus5-videos-agent` | The brief explicitly wants a starting prompt from the Opus 5.5 code-video catalog | Skip it. It researches prompts only and does not render |
 
 The recommendation is stored in `brief.json.optionalAgents`. Optional agents are never silently activated. A user request can approve an agent even when it is not strictly necessary, with the tradeoff recorded. Exactly one video renderer runs: HyperFrames, Remotion, or motionmaxxing.
+
+## 20-style visual language library
+
+Designme now includes a style library for: neon glow, particle swarm, pixel art, glitch, glassmorphism, liquid morph, holographic foil, clay 3D, kinetic typography, vaporwave grid, halftone dots, Bauhaus shapes, ASCII art, paper cutout, flow fields, dithering, risograph print, metaballs, topographic lines, and ray-marched fractals. During grilling, choose one primary and at most one supporting style. `visual-style-agent` writes `style-spec.md` with the material system, palette, motion grammar, hero beat, build sample, renderer handoff, and anti-slop checks.
+
+Read [`references/visual-style-library.md`](references/visual-style-library.md) for the full recipes and code patterns.
 
 ## iart-ai motion-skill packs
 
@@ -45,13 +51,13 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 
 ## Free-only rule
 
-All 21 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off.
+All 22 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off.
 
 ## Structure
 
 - `SKILL.md` — `/designme` contract, install gate, dependency waves, optional-agent gate, and output contract
-- `agents/` — creative direction, motion engineering, optional Remotion/Hairline/motionmaxxing/Opus-prompt agents, craft review, and QA agents
-- `references/` — grilling questions, prompt sources, iart motion-pack routing, motionmaxxing contract, Opus 5.5 prompt catalog, QA rubric, asset pipeline, missing checklist, and orchestration state
+- `agents/` — creative direction, motion engineering, visual-style direction, optional Remotion/Hairline/motionmaxxing/Opus-prompt agents, craft review, and QA agents
+- `references/` — grilling questions, prompt sources, iart motion-pack routing, motionmaxxing contract, Opus 5.5 prompt catalog, visual-style library, QA rubric, asset pipeline, missing checklist, and orchestration state
 - `manifest.json` — selected source repositories and agent responsibilities
 
 ## Install

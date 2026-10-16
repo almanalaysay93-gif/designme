@@ -11,6 +11,11 @@
       "role": "Official GSAP: Timeline, ScrollTrigger, Flip, SplitText, useGSAP"
     },
     {
+      "repo": "designme/internal",
+      "agent": "visual-style-agent",
+      "role": "20-style visual language library: material, palette, motion grammar, camera, procedural build samples, and anti-slop checks"
+    },
+    {
       "repo": "zanwei/design-dna",
       "agent": "design-dna-agent",
       "role": "Extract tokens/style/effects from references into JSON"
@@ -99,9 +104,9 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 21,
+    "subagent_count": 22,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, Hairline, motionmaxxing, and the Opus 5.5 prompt catalog run locally and only when explicitly requested. motionmaxxing must not call ElevenLabs or any paid voice/music API. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits.",
+    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, Hairline, motionmaxxing, and the Opus 5.5 prompt catalog run locally and only when explicitly requested. motionmaxxing must not call ElevenLabs or any paid voice/music API. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -112,6 +117,11 @@
         "agent": "qa-anti-slop-agent",
         "repo": "designme/internal",
         "role": "Final visual, motion, beat, audio, accessibility, and determinism gate"
+      },
+      {
+        "agent": "visual-style-agent",
+        "repo": "designme/internal",
+        "role": "Approved style selection, style-spec.md, implementation sample, and style-specific QA checks"
       }
     ],
     "conditional_agents": [
@@ -167,6 +177,7 @@
     "motionmaxxing_skill": "https://github.com/Tejashmakwana/motionmaxxing/blob/main/SKILL.md",
     "motionmaxxing_license": "Apache-2.0",
     "opus5_videos_repo": "https://github.com/yihui-dev/awesome-opus5-5-videos",
-    "opus5_videos_license": "MIT"
+    "opus5_videos_license": "MIT",
+    "visual_style_library": "references/visual-style-library.md"
   }
 }

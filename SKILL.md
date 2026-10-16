@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, and deterministic HTML video. Combines Three.js, GSAP, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, and QA in one orchestrated command.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, and deterministic HTML video. Combines Three.js, GSAP, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, and QA in one orchestrated command.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -14,6 +14,7 @@ One command for brand-led, code-authored motion and interactive web visuals. Hyp
 
 - **Design DNA + motion principles:** extract a visual system and a motion doctrine before code.
 - **Direction:** develop competing creative directions, a one-claim story arc, camera language, and shot plan.
+- **Visual language:** select one primary style and at most one supporting style, then turn it into a material, motion, camera, shader, proof, and anti-slop specification.
 - **Beat sync:** make a shared beat/timeline table that drives visuals, transitions, captions, and audio cues.
 - **Craft:** use GSAP for choreography, Three.js for hero 3D, and pure `render(t)` functions for seek-safe generative layers.
 - **Sound:** write code-generated cues or wire approved audio against the same timeline, then master and verify it.
@@ -59,7 +60,7 @@ Use only free, local, open-source, or already-installed tools and APIs. Never ca
 
 ### 1 — The Griller (1 agent) — ALWAYS FIRST — BLOCKING
 
-Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, the optional-agent gate, and motion-skill pack selection.
+Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, the visual-style gate, the optional-agent gate, and motion-skill pack selection.
 
 The griller must produce an explicit recommendation for every optional agent:
 
@@ -71,6 +72,7 @@ The griller must produce an explicit recommendation for every optional agent:
     "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "HyperFrames is sufficient"},
     "opus5-videos-agent": {"requested": false, "needed": false, "reason": "No Opus 5.5 prompt catalog requested"}
   },
+  "visualStyle": {"primary": null, "secondary": null, "requested": true, "reason": "", "material": "", "motionGrammar": "", "heroBeat": "", "antiSlop": []},
   "motionSkillPacks": []
 }
 ```
@@ -91,6 +93,7 @@ Show the thesis, renderer choice, optional-agent recommendations, and brief to t
 
 **Wave 2 (needs brief and Wave 1 context):**
 
+- `visual-style-agent` — converts the selected visual style into a buildable style specification and sample recipe.
 - `motion-design-agent` — writes timing, easing, weight, and choreography doctrine.
 - `launch-director-agent` — writes three visual directions, kills two, and creates the story/shot/camera/look plan.
 - `superpowers-agent` — writes the execution plan and tests.
@@ -145,8 +148,8 @@ Compare two final renders by hash. If voice or music is present, verify captions
 - `/hyperframes/composition/` with `index.html`, `style.css`, `script.js`, `tokens.css`, and assets, when HyperFrames is the renderer
 - `film/index.html`, `film/STORYBOARD.md`, `film/NOTE.md`, `film/final.mp4`, and `film/look-final/` when motionmaxxing owns the film
 - `renderer-decision.md` when the video renderer is not HyperFrames
-- `brief.json`, `design-dna.json`, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
+- `brief.json`, `design-dna.json`, `style-spec.md`, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable
 - `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `opus-prompt-brief.md` when applicable, `brief-enhancements.md`, `motion-skills-installed.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
 
-No generic gradients, default purple-on-black SaaS styling, unmotivated bounce, or code-first production. Every visual and sound cue must have an intentional role in the approved thesis.
+No generic gradients, default purple-on-black SaaS styling, unmotivated bounce, or code-first production. The selected visual style must be an intentional system, not a list of effects. Every visual and sound cue must have an intentional role in the approved thesis.

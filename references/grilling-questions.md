@@ -16,7 +16,9 @@ Don't accept the first answer. Dig until the project, renderer, interactions, an
    - **Opus 5.5 videos:** select only when the user wants a starting prompt from that code-video catalog. It does not change the renderer. See `references/opus5-videos.md`.
    - **None of the video swaps:** choose this when the default HyperFrames workflow is sufficient.
 
-9. **Motion-skills pack gate:** Which format and craft packs are needed? Use the smallest compatible set from `references/motion-skills-packs.md`—for example TikTok/Reels, data animation, explainer, kinetic typography, WebGL, or web animation.
+9. **Visual-style gate:** Choose one primary style from `references/visual-style-library.md` and optionally one supporting style. Which of the 20 styles fits the brand and claim? The agent must recommend a style, material, motion grammar, hero beat, and anti-slop boundaries.
+
+10. **Motion-skills pack gate:** Which format and craft packs are needed? Use the smallest compatible set from `references/motion-skills-packs.md`—for example TikTok/Reels, data animation, explainer, kinetic typography, WebGL, or web animation.
 
 The planner must make a recommendation for each optional agent and motion-skill pack, explain why it is or is not needed, and ask the user to approve the selection before dispatch. Exactly one video renderer.
 
@@ -43,6 +45,16 @@ Output: `brief.json`
     {"pack": "iart-ai/motion-design-skills", "requested": false, "needed": false, "reason": ""}
   ],
   "successMetric": "",
-  "interactionThesis": ""
+  "interactionThesis": "",
+  "visualStyle": {
+    "primary": "particle-swarm",
+    "secondary": null,
+    "requested": true,
+    "reason": "",
+    "material": "",
+    "motionGrammar": "",
+    "heroBeat": "",
+    "antiSlop": []
+  }
 }
 ```

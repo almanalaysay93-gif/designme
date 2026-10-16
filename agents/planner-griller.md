@@ -20,6 +20,11 @@ Read `references/grilling-questions.md` and ask 5-8 sharp questions covering:
 - whether **Hairline** is explicitly requested for an interactive figure or pointer-responsive visual
 - whether **motionmaxxing** is explicitly requested for a measured-motion HTML film
 - whether **Opus 5.5 videos** should supply a starting prompt from the code-video catalog
+- which primary visual style, and at most one supporting style, should guide the project
+
+## Visual-style decision gate
+
+Read `references/visual-style-library.md`. Recommend one primary style and at most one supporting style. Explain why the material, palette, motion grammar, camera, and hero beat belong to the brand and claim. Reject effect-stacking and record style-specific anti-slop checks.
 
 ## Motion-skills pack decision gate
 
@@ -51,6 +56,7 @@ Synthesize:
   "resolution": "...",
   "tech": "...",
   "audio": {"voice": false, "music": false, "sfx": false, "bpm": null},
+  "visualStyle": {"primary": "particle-swarm", "secondary": null, "requested": true, "reason": "...", "material": "...", "motionGrammar": "...", "heroBeat": "...", "antiSlop": []},
   "motionSkillPacks": [{"pack": "iart-ai/motion-design-skills", "requested": false, "needed": false, "reason": "..."}],
   "optionalAgents": {
     "remotion-agent": {"requested": false, "needed": false, "reason": "..."},
@@ -70,5 +76,5 @@ Rules:
 - Propose thesis before code.
 - Name the slop being avoided.
 - Explain that optional agents are opt-in and why each is included or skipped.
-- Explain that the studio will use direction, beat sync, craft review, and QA agents.
+- Explain that the studio will use visual-style, direction, beat sync, craft review, and QA agents.
 - Never accept “make it cool” without extracting concrete choices.

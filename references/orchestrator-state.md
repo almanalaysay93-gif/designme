@@ -4,15 +4,16 @@ File: `orchestrator.json` (written by main skill, updated by each agent)
 
 ```json
 {
-  "brief_version": 6,
-  "subagent_count": 21,
+  "brief_version": 7,
+  "subagent_count": 22,
   "waves": {
     "wave1": {"design-dna-agent": "pending", "memory-agent": "pending", "browser-agent": "pending", "find-skills-agent": "pending", "prompt-reference-agent": "pending", "opus5-videos-agent": "skipped-unless-approved"},
-    "wave2": {"motion-design-agent": "pending", "launch-director-agent": "pending", "superpowers-agent": "pending"},
+    "wave2": {"visual-style-agent": "pending", "motion-design-agent": "pending", "launch-director-agent": "pending", "superpowers-agent": "pending"},
     "wave3": {"beat-sync-agent": "pending", "gsap-agent": "pending", "threejs-agent": "pending", "genjutsu-agent": "pending", "taste-gsd-agent": "pending"},
     "wave4": {"hyperframes-agent": "pending", "remotion-agent": "skipped-unless-approved", "hairline-agent": "skipped-unless-approved", "motionmaxxing-agent": "skipped-unless-approved", "motion-craft-agent": "pending"},
     "qa": {"qa-anti-slop-agent": "pending"}
   },
+  "visual_style": {"primary": null, "secondary": null, "approved": false, "style_spec": null},
   "motion_skill_packs": [],
   "motion_skill_pack_approval": false,
   "video_renderer": "hyperframes",
