@@ -59,3 +59,20 @@
 - [ ] Captions overlay if voice
 - [ ] Deterministic render tested: 2 renders identical hash
 - [ ] ffprobe confirms expected FPS, dimensions, duration, and audio stream
+
+## motionmaxxing (only if it owns the film)
+- [ ] It is the only video renderer; HyperFrames and Remotion were skipped
+- [ ] `renderer-decision.md` records why
+- [ ] `film/NOTE.md` quotes G0–G5 from `look.py` and `lint.mjs`, not a self-grade
+- [ ] G1 and G4 were judged from the contact sheet
+- [ ] No page chrome, deck layout, flat swatch ground, or void card
+- [ ] The idea fails a competitor-logo swap
+- [ ] No ElevenLabs or other paid voice/music API; audio is local or user-provided
+- [ ] Two local renders match by hash and ffprobe matches the plan
+
+## Opus 5.5 prompts (only if that agent ran)
+- [ ] `opus-prompt-brief.md` cites 1–3 catalog entries with author and original post
+- [ ] The brief says what craft was kept and what was rejected
+- [ ] No paid generator, voice, or asset API from a source prompt was called
+- [ ] The film is not a shot-for-shot copy of the reference
+- [ ] The catalog was not vendored into the project
