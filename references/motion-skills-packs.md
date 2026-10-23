@@ -19,7 +19,7 @@ Source: https://github.com/iart-ai/motion-skills
 | `iart-ai/web-animation-skills` | Accessible web motion, SVG, GSAP, Lottie, and UI animation | `motion-design-agent`, `gsap-agent`, `hairline-agent` |
 | `iart-ai/motion-design-skills` | Motion principles, timing, transitions, and visual polish | `motion-design-agent`, `motion-craft-agent`, `qa-anti-slop-agent` |
 | `iart-ai/kinetic-typography-skills` | Kinetic type, captions, titles, and text choreography | `motion-design-agent`, `beat-sync-agent`, `remotion-agent` |
-| `iart-ai/freelance-motion-skills` | Client briefs, handoff, revisions, and studio delivery | `planner-griller`, `superpowers-agent`, `qa-anti-slop-agent` |
+| `iart-ai/freelance-motion-skills` | Client briefs, handoff, revisions, and studio delivery | `planner-griller`, `superlite-agent`, `qa-anti-slop-agent` |
 | `iart-ai/webgl-animation-skills` | Three.js, WebGL, shaders, and technical 3D motion | `threejs-agent`, `motion-design-agent`, `qa-anti-slop-agent` |
 | `iart-ai/manim-skills` | Mathematical and educational animation | `remotion-agent`, `threejs-agent`, `launch-director-agent` |
 | `iart-ai/generative-illustration-skills` | Generative illustration and creative coding | `threejs-agent`, `hairline-agent`, `motion-design-agent` |

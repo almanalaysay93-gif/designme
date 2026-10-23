@@ -28,7 +28,7 @@ Fix added: hyperframes-agent now has asset checklist in references/asset-pipelin
 
 ### 5. Cost & Concurrency
 - 12 agents parallel = $$$ and rate limits. Now waved + concurrency limit 3-4
-- No token budget. Added: superpowers plan includes cost estimate, user approves before Wave 2
+- No token budget. Added: Superlite execution plan includes cost estimate, user approves before Wave 2
 
 ### 6. State & Memory
 - brief.json was overwritten each time, no versioning
@@ -42,7 +42,7 @@ Fix added: hyperframes-agent now has asset checklist in references/asset-pipelin
 ### 8. Testing & Verification
 - No browser verification that final MP4 matches refs
 - No webapp-testing skill usage (from anthropics/skills)
-- No TDD cases from superpowers actually executed
+- No TDD cases from the Superlite execution plan actually executed
 
 ### 9. Output Contracts
 - No clear output folder structure, so agents wrote random places
