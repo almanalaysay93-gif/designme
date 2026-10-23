@@ -166,8 +166,18 @@ Compare two final renders by hash. If voice or music is present, verify captions
 - `/hyperframes/composition/` with `index.html`, `style.css`, `script.js`, `tokens.css`, and assets, when HyperFrames is the renderer
 - `film/index.html`, `film/STORYBOARD.md`, `film/NOTE.md`, `film/final.mp4`, and `film/look-final/` when motionmaxxing owns the film
 - `renderer-decision.md` when the video renderer is not HyperFrames
+- `UX_LAWS_AUDIT.md` with all 14 laws, evidence, fixes and re-audit results
 - `brief.json`, `design-dna.json`, `style-spec.md`, `uiux-design-system.md` when applicable, `uiux-audit.md` when applicable, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable
 - `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `opus-prompt-brief.md` when applicable, `brief-enhancements.md`, `motion-skills-installed.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
 
 No generic gradients, default purple-on-black SaaS styling, unmotivated bounce, or code-first production. The selected visual style must be an intentional system, not a list of effects. Every visual and sound cue must have an intentional role in the approved thesis.
+
+## Mandatory UX laws
+
+Before planning or building, read the complete [UX laws reference](references/ux-laws.md)
+and [its workflow](references/ux-laws-workflow.md). Map all 14 laws in the plan and
+include the relevant checks in every specialist handoff. After every build or
+significant change, complete `UX_LAWS_AUDIT.md`, fix findings and re-audit before
+completion. The audit is mandatory even when optional UX tools are skipped.
+Unresolved violations or missing evidence block completion; existing repair caps apply.

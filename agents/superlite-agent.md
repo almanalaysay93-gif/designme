@@ -26,3 +26,15 @@ Define a fresh findings-only final engineering review after integration and craf
 review. Send defects to their owners, then rerun affected checks within Designme's
 three-loop maximum. QA remains the final gate before final render verification.
 This planning role does not write animation code or call native plugin commands.
+
+## Mandatory UX laws
+
+Read the complete [UX laws reference](../references/ux-laws.md) and
+[audit workflow](../references/ux-laws-workflow.md). The execution plan maps all
+14 laws to the actual interface/scenes and assigns acceptance evidence. QA owns
+`UX_LAWS_AUDIT.md` after every build/significant change, sends fixes to the relevant
+specialist, and re-audits within the existing three-loop cap. This applies even
+when UI/UX Pro Max is skipped. For pure films, assess hierarchy, information load,
+readability, emphasis, opening/ending and pacing from timed frames; document why
+interaction-only checks have no corresponding controls. Missing evidence is
+BLOCKED; Violated rows block PASS. Include the audit in `audit.md` and delivery.

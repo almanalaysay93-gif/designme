@@ -180,6 +180,15 @@
       "conflicts_with": [
         "obra/superpowers"
       ]
+    },
+    "ux_laws": {
+      "required": true,
+      "reference": "references/ux-laws.md",
+      "workflow": "references/ux-laws-workflow.md",
+      "audit": "UX_LAWS_AUDIT.md",
+      "law_count": 14,
+      "optional_ux_agent_required": false,
+      "completion": "No Violated rows; every Partial has a documented justification and evidence. Missing evidence blocks completion."
     }
   },
   "reference_sources": {
