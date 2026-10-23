@@ -78,9 +78,9 @@
   ],
   "engineering_track_from_tiktok": [
     {
-      "repo": "obra/superpowers",
-      "agent": "superpowers-agent",
-      "role": "Brainstorming, planning, TDD, systematic debugging, /brainstorm /write-plan /execute-plan"
+      "repo": "iha2/superlite",
+      "agent": "superlite-agent",
+      "role": "Bundled execution adapter: dependency plans, single-owner contracts, systematic debugging, targeted repairs and fresh final review"
     },
     {
       "repo": "anthropics/skills",
@@ -169,6 +169,26 @@
       "default": "smallest-compatible-set",
       "source": "references/motion-skills-packs.md",
       "install_pattern": "npx skills add iart-ai/<approved-pack> -g"
+    },
+    "execution_adapter": {
+      "source": "iha2/superlite",
+      "inspected_ref": "0a852888c8986a6ac03e9bc82519ff8f99c0377a",
+      "contract": "references/superlite-integration.md",
+      "native_plugin_required": false,
+      "coordinator": "designme",
+      "model_routing": "existing authorized host model only",
+      "conflicts_with": [
+        "obra/superpowers"
+      ]
+    },
+    "ux_laws": {
+      "required": true,
+      "reference": "references/ux-laws.md",
+      "workflow": "references/ux-laws-workflow.md",
+      "audit": "UX_LAWS_AUDIT.md",
+      "law_count": 14,
+      "optional_ux_agent_required": false,
+      "completion": "No Violated rows; every Partial has a documented justification and evidence. Missing evidence blocks completion."
     }
   },
   "reference_sources": {

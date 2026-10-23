@@ -34,6 +34,11 @@ Claude Code sees `/designme` because the skill folder is named `designme` and fr
 
 ### 0 — Install Gate
 
+Read the [Superlite execution adapter](references/superlite-integration.md).
+Designme is the sole coordinator. Superlite replaces the Superpowers engineering
+role; never enable both plugins together. The bundled adapter needs no plugin
+installation or paid model routing.
+
 Check whether the dependencies are installed. If not, install the selected skills:
 
 ```bash
@@ -46,7 +51,8 @@ npx skills add Tejashmakwana/motionmaxxing -g  # optional measured-motion films;
 # npm install -g ui-ux-pro-max-cli && uipro init --ai claude --global
 # opus5-videos-agent clones yihui-dev/awesome-opus5-5-videos on approval. It is a prompt catalog, not an npx skill.
 # Install only the approved iart-ai packs selected during grilling; see references/motion-skills-packs.md
-npx skills add obra/superpowers vercel-labs/agent-browser thedotmack/claude-mem -g
+npx skills add vercel-labs/agent-browser thedotmack/claude-mem -g
+# Superlite adapter is bundled; optional native plugin: references/superlite-integration.md
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
 npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd -g
 ```
@@ -85,6 +91,10 @@ Show the thesis, renderer choice, optional-agent recommendations, and brief to t
 
 ### 2 — Parallel Spawn — dependency-aware
 
+The wave lists are dependency groups, not blanket parallel dispatch. Follow the
+Superlite adapter: Wave 2 planning waits for design outputs, Wave 3 implementation
+waits for the canonical beat map, and Wave 4 craft review waits for a renderer draft.
+
 **Wave 1 (no dependencies):**
 
 - `design-dna-agent` — extracts tokens from references.
@@ -101,7 +111,7 @@ Show the thesis, renderer choice, optional-agent recommendations, and brief to t
 - `ui-ux-pro-max-agent` — runs only when approved for UI/UX work; creates a local searchable design system and UI audit.
 - `motion-design-agent` — writes timing, easing, weight, and choreography doctrine.
 - `launch-director-agent` — writes three visual directions, kills two, and creates the story/shot/camera/look plan.
-- `superpowers-agent` — writes the execution plan and tests.
+- `superlite-agent` — writes the execution plan and tests.
 
 **Wave 3 (needs Wave 2 outputs):**
 
@@ -120,6 +130,9 @@ Show the thesis, renderer choice, optional-agent recommendations, and brief to t
 - `motion-craft-agent` — runs still/contact-sheet review, checks frame collisions and safe areas, wires code-generated or approved sound, and records fixes. If motionmaxxing owns the film, review `film/look-final/` and `film/NOTE.md` instead of a HyperFrames contact sheet.
 
 Pass `brief.json`, the approved `motionSkillPacks`, and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.
+
+Run a fresh findings-only engineering review after integration and craft review;
+route fixes to their owners and record evidence before the final QA gate.
 
 ### 3 — QA Anti-Slop Loop — ALWAYS LAST
 
@@ -153,8 +166,18 @@ Compare two final renders by hash. If voice or music is present, verify captions
 - `/hyperframes/composition/` with `index.html`, `style.css`, `script.js`, `tokens.css`, and assets, when HyperFrames is the renderer
 - `film/index.html`, `film/STORYBOARD.md`, `film/NOTE.md`, `film/final.mp4`, and `film/look-final/` when motionmaxxing owns the film
 - `renderer-decision.md` when the video renderer is not HyperFrames
+- `UX_LAWS_AUDIT.md` with all 14 laws, evidence, fixes and re-audit results
 - `brief.json`, `design-dna.json`, `style-spec.md`, `uiux-design-system.md` when applicable, `uiux-audit.md` when applicable, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable
 - `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `opus-prompt-brief.md` when applicable, `brief-enhancements.md`, `motion-skills-installed.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
 
 No generic gradients, default purple-on-black SaaS styling, unmotivated bounce, or code-first production. The selected visual style must be an intentional system, not a list of effects. Every visual and sound cue must have an intentional role in the approved thesis.
+
+## Mandatory UX laws
+
+Before planning or building, read the complete [UX laws reference](references/ux-laws.md)
+and [its workflow](references/ux-laws-workflow.md). Map all 14 laws in the plan and
+include the relevant checks in every specialist handoff. After every build or
+significant change, complete `UX_LAWS_AUDIT.md`, fix findings and re-audit before
+completion. The audit is mandatory even when optional UX tools are skipped.
+Unresolved violations or missing evidence block completion; existing repair caps apply.

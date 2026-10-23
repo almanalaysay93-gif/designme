@@ -47,3 +47,15 @@ Re-spawn only the named agent. Allow at most 3 loops. After PASS, write `audit.m
 When `visual-style-agent` is active, verify `style-spec.md`: exactly one primary style and at most one supporting style, coherent material/palette/motion grammar, a visible hero beat tied to proof, readable text, deterministic procedural output, and no effect used without a stated role.
 
 When `ui-ux-pro-max-agent` is approved, verify `uiux-design-system.md` and `uiux-audit.md`: local search evidence, contrast, keyboard/focus, semantics, responsive wrapping, touch targets, reduced motion, icon discipline, and stack-specific checks.
+
+## Mandatory UX laws
+
+Read the complete [UX laws reference](../references/ux-laws.md) and
+[audit workflow](../references/ux-laws-workflow.md). The execution plan maps all
+14 laws to the actual interface/scenes and assigns acceptance evidence. QA owns
+`UX_LAWS_AUDIT.md` after every build/significant change, sends fixes to the relevant
+specialist, and re-audits within the existing three-loop cap. This applies even
+when UI/UX Pro Max is skipped. For pure films, assess hierarchy, information load,
+readability, emphasis, opening/ending and pacing from timed frames; document why
+interaction-only checks have no corresponding controls. Missing evidence is
+BLOCKED; Violated rows block PASS. Include the audit in `audit.md` and delivery.

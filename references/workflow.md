@@ -8,3 +8,8 @@
 6. `qa-anti-slop-agent` checks visual, timing, beat sync, audio, accessibility, and determinism. If motionmaxxing owns the film, it also checks quoted G0–G5 evidence. If the Opus catalog was used, it checks credits and that the film is not a clone.
 7. If needed, re-run only the responsible agent for up to 3 loops.
 8. On PASS, render the final MP4 with the approved renderer, compare two render hashes, run `ffprobe`, and write `audit.md`.
+
+UX laws apply throughout: read `references/ux-laws.md` before planning, map all
+14 laws in `plan.md`, pass checks to each specialist, and have final QA complete
+`UX_LAWS_AUDIT.md` after each build/significant change. Fix and re-audit within the
+existing repair cap; no PASS with violations or missing required evidence.

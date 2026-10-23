@@ -76,3 +76,11 @@
 - [ ] No paid generator, voice, or asset API from a source prompt was called
 - [ ] The film is not a shot-for-shot copy of the reference
 - [ ] The catalog was not vendored into the project
+
+## Mandatory UX laws (all outputs)
+
+- [ ] Read the complete [UX laws reference](ux-laws.md) and [workflow](ux-laws-workflow.md)
+- [ ] `UX_LAWS_AUDIT.md` covers every law with status and concrete evidence
+- [ ] No Violated rows remain; justified Partial rows have scope, reason and impact
+- [ ] Missing evidence blocks PASS; applicable UI laws are not skipped with optional agents
+- [ ] Fix owners, re-audit results and remaining limitations appear in `audit.md`
