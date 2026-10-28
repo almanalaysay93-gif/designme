@@ -1,7 +1,7 @@
 # img2threejs Integration
 
 `img2threejs-agent` integrates [img2threejs/img2threejs](https://github.com/img2threejs/img2threejs) (Apache-2.0, v2.0.0) into `/designme` as an optional Wave 2 reconstruction agent.
-The canonical checkout lives at `C:/Users/ORGANTRANSPLANT/.agents/skills/img2threejs` with junctions across Claude Code, Codex, Grok, Antigravity, Gemini, and OpenCode.
+The canonical checkout lives at `~/.agents/skills/img2threejs` with junctions across Claude Code, Codex, Grok, Antigravity, Gemini, and OpenCode.
 
 ## When to select `img2threejs-agent`
 
@@ -20,7 +20,7 @@ Recommend skipping `img2threejs-agent` when the project has no 3D hero object, u
 - Use only the built-in `generic` and `character` profiles.
 - Do not install or call paid plugins from `@img2threejs/img2`.
 - Do not call Tripo, Hyper3D, CharacterGen, or any external neural mesh service.
-- Use local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe`) via Playwright for pass screenshot captures.
+- Use local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`) via Playwright for pass screenshot captures.
 
 ## QA checks
 

@@ -59,7 +59,8 @@ npx skills add Tejashmakwana/motionmaxxing -g  # optional measured-motion films;
 npx skills add vercel-labs/agent-browser thedotmack/claude-mem -g
 # Superlite adapter is bundled; optional native plugin: references/superlite-integration.md
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
-npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd -g
+npx skills add vercel-labs/skills --skill find-skills -g
+# taste is installed from Leonxlnx/taste-skill (folder taste-skill); gsd is not used here (no 'gsd' skill exists upstream)
 ```
 
 Do not use Remotion as a second renderer for a HyperFrames composition. Activate `remotion-agent` only when the brief explicitly requires a React/Remotion deliverable, and record the renderer decision. Activate `hairline-agent` only when the brief explicitly requests Hairline or an interactive figure.
@@ -106,7 +107,7 @@ waits for the canonical beat map, and Wave 4 craft review waits for a renderer d
 - `design-dna-agent` — extracts tokens from references.
 - `memory-agent` — loads past taste and prior constraints.
 - `find-skills-agent` — discovers only missing, compatible skills.
-- `browser-agent` — captures reference screenshots with local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe`).
+- `browser-agent` — captures reference screenshots with local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`).
 - `prompt-reference-agent` — curates free prompt patterns from Blotato and Remotion for briefs and future projects.
 - `opus5-videos-agent` — runs only if approved. Picks a few catalog prompts and writes `opus-prompt-brief.md` before direction. Otherwise mark skipped.
 - `find-skills-agent` — routes approved iart-ai motion-skill packs to the owning agents and records local installs.
@@ -143,7 +144,7 @@ route fixes to their owners and record evidence before the final QA gate.
 
 ### 3 — QA Anti-Slop Loop — ALWAYS LAST
 
-Spawn `qa-anti-slop-agent` after composition and craft review. It reads `references/qa-rubric.md`, `references/browsercode-chromium-qa.md`, and `references/missing-checklist.md`. It boots the rendered output in local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe`) and checks `leaningtech/browsercode` (`C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode`) preview compliance to verify that the visual output matches the approved design and that every agent followed `plan.md`.
+Spawn `qa-anti-slop-agent` after composition and craft review. It reads `references/qa-rubric.md`, `references/browsercode-chromium-qa.md`, and `references/missing-checklist.md`. It boots the rendered output in local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`) and checks `leaningtech/browsercode` (`~/.agents/tools/leaningtech-browsercode`) preview compliance to verify that the visual output matches the approved design and that every agent followed `plan.md`.
 
 If `FAIL` or `SLOP`, write `feedback.md` naming the exact agent, file, line or timestamp, and fix. Re-spawn only that agent. Allow at most 3 loops. On the third failure, escalate with `audit.md` and the concrete risk.
 

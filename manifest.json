@@ -103,7 +103,7 @@
       "role": "Local Chromium and BrowserCode verification for JS-heavy pages, click, hover, and visual token extraction"
     },
     {
-      "repo": "glittercowboy/taste + gsd",
+      "repo": "Leonxlnx/taste-skill (gsd removed; render tasks are split by taste-gsd-agent)",
       "agent": "taste-gsd-agent",
       "role": "Taste = aesthetic gate, GSD = get-shit-done ultraplan + execution"
     }
@@ -222,9 +222,9 @@
     "img2threejs_showcase": "https://github.com/img2threejs/img2threejs-showcase",
     "img2threejs_license": "Apache-2.0",
     "leaningtech_browsercode_repo": "https://github.com/leaningtech/browsercode",
-    "leaningtech_browsercode_local": "C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode",
+    "leaningtech_browsercode_local": "~/.agents/tools/leaningtech-browsercode",
     "chromium_repo": "https://github.com/chromium/chromium",
-    "chromium_local_binary": "C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe",
+    "chromium_local_binary": "~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
     "visual_style_library": "references/visual-style-library.md",
     "ui_ux_pro_max_repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
     "ui_ux_pro_max_homepage": "https://uupm.cc",

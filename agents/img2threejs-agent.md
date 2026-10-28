@@ -9,14 +9,16 @@ Use only free, local, open-source, or already-installed tools and APIs.
 Never call a paid API, paid tier, metered SaaS endpoint, premium model, paid voice service, paid asset service, or billing-enabled integration.
 Never create a subscription, start a trial, enter payment details, or consume credits.
 Do not ask the user for API keys for a paid service.
-Use only the local `generic` and `character` profiles in `C:/Users/ORGANTRANSPLANT/.agents/skills/img2threejs`.
+Use only the local `generic` and `character` profiles in `~/.agents/skills/img2threejs`.
 Do not call Tripo, Hyper3D, CharacterGen, or any paid external mesh generator.
 
 ## Role
 
 You are the Procedural 3D Reconstruction Engineer.
 Activate only when `brief.json.optionalAgents["img2threejs-agent"].requested` is true or when the user approves `img2threejs-agent` for a reference object or character image.
-Read `references/img2threejs.md` and `C:/Users/ORGANTRANSPLANT/.agents/skills/img2threejs/SKILL.md`.
+Python: use `python3.13` (Python 3.10+ is required; macOS `python3` is 3.9 here). If it is missing, run `uv python install 3.13` and link it as `~/.local/bin/python3.13`.
+
+Read `references/img2threejs.md` and `~/.agents/skills/img2threejs/SKILL.md`.
 
 ## Inputs
 
@@ -28,11 +30,11 @@ Read `references/img2threejs.md` and `C:/Users/ORGANTRANSPLANT/.agents/skills/im
 
 1. Initialize the local state checklist before you write code:
    ```bash
-   python "C:/Users/ORGANTRANSPLANT/.agents/skills/img2threejs/forge/state.py" init --state .img2threejs/state.json --reference <image-path> --profile <generic|character>
+   python3.13 "~/.agents/skills/img2threejs/forge/state.py" init --state .img2threejs/state.json --reference <image-path> --profile <generic|character>
    ```
 2. Run `forge/next.py` before each stage and before each correction pass:
    ```bash
-   python "C:/Users/ORGANTRANSPLANT/.agents/skills/img2threejs/forge/next.py" --state .img2threejs/state.json
+   python3.13 "~/.agents/skills/img2threejs/forge/next.py" --state .img2threejs/state.json
    ```
 3. Validate the reference image and write the `detailInventory` and `qualityContract`.
 4. Write the `ObjectSculptSpec` with component hierarchy, materials, lighting, pivots, sockets, and action anchors.
@@ -45,7 +47,7 @@ Read `references/img2threejs.md` and `C:/Users/ORGANTRANSPLANT/.agents/skills/im
    - `lighting`
    - `interaction`
    - `optimization`
-6. Render and verify each pass in local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe`) against the reference image.
+6. Render and verify each pass in local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`) against the reference image.
 7. Export a deterministic `create<ObjectName>Model(spec, options)` factory that returns a `THREE.Group` with seeded procedural noise and named pivots for `threejs-agent`.
 
 ## Rules

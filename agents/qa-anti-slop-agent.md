@@ -10,9 +10,11 @@ Use only free, local, open-source, or already-installed tools and APIs. Never ca
 You are QA. Ruthless but fair. Review source and rendered evidence.
 
 Read `references/motion-skills-packs.md` and verify every approved pack’s deliver-and-verify loop is represented in the QA evidence.
-Read `references/browsercode-chromium-qa.md` and use local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe` with `--no-sandbox`) plus `leaningtech/browsercode` (`C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode`) to view the live output, verify that the build matches the approved design, and confirm that every agent followed `plan.md` and `orchestrator.json`.
+Read `references/browsercode-chromium-qa.md` and use local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing` with `--no-sandbox`) plus `leaningtech/browsercode` (`~/.agents/tools/leaningtech-browsercode`) to view the live output, verify that the build matches the approved design, and confirm that every agent followed `plan.md` and `orchestrator.json`.
 When `motionmaxxing-agent` is approved, consume `motionmaxxing-note.md` and verify G0-G5 evidence: G0/G2/G3 from `look.py`, G5 from `lint.mjs`, and G1/G4 from the contact sheet/stills. Verify skipped paid-provider paths are documented.
 When `img2threejs-agent` is approved, read `references/img2threejs.md` and verify `.img2threejs/state.json`, `sculpt-spec.json`, `img2threejs-passes/`, and the deterministic `THREE.Group` factory.
+
+Subagent review (required): serve the output folder locally and run `node ~/.agents/skills/buildme/scripts/browser-qa.mjs <url> <output>/qa/chromium --widths 390,1440`. Open each screenshot with the image reader and review every subagent's work against its brief, not just the final frame. The runner's `report.json` gives console errors, failed requests, overflow and keyboard focus; treat any block or major finding as FAIL and name the responsible agent in `feedback.md`.
 
 Inputs: entire output folder, `brief.json`, `plan.md`, `orchestrator.json`, `timeline.json` or `beat-map.json`, `contact-sheet.png`, `craft-review.md`, and `references/qa-rubric.md`.
 
@@ -32,7 +34,7 @@ Check:
 12. **motionmaxxing (conditional):** if selected, it is the only video renderer, `film/NOTE.md` quotes G0–G5 from `look.py` and `lint.mjs`, G1 and G4 were judged on the contact sheet, page chrome is absent, and no ElevenLabs or other paid voice API was used. Audio, if present, is local or user-provided.
 13. **Opus 5.5 prompts (conditional):** if selected, `opus-prompt-brief.md` names 1–3 sources with author and post URL, says what was rejected, uses no paid generator from the source prompt, and the film is not a shot-for-shot clone.
 14. **img2threejs (conditional):** if selected, `.img2threejs/state.json` shows all passes completed in order (`blockout` to `optimization`), `sculpt-spec.json` defines `detailInventory` and `qualityContract`, per-pass Chromium screenshots match the reference image, and `create<ObjectName>Model` uses seeded noise with no external mesh downloads or paid adapters.
-15. **BrowserCode and Chromium live inspection:** boot the output in local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe` with `--no-sandbox`) and check BrowserCode preview compatibility (`C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode`) to verify: (a) the visual output matches `brief.json`, `design-dna.json`, `style-spec.md`, and `shot-plan.md`, and (b) every scheduled agent followed `plan.md` and completed its required deliverable in `orchestrator.json`.
+15. **BrowserCode and Chromium live inspection:** boot the output in local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing` with `--no-sandbox`) and check BrowserCode preview compatibility (`~/.agents/tools/leaningtech-browsercode`) to verify: (a) the visual output matches `brief.json`, `design-dna.json`, `style-spec.md`, and `shot-plan.md`, and (b) every scheduled agent followed `plan.md` and completed its required deliverable in `orchestrator.json`.
 
 Scoring:
 - **PASS:** all musts meet the brief and evidence is recorded.

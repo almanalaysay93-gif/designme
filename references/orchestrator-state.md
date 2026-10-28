@@ -30,8 +30,8 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
     "img2threejs-agent": {"requested": false, "needed": false, "approved": false, "reason": ""}
   },
   "qa_verification": {
-    "chromium_binary": "C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe",
-    "browsercode_repo": "C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode",
+    "chromium_binary": "~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "browsercode_repo": "~/.agents/tools/leaningtech-browsercode",
     "design_verified": false,
     "plan_verified": false
   },
