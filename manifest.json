@@ -3,7 +3,12 @@
     {
       "repo": "CloudAI-X/threejs-skills",
       "agent": "threejs-agent",
-      "role": "3D scenes, particles, shaders, GLTF, postprocessing"
+      "role": "3D scenes, particles, shaders, GLTF, postprocessing, and mounting procedural img2threejs models"
+    },
+    {
+      "repo": "img2threejs/img2threejs",
+      "agent": "img2threejs-agent",
+      "role": "Optional procedural image-to-Three.js reconstruction: staged sculpting pipeline (blockout to optimization), forge state gates, and deterministic THREE.Group factory"
     },
     {
       "repo": "greensock/gsap-skills",
@@ -93,9 +98,9 @@
       "role": "Persistent memory across sessions, compress + re-inject context"
     },
     {
-      "repo": "vercel-labs/agent-browser",
+      "repo": "vercel-labs/agent-browser + leaningtech/browsercode + chromium/chromium",
       "agent": "browser-agent",
-      "role": "Real Chrome browser for JS-heavy pages, click, login, verify visuals"
+      "role": "Local Chromium and BrowserCode verification for JS-heavy pages, click, hover, and visual token extraction"
     },
     {
       "repo": "glittercowboy/taste + gsd",
@@ -104,9 +109,9 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 23,
+    "subagent_count": 24,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, Hairline, motionmaxxing, and the Opus 5.5 prompt catalog run locally and only when explicitly requested. motionmaxxing must not call ElevenLabs or any paid voice/music API. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
+    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, Hairline, motionmaxxing, img2threejs, and the Opus 5.5 prompt catalog run locally and only when explicitly requested. motionmaxxing must not call ElevenLabs or any paid voice/music API. img2threejs must use only local generic/character profiles and never call Tripo, Hyper3D, CharacterGen, or paid plugins. QA uses local Chromium and leaningtech/browsercode without paid BrowserPod API keys. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -115,8 +120,8 @@
       },
       {
         "agent": "qa-anti-slop-agent",
-        "repo": "designme/internal",
-        "role": "Final visual, motion, beat, audio, accessibility, and determinism gate"
+        "repo": "designme/internal + leaningtech/browsercode + chromium/chromium",
+        "role": "Final visual, motion, beat, audio, accessibility, determinism, UX laws, and live Chromium + BrowserCode design and plan verification gate"
       },
       {
         "agent": "visual-style-agent",
@@ -134,7 +139,8 @@
       "hairline-agent",
       "motionmaxxing-agent",
       "opus5-videos-agent",
-      "ui-ux-pro-max-agent"
+      "ui-ux-pro-max-agent",
+      "img2threejs-agent"
     ],
     "optional_agent_gate": {
       "selection_phase": "planner-griller",
@@ -160,6 +166,10 @@
         "ui-ux-pro-max-agent": {
           "use_when": "The brief includes UI, landing pages, dashboards, product demos, forms, navigation, charts, mobile UI, or UX/accessibility review.",
           "default_recommendation": "skip for pure non-UI films; recommend for any interface or interaction proof."
+        },
+        "img2threejs-agent": {
+          "use_when": "The brief supplies a 2D reference image of an object, product, prop, or character and requires a procedural code-only Three.js THREE.Group reconstruction.",
+          "default_recommendation": "skip unless a reference photo must be reconstructed into a procedural 3D model."
         }
       }
     },
@@ -208,6 +218,13 @@
     "motionmaxxing_license": "Apache-2.0",
     "opus5_videos_repo": "https://github.com/yihui-dev/awesome-opus5-5-videos",
     "opus5_videos_license": "MIT",
+    "img2threejs_repo": "https://github.com/img2threejs/img2threejs",
+    "img2threejs_showcase": "https://github.com/img2threejs/img2threejs-showcase",
+    "img2threejs_license": "Apache-2.0",
+    "leaningtech_browsercode_repo": "https://github.com/leaningtech/browsercode",
+    "leaningtech_browsercode_local": "C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode",
+    "chromium_repo": "https://github.com/chromium/chromium",
+    "chromium_local_binary": "C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe",
     "visual_style_library": "references/visual-style-library.md",
     "ui_ux_pro_max_repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
     "ui_ux_pro_max_homepage": "https://uupm.cc",

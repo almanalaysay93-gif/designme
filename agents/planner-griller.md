@@ -21,6 +21,7 @@ Read `references/grilling-questions.md` and ask 5-8 sharp questions covering:
 - whether **motionmaxxing** is explicitly requested for a measured-motion HTML film
 - whether **Opus 5.5 videos** should supply a starting prompt from the code-video catalog
 - whether **UI/UX Pro Max** is needed for UI structure, design-system generation, stack guidance, interaction, or accessibility
+- whether **img2threejs** is needed to reconstruct a 2D reference object or character image into a procedural Three.js `THREE.Group` model in code
 - which primary visual style, and at most one supporting style, should guide the project
 
 ## UI/UX Pro Max decision gate
@@ -43,6 +44,7 @@ For each optional agent, make a recommendation before dispatch:
 - Recommend **Hairline** only when the user needs an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual. Otherwise recommend **skip**.
 - Recommend **motionmaxxing** only when the user explicitly wants a measured-motion HTML film: brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through its G0–G5 gates. Read `references/motionmaxxing.md`. Otherwise recommend **skip**.
 - Recommend **opus5-videos-agent** only when the user wants a starting prompt from the Opus 5.5 code-video catalog. Read `references/opus5-videos.md`. Otherwise recommend **skip**. It is not a renderer.
+- Recommend **img2threejs-agent** only when the user supplies a 2D reference image of an object, prop, or character and wants a procedural code-only Three.js model (`create<ObjectName>Model`). Read `references/img2threejs.md`. Otherwise recommend **skip**.
 - Exactly one video renderer. Remotion and motionmaxxing cannot both be approved, and neither runs beside HyperFrames.
 - If the user requests an optional agent, include it even if it is not strictly necessary, but explain the tradeoff.
 - Never silently activate an optional agent. Show the selection and reason in the thesis/brief and ask for approval.
@@ -68,7 +70,8 @@ Synthesize:
     "hairline-agent": {"requested": false, "needed": false, "reason": "..."},
     "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "..."},
     "opus5-videos-agent": {"requested": false, "needed": false, "reason": "..."},
-    "ui-ux-pro-max-agent": {"requested": false, "needed": false, "reason": "..."}
+    "ui-ux-pro-max-agent": {"requested": false, "needed": false, "reason": "..."},
+    "img2threejs-agent": {"requested": false, "needed": false, "reason": "..."}
   },
   "successMetric": "...",
   "interactionThesis": "...",

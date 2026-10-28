@@ -77,6 +77,19 @@
 - [ ] The film is not a shot-for-shot copy of the reference
 - [ ] The catalog was not vendored into the project
 
+## img2threejs procedural 3D reconstruction (only if that agent ran)
+- [ ] `.img2threejs/state.json` shows all passes completed in order (`blockout` to `optimization`)
+- [ ] `sculpt-spec.json` defines a complete `detailInventory` and `qualityContract`
+- [ ] `img2threejs-passes/` holds per-pass Chromium screenshots compared against the reference image
+- [ ] `create<ObjectName>Model` uses deterministic noise seeds and named pivots/sockets
+- [ ] No paid or external neural mesh generator (Tripo, Hyper3D, CharacterGen) was called
+
+## Chromium and BrowserCode Live Inspection
+- [ ] Output rendered and inspected in local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe` with `--no-sandbox`)
+- [ ] BrowserCode sandbox compatibility (`C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode`) checked where applicable
+- [ ] Live render verified against `brief.json`, `design-dna.json`, `style-spec.md`, and `shot-plan.md` ("Did it make the right design?")
+- [ ] Workspace artifacts verified against `plan.md` and `orchestrator.json` ("Did every agent follow the plan?")
+
 ## Mandatory UX laws (all outputs)
 
 - [ ] Read the complete [UX laws reference](ux-laws.md) and [workflow](ux-laws-workflow.md)

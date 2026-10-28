@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, and deterministic HTML video. Combines Three.js, GSAP, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, and QA in one orchestrated command.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines Three.js, img2threejs, GSAP, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, and Chromium + BrowserCode QA in one orchestrated command.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -10,21 +10,22 @@ Invoke: `/designme <brief>` — e.g. `/designme premium 9:16 launch reel, Linear
 
 ## What This Is
 
-One command for brand-led, code-authored motion and interactive web visuals. HyperFrames remains the default video renderer, Remotion is an optional local React-video renderer, motionmaxxing is an optional measured-motion HTML film, and Hairline is an optional interactive-figure engine. Blotato and Remotion are also used as free prompt/reference sources for future projects. It adds only complementary production disciplines:
+One command for brand-led, code-authored motion and interactive web visuals. HyperFrames remains the default video renderer, Remotion is an optional local React-video renderer, motionmaxxing is an optional measured-motion HTML film, Hairline is an optional interactive-figure engine, and img2threejs is an optional procedural image-to-3D reconstruction engine. Blotato and Remotion are also used as free prompt/reference sources for future projects. It adds only complementary production disciplines:
 
 - **Design DNA + motion principles:** extract a visual system and a motion doctrine before code.
 - **Direction:** develop competing creative directions, a one-claim story arc, camera language, and shot plan.
 - **Visual language:** select one primary style and at most one supporting style, then turn it into a material, motion, camera, shader, proof, and anti-slop specification.
 - **UI/UX intelligence:** use local UI/UX Pro Max search for interface styles, palettes, typography, UX rules, charts, icons, GSAP guidance, and stack-specific implementation.
+- **Procedural 3D reconstruction:** when approved, `img2threejs-agent` rebuilds a 2D reference image of an object or character into a deterministic code-only `THREE.Group` factory (`create<ObjectName>Model`) for `threejs-agent`.
 - **Beat sync:** make a shared beat/timeline table that drives visuals, transitions, captions, and audio cues.
 - **Craft:** use GSAP for choreography, Three.js for hero 3D, and pure `render(t)` functions for seek-safe generative layers.
 - **Sound:** write code-generated cues or wire approved audio against the same timeline, then master and verify it.
 - **Review:** render stills/contact sheets at beats and inspect them before final MP4 rendering.
 - **Motion skill packs:** route the approved iart-ai packs to the agents that need them; install only the smallest compatible set.
-- **Optional capabilities:** discuss Remotion, Hairline, motionmaxxing, the Opus 5.5 video-prompt catalog, and motion-skill pack selection during grilling, recommend what is needed, and activate only the user-approved choices.
+- **Optional capabilities:** discuss Remotion, Hairline, motionmaxxing, img2threejs, the Opus 5.5 video-prompt catalog, and motion-skill pack selection during grilling, recommend what is needed, and activate only the user-approved choices.
 - **Opus prompt research:** when approved, `opus5-videos-agent` reads a few matching prompts from the MIT catalog, credits the creators, and rewrites the craft for this brand. It never renders and never replaces the video renderer.
 - **Measured-motion film:** when approved, `motionmaxxing-agent` owns one brand-specific HTML film and must pass its G0–G5 gates locally. It never runs beside HyperFrames or Remotion, and it never calls ElevenLabs.
-- **QA:** run anti-slop, determinism, readability, audio, accessibility, and final-frame checks with targeted feedback loops.
+- **QA:** run anti-slop, determinism, readability, audio, accessibility, UX laws, and final-frame checks with live Chromium and BrowserCode verification and targeted feedback loops.
 
 ## Invocation Contract
 
@@ -47,6 +48,10 @@ npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood
 npx skills add remotion-dev/skills -g  # official prompt/reference guidance; local Remotion only
 npx skills add lucasmarkes/hairline -g  # optional interactive figures; free/local only
 npx skills add Tejashmakwana/motionmaxxing -g  # optional measured-motion films; free/local only, no ElevenLabs
+# Optional img2threejs procedural 3D reconstruction (canonical ~/.agents/skills/img2threejs)
+# git clone https://github.com/img2threejs/img2threejs.git ~/.agents/skills/img2threejs
+# Local BrowserCode + Chromium QA verification repo:
+# git clone https://github.com/leaningtech/browsercode.git ~/.agents/tools/leaningtech-browsercode
 # Optional UI/UX Pro Max local skill; MIT, bundled data + Python search, no paid APIs
 # npm install -g ui-ux-pro-max-cli && uipro init --ai claude --global
 # opus5-videos-agent clones yihui-dev/awesome-opus5-5-videos on approval. It is a prompt catalog, not an npx skill.
@@ -61,11 +66,11 @@ Do not use Remotion as a second renderer for a HyperFrames composition. Activate
 
 Do not use motionmaxxing as a second video renderer. Activate `motionmaxxing-agent` only when the brief explicitly requests its measured-motion HTML film (brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through its gates). When it owns the film, skip HyperFrames and Remotion. Exactly one video renderer runs. Read `references/motionmaxxing.md`.
 
-Activate `opus5-videos-agent` only when the user wants a starting prompt from the Opus 5.5 video catalog. It runs in Wave 1, writes `opus-prompt-brief.md`, and is not a video renderer. Read `references/opus5-videos.md`. Activate `ui-ux-pro-max-agent` for UI-containing work when approved; skip it for pure non-UI films. It runs in Wave 2 and writes `uiux-design-system.md` and `uiux-audit.md`.
+Activate `opus5-videos-agent` only when the user wants a starting prompt from the Opus 5.5 video catalog. It runs in Wave 1, writes `opus-prompt-brief.md`, and is not a video renderer. Read `references/opus5-videos.md`. Activate `ui-ux-pro-max-agent` for UI-containing work when approved; skip it for pure non-UI films. It runs in Wave 2 and writes `uiux-design-system.md` and `uiux-audit.md`. Activate `img2threejs-agent` only when approved for a 2D reference object or character image that must be reconstructed into a procedural Three.js `THREE.Group` factory in code. It runs in Wave 2 and hands `create<ObjectName>Model` to `threejs-agent` in Wave 3. Read `references/img2threejs.md`.
 
 ## Free-Only Execution Policy
 
-Use only free, local, open-source, or already-installed tools and APIs. Never call a paid API, paid tier, metered SaaS endpoint, premium model, paid voice service, paid asset service, or billing-enabled integration. Never create a subscription, start a trial, enter payment details, or consume credits. Do not ask the user for API keys for a paid service. If a requested capability requires payment or a paid API, stop that part, explain the limitation, and propose a free/local alternative such as Python, FFmpeg, Chromium, Playwright, system tools, or deterministic code-generated assets. motionmaxxing's optional ElevenLabs voice, SFX, and music path is a paid API and is forbidden.
+Use only free, local, open-source, or already-installed tools and APIs. Never call a paid API, paid tier, metered SaaS endpoint, premium model, paid voice service, paid asset service, or billing-enabled integration. Never create a subscription, start a trial, enter payment details, or consume credits. Do not ask the user for API keys for a paid service. If a requested capability requires payment or a paid API, stop that part, explain the limitation, and propose a free/local alternative such as Python, FFmpeg, Chromium, Playwright, system tools, or deterministic code-generated assets. motionmaxxing's optional ElevenLabs voice, SFX, and music path is a paid API and is forbidden. `img2threejs-agent` must use only local `generic` and `character` profiles and never call Tripo, Hyper3D, CharacterGen, or paid cloud plugins.
 
 ### 1 — The Griller (1 agent) — ALWAYS FIRST — BLOCKING
 
@@ -80,7 +85,8 @@ The griller must produce an explicit recommendation for every optional agent:
     "hairline-agent": {"requested": false, "needed": false, "reason": "No interactive figure requested"},
     "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "HyperFrames is sufficient"},
     "opus5-videos-agent": {"requested": false, "needed": false, "reason": "No Opus 5.5 prompt catalog requested"},
-    "ui-ux-pro-max-agent": {"requested": false, "needed": false, "reason": "No UI or UX work requested"}
+    "ui-ux-pro-max-agent": {"requested": false, "needed": false, "reason": "No UI or UX work requested"},
+    "img2threejs-agent": {"requested": false, "needed": false, "reason": "No 2D reference object image for procedural 3D reconstruction"}
   },
   "visualStyle": {"primary": null, "secondary": null, "requested": true, "reason": "", "material": "", "motionGrammar": "", "heroBeat": "", "antiSlop": []},
   "motionSkillPacks": []
@@ -100,7 +106,7 @@ waits for the canonical beat map, and Wave 4 craft review waits for a renderer d
 - `design-dna-agent` — extracts tokens from references.
 - `memory-agent` — loads past taste and prior constraints.
 - `find-skills-agent` — discovers only missing, compatible skills.
-- `browser-agent` — captures reference screenshots with real Chrome.
+- `browser-agent` — captures reference screenshots with local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe`).
 - `prompt-reference-agent` — curates free prompt patterns from Blotato and Remotion for briefs and future projects.
 - `opus5-videos-agent` — runs only if approved. Picks a few catalog prompts and writes `opus-prompt-brief.md` before direction. Otherwise mark skipped.
 - `find-skills-agent` — routes approved iart-ai motion-skill packs to the owning agents and records local installs.
@@ -109,6 +115,7 @@ waits for the canonical beat map, and Wave 4 craft review waits for a renderer d
 
 - `visual-style-agent` — converts the selected visual style into a buildable style specification and sample recipe.
 - `ui-ux-pro-max-agent` — runs only when approved for UI/UX work; creates a local searchable design system and UI audit.
+- `img2threejs-agent` — runs only when approved for a 2D reference image; runs the staged sculpting pipeline (`blockout` to `optimization`) gated by `forge/state.py` and `forge/next.py` and outputs a deterministic `create<ObjectName>Model` `THREE.Group` factory.
 - `motion-design-agent` — writes timing, easing, weight, and choreography doctrine.
 - `launch-director-agent` — writes three visual directions, kills two, and creates the story/shot/camera/look plan.
 - `superlite-agent` — writes the execution plan and tests.
@@ -117,7 +124,7 @@ waits for the canonical beat map, and Wave 4 craft review waits for a renderer d
 
 - `beat-sync-agent` — creates the shared BPM/frame beat map, transition schedule, and audio cue plan.
 - `gsap-agent` — implements the seekable choreography timeline. If motionmaxxing or Remotion owns the renderer, contribute doctrine and timing notes only; do not build a second HyperFrames timeline.
-- `threejs-agent` — implements only the necessary hero 3D or generative layer, inside the approved renderer.
+- `threejs-agent` — implements only the necessary hero 3D or generative layer, inside the approved renderer, and mounts `create<ObjectName>Model` when `img2threejs-agent` is active.
 - `genjutsu-agent` — writes thesis and anti-slop MASTER.md.
 - `taste-gsd-agent` — performs the aesthetic gate and execution critique.
 
@@ -136,7 +143,7 @@ route fixes to their owners and record evidence before the final QA gate.
 
 ### 3 — QA Anti-Slop Loop — ALWAYS LAST
 
-Spawn `qa-anti-slop-agent` after composition and craft review. It reads `references/qa-rubric.md` and `references/missing-checklist.md`.
+Spawn `qa-anti-slop-agent` after composition and craft review. It reads `references/qa-rubric.md`, `references/browsercode-chromium-qa.md`, and `references/missing-checklist.md`. It boots the rendered output in local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe`) and checks `leaningtech/browsercode` (`C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode`) preview compliance to verify that the visual output matches the approved design and that every agent followed `plan.md`.
 
 If `FAIL` or `SLOP`, write `feedback.md` naming the exact agent, file, line or timestamp, and fix. Re-spawn only that agent. Allow at most 3 loops. On the third failure, escalate with `audit.md` and the concrete risk.
 
@@ -158,7 +165,7 @@ ffprobe -v error -show_streams -show_format film/final.mp4
 
 Add `--audio` only when the mix is local or user-provided. Do not call ElevenLabs.
 
-Compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence. If UI/UX Pro Max is selected, include `uiux-design-system.md`, `uiux-audit.md`, local search queries, responsive/keyboard/focus evidence, and reduced-motion checks. If motionmaxxing is selected, `film/NOTE.md` must quote G0–G5 and a fail is not a pass. If the Opus catalog was selected, `opus-prompt-brief.md` must credit its sources and the film must not be a shot-for-shot clone.
+Compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence. If UI/UX Pro Max is selected, include `uiux-design-system.md`, `uiux-audit.md`, local search queries, responsive/keyboard/focus evidence, and reduced-motion checks. If `img2threejs-agent` is selected, include `.img2threejs/state.json`, `sculpt-spec.json`, `img2threejs-passes/`, and `img2threejs-report.md` in the QA evidence. If motionmaxxing is selected, `film/NOTE.md` must quote G0–G5 and a fail is not a pass. If the Opus catalog was selected, `opus-prompt-brief.md` must credit its sources and the film must not be a shot-for-shot clone.
 
 ## Output Contract
 
@@ -167,7 +174,7 @@ Compare two final renders by hash. If voice or music is present, verify captions
 - `film/index.html`, `film/STORYBOARD.md`, `film/NOTE.md`, `film/final.mp4`, and `film/look-final/` when motionmaxxing owns the film
 - `renderer-decision.md` when the video renderer is not HyperFrames
 - `UX_LAWS_AUDIT.md` with all 14 laws, evidence, fixes and re-audit results
-- `brief.json`, `design-dna.json`, `style-spec.md`, `uiux-design-system.md` when applicable, `uiux-audit.md` when applicable, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
+- `brief.json`, `design-dna.json`, `style-spec.md`, `uiux-design-system.md` when applicable, `uiux-audit.md` when applicable, `sculpt-spec.json` and `img2threejs-report.md` when applicable, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable
 - `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `opus-prompt-brief.md` when applicable, `brief-enhancements.md`, `motion-skills-installed.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
 

@@ -4,15 +4,15 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
 
 ```json
 {
-  "brief_version": 8,
+  "brief_version": 9,
   "execution_adapter": "superlite",
   "coordinator": "designme",
   "tasks": [],
   "engineering_review": "pending",
-  "subagent_count": 23,
+  "subagent_count": 24,
   "waves": {
     "wave1": {"design-dna-agent": "pending", "memory-agent": "pending", "browser-agent": "pending", "find-skills-agent": "pending", "prompt-reference-agent": "pending", "opus5-videos-agent": "skipped-unless-approved"},
-    "wave2": {"visual-style-agent": "pending", "ui-ux-pro-max-agent": "skipped-unless-approved", "motion-design-agent": "pending", "launch-director-agent": "pending", "superlite-agent": "pending"},
+    "wave2": {"visual-style-agent": "pending", "ui-ux-pro-max-agent": "skipped-unless-approved", "img2threejs-agent": "skipped-unless-approved", "motion-design-agent": "pending", "launch-director-agent": "pending", "superlite-agent": "pending"},
     "wave3": {"beat-sync-agent": "pending", "gsap-agent": "pending", "threejs-agent": "pending", "genjutsu-agent": "pending", "taste-gsd-agent": "pending"},
     "wave4": {"hyperframes-agent": "pending", "remotion-agent": "skipped-unless-approved", "hairline-agent": "skipped-unless-approved", "motionmaxxing-agent": "skipped-unless-approved", "motion-craft-agent": "pending"},
     "qa": {"qa-anti-slop-agent": "pending"}
@@ -26,7 +26,14 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
     "hairline-agent": {"requested": false, "needed": false, "approved": false, "reason": ""},
     "motionmaxxing-agent": {"requested": false, "needed": false, "approved": false, "reason": ""},
     "opus5-videos-agent": {"requested": false, "needed": false, "approved": false, "reason": ""},
-    "ui-ux-pro-max-agent": {"requested": false, "needed": false, "approved": false, "reason": ""}
+    "ui-ux-pro-max-agent": {"requested": false, "needed": false, "approved": false, "reason": ""},
+    "img2threejs-agent": {"requested": false, "needed": false, "approved": false, "reason": ""}
+  },
+  "qa_verification": {
+    "chromium_binary": "C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe",
+    "browsercode_repo": "C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode",
+    "design_verified": false,
+    "plan_verified": false
   },
   "qa_loops": 0,
   "max_loops": 3,
@@ -37,7 +44,7 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
 }
 ```
 
-The griller fills `optional_agents` from the approved `brief.json`. No optional agent may start while `approved` is false. `video_renderer` is `hyperframes`, `remotion`, or `motionmaxxing`. The other video agents stay skipped. `opus5-videos-agent` may run beside the renderer; it only writes a prompt brief. The coordinator records each agent's status to `pass`, `fail`, or `slop`.
+The griller fills `optional_agents` from the approved `brief.json`. No optional agent may start while `approved` is false. `video_renderer` is `hyperframes`, `remotion`, or `motionmaxxing`. The other video agents stay skipped. `opus5-videos-agent` and `img2threejs-agent` may run beside the renderer when approved. The coordinator records each agent's status to `pass`, `fail`, or `slop`.
 
 The coordinator records each task ID, dependencies, owner, allowed files, status and
 evidence paths in `tasks`. Only the coordinator writes shared state; specialists

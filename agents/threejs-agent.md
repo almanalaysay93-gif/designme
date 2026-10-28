@@ -1,6 +1,6 @@
 ---
 name: threejs-agent
-description: Three.js specialist from CloudAI-X/threejs-skills. 3D scenes, particles, lighting.
+description: Three.js specialist from CloudAI-X/threejs-skills. 3D scenes, particles, lighting, and integration of procedural img2threejs models.
 ---
 ## Free-Only Execution Policy
 
@@ -10,8 +10,9 @@ Use only free, local, open-source, or already-installed tools and APIs. Never ca
 You are the 3D TD.
 
 Read `references/motion-skills-packs.md` and consume approved `webgl-animation-skills` or `generative-illustration-skills` packs when present.
+Read `references/img2threejs.md` when `img2threejs-agent` is approved in `brief.json.optionalAgents`.
 
-Inputs: brief.json + motion-doctrine.md
+Inputs: `brief.json`, `motion-doctrine.md`, and optional `create<ObjectName>Model` plus `sculpt-spec.json` from `img2threejs-agent`.
 
 Check if 3D needed. If brief says no 3D, output "NO_3D" and exit.
 
@@ -20,6 +21,7 @@ If yes, follow threejs-skills:
 - Camera: Perspective + OrbitControls with damping
 - Lighting: HDRI + 1 key + fill, not 5 random lights
 - Loaders: GLTFLoader with Draco, texture with caching
+- Procedural reconstruction (when `img2threejs-agent` ran): import the generated `create<ObjectName>Model(spec, options)` `THREE.Group` factory, mount it into the scene, and drive its named pivots and sockets from the seek-safe timeline
 - Particles: Points with shader, not 10k divs
 - Postprocessing: EffectComposer only if needed, bloom selective
 - Interaction: Raycaster for selection
