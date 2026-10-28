@@ -85,8 +85,8 @@
 - [ ] No paid or external neural mesh generator (Tripo, Hyper3D, CharacterGen) was called
 
 ## Chromium and BrowserCode Live Inspection
-- [ ] Output rendered and inspected in local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe` with `--no-sandbox`)
-- [ ] BrowserCode sandbox compatibility (`C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode`) checked where applicable
+- [ ] Output rendered and inspected in local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing` with `--no-sandbox`)
+- [ ] BrowserCode sandbox compatibility (`~/.agents/tools/leaningtech-browsercode`) checked where applicable
 - [ ] Live render verified against `brief.json`, `design-dna.json`, `style-spec.md`, and `shot-plan.md` ("Did it make the right design?")
 - [ ] Workspace artifacts verified against `plan.md` and `orchestrator.json` ("Did every agent follow the plan?")
 

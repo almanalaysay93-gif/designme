@@ -2,7 +2,7 @@
 
 One skill that spawns a griller/planner, a visual-style director, parallel creative and engineering agents, an optional procedural 3D reconstruction agent (`img2threejs-agent`), a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop with live Chromium and BrowserCode verification.
 
-> **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. `motionmaxxing-agent` is optional and runs only when a project explicitly requests a measured-motion HTML film from [Tejashmakwana/motionmaxxing](https://github.com/Tejashmakwana/motionmaxxing). `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. `img2threejs-agent` is optional and runs only when a project provides a 2D reference image to reconstruct as a procedural Three.js `THREE.Group` model in code from [img2threejs/img2threejs](https://github.com/img2threejs/img2threejs). Blotato and Remotion references are used for prompt patterns only. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits. `opus5-videos-agent` is optional and only researches prompts from [yihui-dev/awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos). motionmaxxing must not call ElevenLabs. `qa-anti-slop-agent` inspects live output in local Chromium (`chromium-1243`) and [leaningtech/browsercode](https://github.com/leaningtech/browsercode).
+> **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. `motionmaxxing-agent` is optional and runs only when a project explicitly requests a measured-motion HTML film from [Tejashmakwana/motionmaxxing](https://github.com/Tejashmakwana/motionmaxxing). `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. `img2threejs-agent` is optional and runs only when a project provides a 2D reference image to reconstruct as a procedural Three.js `THREE.Group` model in code from [img2threejs/img2threejs](https://github.com/img2threejs/img2threejs). Blotato and Remotion references are used for prompt patterns only. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits. `opus5-videos-agent` is optional and only researches prompts from [yihui-dev/awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos). motionmaxxing must not call ElevenLabs. `qa-anti-slop-agent` inspects live output in local Chromium (`chromium-1248`) and [leaningtech/browsercode](https://github.com/leaningtech/browsercode).
 
 ## Invoke
 
@@ -33,7 +33,7 @@ See [`references/img2threejs.md`](references/img2threejs.md).
 
 ## Chromium and BrowserCode QA verification
 
-`qa-anti-slop-agent` and `browser-agent` verify live rendered output using local Chromium (`C:/Users/ORGANTRANSPLANT/AppData/Local/ms-playwright/chromium-1243/chrome-win64/chrome.exe`) and [leaningtech/browsercode](https://github.com/leaningtech/browsercode) (`C:/Users/ORGANTRANSPLANT/.agents/tools/leaningtech-browsercode`) to check that the rendered output matches the approved design and that every scheduled agent followed `plan.md` and `orchestrator.json`.
+`qa-anti-slop-agent` and `browser-agent` verify live rendered output using local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`) and [leaningtech/browsercode](https://github.com/leaningtech/browsercode) (`~/.agents/tools/leaningtech-browsercode`) to check that the rendered output matches the approved design and that every scheduled agent followed `plan.md` and `orchestrator.json`.
 
 See [`references/browsercode-chromium-qa.md`](references/browsercode-chromium-qa.md).
 
@@ -97,7 +97,8 @@ npm install -g ui-ux-pro-max-cli && uipro init --ai claude --global
 npx skills add vercel-labs/agent-browser thedotmack/claude-mem -g
 # Superlite adapter is bundled; optional native plugin: references/superlite-integration.md
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
-npx skills add vercel-labs/skills --skill find-skills --skill taste --skill gsd -g
+npx skills add vercel-labs/skills --skill find-skills -g
+# taste: install from Leonxlnx/taste-skill (folder taste-skill). gsd is not used.
 cp -r ./designme ~/.claude/skills/designme
 ```
 
