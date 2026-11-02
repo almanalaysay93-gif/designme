@@ -32,3 +32,5 @@ Output:
 - Performance notes: poly count, texture size
 
 Must be compatible with HyperFrames (offscreen canvas rendering, no window.* random).
+
+Read `references/open-3d-integration.md` when Open 3D is enabled. Agree scene ownership before coding: only one agent owns a scene renderer/camera/loop. When open-3d-agent owns the scene, supply only assigned geometry/model factories or review; do not create a parallel scene runtime. Consume the same project Three.js version and matching addons.

@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines Three.js, img2threejs, GSAP, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, and Chromium + BrowserCode QA in one orchestrated command.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, and Chromium + BrowserCode QA in one orchestrated command.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -18,7 +18,7 @@ One command for brand-led, code-authored motion and interactive web visuals. Hyp
 - **UI/UX intelligence:** use local UI/UX Pro Max search for interface styles, palettes, typography, UX rules, charts, icons, GSAP guidance, and stack-specific implementation.
 - **Procedural 3D reconstruction:** when approved, `img2threejs-agent` rebuilds a 2D reference image of an object or character into a deterministic code-only `THREE.Group` factory (`create<ObjectName>Model`) for `threejs-agent`.
 - **Beat sync:** make a shared beat/timeline table that drives visuals, transitions, captions, and audio cues.
-- **Craft:** use GSAP for choreography, Three.js for hero 3D, and pure `render(t)` functions for seek-safe generative layers.
+- **Craft:** default to Anime.js for landing-page text and element animation; use GSAP for assigned specialist choreography, Three.js for hero 3D, and pure `render(t)` functions for seek-safe generative layers.
 - **Sound:** write code-generated cues or wire approved audio against the same timeline, then master and verify it.
 - **Review:** render stills/contact sheets at beats and inspect them before final MP4 rendering.
 - **Motion skill packs:** route the approved iart-ai packs to the agents that need them; install only the smallest compatible set.
@@ -40,9 +40,12 @@ Designme is the sole coordinator. Superlite replaces the Superpowers engineering
 role; never enable both plugins together. The bundled adapter needs no plugin
 installation or paid model routing.
 
-Check whether the dependencies are installed. If not, install the selected skills:
+Always ensure the official Anime.js repository is downloaded during Designme installation, including static or non-Anime.js builds. Run `bash scripts/install-animejs.sh` from this skill directory; the default checkout is `~/.agents/tools/animejs`. Do not mark installation complete if the download/verification fails. Record its path and commit in `motion-skills-installed.md`. Then check whether the remaining dependencies are installed and install the selected skills:
 
 ```bash
+# Required: download official Anime.js source when installing Designme.
+# Run from the designme repository root. Reuses a verified existing checkout.
+bash scripts/install-animejs.sh
 npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills -g  # official prompt/reference guidance; local Remotion only
@@ -73,6 +76,16 @@ Activate `opus5-videos-agent` only when the user wants a starting prompt from th
 
 Use only free, local, open-source, or already-installed tools and APIs. Never call a paid API, paid tier, metered SaaS endpoint, premium model, paid voice service, paid asset service, or billing-enabled integration. Never create a subscription, start a trial, enter payment details, or consume credits. Do not ask the user for API keys for a paid service. If a requested capability requires payment or a paid API, stop that part, explain the limitation, and propose a free/local alternative such as Python, FFmpeg, Chromium, Playwright, system tools, or deterministic code-generated assets. motionmaxxing's optional ElevenLabs voice, SFX, and music path is a paid API and is forbidden. `img2threejs-agent` must use only local `generic` and `character` profiles and never call Tripo, Hyper3D, CharacterGen, or paid cloud plugins.
 
+## Animation engine routing
+
+Read [Anime.js integration](references/animejs-integration.md). Prefer `animejs-agent` for animated landing pages, words, SVG accents, and ordinary elements. The existing `prompt-reference-agent` researches build-specific animated-word references before design planning. Record `brief.json.animation` and coordinator-owned `animation-plan.json`; assign each target/property to one engine before implementation. Honor static briefs and explicit stack choices. Anime.js is not a renderer; web-only builds do not require a video render.
+
+## Open 3D specialist routing
+
+For an explicitly requested recording of a web-only build, the coordinator may select `frame-capture` as the sole capture backend under the integration contract below; skip all film renderers and record `renderer-decision.md`. This is the only Open 3D exception to the film-renderer list.
+
+Read [Open 3D integration](references/open-3d-integration.md). For relevant 3D/scroll/interactive builds, record `brief.json.open3d` and selected skills. Make all eight upstream skills available, assess each in `open-3d-capabilities.json`, and execute every relevant capability through evidence-backed verification. `open-3d-agent` plans in Wave 2, implements assigned modules in Wave 3, validates the integrated draft in Wave 4, and receives targeted QA repairs within the existing three-loop cap. Skip unrelated work with a recorded reason. Freeze ownership alongside Three.js, Anime.js and GSAP; retain the free-only policy.
+
 ### 1 — The Griller (1 agent) — ALWAYS FIRST — BLOCKING
 
 Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, the visual-style gate, the optional-agent gate, and motion-skill pack selection.
@@ -100,7 +113,7 @@ Show the thesis, renderer choice, optional-agent recommendations, and brief to t
 
 The wave lists are dependency groups, not blanket parallel dispatch. Follow the
 Superlite adapter: Wave 2 planning waits for design outputs, Wave 3 implementation
-waits for the canonical beat map, and Wave 4 craft review waits for a renderer draft.
+waits for animation ownership and, for video, the canonical beat map, and Wave 4 craft review waits for a renderer draft.
 
 **Wave 1 (no dependencies):**
 
@@ -108,7 +121,7 @@ waits for the canonical beat map, and Wave 4 craft review waits for a renderer d
 - `memory-agent` — loads past taste and prior constraints.
 - `find-skills-agent` — discovers only missing, compatible skills.
 - `browser-agent` — captures reference screenshots with local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`).
-- `prompt-reference-agent` — curates free prompt patterns from Blotato and Remotion for briefs and future projects.
+- `prompt-reference-agent` — researches 3–5 build-fit animated-word examples for landing pages/text-motion builds and writes `word-animation-references.md`; also curates free Blotato/Remotion prompt patterns.
 - `opus5-videos-agent` — runs only if approved. Picks a few catalog prompts and writes `opus-prompt-brief.md` before direction. Otherwise mark skipped.
 - `find-skills-agent` — routes approved iart-ai motion-skill packs to the owning agents and records local installs.
 
@@ -117,24 +130,30 @@ waits for the canonical beat map, and Wave 4 craft review waits for a renderer d
 - `visual-style-agent` — converts the selected visual style into a buildable style specification and sample recipe.
 - `ui-ux-pro-max-agent` — runs only when approved for UI/UX work; creates a local searchable design system and UI audit.
 - `img2threejs-agent` — runs only when approved for a 2D reference image; runs the staged sculpting pipeline (`blockout` to `optimization`) gated by `forge/state.py` and `forge/next.py` and outputs a deterministic `create<ObjectName>Model` `THREE.Group` factory.
-- `motion-design-agent` — writes timing, easing, weight, and choreography doctrine.
+- `motion-design-agent` — consumes `word-animation-references.md`, selects brand-fit text treatments, and writes timing, easing, weight, and choreography doctrine. The coordinator freezes target/property ownership in `animation-plan.json`.
 - `launch-director-agent` — writes three visual directions, kills two, and creates the story/shot/camera/look plan.
-- `superlite-agent` — writes the execution plan and tests.
+- `open-3d-agent` — when selected, consumes design inputs and writes `open-3d-plan.md` with chosen upstream skills, scene/file ownership, dependencies and acceptance budgets.
+- `superlite-agent` — writes the execution plan and tests, incorporating the Open 3D plan before contracts freeze.
 
 **Wave 3 (needs Wave 2 outputs):**
 
 - `beat-sync-agent` — creates the shared BPM/frame beat map, transition schedule, and audio cue plan.
-- `gsap-agent` — implements the seekable choreography timeline. If motionmaxxing or Remotion owns the renderer, contribute doctrine and timing notes only; do not build a second HyperFrames timeline.
+- `animejs-agent` — implements assigned landing-page/text/element motion after research, design and engine ownership are frozen; writes `animejs-plan.md`, `animejs-motion.js`, and `animejs-validation.md`. Read `references/animejs-integration.md`.
+- `gsap-agent` — implements only its assigned seekable choreography targets; skip when Anime.js owns all motion. If motionmaxxing or Remotion owns the renderer, contribute doctrine and timing notes only; do not build a second HyperFrames timeline.
+- `open-3d-agent` — resumes after ownership/dependency freeze, implements only assigned scene/media/interaction modules, and preserves one renderer/clock per scene.
 - `threejs-agent` — implements only the necessary hero 3D or generative layer, inside the approved renderer, and mounts `create<ObjectName>Model` when `img2threejs-agent` is active.
 - `genjutsu-agent` — writes thesis and anti-slop MASTER.md.
 - `taste-gsd-agent` — performs the aesthetic gate and execution critique.
 
 **Wave 4 (needs all design and engineering outputs):**
 
+For web-only landing pages, the coordinator integrates the web build and skips video-render agents, final MP4 rendering and video-only artifacts. Motion-craft and QA inspect the live page.
+
 - `hyperframes-agent` — assembles the deterministic HTML composition and renders drafts by default. Skip if Remotion or motionmaxxing owns the video renderer.
 - `remotion-agent` — runs only if `brief.json.optionalAgents.remotion-agent.requested` is true or the user explicitly approved it; otherwise mark skipped. Do not run it if motionmaxxing owns the film.
 - `motionmaxxing-agent` — runs only if `brief.json.optionalAgents.motionmaxxing-agent.requested` is true or the user explicitly approved it; otherwise mark skipped. When it runs, it owns the film and HyperFrames and Remotion are skipped.
 - `hairline-agent` — runs only if `brief.json.optionalAgents.hairline-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
+- `open-3d-agent` — resumes after integration for selected site-check/browser validation, writes `open-3d-validation.md`, and hands evidence/findings to craft review and QA.
 - `motion-craft-agent` — runs still/contact-sheet review, checks frame collisions and safe areas, wires code-generated or approved sound, and records fixes. If motionmaxxing owns the film, review `film/look-final/` and `film/NOTE.md` instead of a HyperFrames contact sheet.
 
 Pass `brief.json`, the approved `motionSkillPacks`, and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.
@@ -177,6 +196,8 @@ Compare two final renders by hash. If voice or music is present, verify captions
 - `UX_LAWS_AUDIT.md` with all 14 laws, evidence, fixes and re-audit results
 - `brief.json`, `design-dna.json`, `style-spec.md`, `uiux-design-system.md` when applicable, `uiux-audit.md` when applicable, `sculpt-spec.json` and `img2threejs-report.md` when applicable, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable
+- `open-3d-capabilities.json`, `open-3d-plan.md`, assigned modules/assets and `open-3d-validation.md` when Open 3D is enabled; `open-3d-assets.md` and provenance logs when assets are involved
+- `animation-plan.json` when motion applies; `word-animation-references.md` when text research applies; `animejs-plan.md`, `animejs-motion.js`, and `animejs-validation.md` when Anime.js is used
 - `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `opus-prompt-brief.md` when applicable, `brief-enhancements.md`, `motion-skills-installed.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
 
 No generic gradients, default purple-on-black SaaS styling, unmotivated bounce, or code-first production. The selected visual style must be an intentional system, not a list of effects. Every visual and sound cue must have an intentional role in the approved thesis.

@@ -23,7 +23,7 @@ Check:
 1. **Direction:** selected direction is traceable to the thesis, shots have purpose, camera moves are motivated, and the first three seconds contain a hook.
 2. **Design DNA:** palette <=5 colors, typography is specific, tokens are used, and the result is not generic purple-on-black.
 3. **Motion:** timing is intentional, easing varies by role, stagger/overlap/weight are visible, holds are readable, and no unmotivated bounce or drift dominates.
-4. **GSAP/Three.js:** timelines are seekable, cleanup is present, GPU-safe properties are used, and 3D resources are disposed.
+4. **Anime.js/GSAP/Three.js:** timelines are seekable, cleanup is present, GPU-safe properties are used, and 3D resources are disposed.
 5. **Beat sync:** cuts, impacts, captions, and the key visual land on the canonical beat/word map. No guessed voice timing.
 6. **Frame craft:** contact sheet has scene peaks, no clipping/collisions/unsafe text, no accidental flashes or pop frames, and transitions carry visual intent.
 7. **Audio:** 48 kHz, no drift, cues are audible, music/voice are not masked, true peak below -2 dBFS, and loudness is approximately -14 LUFS unless brief says otherwise.
@@ -65,3 +65,9 @@ when UI/UX Pro Max is skipped. For pure films, assess hierarchy, information loa
 readability, emphasis, opening/ending and pacing from timed frames; document why
 interaction-only checks have no corresponding controls. Missing evidence is
 BLOCKED; Violated rows block PASS. Include the audit in `audit.md` and delivery.
+
+For Anime.js/text-motion builds, read `references/animejs-integration.md` and apply the Anime.js section of `references/qa-rubric.md`. Verify cited word-animation references, exclusive engine/property ownership, and `animejs-validation.md` evidence. Web-only landing pages require browser checks, not video artifacts.
+
+When Open 3D is enabled, read `references/open-3d-integration.md`. Inspect its actual integrated output and `open-3d-validation.md`; apply the Open 3D rubric. Return reproducible findings on assigned Open 3D modules to open-3d-agent (or the actual scene owner), rerun affected checks and re-audit inside the existing three-loop cap. Missing browser evidence is BLOCKED.
+
+For Open 3D, audit all eight rows of `open-3d-capabilities.json`: each has a use/skip/blocked decision with a reason; used skills have completed tasks, outputs and actual verification evidence. Unresolved blocked capabilities required by the approved build prevent PASS. Require site-check for enabled animated/3D web builds and targeted frame-capture when static shots cannot verify motion behavior.

@@ -18,7 +18,7 @@ acceptance checks, evidence paths and risks. Reference the existing thesis and
 approved renderer; do not reopen the approved brief or run another orchestrator.
 Record assumptions and resolved choices in brainstorm.md without another interview.
 
-Schedule the canonical beat/frame map before GSAP/Three.js implementation. Motion
+Read `references/animejs-integration.md`. Schedule animated-word research before motion doctrine and coordinator-owned `animation-plan.json` before Anime.js/GSAP implementation. For video, schedule the canonical beat/frame map before Anime.js/GSAP/Three.js implementation. For web-only builds, use interaction triggers and millisecond timing instead of waiting for a video beat map. Motion
 craft review waits for a renderer draft. Only independent files may run in parallel;
 the coordinator owns manifests, shared composition entry and integration.
 
@@ -38,3 +38,5 @@ when UI/UX Pro Max is skipped. For pure films, assess hierarchy, information loa
 readability, emphasis, opening/ending and pacing from timed frames; document why
 interaction-only checks have no corresponding controls. Missing evidence is
 BLOCKED; Violated rows block PASS. Include the audit in `audit.md` and delivery.
+
+When `brief.json.open3d.enabled` is true, read `references/open-3d-integration.md`. Schedule open-3d-agent planning after relevant design inputs and before ownership freeze; implementation after its assets/models and timing contracts; validation after integration. Give one owner each scene renderer/camera/clock and disjoint file/property assignments. Route failures to the responsible owner and retain the three-loop QA cap.

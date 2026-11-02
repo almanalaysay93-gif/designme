@@ -31,3 +31,5 @@ Outputs:
 - `craft-review.md`.
 - `audio_meta.json` when voice or word timings exist.
 - A corrected draft ready for `qa-anti-slop-agent`.
+
+For enabled Open 3D work, consume `open-3d-plan.md` and `open-3d-validation.md` after integration. Review sampled scene/scroll/cursor states, word/label collisions and mobile/reduced-motion fallbacks; return reproducible findings to the actual module owner for repair before QA.

@@ -73,7 +73,7 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 
 ## Free-only rule
 
-All 24 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
+All 26 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
 
 ## Structure
 
@@ -85,6 +85,9 @@ All 24 agents are restricted to free, local, open-source, or already-installed t
 ## Install
 
 ```bash
+# Required: download official Anime.js source when installing Designme.
+# Run from the designme repository root. Reuses a verified existing checkout.
+bash scripts/install-animejs.sh
 npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills lucasmarkes/hairline Tejashmakwana/motionmaxxing -g
@@ -119,3 +122,21 @@ implementation and post-build review. Plans map the laws to actual flows; every
 build or significant change produces `UX_LAWS_AUDIT.md` with evidence, fixes and
 re-audit results. Completion requires no violations and documented reasons for
 any justified Partial results. See [the audit workflow](references/ux-laws-workflow.md).
+
+## Anime.js for landing pages and animated words
+
+Anime.js is the default for animated landing-page text, staggered elements, SVG accents, and ordinary UI motion. The existing `prompt-reference-agent` researches 3–5 relevant animated-word examples, cites sources, and shortlists treatments that fit the build's copy, brand, audience, and pacing. `motion-design-agent` uses those references before `animejs-agent` implements the selected treatment.
+
+The coordinator records engine choice in `brief.json.animation` and target/property ownership in `animation-plan.json`, preventing Anime.js/GSAP conflicts. Static briefs and explicit stack choices take precedence. The Designme installer downloads the official Anime.js repository to `~/.agents/tools/animejs` using `scripts/install-animejs.sh`. Existing official checkouts are verified and reused. Install `animejs@4` only in the target build and pin its lockfile; no additional external skill is required. QA verifies mobile wrapping, semantic readable text, keyboard access, reduced motion, cleanup, and deterministic video seeking where applicable. Web-only landing pages do not require video rendering.
+
+See [Anime.js integration and research contract](references/animejs-integration.md) and the [Anime.js specialist](agents/animejs-agent.md).
+
+## Open 3D specialist in the loop
+
+`open-3d-agent` integrates selected [Open 3D Skills](https://github.com/Moh4696/open-3d-skills): procedural scenes, exploded product views, scroll films, transparent media, cursor rigs and browser/performance checks. It plans in Wave 2, implements assigned modules in Wave 3 and validates the integrated draft in Wave 4. Craft/QA findings return to the responsible agent and are rechecked within the existing three-loop repair cap.
+
+The coordinator assigns one scene owner alongside `threejs-agent` and preserves Anime.js for landing-page text/UI. All eight upstream skills are made available and assessed; the agent executes every relevant capability, with explicit reasons for skips and required local dependencies installed as needed; paid generation remains disabled and media comes from supplied/local assets. Capture stays within the existing final-renderer decision.
+
+See [integration, install, ownership and repair contract](references/open-3d-integration.md) and [agent instructions](agents/open-3d-agent.md).
+
+Full-library use is tracked in `open-3d-capabilities.json`: all eight skills get use/skip/blocked decisions and used skills get tasks, outputs, checks and execution evidence. Asset planning/logs and local repair tools are included. Enabled animated/3D web builds require site-check, with targeted motion recordings when stills cannot verify the behavior.
