@@ -135,6 +135,8 @@ See [Anime.js integration and research contract](references/animejs-integration.
 
 `open-3d-agent` integrates selected [Open 3D Skills](https://github.com/Moh4696/open-3d-skills): procedural scenes, exploded product views, scroll films, transparent media, cursor rigs and browser/performance checks. It plans in Wave 2, implements assigned modules in Wave 3 and validates the integrated draft in Wave 4. Craft/QA findings return to the responsible agent and are rechecked within the existing three-loop repair cap.
 
-The coordinator assigns one scene owner alongside `threejs-agent` and preserves Anime.js for landing-page text/UI. Only selected upstream skills and needed local dependencies are installed; paid generation remains disabled and media comes from supplied/local assets. Capture stays within the existing final-renderer decision.
+The coordinator assigns one scene owner alongside `threejs-agent` and preserves Anime.js for landing-page text/UI. All eight upstream skills are made available and assessed; the agent executes every relevant capability, with explicit reasons for skips and required local dependencies installed as needed; paid generation remains disabled and media comes from supplied/local assets. Capture stays within the existing final-renderer decision.
 
 See [integration, install, ownership and repair contract](references/open-3d-integration.md) and [agent instructions](agents/open-3d-agent.md).
+
+Full-library use is tracked in `open-3d-capabilities.json`: all eight skills get use/skip/blocked decisions and used skills get tasks, outputs, checks and execution evidence. Asset planning/logs and local repair tools are included. Enabled animated/3D web builds require site-check, with targeted motion recordings when stills cannot verify the behavior.

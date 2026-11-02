@@ -84,7 +84,7 @@ Read [Anime.js integration](references/animejs-integration.md). Prefer `animejs-
 
 For an explicitly requested recording of a web-only build, the coordinator may select `frame-capture` as the sole capture backend under the integration contract below; skip all film renderers and record `renderer-decision.md`. This is the only Open 3D exception to the film-renderer list.
 
-Read [Open 3D integration](references/open-3d-integration.md). For relevant 3D/scroll/interactive builds, record `brief.json.open3d` and selected skills. `open-3d-agent` plans in Wave 2, implements assigned modules in Wave 3, validates the integrated draft in Wave 4, and receives targeted QA repairs within the existing three-loop cap. Skip unrelated work with a recorded reason. Freeze ownership alongside Three.js, Anime.js and GSAP; retain the free-only policy.
+Read [Open 3D integration](references/open-3d-integration.md). For relevant 3D/scroll/interactive builds, record `brief.json.open3d` and selected skills. Make all eight upstream skills available, assess each in `open-3d-capabilities.json`, and execute every relevant capability through evidence-backed verification. `open-3d-agent` plans in Wave 2, implements assigned modules in Wave 3, validates the integrated draft in Wave 4, and receives targeted QA repairs within the existing three-loop cap. Skip unrelated work with a recorded reason. Freeze ownership alongside Three.js, Anime.js and GSAP; retain the free-only policy.
 
 ### 1 — The Griller (1 agent) — ALWAYS FIRST — BLOCKING
 
@@ -196,7 +196,7 @@ Compare two final renders by hash. If voice or music is present, verify captions
 - `UX_LAWS_AUDIT.md` with all 14 laws, evidence, fixes and re-audit results
 - `brief.json`, `design-dna.json`, `style-spec.md`, `uiux-design-system.md` when applicable, `uiux-audit.md` when applicable, `sculpt-spec.json` and `img2threejs-report.md` when applicable, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable
-- `open-3d-plan.md`, assigned modules/assets and `open-3d-validation.md` when Open 3D is enabled
+- `open-3d-capabilities.json`, `open-3d-plan.md`, assigned modules/assets and `open-3d-validation.md` when Open 3D is enabled; `open-3d-assets.md` and provenance logs when assets are involved
 - `animation-plan.json` when motion applies; `word-animation-references.md` when text research applies; `animejs-plan.md`, `animejs-motion.js`, and `animejs-validation.md` when Anime.js is used
 - `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `opus-prompt-brief.md` when applicable, `brief-enhancements.md`, `motion-skills-installed.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
 

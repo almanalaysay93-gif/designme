@@ -118,3 +118,8 @@
 - [ ] `open-3d-validation.md` records measured evidence and limitations; unavailable required checks are BLOCKED
 - [ ] Final capture respects the selected renderer; no paid motion-assets generation was invoked
 - [ ] Findings identify the actual owner and are repaired/rechecked within the existing three-loop cap
+
+- [ ] Open 3D capability matrix covers all eight upstream skills with concrete use/skip/blocked reasons
+- [ ] Every used skill has task mapping, outputs and actual passing evidence; required blocked or pending rows prevent PASS
+- [ ] Asset planning, consistent style, provenance and reproducibility logs exist when assets are involved
+- [ ] Enabled animated/3D web builds have Chromium/WebKit site-check evidence at desktop/tablet/phone sizes; motion-only behaviors have targeted capture evidence

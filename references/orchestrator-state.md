@@ -22,7 +22,7 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
   "motion_skill_pack_approval": false,
   "video_renderer": "hyperframes",
   "animation": {"engine": null, "reason": "", "textResearch": false, "reducedMotion": "show-final-state"},
-  "open3d": {"enabled": false, "skills": [], "reason": "", "plan": null, "validation": null},
+  "open3d": {"enabled": false, "skills": [], "reason": "", "capabilities": null, "assets": null, "plan": null, "validation": null},
   "animation_plan": null,
   "word_animation_references": null,
   "optional_agents": {

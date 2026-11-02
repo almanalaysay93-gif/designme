@@ -239,11 +239,26 @@
         "wave4": "validate integrated draft and hand off evidence",
         "qa": "targeted repairs and recheck within existing three-loop cap"
       },
-      "install": "Only selected Moh4696/open-3d-skills skills",
+      "install": "Ensure all eight upstream skills are available; install runtime dependencies only as needed",
       "plan": "open-3d-plan.md",
       "validation": "open-3d-validation.md",
       "scene_ownership": "One owner/renderer/camera/clock per scene",
-      "paid_generation": false
+      "paid_generation": false,
+      "available_skills": [
+        "threejs-scene",
+        "scroll-film",
+        "motion-assets",
+        "alpha-cutout",
+        "cursor-rig",
+        "exploded-view",
+        "site-check",
+        "frame-capture"
+      ],
+      "assessment": "Read all eight SKILL.md files; record use/skip/blocked with reasons",
+      "capability_matrix": "open-3d-capabilities.json",
+      "asset_plan": "open-3d-assets.md when assets are involved",
+      "verification": "site-check for enabled animated/3D web builds; targeted frame-capture for behaviors requiring motion evidence",
+      "completion": "Every used capability has completed task/output/check evidence; required blocked rows prevent PASS"
     }
   },
   "reference_sources": {
