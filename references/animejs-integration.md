@@ -20,7 +20,7 @@ Separately, install `animejs@4` in the target build with its existing package ma
 2. In Wave 1, `prompt-reference-agent` acts as the animation research agent. It produces `word-animation-references.md` before Wave 2 design decisions. `browser-agent` can capture motion samples at meaningful timestamps.
 3. Wave 2's `motion-design-agent` consumes that research and chooses a coherent text-motion language. The coordinator writes `animation-plan.json` before Wave 3, assigning each component/selector and property set to exactly one engine, with reference IDs, trigger, duration/delay in milliseconds, easing, replay, final state and reduced-motion behavior. For mixed builds, split by component or property; never let both engines write the same property on the same element, including transform shorthands and their axes.
 4. `animejs-agent` implements only its assigned targets in Wave 3 after design and ownership freeze. `gsap-agent` owns only its assigned targets. Skip either implementation role if it owns nothing. Record skips and reasons in `orchestrator.json`.
-5. The coordinator integrates dependencies and entry points; craft review and QA consume research, plan and actual browser evidence. Landing pages ship as web builds; the exactly-one-video-renderer rule applies only when producing video.
+5. The coordinator integrates dependencies and entry points; craft review and QA consume research, plan and actual browser evidence. Landing pages ship as web builds; the one-final-owner rule applies per video deliverable, with assigned intermediate asset renders permitted under production-plan.json.
 
 ## Research contract
 

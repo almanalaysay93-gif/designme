@@ -14,7 +14,7 @@ Select `opus5-videos-agent` when the user explicitly wants a starting prompt fro
 
 Otherwise skip it. `prompt-reference-agent` still covers Blotato and Remotion patterns.
 
-This agent does not own the film. HyperFrames, Remotion, and motionmaxxing stay the only video renderers, and only one of those runs.
+This agent does not own the film. The production contract assigns one final owner per deliverable (HyperFrames by default), while Remotion/Open 3D may produce supporting clips and motionmaxxing may contribute craft review.
 
 ## How to read it
 

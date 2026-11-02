@@ -16,9 +16,7 @@ Read `references/grilling-questions.md` and ask 5-8 sharp questions covering:
 - voiceover/music/SFX, source files, BPM, transcript, and caption needs
 - renderer/stack, constraints, success metric, TDD, and browser verification
 - which iart-ai motion-skill packs fit the channel, artifact, data, and visual treatment
-- whether **Remotion** is explicitly requested for a React/video deliverable
 - whether **Hairline** is explicitly requested for an interactive figure or pointer-responsive visual
-- whether **motionmaxxing** is explicitly requested for a measured-motion HTML film
 - whether **Opus 5.5 videos** should supply a starting prompt from the code-video catalog
 - whether **UI/UX Pro Max** is needed for UI structure, design-system generation, stack guidance, interaction, or accessibility
 - whether **img2threejs** is needed to reconstruct a 2D reference object or character image into a procedural Three.js `THREE.Group` model in code
@@ -40,12 +38,9 @@ Read `references/motion-skills-packs.md`. Recommend the smallest compatible pack
 
 For each optional agent, make a recommendation before dispatch:
 
-- Recommend **Remotion** only when the user needs React/Remotion-specific composition or rendering. Otherwise recommend **skip** and keep HyperFrames as the default.
 - Recommend **Hairline** only when the user needs an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual. Otherwise recommend **skip**.
-- Recommend **motionmaxxing** only when the user explicitly wants a measured-motion HTML film: brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through its G0–G5 gates. Read `references/motionmaxxing.md`. Otherwise recommend **skip**.
 - Recommend **opus5-videos-agent** only when the user wants a starting prompt from the Opus 5.5 code-video catalog. Read `references/opus5-videos.md`. Otherwise recommend **skip**. It is not a renderer.
 - Recommend **img2threejs-agent** only when the user supplies a 2D reference image of an object, prop, or character and wants a procedural code-only Three.js model (`create<ObjectName>Model`). Read `references/img2threejs.md`. Otherwise recommend **skip**.
-- Exactly one video renderer. Remotion and motionmaxxing cannot both be approved, and neither runs beside HyperFrames.
 - If the user requests an optional agent, include it even if it is not strictly necessary, but explain the tradeoff.
 - Never silently activate an optional agent. Show the selection and reason in the thesis/brief and ask for approval.
 - Voice inside a motionmaxxing film stays local. Do not plan ElevenLabs.
@@ -65,10 +60,9 @@ Synthesize:
   "audio": {"voice": false, "music": false, "sfx": false, "bpm": null},
   "visualStyle": {"primary": "particle-swarm", "secondary": null, "requested": true, "reason": "...", "material": "...", "motionGrammar": "...", "heroBeat": "...", "antiSlop": []},
   "motionSkillPacks": [{"pack": "iart-ai/motion-design-skills", "requested": false, "needed": false, "reason": "..."}],
+  "production": {"deliverable":"video","profile":"standard","finalRenderer":"hyperframes","specialists":{"remotion-agent":{"mode":"contribute","reason":"Assess supporting sequences"},"motionmaxxing-agent":{"mode":"review","reason":"Motion planning and integrated review"},"open-3d-agent":{"mode":"contribute","reason":"Assess scenes and capture"}}},
   "optionalAgents": {
-    "remotion-agent": {"requested": false, "needed": false, "reason": "..."},
     "hairline-agent": {"requested": false, "needed": false, "reason": "..."},
-    "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "..."},
     "opus5-videos-agent": {"requested": false, "needed": false, "reason": "..."},
     "ui-ux-pro-max-agent": {"requested": false, "needed": false, "reason": "..."},
     "img2threejs-agent": {"requested": false, "needed": false, "reason": "..."}
@@ -106,4 +100,8 @@ Read `references/animejs-integration.md`. For landing pages with motion, default
 
 ## Open 3D selection
 
-Read `references/open-3d-integration.md`. Recommend the relevant Open 3D skills for procedural scenes, exploded views, scroll films, transparent media, cursor rigs or extra 3D QA. Record `brief.json.open3d` as `{"enabled":false,"skills":[],"reason":"No Open 3D capability needed"}` or the selected enabled scope in the approved brief. Keep paid motion-assets generation disabled; use local/supplied assets. Explain scene ownership alongside threejs-agent and preserve Anime.js for assigned landing-page text.
+Read `references/open-3d-integration.md`. Recommend the relevant Open 3D skills for procedural scenes, exploded views, scroll films, transparent media, cursor rigs or extra 3D QA. Record `brief.json.open3d` as `{"enabled":true,"skills":["threejs-scene","site-check","frame-capture"],"reason":"3D parallax website"}` or the selected enabled scope in the approved brief. Keep paid motion-assets generation disabled; use local/supplied assets. Explain scene ownership alongside threejs-agent and preserve Anime.js for assigned landing-page text.
+
+## Normal specialists and 3D parallax
+
+Read `references/normal-motion-orchestration.md`. Assess Remotion, motionmaxxing and Open 3D normally; do not request separate opt-in for their contribution roles or put them in optionalAgents. Record `production` deliverable/profile/finalRenderer/specialist modes and reasons in the brief, then coordinator-owned `production-plan.json`. Default films to HyperFrames and websites to no final renderer. For 3D parallax websites enable Open 3D, assign depth/camera/pacing guidance to motionmaxxing, assess useful Remotion layers/clips, and preserve Anime.js text/UI with one canonical scroll progress source. Record no-work reasons when a specialist adds no value.

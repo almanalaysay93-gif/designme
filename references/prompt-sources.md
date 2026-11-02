@@ -18,7 +18,7 @@ Use these repositories as prompt and workflow references for future `designme` p
 - Templates: https://www.remotion.dev/templates
 - Curated prompts: https://github.com/quriosity-agent/remotion-prompts
 
-Safe designme use: borrow prompt structures for composition briefs, frame/fps/duration vocabulary, React component decomposition, captions, maps, and prompt-to-video story ideas. Treat Remotion as an optional reference or explicitly requested React renderer, never as an automatic replacement for HyperFrames.
+Safe designme use: borrow prompt structures for composition briefs, frame/fps/duration vocabulary, React component decomposition, captions, maps, and prompt-to-video story ideas. Treat Remotion as a normal supporting-sequence specialist under the production contract, never as an automatic replacement for HyperFrames final assembly.
 
 ## Free-only boundary
 

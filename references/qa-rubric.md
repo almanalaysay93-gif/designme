@@ -60,8 +60,8 @@
 - [ ] Deterministic render tested: 2 renders identical hash
 - [ ] ffprobe confirms expected FPS, dimensions, duration, and audio stream
 
-## motionmaxxing (only if it owns the film)
-- [ ] It is the only video renderer; HyperFrames and Remotion were skipped
+## motionmaxxing standalone final mode (film-only gates)
+- [ ] It owns this final deliverable; other specialists only produce assigned intermediate assets or reviews
 - [ ] `renderer-decision.md` records why
 - [ ] `film/NOTE.md` quotes G0–G5 from `look.py` and `lint.mjs`, not a self-grade
 - [ ] G1 and G4 were judged from the contact sheet
@@ -123,3 +123,12 @@
 - [ ] Every used skill has task mapping, outputs and actual passing evidence; required blocked or pending rows prevent PASS
 - [ ] Asset planning, consistent style, provenance and reproducibility logs exist when assets are involved
 - [ ] Enabled animated/3D web builds have Chromium/WebKit site-check evidence at desktop/tablet/phone sizes; motion-only behaviors have targeted capture evidence
+
+## Normal specialist and asset handoffs
+
+- [ ] production-plan.json matches the approved deliverable; all three normal specialists have dispatched work or concrete no-work reasons, with no obsolete opt-in gate
+- [ ] Assigned supporting clips have verified frame count/FPS/dimensions/alpha/color/audio, editable source and readiness evidence
+- [ ] HyperFrames consumes the correct local assets; first/last/join frames and backward/forward seeks are correct, with no double audio or duplicate final renders
+- [ ] motionmaxxing planning/review evidence applies to the real output; film-only gates are N/A for ordinary website navigation and reading holds
+- [ ] 3D parallax sites use one scene owner and canonical scroll progress, with readable CTAs, mobile/reduced-motion behavior, loading/performance and targeted motion evidence
+- [ ] Captured footage waits for a ready integrated page; film assembly waits for its source footage; producer and consumer checks rerun after relevant repairs

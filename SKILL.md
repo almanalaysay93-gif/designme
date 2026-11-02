@@ -10,7 +10,7 @@ Invoke: `/designme <brief>` — e.g. `/designme premium 9:16 launch reel, Linear
 
 ## What This Is
 
-One command for brand-led, code-authored motion and interactive web visuals. HyperFrames remains the default video renderer, Remotion is an optional local React-video renderer, motionmaxxing is an optional measured-motion HTML film, Hairline is an optional interactive-figure engine, and img2threejs is an optional procedural image-to-3D reconstruction engine. Blotato and Remotion are also used as free prompt/reference sources for future projects. It adds only complementary production disciplines:
+One command for brand-led, code-authored motion and interactive web visuals. HyperFrames remains the default video renderer, Remotion is a normal local React sequence/clip specialist, motionmaxxing is a normal motion-direction and craft-review specialist, Hairline is an optional interactive-figure engine, and img2threejs is an optional procedural image-to-3D reconstruction engine. Blotato and Remotion are also used as free prompt/reference sources for future projects. It adds only complementary production disciplines:
 
 - **Design DNA + motion principles:** extract a visual system and a motion doctrine before code.
 - **Direction:** develop competing creative directions, a one-claim story arc, camera language, and shot plan.
@@ -22,9 +22,9 @@ One command for brand-led, code-authored motion and interactive web visuals. Hyp
 - **Sound:** write code-generated cues or wire approved audio against the same timeline, then master and verify it.
 - **Review:** render stills/contact sheets at beats and inspect them before final MP4 rendering.
 - **Motion skill packs:** route the approved iart-ai packs to the agents that need them; install only the smallest compatible set.
-- **Optional capabilities:** discuss Remotion, Hairline, motionmaxxing, img2threejs, the Opus 5.5 video-prompt catalog, and motion-skill pack selection during grilling, recommend what is needed, and activate only the user-approved choices.
+- **Optional capabilities:** discuss Hairline, img2threejs, the Opus 5.5 video-prompt catalog, and motion-skill pack selection during grilling, recommend what is needed, and activate only the user-approved choices.
 - **Opus prompt research:** when approved, `opus5-videos-agent` reads a few matching prompts from the MIT catalog, credits the creators, and rewrites the craft for this brand. It never renders and never replaces the video renderer.
-- **Measured-motion film:** when approved, `motionmaxxing-agent` owns one brand-specific HTML film and must pass its G0–G5 gates locally. It never runs beside HyperFrames or Remotion, and it never calls ElevenLabs.
+- **Measured motion:** motionmaxxing contributes brand-specific pacing, camera/depth guidance and integrated review alongside HyperFrames; standalone final mode is reserved for an explicit motionmaxxing deliverable.
 - **QA:** run anti-slop, determinism, readability, audio, accessibility, UX laws, and final-frame checks with live Chromium and BrowserCode verification and targeted feedback loops.
 
 ## Invocation Contract
@@ -50,7 +50,7 @@ npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna 
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills -g  # official prompt/reference guidance; local Remotion only
 npx skills add lucasmarkes/hairline -g  # optional interactive figures; free/local only
-npx skills add Tejashmakwana/motionmaxxing -g  # optional measured-motion films; free/local only, no ElevenLabs
+npx skills add Tejashmakwana/motionmaxxing -g  # normal craft planning/review; free/local only, no ElevenLabs
 # Optional img2threejs procedural 3D reconstruction (canonical ~/.agents/skills/img2threejs)
 # git clone https://github.com/img2threejs/img2threejs.git ~/.agents/skills/img2threejs
 # Local BrowserCode + Chromium QA verification repo:
@@ -66,9 +66,7 @@ npx skills add vercel-labs/skills --skill find-skills -g
 # taste is installed from Leonxlnx/taste-skill (folder taste-skill); gsd is not used here (no 'gsd' skill exists upstream)
 ```
 
-Do not use Remotion as a second renderer for a HyperFrames composition. Activate `remotion-agent` only when the brief explicitly requires a React/Remotion deliverable, and record the renderer decision. Activate `hairline-agent` only when the brief explicitly requests Hairline or an interactive figure.
-
-Do not use motionmaxxing as a second video renderer. Activate `motionmaxxing-agent` only when the brief explicitly requests its measured-motion HTML film (brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through its gates). When it owns the film, skip HyperFrames and Remotion. Exactly one video renderer runs. Read `references/motionmaxxing.md`.
+Read [normal motion orchestration](references/normal-motion-orchestration.md). Remotion, motionmaxxing and Open 3D are normal specialists assessed and dispatched when relevant without separate opt-in gates. HyperFrames owns final film assembly by default; Remotion/Open 3D may render assigned intermediate assets. motionmaxxing normally plans and reviews in contribution mode. One final owner per deliverable, with explicit standalone renderer overrides. Hairline retains its existing optional-agent gate.
 
 Activate `opus5-videos-agent` only when the user wants a starting prompt from the Opus 5.5 video catalog. It runs in Wave 1, writes `opus-prompt-brief.md`, and is not a video renderer. Read `references/opus5-videos.md`. Activate `ui-ux-pro-max-agent` for UI-containing work when approved; skip it for pure non-UI films. It runs in Wave 2 and writes `uiux-design-system.md` and `uiux-audit.md`. Activate `img2threejs-agent` only when approved for a 2D reference object or character image that must be reconstructed into a procedural Three.js `THREE.Group` factory in code. It runs in Wave 2 and hands `create<ObjectName>Model` to `threejs-agent` in Wave 3. Read `references/img2threejs.md`.
 
@@ -95,9 +93,7 @@ The griller must produce an explicit recommendation for every optional agent:
 ```json
 {
   "optionalAgents": {
-    "remotion-agent": {"requested": false, "needed": false, "reason": "HyperFrames is sufficient"},
     "hairline-agent": {"requested": false, "needed": false, "reason": "No interactive figure requested"},
-    "motionmaxxing-agent": {"requested": false, "needed": false, "reason": "HyperFrames is sufficient"},
     "opus5-videos-agent": {"requested": false, "needed": false, "reason": "No Opus 5.5 prompt catalog requested"},
     "ui-ux-pro-max-agent": {"requested": false, "needed": false, "reason": "No UI or UX work requested"},
     "img2threejs-agent": {"requested": false, "needed": false, "reason": "No 2D reference object image for procedural 3D reconstruction"}
@@ -133,10 +129,13 @@ waits for animation ownership and, for video, the canonical beat map, and Wave 4
 - `motion-design-agent` — consumes `word-animation-references.md`, selects brand-fit text treatments, and writes timing, easing, weight, and choreography doctrine. The coordinator freezes target/property ownership in `animation-plan.json`.
 - `launch-director-agent` — writes three visual directions, kills two, and creates the story/shot/camera/look plan.
 - `open-3d-agent` — when selected, consumes design inputs and writes `open-3d-plan.md` with chosen upstream skills, scene/file ownership, dependencies and acceptance budgets.
+- `remotion-agent` — assesses useful React components/supporting clips and returns its plan or no-work reason.
+- `motionmaxxing-agent` — contributes brand-specific pacing/camera/depth guidance before plan freeze.
 - `superlite-agent` — writes the execution plan and tests, incorporating the Open 3D plan before contracts freeze.
 
 **Wave 3 (needs Wave 2 outputs):**
 
+- `remotion-agent` — builds and validates assigned intermediate clips/sequences against frozen production contracts.
 - `beat-sync-agent` — creates the shared BPM/frame beat map, transition schedule, and audio cue plan.
 - `animejs-agent` — implements assigned landing-page/text/element motion after research, design and engine ownership are frozen; writes `animejs-plan.md`, `animejs-motion.js`, and `animejs-validation.md`. Read `references/animejs-integration.md`.
 - `gsap-agent` — implements only its assigned seekable choreography targets; skip when Anime.js owns all motion. If motionmaxxing or Remotion owns the renderer, contribute doctrine and timing notes only; do not build a second HyperFrames timeline.
@@ -147,14 +146,16 @@ waits for animation ownership and, for video, the canonical beat map, and Wave 4
 
 **Wave 4 (needs all design and engineering outputs):**
 
-For web-only landing pages, the coordinator integrates the web build and skips video-render agents, final MP4 rendering and video-only artifacts. Motion-craft and QA inspect the live page.
+For web-only landing pages, the coordinator integrates the web build, retains specialist assessment/contribution/review tasks, and skips only unnecessary video-render tasks, final MP4 rendering and video-only artifacts. Motion-craft and QA inspect the live page.
 
-- `hyperframes-agent` — assembles the deterministic HTML composition and renders drafts by default. Skip if Remotion or motionmaxxing owns the video renderer.
-- `remotion-agent` — runs only if `brief.json.optionalAgents.remotion-agent.requested` is true or the user explicitly approved it; otherwise mark skipped. Do not run it if motionmaxxing owns the film.
-- `motionmaxxing-agent` — runs only if `brief.json.optionalAgents.motionmaxxing-agent.requested` is true or the user explicitly approved it; otherwise mark skipped. When it runs, it owns the film and HyperFrames and Remotion are skipped.
+- `hyperframes-agent` — consumes verified supporting clips, local sequences and scene layers; assembles the final-film draft by default. Skip only for a web-only deliverable or explicit alternate final owner, never merely because another specialist contributes.
+- `remotion-agent` — supports clip integration/repairs; only owns final rendering for an explicit standalone deliverable.
+- `motionmaxxing-agent` — reviews the integrated draft in contribution mode; writes `motionmaxxing-review.md` and returns findings to actual owners. Only owns final rendering for an explicit standalone deliverable.
 - `hairline-agent` — runs only if `brief.json.optionalAgents.hairline-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
 - `open-3d-agent` — resumes after integration for selected site-check/browser validation, writes `open-3d-validation.md`, and hands evidence/findings to craft review and QA.
-- `motion-craft-agent` — runs still/contact-sheet review, checks frame collisions and safe areas, wires code-generated or approved sound, and records fixes. If motionmaxxing owns the film, review `film/look-final/` and `film/NOTE.md` instead of a HyperFrames contact sheet.
+- `motion-craft-agent` — reviews intermediate-asset joins and integrated frames, consumes motionmaxxing findings, checks safe areas and audio, and routes repairs to actual owners.
+
+Read `references/normal-motion-orchestration.md`; freeze `production-plan.json` before implementation, and use its `3d-parallax` profile for 3D parallax websites. Captures of integrated pages precede final-film asset consumption.
 
 Pass `brief.json`, the approved `motionSkillPacks`, and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.
 
@@ -185,14 +186,16 @@ ffprobe -v error -show_streams -show_format film/final.mp4
 
 Add `--audio` only when the mix is local or user-provided. Do not call ElevenLabs.
 
-Compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence. If UI/UX Pro Max is selected, include `uiux-design-system.md`, `uiux-audit.md`, local search queries, responsive/keyboard/focus evidence, and reduced-motion checks. If `img2threejs-agent` is selected, include `.img2threejs/state.json`, `sculpt-spec.json`, `img2threejs-passes/`, and `img2threejs-report.md` in the QA evidence. If motionmaxxing is selected, `film/NOTE.md` must quote G0–G5 and a fail is not a pass. If the Opus catalog was selected, `opus-prompt-brief.md` must credit its sources and the film must not be a shot-for-shot clone.
+For video deliverables, compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence. If UI/UX Pro Max is selected, include `uiux-design-system.md`, `uiux-audit.md`, local search queries, responsive/keyboard/focus evidence, and reduced-motion checks. If `img2threejs-agent` is selected, include `.img2threejs/state.json`, `sculpt-spec.json`, `img2threejs-passes/`, and `img2threejs-report.md` in the QA evidence. If motionmaxxing owns an explicit standalone film, `film/NOTE.md` must quote G0–G5 and a fail is not a pass; contribution mode instead requires `motionmaxxing-plan.md` and applicable `motionmaxxing-review.md`. If the Opus catalog was selected, `opus-prompt-brief.md` must credit its sources and the film must not be a shot-for-shot clone.
 
 ## Output Contract
+
+- `production-plan.json`, `motionmaxxing-plan.md` and `motionmaxxing-review.md` when applicable; assigned Remotion plans/source/clips and validation evidence, with no-work reasons for unneeded specialist work
 
 - `/hyperframes/output/final.mp4` when HyperFrames is the renderer
 - `/hyperframes/composition/` with `index.html`, `style.css`, `script.js`, `tokens.css`, and assets, when HyperFrames is the renderer
 - `film/index.html`, `film/STORYBOARD.md`, `film/NOTE.md`, `film/final.mp4`, and `film/look-final/` when motionmaxxing owns the film
-- `renderer-decision.md` when the video renderer is not HyperFrames
+- `renderer-decision.md` for video deliverables with an explicit final owner other than HyperFrames
 - `UX_LAWS_AUDIT.md` with all 14 laws, evidence, fixes and re-audit results
 - `brief.json`, `design-dna.json`, `style-spec.md`, `uiux-design-system.md` when applicable, `uiux-audit.md` when applicable, `sculpt-spec.json` and `img2threejs-report.md` when applicable, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable

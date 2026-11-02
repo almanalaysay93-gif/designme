@@ -33,3 +33,5 @@ Outputs:
 - A corrected draft ready for `qa-anti-slop-agent`.
 
 For enabled Open 3D work, consume `open-3d-plan.md` and `open-3d-validation.md` after integration. Review sampled scene/scroll/cursor states, word/label collisions and mobile/reduced-motion fallbacks; return reproducible findings to the actual module owner for repair before QA.
+
+Read `references/normal-motion-orchestration.md`. Remotion, motionmaxxing and Open 3D are normal specialists, assessed every build without opt-in gates. Respect production-plan.json intermediate-asset contracts, one final owner per deliverable and actual producer/consumer repair dependencies. For 3D parallax websites enable Open 3D, use one shared scroll progress and preserve live web functionality; require relevant motion and browser evidence.
