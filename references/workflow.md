@@ -5,7 +5,7 @@
 3. Wave 2 writes visual style spec, UI/UX design system (if approved), `img2threejs-agent` procedural 3D reconstruction (if approved), motion doctrine, competing creative directions, the selected shot plan, and execution plan (`superlite-agent`).
 4. Wave 3 creates the canonical beat/frame map, Anime.js/GSAP/Three.js implementation or notes (mounting `create<ObjectName>Model` when `img2threejs-agent` ran), thesis, and taste critique.
 5. Wave 4 validates assigned intermediate clips/captures, assembles the HyperFrames final-film draft by default, and runs motionmaxxing contribution review. Explicit standalone output can select a different final owner; one final owner per deliverable. Then run draft contact-sheet and sound review. Hairline, if approved, is an interactive figure beside that renderer, not a second video.
-6. `qa-anti-slop-agent` boots the output in local Chromium (`chromium-1248`) and checks `leaningtech/browsercode` preview rules to verify visual design accuracy, plan compliance (`plan.md` and `orchestrator.json`), timing, beat sync, audio, accessibility, UX laws, and determinism.
+6. `qa-anti-slop-agent` and browser-agent use Agent Desktop for actual scoped UI/visual checks and separate local browser/render tools for exact viewport, DOM, timing, audio and determinism evidence. Verify design and plan compliance; missing required native checks are BLOCKED. See `references/agent-desktop-integration.md`.
 7. If needed, re-run only the responsible agent for up to 3 loops.
 8. On PASS, deliver the verified live site for website work. For video, render with its final owner, compare two render hashes, run `ffprobe`, and write `audit.md`.
 

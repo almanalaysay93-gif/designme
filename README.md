@@ -1,8 +1,8 @@
 # /designme — invoke with /designme
 
-One skill that spawns a griller/planner, a visual-style director, parallel creative and engineering agents, an optional procedural 3D reconstruction agent (`img2threejs-agent`), a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop with live Chromium and BrowserCode verification.
+One skill that spawns a griller/planner, a visual-style director, parallel creative and engineering agents, an optional procedural 3D reconstruction agent (`img2threejs-agent`), a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop with Agent Desktop UI and local render verification.
 
-> **Scope:** HyperFrames is the default renderer. Remotion, motionmaxxing and Open 3D are normal specialists that contribute useful components, supporting footage, motion guidance and integrated review alongside HyperFrames. `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. `img2threejs-agent` is optional and runs only when a project provides a 2D reference image to reconstruct as a procedural Three.js `THREE.Group` model in code from [img2threejs/img2threejs](https://github.com/img2threejs/img2threejs). Blotato supplies prompt references; Remotion supplies both references and useful local supporting sequences. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits. `opus5-videos-agent` is optional and only researches prompts from [yihui-dev/awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos). motionmaxxing must not call ElevenLabs. `qa-anti-slop-agent` inspects live output in local Chromium (`chromium-1248`) and [leaningtech/browsercode](https://github.com/leaningtech/browsercode).
+> **Scope:** HyperFrames is the default renderer. Remotion, motionmaxxing and Open 3D are normal specialists that contribute useful components, supporting footage, motion guidance and integrated review alongside HyperFrames. `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. `img2threejs-agent` is optional and runs only when a project provides a 2D reference image to reconstruct as a procedural Three.js `THREE.Group` model in code from [img2threejs/img2threejs](https://github.com/img2threejs/img2threejs). Blotato supplies prompt references; Remotion supplies both references and useful local supporting sequences. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits. `opus5-videos-agent` is optional and only researches prompts from [yihui-dev/awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos). motionmaxxing must not call ElevenLabs. `qa-anti-slop-agent` uses [Agent Desktop](https://github.com/vercel-labs/agent-desktop) for live UI verification and local render/measurement tools for technical evidence.
 
 ## Invoke
 
@@ -29,11 +29,13 @@ The recommendation is stored in `brief.json.optionalAgents`. Optional agents are
 
 See [`references/img2threejs.md`](references/img2threejs.md).
 
-## Chromium and BrowserCode QA verification
+## Agent Desktop and render QA
 
-`qa-anti-slop-agent` and `browser-agent` verify live rendered output using local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`) and [leaningtech/browsercode](https://github.com/leaningtech/browsercode) (`~/.agents/tools/leaningtech-browsercode`) to check that the rendered output matches the approved design and that every scheduled agent followed `plan.md` and `orchestrator.json`.
+`browser-agent` and final QA use `vercel-labs/agent-desktop` for task-scoped app/window snapshots, native accessibility ref actions, UI observations and visual evidence. This replaces the former interactive browser tool while preserving role names and report handoffs. Actual OS/session permissions and capability checks are required; a headless container is not assumed to have an accessible desktop.
 
-See [`references/browsercode-chromium-qa.md`](references/browsercode-chromium-qa.md).
+Playwright/Chromium and Open 3D checks retain exact viewport/DOM/console/network/performance and deterministic rendering responsibilities. Agent Desktop is not a DOM evaluator or video engine. Missing required native interaction evidence is reported as BLOCKED. BrowserCode is only an optional requested preview target.
+
+See [installation, interaction loop, platform requirements and evidence contract](references/agent-desktop-integration.md).
 
 ## UI/UX Pro Max design intelligence
 
@@ -67,7 +69,7 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 - `Tejashmakwana/motionmaxxing` → `motionmaxxing-agent`: normal brand-specific motion/depth/pacing planning and integrated craft review; an explicit standalone film can still use its runtime and G0–G5 gates. See [`references/motionmaxxing.md`](references/motionmaxxing.md).
 - `yihui-dev/awesome-opus5-5-videos` → `opus5-videos-agent`: optional MIT prompt catalog. Picks a few code-authored video prompts, credits the creators, and rewrites the craft for this brand. See [`references/opus5-videos.md`](references/opus5-videos.md).
 - `img2threejs/img2threejs` → `img2threejs-agent`: optional Apache-2.0 procedural image-to-Three.js reconstruction agent. See [`references/img2threejs.md`](references/img2threejs.md).
-- `leaningtech/browsercode` + local Chromium → `qa-anti-slop-agent` and `browser-agent`: live Chromium and BrowserCode verification of design fidelity and plan execution. See [`references/browsercode-chromium-qa.md`](references/browsercode-chromium-qa.md).
+- `vercel-labs/agent-desktop` → browser-agent and QA: native UI interaction and scoped reference/visual evidence; separate local Playwright/site-check tools supply exact browser/render measurements.
 
 ## Free-only rule
 
@@ -77,7 +79,7 @@ All 27 agents are restricted to free, local, open-source, or already-installed t
 
 - `SKILL.md` — `/designme` contract, install gate, dependency waves, optional-agent gate, and output contract
 - `agents/` — creative direction, motion engineering, visual-style direction, UI/UX Pro Max intelligence, normal Remotion/motionmaxxing/Open 3D specialists and optional Hairline/Opus-prompt/img2threejs agents, craft review, and QA agents
-- `references/` — grilling questions, prompt sources, iart motion-pack routing, motionmaxxing contract, Opus 5.5 prompt catalog, img2threejs integration, BrowserCode + Chromium QA verification, visual-style library, UI/UX Pro Max integration, Superlite adapter, UX laws, QA rubric, asset pipeline, missing checklist, and orchestration state
+- `references/` — grilling questions, prompt sources, iart motion-pack routing, motionmaxxing contract, Opus 5.5 prompt catalog, img2threejs integration, Agent Desktop + render QA verification, visual-style library, UI/UX Pro Max integration, Superlite adapter, UX laws, QA rubric, asset pipeline, missing checklist, and orchestration state
 - `manifest.json` — selected source repositories and agent responsibilities
 
 ## Install
@@ -90,12 +92,13 @@ npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna 
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills lucasmarkes/hairline Tejashmakwana/motionmaxxing -g
 git clone https://github.com/img2threejs/img2threejs.git ~/.agents/skills/img2threejs
-git clone https://github.com/leaningtech/browsercode.git ~/.agents/tools/leaningtech-browsercode
 # Optional UI/UX Pro Max local skill (MIT, bundled data + Python search)
 npm install -g ui-ux-pro-max-cli && uipro init --ai claude --global
 # Opus prompt catalog is cloned by opus5-videos-agent when approved; see references/opus5-videos.md
 # Add only the iart-ai packs approved during grilling; see references/motion-skills-packs.md
-npx skills add vercel-labs/agent-browser thedotmack/claude-mem -g
+bash scripts/install-agent-desktop.sh
+npx skills add https://github.com/vercel-labs/agent-desktop --skill agent-desktop -g
+npx skills add thedotmack/claude-mem -g
 # Superlite adapter is bundled; optional native plugin: references/superlite-integration.md
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
 npx skills add vercel-labs/skills --skill find-skills -g

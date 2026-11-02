@@ -113,9 +113,9 @@
       "role": "Persistent memory across sessions, compress + re-inject context"
     },
     {
-      "repo": "vercel-labs/agent-browser + leaningtech/browsercode + chromium/chromium",
+      "repo": "vercel-labs/agent-desktop",
       "agent": "browser-agent",
-      "role": "Local Chromium and BrowserCode verification for JS-heavy pages, click, hover, and visual token extraction"
+      "role": "Task-scoped native app/window UI interaction and reference/visual verification through Agent Desktop; separate local browser tools provide DOM/render measurements"
     },
     {
       "repo": "Leonxlnx/taste-skill (gsd removed; render tasks are split by taste-gsd-agent)",
@@ -126,7 +126,7 @@
   "orchestration": {
     "subagent_count": 27,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, motionmaxxing and Open 3D are normal locally executed specialists; Hairline, img2threejs and the Opus prompt catalog retain their optional gates. motionmaxxing must not call ElevenLabs or any paid voice/music API. img2threejs must use only local generic/character profiles and never call Tripo, Hyper3D, CharacterGen, or paid plugins. QA uses local Chromium and leaningtech/browsercode without paid BrowserPod API keys. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
+    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, motionmaxxing and Open 3D are normal locally executed specialists; Hairline, img2threejs and the Opus prompt catalog retain their optional gates. motionmaxxing must not call ElevenLabs or any paid voice/music API. img2threejs must use only local generic/character profiles and never call Tripo, Hyper3D, CharacterGen, or paid plugins. QA uses Agent Desktop for native UI verification and local browser/render tools for measurements; BrowserCode is only an explicitly requested optional preview target, with no paid BrowserPod keys. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -135,8 +135,8 @@
       },
       {
         "agent": "qa-anti-slop-agent",
-        "repo": "designme/internal + leaningtech/browsercode + chromium/chromium",
-        "role": "Final visual, motion, beat, audio, accessibility, determinism, UX laws, and live Chromium + BrowserCode design and plan verification gate"
+        "repo": "designme/internal + vercel-labs/agent-desktop + local browser/render tools",
+        "role": "Final visual, motion, timing, audio, accessibility, determinism and plan verification using native UI and separately measured render evidence"
       },
       {
         "agent": "visual-style-agent",
@@ -314,6 +314,26 @@
       },
       "scene_ownership": "Dedicated background owner or layers in one existing scene; one progress source",
       "repair_cap": 3
+    },
+    "interaction_routing": {
+      "backend": "agent-desktop",
+      "repo": "vercel-labs/agent-desktop",
+      "agent": "browser-agent",
+      "contract": "references/agent-desktop-integration.md",
+      "install_script": "scripts/install-agent-desktop.sh",
+      "harness_skill": "agent-desktop",
+      "replaces": "former interactive agent-browser/browser-use routing",
+      "prerequisites": "Installed native CLI plus actual supported graphical session, accessibility and capture permissions",
+      "first_use": [
+        "agent-desktop skills get desktop",
+        "agent-desktop skills get platform",
+        "agent-desktop status",
+        "agent-desktop permissions"
+      ],
+      "retry": "Only disposition.retry=safe; otherwise observe live state",
+      "physical_input": "Explicit user authorization; never automatic fallback",
+      "measurements": "Existing local Playwright/site-check/frame-capture/render tools",
+      "missing_required_desktop_checks": "BLOCKED"
     }
   },
   "reference_sources": {
@@ -352,6 +372,9 @@
     "open3d_contract": "references/open-3d-integration.md",
     "background_contract": "references/parallax-background-integration.md",
     "html_video_repo": "https://github.com/nexu-io/html-video",
-    "html_video_contract": "references/html-video-integration.md"
+    "html_video_contract": "references/html-video-integration.md",
+    "agent_desktop_repo": "https://github.com/vercel-labs/agent-desktop",
+    "agent_desktop_contract": "references/agent-desktop-integration.md",
+    "browsercode_role": "Optional preview compatibility only when explicitly required by the deliverable"
   }
 }

@@ -84,11 +84,16 @@
 - [ ] `create<ObjectName>Model` uses deterministic noise seeds and named pivots/sockets
 - [ ] No paid or external neural mesh generator (Tripo, Hyper3D, CharacterGen) was called
 
-## Chromium and BrowserCode Live Inspection
-- [ ] Output rendered and inspected in local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing` with `--no-sandbox`)
-- [ ] BrowserCode sandbox compatibility (`~/.agents/tools/leaningtech-browsercode`) checked where applicable
-- [ ] Live render verified against `brief.json`, `design-dna.json`, `style-spec.md`, and `shot-plan.md` ("Did it make the right design?")
-- [ ] Workspace artifacts verified against `plan.md` and `orchestrator.json` ("Did every agent follow the plan?")
+## Agent Desktop and separate render inspection
+
+- [ ] Official installed version/docs and actual platform/session/permission/capability status recorded before native interaction
+- [ ] Task app/window scope and fresh qualified snapshot refs used; unsafe delivery is observed before retry, with no automatic physical-input escalation
+- [ ] Actual Agent Desktop UI/visual evidence is distinguished from local Playwright/site-check/render measurements
+- [ ] Exact viewport/mobile/reduced-motion emulation, computed styles, console/network/overflow/performance use appropriate executable tools, not invented Agent Desktop APIs
+- [ ] Canvas/parallax/animated output inspected through real screenshots and targeted motion evidence; accessibility trees alone do not establish visual correctness
+- [ ] Missing required desktop/session/input/permission evidence is BLOCKED; optional requested BrowserCode preview compatibility is recorded separately
+- [ ] Desktop artifacts remain scoped/private and are not committed as public screenshots/snapshots
+- [ ] Live output and every scheduled specialist agree with brief/design/plan/state, with reproducible owner-specific repairs
 
 ## Mandatory UX laws (all outputs)
 

@@ -32,7 +32,7 @@ Inputs: approved `brief.json`, `design-dna.json`, `style-spec.md`, `motion-doctr
 
 - Require `site-check` for enabled animated/3D web builds: Chromium and WebKit at desktop, tablet and phone sizes, reachable view/light/scroll states, reduced motion, and actual contact-sheet inspection. Distinguish software-rendered frame-time readings from hardware performance evidence.
 - Use `frame-capture` for low-FPS motion review when stills cannot establish scroll seams, pin release, alpha loops, cursor response or camera/scene timing; capture only relevant sequences and preserve the existing final-renderer boundary.
-- Run the selected local `site-check` checks against the integrated draft and record actual reports/contact sheets in `open-3d-validation.md`. Supplement Designme's existing Chromium/BrowserCode QA; do not replace it. If browsers/dependencies are missing, report BLOCKED and the exact prerequisite, not PASS.
+- Run the selected local `site-check` checks against the integrated draft and record actual reports/contact sheets in `open-3d-validation.md`. Supplement Designme's Agent Desktop interaction plus local render QA; do not replace it. If browsers/dependencies are missing, report BLOCKED and the exact prerequisite, not PASS.
 - Supply timestamps, viewport, steps, performance readings and evidence paths to `motion-craft-agent` and `qa-anti-slop-agent`.
 - On findings targeting your modules, reproduce and fix only owned files, rerun affected checks, and return evidence to the coordinator. QA re-audits inside the existing maximum of three repair loops; the coordinator owns retry counts and final status.
 
