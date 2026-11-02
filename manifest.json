@@ -213,7 +213,16 @@
       "contract": "references/animejs-integration.md",
       "implementation_agent": "animejs-agent",
       "property_ownership": "One engine per target/property; honor static briefs and explicit stack choices",
-      "video_renderer": false
+      "video_renderer": false,
+      "source_install": {
+        "required_on_skill_install": true,
+        "script": "scripts/install-animejs.sh",
+        "repo": "https://github.com/juliangarnier/anime.git",
+        "local_path": "~/.agents/tools/animejs",
+        "path_override": "DESIGNME_ANIMEJS_REPO_DIR",
+        "existing_checkout": "verify origin and reuse without modifying",
+        "evidence": "motion-skills-installed.md: checkout path and commit SHA"
+      }
     }
   },
   "reference_sources": {

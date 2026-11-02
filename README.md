@@ -85,6 +85,9 @@ All 25 agents are restricted to free, local, open-source, or already-installed t
 ## Install
 
 ```bash
+# Required: download official Anime.js source when installing Designme.
+# Run from the designme repository root. Reuses a verified existing checkout.
+bash scripts/install-animejs.sh
 npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills lucasmarkes/hairline Tejashmakwana/motionmaxxing -g
@@ -124,6 +127,6 @@ any justified Partial results. See [the audit workflow](references/ux-laws-workf
 
 Anime.js is the default for animated landing-page text, staggered elements, SVG accents, and ordinary UI motion. The existing `prompt-reference-agent` researches 3–5 relevant animated-word examples, cites sources, and shortlists treatments that fit the build's copy, brand, audience, and pacing. `motion-design-agent` uses those references before `animejs-agent` implements the selected treatment.
 
-The coordinator records engine choice in `brief.json.animation` and target/property ownership in `animation-plan.json`, preventing Anime.js/GSAP conflicts. Static briefs and explicit stack choices take precedence. Install `animejs@4` only in the target build and pin its lockfile; no additional external skill is required. QA verifies mobile wrapping, semantic readable text, keyboard access, reduced motion, cleanup, and deterministic video seeking where applicable. Web-only landing pages do not require video rendering.
+The coordinator records engine choice in `brief.json.animation` and target/property ownership in `animation-plan.json`, preventing Anime.js/GSAP conflicts. Static briefs and explicit stack choices take precedence. The Designme installer downloads the official Anime.js repository to `~/.agents/tools/animejs` using `scripts/install-animejs.sh`. Existing official checkouts are verified and reused. Install `animejs@4` only in the target build and pin its lockfile; no additional external skill is required. QA verifies mobile wrapping, semantic readable text, keyboard access, reduced motion, cleanup, and deterministic video seeking where applicable. Web-only landing pages do not require video rendering.
 
 See [Anime.js integration and research contract](references/animejs-integration.md) and the [Anime.js specialist](agents/animejs-agent.md).

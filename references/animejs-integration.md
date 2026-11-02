@@ -10,7 +10,9 @@ Anime.js is a first-class animation engine, especially for landing pages. It ani
 
 The gallery contains older Anime.js examples: use it for visual inspiration and rewrite against the selected v4 API. Do not paste v3 syntax into v4 projects. Verify the installed version's documentation for text splitting, scopes, timeline seeking and scroll APIs before using them; use local accessible span splitting when necessary.
 
-Install `animejs@4` in the target build with its existing package manager, only when animation is selected; commit its lockfile to pin the resolved version. This skill repository is instruction-only and needs no root npm dependency. Anime.js is a library, not an invented external skill package. Use local bundled assets for offline rendering.
+During every Designme installation, run `bash scripts/install-animejs.sh` from the skill directory to download the official repository into `~/.agents/tools/animejs` (override with `DESIGNME_ANIMEJS_REPO_DIR`). The helper verifies and reuses an existing official checkout without pulling, resetting or overwriting it; mismatched destinations or download failures block install completion. Record the checkout path and `git rev-parse HEAD` in `motion-skills-installed.md`. Both the research agent and Anime.js specialist should consult this local source.
+
+Separately, install `animejs@4` in the target build with its existing package manager, only when animation is selected; commit its lockfile to pin the resolved version. This skill repository is instruction-only and needs no root npm dependency. Anime.js is a library, not an invented external skill package. Use local bundled assets for offline rendering.
 
 ## Coordinator routing
 
