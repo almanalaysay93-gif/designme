@@ -16,6 +16,11 @@
       "role": "Official GSAP: Timeline, ScrollTrigger, Flip, SplitText, useGSAP"
     },
     {
+      "repo": "juliangarnier/anime",
+      "agent": "animejs-agent",
+      "role": "Default animated landing-page text and elements, SVG accents, scoped Anime.js v4 timelines and accessible reduced-motion behavior"
+    },
+    {
       "repo": "designme/internal",
       "agent": "visual-style-agent",
       "role": "20-style visual language library: material, palette, motion grammar, camera, procedural build samples, and anti-slop checks"
@@ -58,7 +63,7 @@
     {
       "repo": "Blotato-Inc/blotato-skills + remotion-dev/skills",
       "agent": "prompt-reference-agent",
-      "role": "Free prompt references for brand intake, hooks, grading, repurposing, React/video composition, captions, and future project briefs"
+      "role": "Free prompt references for brand intake, hooks, grading, repurposing, React/video composition, captions, and future project briefs; animated-word reference research with cited, brand-fit treatments for landing pages and text-motion builds"
     },
     {
       "repo": "remotion-dev/remotion + remotion-dev/skills",
@@ -109,7 +114,7 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 24,
+    "subagent_count": 25,
     "free_only": true,
     "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, Hairline, motionmaxxing, img2threejs, and the Opus 5.5 prompt catalog run locally and only when explicitly requested. motionmaxxing must not call ElevenLabs or any paid voice/music API. img2threejs must use only local generic/character profiles and never call Tripo, Hyper3D, CharacterGen, or paid plugins. QA uses local Chromium and leaningtech/browsercode without paid BrowserPod API keys. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
     "agents": [
@@ -199,6 +204,16 @@
       "law_count": 14,
       "optional_ux_agent_required": false,
       "completion": "No Violated rows; every Partial has a documented justification and evidence. Missing evidence blocks completion."
+    },
+    "animation_routing": {
+      "landing_page_default": "animejs",
+      "research_agent": "prompt-reference-agent",
+      "research_output": "word-animation-references.md",
+      "ownership_map": "animation-plan.json",
+      "contract": "references/animejs-integration.md",
+      "implementation_agent": "animejs-agent",
+      "property_ownership": "One engine per target/property; honor static briefs and explicit stack choices",
+      "video_renderer": false
     }
   },
   "reference_sources": {
@@ -228,6 +243,10 @@
     "visual_style_library": "references/visual-style-library.md",
     "ui_ux_pro_max_repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
     "ui_ux_pro_max_homepage": "https://uupm.cc",
-    "ui_ux_pro_max_license": "MIT"
+    "ui_ux_pro_max_license": "MIT",
+    "animejs_repo": "https://github.com/juliangarnier/anime",
+    "animejs_docs": "https://animejs.com/documentation/",
+    "animated_words_gallery": "https://tobiasahlin.com/moving-letters/",
+    "animejs_contract": "references/animejs-integration.md"
   }
 }

@@ -73,7 +73,7 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 
 ## Free-only rule
 
-All 24 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
+All 25 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
 
 ## Structure
 
@@ -119,3 +119,11 @@ implementation and post-build review. Plans map the laws to actual flows; every
 build or significant change produces `UX_LAWS_AUDIT.md` with evidence, fixes and
 re-audit results. Completion requires no violations and documented reasons for
 any justified Partial results. See [the audit workflow](references/ux-laws-workflow.md).
+
+## Anime.js for landing pages and animated words
+
+Anime.js is the default for animated landing-page text, staggered elements, SVG accents, and ordinary UI motion. The existing `prompt-reference-agent` researches 3–5 relevant animated-word examples, cites sources, and shortlists treatments that fit the build's copy, brand, audience, and pacing. `motion-design-agent` uses those references before `animejs-agent` implements the selected treatment.
+
+The coordinator records engine choice in `brief.json.animation` and target/property ownership in `animation-plan.json`, preventing Anime.js/GSAP conflicts. Static briefs and explicit stack choices take precedence. Install `animejs@4` only in the target build and pin its lockfile; no additional external skill is required. QA verifies mobile wrapping, semantic readable text, keyboard access, reduced motion, cleanup, and deterministic video seeking where applicable. Web-only landing pages do not require video rendering.
+
+See [Anime.js integration and research contract](references/animejs-integration.md) and the [Anime.js specialist](agents/animejs-agent.md).

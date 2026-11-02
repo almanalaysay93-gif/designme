@@ -18,7 +18,7 @@ acceptance checks, evidence paths and risks. Reference the existing thesis and
 approved renderer; do not reopen the approved brief or run another orchestrator.
 Record assumptions and resolved choices in brainstorm.md without another interview.
 
-Schedule the canonical beat/frame map before GSAP/Three.js implementation. Motion
+Read `references/animejs-integration.md`. Schedule animated-word research before motion doctrine and coordinator-owned `animation-plan.json` before Anime.js/GSAP implementation. For video, schedule the canonical beat/frame map before Anime.js/GSAP/Three.js implementation. For web-only builds, use interaction triggers and millisecond timing instead of waiting for a video beat map. Motion
 craft review waits for a renderer draft. Only independent files may run in parallel;
 the coordinator owns manifests, shared composition entry and integration.
 

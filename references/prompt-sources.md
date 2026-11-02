@@ -30,3 +30,7 @@ Use only public repository/docs content and local or already-installed tools. Do
 - Skill: https://github.com/lucasmarkes/hairline/tree/main/skills/hairline-create
 
 Use Hairline for pointer-responsive interactive figures, technical diagrams, and self-contained line illustrations. Read its concepts and ten rules before creating a figure. Keep it separate from video rendering, use approved Design DNA tokens, and validate the browser result, accessibility, reduced-motion behavior, rest pose, and tour.
+
+## Anime.js and animated words
+
+Use https://animejs.com/documentation/ and https://github.com/juliangarnier/anime for current v4 APIs, and https://tobiasahlin.com/moving-letters/ for visual inspiration (older code needs migration). Research additional public live examples that fit the actual build. Follow [the research contract](animejs-integration.md) and produce `word-animation-references.md` before motion planning.

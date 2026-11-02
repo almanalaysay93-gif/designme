@@ -73,13 +73,14 @@ Installing a plugin alone does not wire the specialty skill's contracts into it.
 
 Use `plan.md` for execution contracts and `orchestrator.json` for task state and
 repair counts. `superlite-agent` replaces the former Superpowers engineering role;
-it does not add a 24th role. Existing free/local policy, optional-agent approvals,
+it does not add a role; Anime.js is a separate specialist. Existing free/local policy, optional-agent approvals,
 three repair loops, exactly-one-renderer rule and anti-slop QA remain binding.
 Do not launch Superlite's paid-model routing or bypass still/contact-sheet review.
 
 The named waves are dependency groups, not permission to run every listed role
 simultaneously. Within Wave 2, freeze engineering contracts after style, doctrine
-and shot direction. Within Wave 3, finish the shared beat/frame map before GSAP
-and Three.js implementation. Within Wave 4, assemble the selected renderer's draft
+and shot direction. Within Wave 3, finish the shared beat/frame map before GSAP, Anime.js
+and Three.js implementation. Anime.js additionally waits for animated-word research
+and the coordinator-owned animation target/property map. Within Wave 4, assemble the selected renderer's draft
 before motion-craft review. Fresh engineering review follows integration/craft,
 then the anti-slop QA gate and final render verification.

@@ -19,10 +19,10 @@
 - [ ] Holds are readable and the hook is not delayed by empty frames
 
 ## GSAP and Three.js
-- [ ] useGSAP with cleanup or gsap.context()
+- [ ] When GSAP is used: useGSAP with cleanup or gsap.context()
 - [ ] Timeline used, not scattered tweens
 - [ ] Only transform/opacity for ordinary UI motion
-- [ ] ScrollTrigger: anticipatePin, scrub 0.5-1.5, no markers in prod
+- [ ] When ScrollTrigger is used: anticipatePin, scrub 0.5-1.5, no markers in prod
 - [ ] 3D assets are disposed and seeded layers are repeatable
 
 ## Beat and Timeline Contract
@@ -97,3 +97,14 @@
 - [ ] No Violated rows remain; justified Partial rows have scope, reason and impact
 - [ ] Missing evidence blocks PASS; applicable UI laws are not skipped with optional agents
 - [ ] Fix owners, re-audit results and remaining limitations appear in `audit.md`
+
+## Anime.js and animated-word builds
+
+- [ ] Research cites build-fit sources, distinguishes observed motion from inference, and identifies selected reference IDs
+- [ ] `animation-plan.json` assigns non-overlapping target/property ownership; implementation matches it
+- [ ] Anime.js uses the selected pinned v4 API and component-scoped selectors; GSAP checks apply only where GSAP is used
+- [ ] Actual desktop/mobile evidence covers font-loaded wrapping, no-JS/first-paint readability, accessible text and keyboard/CTA access
+- [ ] Reduced-motion initial state and preference changes expose full readable content without decorative loops
+- [ ] Unmount/replay cleanup restores DOM and removes timelines, observers and listeners
+- [ ] When rendered as video, paused Anime.js seeking uses canonical milliseconds and remains repeatable on backward/forward seeks
+- [ ] `animejs-validation.md` records actual execution evidence or BLOCKED limitations

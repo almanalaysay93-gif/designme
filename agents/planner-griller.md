@@ -99,3 +99,7 @@ when UI/UX Pro Max is skipped. For pure films, assess hierarchy, information loa
 readability, emphasis, opening/ending and pacing from timed frames; document why
 interaction-only checks have no corresponding controls. Missing evidence is
 BLOCKED; Violated rows block PASS. Include the audit in `audit.md` and delivery.
+
+## Text and element animation routing
+
+Read `references/animejs-integration.md`. For landing pages with motion, default `brief.json.animation` to `{"engine":"animejs","reason":"Landing-page text and element motion","textResearch":true,"reducedMotion":"show-final-state"}`. Honor explicit stack or static requirements; use `mixed` only for disjoint ownership and `none` for static builds. Schedule `prompt-reference-agent` to find animated-word references that fit the brand/copy before motion planning. The coordinator records target/property ownership in `animation-plan.json` before implementation. This is core routing, not an extra optional-agent approval gate.
