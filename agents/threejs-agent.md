@@ -34,3 +34,5 @@ Output:
 Must be compatible with HyperFrames (offscreen canvas rendering, no window.* random).
 
 Read `references/open-3d-integration.md` when Open 3D is enabled. Agree scene ownership before coding: only one agent owns a scene renderer/camera/loop. When open-3d-agent owns the scene, supply only assigned geometry/model factories or review; do not create a parallel scene runtime. Consume the same project Three.js version and matching addons.
+
+For requested multilayer/parallax animated backgrounds, read `references/parallax-background-integration.md` and consume `background-plan.json`. Coordinate with parallax-background-agent: one assigned scene/camera/progress owner, disjoint layer/asset/property files and production-plan.json handoffs. Evaluate actual reference fit, website-goal/text/CTA readability, mobile/reduced-motion/fallback/lifecycle behavior and return reproducible failures to the true owner within the existing repair loop. For html-video use `references/html-video-integration.md`; source availability is not proof of a successful frame-accurate/alpha render.

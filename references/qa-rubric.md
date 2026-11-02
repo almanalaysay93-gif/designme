@@ -132,3 +132,14 @@
 - [ ] motionmaxxing planning/review evidence applies to the real output; film-only gates are N/A for ordinary website navigation and reading holds
 - [ ] 3D parallax sites use one scene owner and canonical scroll progress, with readable CTAs, mobile/reduced-motion behavior, loading/performance and targeted motion evidence
 - [ ] Captured footage waits for a ready integrated page; film assembly waits for its source footage; producer and consumer checks rerun after relevant repairs
+
+## Multilayer/parallax animated backgrounds
+
+- [ ] background-plan.json reflects actual website type/goal/CTA and all six provider decisions with availability reasons; html-video source/build/render readiness and actual frame/alpha evidence are distinguished
+- [ ] Supplied reference images were actually inspected, with observations/provenance and inferred hidden regions clearly distinguished
+- [ ] img2threejs is used only for approved useful reference-object reconstruction; its factory/pass evidence reaches the assigned scene owner before implementation
+- [ ] Actual named layers, coherent depth/camera/occlusion and bounded motion match the plan; one renderer/camera/progress owner and disjoint text/UI property ownership
+- [ ] Background does not intercept pointer/focus or obscure headings/CTAs; text contrast, semantic access and goal fit were inspected in the integrated site
+- [ ] Desktop/tablet/phone/short-viewport, fast/reverse scroll, pointer/touch, resize, reduced-motion initial/change, no-WebGL/context-loss/static fallback, loading and cleanup checks have real evidence
+- [ ] Hardware-performance/media budgets are measured honestly; background-validation.md and targeted motion captures identify limitations and required blocked checks
+- [ ] Repairs rerun the affected provider/model/layer and integrated consumer checks within the existing three-loop cap

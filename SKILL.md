@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, and Chromium + BrowserCode QA in one orchestrated command.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines goal-led multilayer parallax backgrounds, Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, and Chromium + BrowserCode QA in one orchestrated command.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -58,6 +58,8 @@ npx skills add Tejashmakwana/motionmaxxing -g  # normal craft planning/review; f
 # Optional UI/UX Pro Max local skill; MIT, bundled data + Python search, no paid APIs
 # npm install -g ui-ux-pro-max-cli && uipro init --ai claude --global
 # opus5-videos-agent clones yihui-dev/awesome-opus5-5-videos on approval. It is a prompt catalog, not an npx skill.
+# html-video source when assigned: bash scripts/install-html-video.sh
+# See references/html-video-integration.md for local build/engine checks.
 # Install only the approved iart-ai packs selected during grilling; see references/motion-skills-packs.md
 npx skills add vercel-labs/agent-browser thedotmack/claude-mem -g
 # Superlite adapter is bundled; optional native plugin: references/superlite-integration.md
@@ -83,6 +85,10 @@ Read [Anime.js integration](references/animejs-integration.md). Prefer `animejs-
 For an explicitly requested recording of a web-only build, the coordinator may select `frame-capture` as the sole capture backend under the integration contract below; skip all film renderers and record `renderer-decision.md`. This is the only Open 3D exception to the film-renderer list.
 
 Read [Open 3D integration](references/open-3d-integration.md). For relevant 3D/scroll/interactive builds, record `brief.json.open3d` and selected skills. Make all eight upstream skills available, assess each in `open-3d-capabilities.json`, and execute every relevant capability through evidence-backed verification. `open-3d-agent` plans in Wave 2, implements assigned modules in Wave 3, validates the integrated draft in Wave 4, and receives targeted QA repairs within the existing three-loop cap. Skip unrelated work with a recorded reason. Freeze ownership alongside Three.js, Anime.js and GSAP; retain the free-only policy.
+
+## Goal-led animated backgrounds
+
+Read [parallax background orchestration](references/parallax-background-integration.md). `parallax-background-agent` is a normal specialist, automatically active for requested 3D/multilayer/parallax animated backgrounds. It selects techniques from website type, primary goal and actually inspected reference images, assesses all six providers, builds assigned layers, and participates in integrated QA/repairs. Use the verified `nexu-io/html-video` provider through `references/html-video-integration.md`; inspect actual engine/runtime availability and preserve frame-accuracy and free-only requirements.
 
 ### 1 — The Griller (1 agent) — ALWAYS FIRST — BLOCKING
 
@@ -117,7 +123,7 @@ waits for animation ownership and, for video, the canonical beat map, and Wave 4
 - `memory-agent` — loads past taste and prior constraints.
 - `find-skills-agent` — discovers only missing, compatible skills.
 - `browser-agent` — captures reference screenshots with local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`).
-- `prompt-reference-agent` — researches 3–5 build-fit animated-word examples for landing pages/text-motion builds and writes `word-animation-references.md`; also curates free Blotato/Remotion prompt patterns.
+- `prompt-reference-agent` — researches goal-fit background/depth treatments and inspects supplied images into `background-references.md` when needed; also researches 3–5 build-fit animated-word examples for landing pages/text-motion builds and writes `word-animation-references.md`; also curates free Blotato/Remotion prompt patterns.
 - `opus5-videos-agent` — runs only if approved. Picks a few catalog prompts and writes `opus-prompt-brief.md` before direction. Otherwise mark skipped.
 - `find-skills-agent` — routes approved iart-ai motion-skill packs to the owning agents and records local installs.
 
@@ -128,6 +134,7 @@ waits for animation ownership and, for video, the canonical beat map, and Wave 4
 - `img2threejs-agent` — runs only when approved for a 2D reference image; runs the staged sculpting pipeline (`blockout` to `optimization`) gated by `forge/state.py` and `forge/next.py` and outputs a deterministic `create<ObjectName>Model` `THREE.Group` factory.
 - `motion-design-agent` — consumes `word-animation-references.md`, selects brand-fit text treatments, and writes timing, easing, weight, and choreography doctrine. The coordinator freezes target/property ownership in `animation-plan.json`.
 - `launch-director-agent` — writes three visual directions, kills two, and creates the story/shot/camera/look plan.
+- `parallax-background-agent` — writes goal/reference/provider/layer architecture and a reconstruction brief when needed; waits for research/style, then coordinates motionmaxxing and specialist handoffs before ownership freeze.
 - `open-3d-agent` — when selected, consumes design inputs and writes `open-3d-plan.md` with chosen upstream skills, scene/file ownership, dependencies and acceptance budgets.
 - `remotion-agent` — assesses useful React components/supporting clips and returns its plan or no-work reason.
 - `motionmaxxing-agent` — contributes brand-specific pacing/camera/depth guidance before plan freeze.
@@ -137,6 +144,7 @@ waits for animation ownership and, for video, the canonical beat map, and Wave 4
 
 - `remotion-agent` — builds and validates assigned intermediate clips/sequences against frozen production contracts.
 - `beat-sync-agent` — creates the shared BPM/frame beat map, transition schedule, and audio cue plan.
+- `parallax-background-agent` — builds assigned background layers/modules/media adapters after model/asset and ownership dependencies; shares one progress source and scene owner.
 - `animejs-agent` — implements assigned landing-page/text/element motion after research, design and engine ownership are frozen; writes `animejs-plan.md`, `animejs-motion.js`, and `animejs-validation.md`. Read `references/animejs-integration.md`.
 - `gsap-agent` — implements only its assigned seekable choreography targets; skip when Anime.js owns all motion. If motionmaxxing or Remotion owns the renderer, contribute doctrine and timing notes only; do not build a second HyperFrames timeline.
 - `open-3d-agent` — resumes after ownership/dependency freeze, implements only assigned scene/media/interaction modules, and preserves one renderer/clock per scene.
@@ -152,6 +160,7 @@ For web-only landing pages, the coordinator integrates the web build, retains sp
 - `remotion-agent` — supports clip integration/repairs; only owns final rendering for an explicit standalone deliverable.
 - `motionmaxxing-agent` — reviews the integrated draft in contribution mode; writes `motionmaxxing-review.md` and returns findings to actual owners. Only owns final rendering for an explicit standalone deliverable.
 - `hairline-agent` — runs only if `brief.json.optionalAgents.hairline-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
+- `parallax-background-agent` — validates the integrated site, writes `background-validation.md`, and receives layer/provider repairs within the existing three-loop cap.
 - `open-3d-agent` — resumes after integration for selected site-check/browser validation, writes `open-3d-validation.md`, and hands evidence/findings to craft review and QA.
 - `motion-craft-agent` — reviews intermediate-asset joins and integrated frames, consumes motionmaxxing findings, checks safe areas and audio, and routes repairs to actual owners.
 
@@ -189,6 +198,8 @@ Add `--audio` only when the mix is local or user-provided. Do not call ElevenLab
 For video deliverables, compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence. If UI/UX Pro Max is selected, include `uiux-design-system.md`, `uiux-audit.md`, local search queries, responsive/keyboard/focus evidence, and reduced-motion checks. If `img2threejs-agent` is selected, include `.img2threejs/state.json`, `sculpt-spec.json`, `img2threejs-passes/`, and `img2threejs-report.md` in the QA evidence. If motionmaxxing owns an explicit standalone film, `film/NOTE.md` must quote G0–G5 and a fail is not a pass; contribution mode instead requires `motionmaxxing-plan.md` and applicable `motionmaxxing-review.md`. If the Opus catalog was selected, `opus-prompt-brief.md` must credit its sources and the film must not be a shot-for-shot clone.
 
 ## Output Contract
+
+- `background-plan.json`, `background-design.md`, assigned `background/` modules/assets, `background-references.md` and `background-validation.md` when backgrounds apply
 
 - `production-plan.json`, `motionmaxxing-plan.md` and `motionmaxxing-review.md` when applicable; assigned Remotion plans/source/clips and validation evidence, with no-work reasons for unneeded specialist work
 

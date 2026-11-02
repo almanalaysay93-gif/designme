@@ -1,6 +1,11 @@
 {
   "creative_track": [
     {
+      "repo": "designme/internal",
+      "agent": "parallax-background-agent",
+      "role": "Goal/reference-led multilayer 3D/parallax animated background architecture, owned source implementation, provider handoffs, integrated validation and targeted repairs"
+    },
+    {
       "repo": "CloudAI-X/threejs-skills",
       "agent": "threejs-agent",
       "role": "3D scenes, particles, shaders, GLTF, postprocessing, and mounting procedural img2threejs models"
@@ -119,7 +124,7 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 26,
+    "subagent_count": 27,
     "free_only": true,
     "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, motionmaxxing and Open 3D are normal locally executed specialists; Hairline, img2threejs and the Opus prompt catalog retain their optional gates. motionmaxxing must not call ElevenLabs or any paid voice/music API. img2threejs must use only local generic/character profiles and never call Tripo, Hyper3D, CharacterGen, or paid plugins. QA uses local Chromium and leaningtech/browsercode without paid BrowserPod API keys. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
     "agents": [
@@ -255,7 +260,8 @@
       "agents": [
         "remotion-agent",
         "motionmaxxing-agent",
-        "open-3d-agent"
+        "open-3d-agent",
+        "parallax-background-agent"
       ],
       "contract": "references/normal-motion-orchestration.md",
       "default_final_renderer": "hyperframes",
@@ -264,6 +270,50 @@
       "dispatch": "Assess every build and dispatch relevant work without opt-in; record no-work reasons",
       "parallax_profile": "3d-parallax",
       "final_ownership": "One final owner per deliverable; assigned intermediate asset renders allowed"
+    },
+    "background_routing": {
+      "agent": "parallax-background-agent",
+      "selection": "brief.json.background",
+      "contract": "references/parallax-background-integration.md",
+      "plan": "background-plan.json",
+      "research": "background-references.md",
+      "validation": "background-validation.md",
+      "providers": [
+        "hyperframes",
+        "remotion",
+        "motionmaxxing",
+        "open3d",
+        "html-video",
+        "img2threejs"
+      ],
+      "default": "Assess every build; activate for requested animated/multilayer/3D parallax backgrounds",
+      "selection_basis": [
+        "website type",
+        "primary goal/CTA",
+        "audience",
+        "reference images",
+        "device/loading budget"
+      ],
+      "phases": {
+        "wave1": "Research and actual reference-image inspection",
+        "wave2": "Background requirements/provider/layer plan before reconstruction and ownership freeze",
+        "wave3": "Build owned layers after verified model/assets",
+        "wave4": "Validate integrated background and route QA/craft repairs"
+      },
+      "provider_availability": {
+        "html-video": {
+          "repo": "https://github.com/nexu-io/html-video",
+          "status": "source-verified",
+          "inspected_commit": "c414ecc07f795add03807d5d9ce4baefd807cea2",
+          "license": "Apache-2.0",
+          "contract": "references/html-video-integration.md",
+          "install_script": "scripts/install-html-video.sh",
+          "render_verified": false,
+          "requirements": "Discover installed engines; verify timing/alpha; no paid generation or nested agent loop"
+        }
+      },
+      "scene_ownership": "Dedicated background owner or layers in one existing scene; one progress source",
+      "repair_cap": 3
     }
   },
   "reference_sources": {
@@ -299,6 +349,9 @@
     "animated_words_gallery": "https://tobiasahlin.com/moving-letters/",
     "animejs_contract": "references/animejs-integration.md",
     "open3d_repo": "https://github.com/Moh4696/open-3d-skills",
-    "open3d_contract": "references/open-3d-integration.md"
+    "open3d_contract": "references/open-3d-integration.md",
+    "background_contract": "references/parallax-background-integration.md",
+    "html_video_repo": "https://github.com/nexu-io/html-video",
+    "html_video_contract": "references/html-video-integration.md"
   }
 }

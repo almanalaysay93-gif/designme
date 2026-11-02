@@ -26,3 +26,5 @@ Outputs:
 - `word-animation-references.md` for landing pages or animated-word builds, with cited examples and selected build-fit treatments.
 - `prompt-reference.md` with the selected prompt patterns, source URLs, and free/local substitutions.
 - `brief-enhancements.md` with improved hook, audience, story, caption, and repurposing prompts for the current or future project.
+
+For requested animated/parallax backgrounds, read `references/parallax-background-integration.md`. Research 3–5 goal-fit depth/layer/motion references and inspect actual supplied image pixels with browser/image tools, coordinating with browser-agent. Write `background-references.md` with cited observations, layering/composition/light/text-safe zones, image paths, proposed treatments and explicitly inferred/missing evidence before background planning. Never claim inspected image fidelity from a URL or description alone.

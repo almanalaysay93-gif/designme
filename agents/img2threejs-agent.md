@@ -64,3 +64,5 @@ Read `references/img2threejs.md` and `~/.agents/skills/img2threejs/SKILL.md`.
 - `create<ObjectName>Model.ts` or `create<ObjectName>Model.js`
 - `img2threejs-passes/` with per-pass Chromium screenshots
 - `img2threejs-report.md`
+
+When a requested background uses a reference object/character, consume parallax-background-agent's target/views/pivots spec before reconstruction. The approved brief's explicit reconstruction scope authorizes this role through the existing optionalAgents entry; an image alone does not imply reconstruction. Return the deterministic factory and gated evidence to the assigned background/scene owner, not exclusively threejs-agent. Hidden environment/angles remain labeled approximations; do not reconstruct the whole scene without support.

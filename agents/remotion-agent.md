@@ -21,3 +21,5 @@ You are the Remotion Engineer, a normal Designme specialist. Read `references/no
 ## Review and repair
 
 Hand `remotion-render-plan.md`, assigned editable source, supporting outputs and `remotion-validation.md` to the coordinator and craft/QA agents. Reproduce findings against owned source/clips, rerender affected sequences and hand updated evidence to the consumer. Recheck clip joins and integrated timing within the existing three-loop cap. Do not self-certify the final result or write a competing final film in contribution mode.
+
+For requested multilayer/parallax animated backgrounds, read `references/parallax-background-integration.md` and consume `background-plan.json`. Coordinate with parallax-background-agent: one assigned scene/camera/progress owner, disjoint layer/asset/property files and production-plan.json handoffs. Evaluate actual reference fit, website-goal/text/CTA readability, mobile/reduced-motion/fallback/lifecycle behavior and return reproducible failures to the true owner within the existing repair loop. For html-video use `references/html-video-integration.md`; source availability is not proof of a successful frame-accurate/alpha render.
