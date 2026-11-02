@@ -19,3 +19,5 @@ For animated landing pages, default to Anime.js. Wave 1 researches animated-word
 For selected Open 3D work, open-3d-agent plans in Wave 2, implements its owned modules in Wave 3 and validates the integrated draft in Wave 4. Its findings feed craft review and final QA; failures return to the same owner and are rechecked within the existing three repair loops. Read `references/open-3d-integration.md`.
 
 Normal specialist assessment, contribution and asset handoffs follow `references/normal-motion-orchestration.md`. 3D parallax websites automatically use its profile, with a live site as the primary deliverable and no forced final film.
+
+For animated/multilayer 3D parallax backgrounds, dispatch parallax-background-agent normally: Wave 1 research inspects references; Wave 2 plans goal-fit layers/providers and hands off required reconstruction; Wave 3 builds after verified models/assets and ownership freeze; Wave 4 validates the integrated background, then craft/engineering/QA return targeted repairs. See `references/parallax-background-integration.md`.

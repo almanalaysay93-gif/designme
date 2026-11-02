@@ -71,7 +71,7 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 
 ## Free-only rule
 
-All 26 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
+All 27 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
 
 ## Structure
 
@@ -143,6 +143,14 @@ Full-library use is tracked in `open-3d-capabilities.json`: all eight skills get
 
 Remotion, motionmaxxing and Open 3D are assessed on every build and dispatched when relevant without separate opt-in gates. Remotion creates useful supporting sequences, Open 3D supplies live scenes/media/captured footage, and motionmaxxing contributes motion direction and reviews the integrated result. HyperFrames assembles final films from verified local assets. Record a no-work reason rather than manufacturing unnecessary output.
 
-For a **3D parallax website**, enable the dedicated profile: Open 3D owns scene layers, motionmaxxing guides depth/camera/scroll pacing, Anime.js animates assigned text/UI, and one normalized scroll progress drives the consumers. Remotion assesses useful pre-rendered sequences. The website stays live and interactive, with mobile, reduced-motion, readable CTA and performance checks. A companion film uses captured scene footage inside HyperFrames only when requested.
+For a **3D parallax website**, enable the dedicated profile: parallax-background-agent builds background layers with Open 3D techniques and an explicit scene owner; motionmaxxing guides depth/camera/scroll pacing, Anime.js animates assigned text/UI, and one normalized scroll progress drives the consumers. Remotion assesses useful pre-rendered sequences. The website stays live and interactive, with mobile, reduced-motion, readable CTA and performance checks. A companion film uses captured scene footage inside HyperFrames only when requested.
 
 See [normal specialist routing, intermediate-asset contract and 3D parallax profile](references/normal-motion-orchestration.md).
+
+## Goal-led animated backgrounds
+
+`parallax-background-agent` designs and builds multilayer 3D/parallax animated website backgrounds based on website type, primary goal/CTA, brand, reference images and device budgets. It researches/inspects references, plans depth/layers and provider handoffs, implements owned background modules, validates the integrated site and receives targeted repairs through the normal loop.
+
+It assesses HyperFrames, Remotion, motionmaxxing, Open 3D, html-video and img2threejs. Live scenes, image-based 2.5D layers, procedural animation and justified footage can be combined while preserving one scene/progress owner, readable CTAs and mobile/reduced-motion/static fallbacks. img2threejs is used when an approved reference object needs procedural reconstruction; a single image is not treated as a complete 3D environment. The corrected [nexu-io/html-video](https://github.com/nexu-io/html-video) source supplies goal-fit HTML templates and local supporting footage; see [its local install/render contract](references/html-video-integration.md) for engine discovery and frame-accuracy limitations. Paid audio/model generation stays disabled.
+
+See [background architecture, provider decisions, reference routing and verification](references/parallax-background-integration.md).

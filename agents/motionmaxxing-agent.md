@@ -28,3 +28,5 @@ If the approved deliverable explicitly selects motionmaxxing as final owner, fol
 ## Repair and outputs
 
 Return `motionmaxxing-plan.md`, `motionmaxxing-review.md` and any owned repair evidence to motion-craft and QA. Re-review the integrated fix within the existing three-loop cap. Final authority remains QA; do not self-certify. Final-mode film artifacts are required only when that deliverable was actually selected.
+
+For requested multilayer/parallax animated backgrounds, read `references/parallax-background-integration.md` and consume `background-plan.json`. Coordinate with parallax-background-agent: one assigned scene/camera/progress owner, disjoint layer/asset/property files and production-plan.json handoffs. Evaluate actual reference fit, website-goal/text/CTA readability, mobile/reduced-motion/fallback/lifecycle behavior and return reproducible failures to the true owner within the existing repair loop. For html-video use `references/html-video-integration.md`; source availability is not proof of a successful frame-accurate/alpha render.

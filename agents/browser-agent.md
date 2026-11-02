@@ -21,3 +21,5 @@ Task:
 Output: `browser-report.md` with Chromium screenshots, BrowserCode preview status, and extracted tokens (real, not hallucinated).
 
 This prevents Design DNA hallucination.
+
+For animated/parallax backgrounds, inspect actual reference images and live background motion with the research agent. Provide image/URL provenance, observed near/mid/far structure, lighting and text-safe composition in `background-references.md`. Validate integrated background motion and click-through/reduced-motion/fallback behavior with actual screenshots/recordings under `references/parallax-background-integration.md`.

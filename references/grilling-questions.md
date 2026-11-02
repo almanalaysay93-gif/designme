@@ -27,22 +27,75 @@ Output: `brief.json`
 {
   "goal": "",
   "audience": "",
-  "vibe": ["", "", ""],
-  "references": ["url1", "url2"],
-  "antiSlop": ["no...", "no..."],
+  "vibe": [
+    "",
+    "",
+    ""
+  ],
+  "references": [
+    "url1",
+    "url2"
+  ],
+  "antiSlop": [
+    "no...",
+    "no..."
+  ],
   "duration": "15s",
   "aspect": "9:16",
   "resolution": "1080x1920",
   "tech": "HTML + HyperFrames",
-  "production": {"deliverable":"video","profile":"standard","finalRenderer":"hyperframes","specialists":{"remotion-agent":{"mode":"contribute","reason":"Assess supporting sequences"},"motionmaxxing-agent":{"mode":"review","reason":"Motion planning and integrated review"},"open-3d-agent":{"mode":"contribute","reason":"Assess scenes and capture"}}},
+  "production": {
+    "deliverable": "video",
+    "profile": "standard",
+    "finalRenderer": "hyperframes",
+    "specialists": {
+      "remotion-agent": {
+        "mode": "contribute",
+        "reason": "Assess supporting sequences"
+      },
+      "motionmaxxing-agent": {
+        "mode": "review",
+        "reason": "Motion planning and integrated review"
+      },
+      "open-3d-agent": {
+        "mode": "contribute",
+        "reason": "Assess scenes and capture"
+      },
+      "parallax-background-agent": {
+        "mode": "contribute",
+        "reason": "Assess goal-led multilayer backgrounds"
+      }
+    }
+  },
   "optionalAgents": {
-    "hairline-agent": {"requested": false, "needed": false, "reason": ""},
-    "opus5-videos-agent": {"requested": false, "needed": false, "reason": ""},
-    "ui-ux-pro-max-agent": {"requested": false, "needed": false, "reason": ""},
-    "img2threejs-agent": {"requested": false, "needed": false, "reason": ""}
+    "hairline-agent": {
+      "requested": false,
+      "needed": false,
+      "reason": ""
+    },
+    "opus5-videos-agent": {
+      "requested": false,
+      "needed": false,
+      "reason": ""
+    },
+    "ui-ux-pro-max-agent": {
+      "requested": false,
+      "needed": false,
+      "reason": ""
+    },
+    "img2threejs-agent": {
+      "requested": false,
+      "needed": false,
+      "reason": ""
+    }
   },
   "motionSkillPacks": [
-    {"pack": "iart-ai/motion-design-skills", "requested": false, "needed": false, "reason": ""}
+    {
+      "pack": "iart-ai/motion-design-skills",
+      "requested": false,
+      "needed": false,
+      "reason": ""
+    }
   ],
   "successMetric": "",
   "interactionThesis": "",
@@ -70,3 +123,7 @@ Read `references/open-3d-integration.md`. Recommend the relevant Open 3D skills 
 ## Normal specialists and 3D parallax
 
 Read `references/normal-motion-orchestration.md`. Assess Remotion, motionmaxxing and Open 3D normally; do not request separate opt-in for their contribution roles or put them in optionalAgents. Record `production` deliverable/profile/finalRenderer/specialist modes and reasons in the brief, then coordinator-owned `production-plan.json`. Default films to HyperFrames and websites to no final renderer. For 3D parallax websites enable Open 3D, assign depth/camera/pacing guidance to motionmaxxing, assess useful Remotion layers/clips, and preserve Anime.js text/UI with one canonical scroll progress source. Record no-work reasons when a specialist adds no value.
+
+## Goal-led multilayer background
+
+Read `references/parallax-background-integration.md`. Assess background needs normally; infer website type, goal/CTA, audience, style, device budget and reference-image role. Record `brief.json.background` with `enabled`, `goal`, `websiteType`, `referenceImages` and `reason`. Activate parallax-background-agent for requested 3D/multilayer/parallax animated backgrounds. It assesses HyperFrames, Remotion, motionmaxxing, Open 3D, verified html-video and img2threejs; choose useful contributions rather than requiring all providers. Existing approved-brief reconstruction scope authorizes img2threejs without asking again.

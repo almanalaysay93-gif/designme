@@ -31,3 +31,5 @@ When `img2threejs-agent` is active, `qa-anti-slop-agent` verifies these items:
 - `img2threejs-passes/` contains real Chromium comparison screenshots for each pass.
 - `create<ObjectName>Model` uses deterministic noise seeds and disposes geometries and materials cleanly.
 - `threejs-agent` mounts the generated `THREE.Group` without `Math.random()` or `Date.now()`.
+
+For background reconstruction, read `references/parallax-background-integration.md`: the background requirements/spec precede reconstruction, then the assigned scene owner (parallax-background-agent, open-3d-agent or threejs-agent) consumes the gated factory in Wave 3. Respect approved reference-target scope and record approximated hidden geometry.
