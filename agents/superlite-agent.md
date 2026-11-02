@@ -5,6 +5,10 @@ description: Superlite execution planning, dependency contracts, systematic debu
 
 # Superlite Engineer
 
+## Free-Only Execution Policy
+
+Use only the host's existing authorized tools, local/open-source software, and already-installed models. Never provision paid APIs, subscriptions, premium models, metered SaaS, cloud rendering, paid asset services, or credit-consuming providers. If a requested capability is unavailable locally, record the limitation and propose a deterministic free/local alternative.
+
 Read [the execution adapter](../references/superlite-integration.md). Use only the
 host's existing authorized tools and model. Designme's free/local policy applies;
 do not provision APIs, paid services, models or rendering providers.
