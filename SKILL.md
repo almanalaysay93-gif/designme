@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines Three.js, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, and Chromium + BrowserCode QA in one orchestrated command.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, and Chromium + BrowserCode QA in one orchestrated command.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -80,6 +80,12 @@ Use only free, local, open-source, or already-installed tools and APIs. Never ca
 
 Read [Anime.js integration](references/animejs-integration.md). Prefer `animejs-agent` for animated landing pages, words, SVG accents, and ordinary elements. The existing `prompt-reference-agent` researches build-specific animated-word references before design planning. Record `brief.json.animation` and coordinator-owned `animation-plan.json`; assign each target/property to one engine before implementation. Honor static briefs and explicit stack choices. Anime.js is not a renderer; web-only builds do not require a video render.
 
+## Open 3D specialist routing
+
+For an explicitly requested recording of a web-only build, the coordinator may select `frame-capture` as the sole capture backend under the integration contract below; skip all film renderers and record `renderer-decision.md`. This is the only Open 3D exception to the film-renderer list.
+
+Read [Open 3D integration](references/open-3d-integration.md). For relevant 3D/scroll/interactive builds, record `brief.json.open3d` and selected skills. `open-3d-agent` plans in Wave 2, implements assigned modules in Wave 3, validates the integrated draft in Wave 4, and receives targeted QA repairs within the existing three-loop cap. Skip unrelated work with a recorded reason. Freeze ownership alongside Three.js, Anime.js and GSAP; retain the free-only policy.
+
 ### 1 — The Griller (1 agent) — ALWAYS FIRST — BLOCKING
 
 Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, the visual-style gate, the optional-agent gate, and motion-skill pack selection.
@@ -126,13 +132,15 @@ waits for animation ownership and, for video, the canonical beat map, and Wave 4
 - `img2threejs-agent` — runs only when approved for a 2D reference image; runs the staged sculpting pipeline (`blockout` to `optimization`) gated by `forge/state.py` and `forge/next.py` and outputs a deterministic `create<ObjectName>Model` `THREE.Group` factory.
 - `motion-design-agent` — consumes `word-animation-references.md`, selects brand-fit text treatments, and writes timing, easing, weight, and choreography doctrine. The coordinator freezes target/property ownership in `animation-plan.json`.
 - `launch-director-agent` — writes three visual directions, kills two, and creates the story/shot/camera/look plan.
-- `superlite-agent` — writes the execution plan and tests.
+- `open-3d-agent` — when selected, consumes design inputs and writes `open-3d-plan.md` with chosen upstream skills, scene/file ownership, dependencies and acceptance budgets.
+- `superlite-agent` — writes the execution plan and tests, incorporating the Open 3D plan before contracts freeze.
 
 **Wave 3 (needs Wave 2 outputs):**
 
 - `beat-sync-agent` — creates the shared BPM/frame beat map, transition schedule, and audio cue plan.
 - `animejs-agent` — implements assigned landing-page/text/element motion after research, design and engine ownership are frozen; writes `animejs-plan.md`, `animejs-motion.js`, and `animejs-validation.md`. Read `references/animejs-integration.md`.
 - `gsap-agent` — implements only its assigned seekable choreography targets; skip when Anime.js owns all motion. If motionmaxxing or Remotion owns the renderer, contribute doctrine and timing notes only; do not build a second HyperFrames timeline.
+- `open-3d-agent` — resumes after ownership/dependency freeze, implements only assigned scene/media/interaction modules, and preserves one renderer/clock per scene.
 - `threejs-agent` — implements only the necessary hero 3D or generative layer, inside the approved renderer, and mounts `create<ObjectName>Model` when `img2threejs-agent` is active.
 - `genjutsu-agent` — writes thesis and anti-slop MASTER.md.
 - `taste-gsd-agent` — performs the aesthetic gate and execution critique.
@@ -145,6 +153,7 @@ For web-only landing pages, the coordinator integrates the web build and skips v
 - `remotion-agent` — runs only if `brief.json.optionalAgents.remotion-agent.requested` is true or the user explicitly approved it; otherwise mark skipped. Do not run it if motionmaxxing owns the film.
 - `motionmaxxing-agent` — runs only if `brief.json.optionalAgents.motionmaxxing-agent.requested` is true or the user explicitly approved it; otherwise mark skipped. When it runs, it owns the film and HyperFrames and Remotion are skipped.
 - `hairline-agent` — runs only if `brief.json.optionalAgents.hairline-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
+- `open-3d-agent` — resumes after integration for selected site-check/browser validation, writes `open-3d-validation.md`, and hands evidence/findings to craft review and QA.
 - `motion-craft-agent` — runs still/contact-sheet review, checks frame collisions and safe areas, wires code-generated or approved sound, and records fixes. If motionmaxxing owns the film, review `film/look-final/` and `film/NOTE.md` instead of a HyperFrames contact sheet.
 
 Pass `brief.json`, the approved `motionSkillPacks`, and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.
@@ -187,6 +196,7 @@ Compare two final renders by hash. If voice or music is present, verify captions
 - `UX_LAWS_AUDIT.md` with all 14 laws, evidence, fixes and re-audit results
 - `brief.json`, `design-dna.json`, `style-spec.md`, `uiux-design-system.md` when applicable, `uiux-audit.md` when applicable, `sculpt-spec.json` and `img2threejs-report.md` when applicable, `motion-doctrine.md`, `directions.md`, `shot-plan.md`
 - `timeline.json` or `beat-map.json`, `audio-cues.md`, and `audio_meta.json` when applicable
+- `open-3d-plan.md`, assigned modules/assets and `open-3d-validation.md` when Open 3D is enabled
 - `animation-plan.json` when motion applies; `word-animation-references.md` when text research applies; `animejs-plan.md`, `animejs-motion.js`, and `animejs-validation.md` when Anime.js is used
 - `thesis.md`, `plan.md`, `browser-report.md`, `prompt-reference.md`, `opus-prompt-brief.md` when applicable, `brief-enhancements.md`, `motion-skills-installed.md`, `hairline-design.md` when applicable, `hairline-validation.md` when applicable, `contact-sheet.png`, and `audit.md`
 

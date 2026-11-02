@@ -67,3 +67,5 @@ interaction-only checks have no corresponding controls. Missing evidence is
 BLOCKED; Violated rows block PASS. Include the audit in `audit.md` and delivery.
 
 For Anime.js/text-motion builds, read `references/animejs-integration.md` and apply the Anime.js section of `references/qa-rubric.md`. Verify cited word-animation references, exclusive engine/property ownership, and `animejs-validation.md` evidence. Web-only landing pages require browser checks, not video artifacts.
+
+When Open 3D is enabled, read `references/open-3d-integration.md`. Inspect its actual integrated output and `open-3d-validation.md`; apply the Open 3D rubric. Return reproducible findings on assigned Open 3D modules to open-3d-agent (or the actual scene owner), rerun affected checks and re-audit inside the existing three-loop cap. Missing browser evidence is BLOCKED.

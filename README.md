@@ -73,7 +73,7 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 
 ## Free-only rule
 
-All 25 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
+All 26 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
 
 ## Structure
 
@@ -130,3 +130,11 @@ Anime.js is the default for animated landing-page text, staggered elements, SVG 
 The coordinator records engine choice in `brief.json.animation` and target/property ownership in `animation-plan.json`, preventing Anime.js/GSAP conflicts. Static briefs and explicit stack choices take precedence. The Designme installer downloads the official Anime.js repository to `~/.agents/tools/animejs` using `scripts/install-animejs.sh`. Existing official checkouts are verified and reused. Install `animejs@4` only in the target build and pin its lockfile; no additional external skill is required. QA verifies mobile wrapping, semantic readable text, keyboard access, reduced motion, cleanup, and deterministic video seeking where applicable. Web-only landing pages do not require video rendering.
 
 See [Anime.js integration and research contract](references/animejs-integration.md) and the [Anime.js specialist](agents/animejs-agent.md).
+
+## Open 3D specialist in the loop
+
+`open-3d-agent` integrates selected [Open 3D Skills](https://github.com/Moh4696/open-3d-skills): procedural scenes, exploded product views, scroll films, transparent media, cursor rigs and browser/performance checks. It plans in Wave 2, implements assigned modules in Wave 3 and validates the integrated draft in Wave 4. Craft/QA findings return to the responsible agent and are rechecked within the existing three-loop repair cap.
+
+The coordinator assigns one scene owner alongside `threejs-agent` and preserves Anime.js for landing-page text/UI. Only selected upstream skills and needed local dependencies are installed; paid generation remains disabled and media comes from supplied/local assets. Capture stays within the existing final-renderer decision.
+
+See [integration, install, ownership and repair contract](references/open-3d-integration.md) and [agent instructions](agents/open-3d-agent.md).

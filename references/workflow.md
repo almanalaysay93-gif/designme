@@ -15,3 +15,5 @@ UX laws apply throughout: read `references/ux-laws.md` before planning, map all
 existing repair cap; no PASS with violations or missing required evidence.
 
 For animated landing pages, default to Anime.js. Wave 1 researches animated-word references; Wave 2 consumes them and freezes engine/property ownership; Wave 3 implements the assigned motion. Follow `references/animejs-integration.md`. Web-only builds skip video-render tasks and use interaction timings instead of a video beat map.
+
+For selected Open 3D work, open-3d-agent plans in Wave 2, implements its owned modules in Wave 3 and validates the integrated draft in Wave 4. Its findings feed craft review and final QA; failures return to the same owner and are rechecked within the existing three repair loops. Read `references/open-3d-integration.md`.

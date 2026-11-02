@@ -13,3 +13,5 @@ Read `references/motion-skills-packs.md` first. If `brief.json.motionSkillPacks`
 npx skills search <query> -> check installs/stars -> recommend.
 
 Output: `extra-skills.md` with install commands if needed and `motion-skills-installed.md` listing approved pack installs, owners, and verification status. Never install paid or unrelated skills.
+
+When `brief.json.open3d.enabled` is true, read `references/open-3d-integration.md`, inspect installed skills, and install only its selected `Moh4696/open-3d-skills` subset. Record source version/commit, installed paths and required local script dependencies in `motion-skills-installed.md`; do not enable paid generation or install every pack by default.

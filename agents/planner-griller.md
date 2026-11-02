@@ -103,3 +103,7 @@ BLOCKED; Violated rows block PASS. Include the audit in `audit.md` and delivery.
 ## Text and element animation routing
 
 Read `references/animejs-integration.md`. For landing pages with motion, default `brief.json.animation` to `{"engine":"animejs","reason":"Landing-page text and element motion","textResearch":true,"reducedMotion":"show-final-state"}`. Honor explicit stack or static requirements; use `mixed` only for disjoint ownership and `none` for static builds. Schedule `prompt-reference-agent` to find animated-word references that fit the brand/copy before motion planning. The coordinator records target/property ownership in `animation-plan.json` before implementation. This is core routing, not an extra optional-agent approval gate.
+
+## Open 3D selection
+
+Read `references/open-3d-integration.md`. Recommend the relevant Open 3D skills for procedural scenes, exploded views, scroll films, transparent media, cursor rigs or extra 3D QA. Record `brief.json.open3d` as `{"enabled":false,"skills":[],"reason":"No Open 3D capability needed"}` or the selected enabled scope in the approved brief. Keep paid motion-assets generation disabled; use local/supplied assets. Explain scene ownership alongside threejs-agent and preserve Anime.js for assigned landing-page text.

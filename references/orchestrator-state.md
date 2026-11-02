@@ -9,12 +9,12 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
   "coordinator": "designme",
   "tasks": [],
   "engineering_review": "pending",
-  "subagent_count": 25,
+  "subagent_count": 26,
   "waves": {
     "wave1": {"design-dna-agent": "pending", "memory-agent": "pending", "browser-agent": "pending", "find-skills-agent": "pending", "prompt-reference-agent": "pending", "opus5-videos-agent": "skipped-unless-approved"},
-    "wave2": {"visual-style-agent": "pending", "ui-ux-pro-max-agent": "skipped-unless-approved", "img2threejs-agent": "skipped-unless-approved", "motion-design-agent": "pending", "launch-director-agent": "pending", "superlite-agent": "pending"},
-    "wave3": {"animejs-agent": "pending-if-assigned", "beat-sync-agent": "pending", "gsap-agent": "pending", "threejs-agent": "pending", "genjutsu-agent": "pending", "taste-gsd-agent": "pending"},
-    "wave4": {"hyperframes-agent": "pending", "remotion-agent": "skipped-unless-approved", "hairline-agent": "skipped-unless-approved", "motionmaxxing-agent": "skipped-unless-approved", "motion-craft-agent": "pending"},
+    "wave2": {"open-3d-agent": "pending-if-assigned", "visual-style-agent": "pending", "ui-ux-pro-max-agent": "skipped-unless-approved", "img2threejs-agent": "skipped-unless-approved", "motion-design-agent": "pending", "launch-director-agent": "pending", "superlite-agent": "pending"},
+    "wave3": {"open-3d-agent": "pending-if-assigned", "animejs-agent": "pending-if-assigned", "beat-sync-agent": "pending", "gsap-agent": "pending", "threejs-agent": "pending", "genjutsu-agent": "pending", "taste-gsd-agent": "pending"},
+    "wave4": {"open-3d-agent": "pending-if-assigned", "hyperframes-agent": "pending", "remotion-agent": "skipped-unless-approved", "hairline-agent": "skipped-unless-approved", "motionmaxxing-agent": "skipped-unless-approved", "motion-craft-agent": "pending"},
     "qa": {"qa-anti-slop-agent": "pending"}
   },
   "visual_style": {"primary": null, "secondary": null, "approved": false, "style_spec": null},
@@ -22,6 +22,7 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
   "motion_skill_pack_approval": false,
   "video_renderer": "hyperframes",
   "animation": {"engine": null, "reason": "", "textResearch": false, "reducedMotion": "show-final-state"},
+  "open3d": {"enabled": false, "skills": [], "reason": "", "plan": null, "validation": null},
   "animation_plan": null,
   "word_animation_references": null,
   "optional_agents": {
@@ -54,3 +55,5 @@ evidence paths in `tasks`. Only the coordinator writes shared state; specialists
 return status updates. Fresh engineering review must pass before final QA.
 
 For web-only landing pages, set `video_renderer` to null and skip video-render tasks. Copy `animation` from the brief; record `animation-plan.json` and `word-animation-references.md` paths when applicable. Anime.js defaults on for animated landing pages; mark animation roles without target/property assignments skipped with a reason.
+
+Copy `open3d` selection from the approved brief; the coordinator tracks its planning, implementation and integrated validation tasks separately in `tasks`, with dependencies, owned files, evidence paths and existing QA retry counts. If disabled, mark all open-3d-agent phase entries skipped with a reason. An explicitly requested web recording may use `video_renderer: "frame-capture"` only under the [capture boundary](open-3d-integration.md); skip all film renderers in that case.

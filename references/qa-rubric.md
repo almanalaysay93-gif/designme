@@ -108,3 +108,13 @@
 - [ ] Unmount/replay cleanup restores DOM and removes timelines, observers and listeners
 - [ ] When rendered as video, paused Anime.js seeking uses canonical milliseconds and remains repeatable on backward/forward seeks
 - [ ] `animejs-validation.md` records actual execution evidence or BLOCKED limitations
+
+## Open 3D (when enabled)
+
+- [ ] `open-3d-plan.md` and approved brief agree on selected upstream skills and allowed local/supplied assets
+- [ ] Each scene has one owner, Three.js version, renderer/camera/clock and lifecycle; Anime.js/GSAP have non-overlapping properties
+- [ ] Actual integrated browser reports/contact sheets cover desktop/mobile, scroll extremes, alpha playback/cursor states where applicable, loading and reduced motion
+- [ ] Frame time, draw calls, geometry/media size meet declared target-device budgets; resources/listeners are disposed on unmount
+- [ ] `open-3d-validation.md` records measured evidence and limitations; unavailable required checks are BLOCKED
+- [ ] Final capture respects the selected renderer; no paid motion-assets generation was invoked
+- [ ] Findings identify the actual owner and are repaired/rechecked within the existing three-loop cap

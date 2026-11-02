@@ -38,3 +38,5 @@ when UI/UX Pro Max is skipped. For pure films, assess hierarchy, information loa
 readability, emphasis, opening/ending and pacing from timed frames; document why
 interaction-only checks have no corresponding controls. Missing evidence is
 BLOCKED; Violated rows block PASS. Include the audit in `audit.md` and delivery.
+
+When `brief.json.open3d.enabled` is true, read `references/open-3d-integration.md`. Schedule open-3d-agent planning after relevant design inputs and before ownership freeze; implementation after its assets/models and timing contracts; validation after integration. Give one owner each scene renderer/camera/clock and disjoint file/property assignments. Route failures to the responsible owner and retain the three-loop QA cap.
