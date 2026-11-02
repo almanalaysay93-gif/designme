@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines goal-led multilayer parallax backgrounds, Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, and Chromium + BrowserCode QA in one orchestrated command.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines goal-led multilayer parallax backgrounds, Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, and Agent Desktop + render QA in one orchestrated command.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -25,7 +25,7 @@ One command for brand-led, code-authored motion and interactive web visuals. Hyp
 - **Optional capabilities:** discuss Hairline, img2threejs, the Opus 5.5 video-prompt catalog, and motion-skill pack selection during grilling, recommend what is needed, and activate only the user-approved choices.
 - **Opus prompt research:** when approved, `opus5-videos-agent` reads a few matching prompts from the MIT catalog, credits the creators, and rewrites the craft for this brand. It never renders and never replaces the video renderer.
 - **Measured motion:** motionmaxxing contributes brand-specific pacing, camera/depth guidance and integrated review alongside HyperFrames; standalone final mode is reserved for an explicit motionmaxxing deliverable.
-- **QA:** run anti-slop, determinism, readability, audio, accessibility, UX laws, and final-frame checks with live Chromium and BrowserCode verification and targeted feedback loops.
+- **QA:** run anti-slop, determinism, readability, audio, accessibility, UX laws, and final-frame checks with Agent Desktop UI and local render verification and targeted feedback loops.
 
 ## Invocation Contract
 
@@ -53,15 +53,15 @@ npx skills add lucasmarkes/hairline -g  # optional interactive figures; free/loc
 npx skills add Tejashmakwana/motionmaxxing -g  # normal craft planning/review; free/local only, no ElevenLabs
 # Optional img2threejs procedural 3D reconstruction (canonical ~/.agents/skills/img2threejs)
 # git clone https://github.com/img2threejs/img2threejs.git ~/.agents/skills/img2threejs
-# Local BrowserCode + Chromium QA verification repo:
-# git clone https://github.com/leaningtech/browsercode.git ~/.agents/tools/leaningtech-browsercode
 # Optional UI/UX Pro Max local skill; MIT, bundled data + Python search, no paid APIs
 # npm install -g ui-ux-pro-max-cli && uipro init --ai claude --global
 # opus5-videos-agent clones yihui-dev/awesome-opus5-5-videos on approval. It is a prompt catalog, not an npx skill.
 # html-video source when assigned: bash scripts/install-html-video.sh
 # See references/html-video-integration.md for local build/engine checks.
 # Install only the approved iart-ai packs selected during grilling; see references/motion-skills-packs.md
-npx skills add vercel-labs/agent-browser thedotmack/claude-mem -g
+bash scripts/install-agent-desktop.sh
+npx skills add https://github.com/vercel-labs/agent-desktop --skill agent-desktop -g
+npx skills add thedotmack/claude-mem -g
 # Superlite adapter is bundled; optional native plugin: references/superlite-integration.md
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
 npx skills add vercel-labs/skills --skill find-skills -g
@@ -122,7 +122,7 @@ waits for animation ownership and, for video, the canonical beat map, and Wave 4
 - `design-dna-agent` — extracts tokens from references.
 - `memory-agent` — loads past taste and prior constraints.
 - `find-skills-agent` — discovers only missing, compatible skills.
-- `browser-agent` — captures reference screenshots with local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`).
+- `browser-agent` — uses Agent Desktop to inspect actual task-scoped reference pages/images and UI; records separate local DOM/render measurements in browser-report.md before dependent design planning. Read `references/agent-desktop-integration.md`.
 - `prompt-reference-agent` — researches goal-fit background/depth treatments and inspects supplied images into `background-references.md` when needed; also researches 3–5 build-fit animated-word examples for landing pages/text-motion builds and writes `word-animation-references.md`; also curates free Blotato/Remotion prompt patterns.
 - `opus5-videos-agent` — runs only if approved. Picks a few catalog prompts and writes `opus-prompt-brief.md` before direction. Otherwise mark skipped.
 - `find-skills-agent` — routes approved iart-ai motion-skill packs to the owning agents and records local installs.
@@ -173,7 +173,7 @@ route fixes to their owners and record evidence before the final QA gate.
 
 ### 3 — QA Anti-Slop Loop — ALWAYS LAST
 
-Spawn `qa-anti-slop-agent` after composition and craft review. It reads `references/qa-rubric.md`, `references/browsercode-chromium-qa.md`, and `references/missing-checklist.md`. It boots the rendered output in local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`) and checks `leaningtech/browsercode` (`~/.agents/tools/leaningtech-browsercode`) preview compliance to verify that the visual output matches the approved design and that every agent followed `plan.md`.
+Spawn `qa-anti-slop-agent` after composition and craft review. It reads `references/qa-rubric.md`, `references/agent-desktop-integration.md` and `references/missing-checklist.md`. Use Agent Desktop for actual UI/ref/visual verification and the existing local Playwright/site-check/render paths for exact measurements and deterministic evidence. Verify both design fit and every scheduled agent's plan compliance; report missing required desktop/session/permission checks as BLOCKED.
 
 If `FAIL` or `SLOP`, write `feedback.md` naming the exact agent, file, line or timestamp, and fix. Re-spawn only that agent. Allow at most 3 loops. On the third failure, escalate with `audit.md` and the concrete risk.
 

@@ -132,10 +132,20 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
     }
   },
   "qa_verification": {
-    "chromium_binary": "~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
-    "browsercode_repo": "~/.agents/tools/leaningtech-browsercode",
     "design_verified": false,
-    "plan_verified": false
+    "plan_verified": false,
+    "interaction_backend": "agent-desktop",
+    "desktop_status": "unchecked",
+    "desktop_version": null,
+    "target_app": null,
+    "target_window": null,
+    "permissions": {},
+    "capabilities": {},
+    "desktop_evidence": [],
+    "measurement_tools": [],
+    "measurement_evidence": [],
+    "limitations": [],
+    "optional_preview": null
   },
   "qa_loops": 0,
   "max_loops": 3,
@@ -173,3 +183,5 @@ Copy `open3d` selection from the approved brief; the coordinator tracks its plan
 Normal specialist tasks follow `references/normal-motion-orchestration.md`; legacy Remotion/motionmaxxing optional flags never suppress HyperFrames or block contribution dispatch. Translate an explicit standalone renderer request into production.finalRenderer. Website captures depend on an integrated ready page, and their consuming final film depends on completed capture assets.
 
 Track background research → layer/reconstruction plan → assigned model/assets → background implementation → integration → validation/repairs as dependency tasks. Keep provider availability/evidence in background-plan.json and state; missing providers are never recorded as executed.
+
+Agent Desktop capability/status fields describe observed native UI access, not binary installation alone. Required unavailable session/permission/input checks remain BLOCKED; record separate headless measurements and exact tools without substituting them for missing desktop evidence.
