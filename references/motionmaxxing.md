@@ -1,58 +1,17 @@
-# motionmaxxing — optional agent
+# motionmaxxing — normal contribution and review specialist
 
-Source: [Tejashmakwana/motionmaxxing](https://github.com/Tejashmakwana/motionmaxxing) (Apache-2.0). Install with:
+Source: https://github.com/Tejashmakwana/motionmaxxing (Apache-2.0). Read the installed upstream SKILL.md for craft laws and supported scripts. Install with `npx skills add Tejashmakwana/motionmaxxing -g` when assigned work requires it. Preserve LICENSE/NOTICE. Do not vendor upstream runtime/library into Designme.
 
-```bash
-npx skills add Tejashmakwana/motionmaxxing -g
-```
+Read [normal motion orchestration](normal-motion-orchestration.md). Default mode is contribution/review alongside HyperFrames, Remotion supporting clips and Open 3D layers. No optional-agent gate applies. Wave 2 produces `motionmaxxing-plan.md`; integrated Wave 4 review produces `motionmaxxing-review.md`. Use real browser/render evidence and return findings to actual owners inside the existing three-loop repair cap.
 
-The installed `SKILL.md` is the authority for laws, the never-ship list, script flags, and gates. This file is only the designme routing contract. Do not copy the upstream runtime, `library/`, or bundled GSAP/Three.js into this repo.
+For 3D parallax websites, contribute hierarchy, layer depth, motivated camera paths, scroll rhythm and readable holds, with mobile/reduced-motion fallbacks. Film-only gates prohibiting page chrome or static frames do not prohibit navigation, CTAs or reading holds on websites. Inspect real scroll/interactions, not only stills. Do not invoke the upstream exclusive film workflow in contribution mode.
 
-## When to select it
+## Explicit standalone final mode
 
-Select `motionmaxxing-agent` only when the user explicitly wants that pipeline:
+Only when the approved deliverable names motionmaxxing as final owner: verify local Node 22+, Python, FFmpeg and Chrome using supported upstream checks; capture approved brand assets; build its seek-safe film and storyboard; draft-render; run actual look/lint and inspect the contact sheet; repair gate failures; render locally and verify final dimensions/FPS/duration/audio and repeatability. HyperFrames skips this same final deliverable, but supporting Remotion/Open 3D assets may still be assigned.
 
-- a brand-from-URL launch film, sting, kinetic-type piece, or social ad built as a measured-motion HTML film
-- an upgrade or critique of an existing slop cut using its gates
+Final-mode outputs: `renderer-decision.md`, `film/STORYBOARD.md`, `film/index.html`, assets, `film/final.mp4`, `film/look-final/`, and `film/NOTE.md` quoting actual G0–G5 evidence. G0 checks a decodable/nonblank moving render with planned duration/audio; G1 proof readability/world and G4 hero hierarchy require visual inspection; G2 flat-frame runs, G3 ending length and G5 page chrome use the current upstream gates. Never invent gate results. Use the installed scripts' actual interfaces, not guessed compatibility with a HyperFrames export.
 
-Otherwise skip it. HyperFrames stays the default video renderer.
+## Free-only policy
 
-Exactly one video renderer per project:
-
-| Renderer | When |
-|---|---|
-| HyperFrames | Default |
-| Remotion | User explicitly wants a React/Remotion deliverable |
-| motionmaxxing | User explicitly wants this measured-motion film |
-
-Hairline is not a video renderer and may run beside the chosen one.
-
-## Free-only override
-
-Upstream voice, SFX, and music can call ElevenLabs. **Designme does not.** Never request an ElevenLabs key. Use user-provided audio or local FFmpeg/Python synthesis. If the plan needs paid voice, drop that part and say so in `film/NOTE.md`.
-
-## Required local tools
-
-Node.js 22+, Python 3, ffmpeg, Chrome. Check with the skill's `scripts/providers.sh` before building. A missing tool stops the agent. It does not pretend the film rendered.
-
-## Gates the studio will trust
-
-| Gate | Pass means |
-|---|---|
-| G0 | Render exists, decodes, is not blank, picture moves, length matches the plan, and planned audio is present and not silent |
-| G1 | Proof is readable, lit, and in a world (judged on the contact sheet) |
-| G2 | No run of more than 3 consecutive flat frames |
-| G3 | End hold is short and the final shot is not most of the film |
-| G4 | One hero per frame (judged on the contact sheet) |
-| G5 | No page chrome (`lint.mjs`) |
-
-A fail is fixed, never argued. `film/NOTE.md` must quote the gate results. The agent may not self-certify.
-
-## Outputs when this agent owns the film
-
-- `renderer-decision.md` — motionmaxxing is the renderer; HyperFrames and Remotion are skipped
-- `film/STORYBOARD.md`
-- `film/index.html`
-- `film/final.mp4`
-- `film/look-final/`
-- `film/NOTE.md`
+Never call ElevenLabs or paid voice/music/SFX/image providers. Use local deterministic code/synthesis, captured or supplied assets, or silence. Report missing required local tools or assets as BLOCKED rather than faking execution. In contribution mode record substitutions in `motionmaxxing-review.md`; in final mode include them in `film/NOTE.md`.

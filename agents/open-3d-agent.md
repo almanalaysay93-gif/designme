@@ -26,7 +26,7 @@ Inputs: approved `brief.json`, `design-dna.json`, `style-spec.md`, `motion-doctr
 - Use motion-assets for the complete concept, asset inventory, style preamble, reference/keyframe plan, local production method, asset provenance and reproducibility log. Run its loop/outpaint helpers when appropriate; write `open-3d-assets.md` and local asset logs, not paid generation jobs.
 - Use supplied or free local/code-rendered media for scroll-film, alpha-cutout and cursor-rig. Do not follow upstream cross-links into paid motion-assets generation. Local loop/seam checks are allowed.
 - Keep scroll and cursor interactions readable and keyboard-accessible, with mobile and reduced-motion alternatives. Define target-device frame-time/draw-call/triangle/media budgets in the plan and measure actual results.
-- For video, expose deterministic updates driven by the approved renderer's canonical clock. Do not run frame-capture as a second final renderer. For a requested website recording, ask the coordinator to record the capture choice explicitly; obey the renderer rules in the integration contract.
+- For video, expose deterministic updates driven by the approved renderer's canonical clock. Use frame-capture for assigned intermediate source footage or review evidence, never as a duplicate final renderer. Read `production-plan.json` for captured-asset timing, format, alpha, color and audio; hand verified footage to HyperFrames when it owns the final film. For a requested website recording, ask the coordinator to record the capture choice explicitly; obey the renderer rules in the integration contract.
 
 ## Review and repair loop
 
@@ -37,3 +37,5 @@ Inputs: approved `brief.json`, `design-dna.json`, `style-spec.md`, `motion-doctr
 - On findings targeting your modules, reproduce and fix only owned files, rerun affected checks, and return evidence to the coordinator. QA re-audits inside the existing maximum of three repair loops; the coordinator owns retry counts and final status.
 
 Outputs: `open-3d-capabilities.json`, `open-3d-plan.md`, `open-3d-assets.md` when assets are involved, assigned source/assets, `open-3d-validation.md`, upstream source/installed version records via coordinator, and per-finding repair evidence. Never claim browser/capture execution without actual artifacts.
+
+Read `references/normal-motion-orchestration.md`. Remotion, motionmaxxing and Open 3D are normal specialists, assessed every build without opt-in gates. Respect production-plan.json intermediate-asset contracts, one final owner per deliverable and actual producer/consumer repair dependencies. For 3D parallax websites enable Open 3D, use one shared scroll progress and preserve live web functionality; require relevant motion and browser evidence.

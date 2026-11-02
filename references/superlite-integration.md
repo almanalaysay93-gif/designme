@@ -74,7 +74,7 @@ Installing a plugin alone does not wire the specialty skill's contracts into it.
 Use `plan.md` for execution contracts and `orchestrator.json` for task state and
 repair counts. `superlite-agent` replaces the former Superpowers engineering role;
 it does not add a role; Anime.js is a separate specialist. Existing free/local policy, optional-agent approvals,
-three repair loops, exactly-one-renderer rule and anti-slop QA remain binding.
+three repair loops, one-final-owner-per-deliverable rule (intermediate asset renders allowed) and anti-slop QA remain binding.
 Do not launch Superlite's paid-model routing or bypass still/contact-sheet review.
 
 The named waves are dependency groups, not permission to run every listed role

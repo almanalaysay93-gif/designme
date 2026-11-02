@@ -18,7 +18,7 @@ Use the public Blotato skills repository for patterns such as brand intake, cont
 Rules:
 - Treat these repositories and iart-ai pack descriptions as reference material; execution uses only the approved local pack installs.
 - Do not install or invoke Blotato publishing, scheduling, or generation workflows.
-- Do not add Remotion as a renderer unless the user explicitly requests a React/Remotion deliverable. HyperFrames remains the default renderer for designme.
+- Remotion is a normal supporting-sequence producer under production-plan.json; HyperFrames remains the default final-film renderer. Do not select a different final owner unless the approved deliverable calls for it.
 - Adapt every reference to the user’s approved thesis, brand tokens, shot plan, and free-only constraints.
 - Cite the source URL in `prompt-reference.md` and label any borrowed pattern as inspiration rather than a copied house style.
 

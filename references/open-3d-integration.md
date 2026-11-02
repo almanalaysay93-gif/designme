@@ -4,7 +4,7 @@ Source: https://github.com/Moh4696/open-3d-skills (MIT). This library supplies s
 
 ## Selection and install
 
-During briefing, record `brief.json.open3d` with `enabled`, `skills`, and `reason`. Default `enabled` to false for unrelated/static builds. Recommend relevant skills for 3D landing pages, product explainers, scroll films, alpha video, cursor interactions, and extra 3D QA; the approved brief authorizes the selected scope. Never activate paid generation or invent a new optional approval step for already-authorized work.
+During briefing, record `brief.json.open3d` with `enabled`, `skills`, and `reason`. Assess Open 3D normally on every build; enable it by default for 3D parallax websites and record a reason for no-work on unrelated/static builds. Recommend relevant skills for 3D landing pages, product explainers, scroll films, alpha video, cursor interactions, and extra 3D QA; the approved brief authorizes the selected scope. Never activate paid generation or invent a new optional approval step for already-authorized work.
 
 When Open 3D is enabled, `find-skills-agent` ensures all eight skills are available so the agent can compose the full library. Install missing skill folders using the existing skills CLI:
 
@@ -61,7 +61,7 @@ Compose useful chains: motion-assets planning → procedural scene/exploded view
 | `alpha-cutout` | Local keying, alpha-video player and browser formats | Supplied/local clips only; check Chromium and WebKit where supported |
 | `cursor-rig` | Local pose-grid preparation and pointer-following layer | Supplied/local pose assets; touch/keyboard alternatives and cleanup |
 | `site-check` | Browser, overflow, canvas and performance evidence | Supplements existing QA; failures return to the owning specialist |
-| `frame-capture` | Optional review recordings/contact-sheet evidence | Does not replace the selected final renderer or bypass final QA |
+| `frame-capture` | Optional review recordings/contact-sheet evidence | Produces assigned source footage/review evidence; final owner consumes it under production-plan.json |
 | `motion-assets` | Concept/asset planning, consistent style, local production, provenance/logs and loop/outpaint repair | Paid/cloud generation remains disabled under Designme's free-only policy |
 
 The starter pins Three.js r169 and includes CDN imports, a frame loop and recording hooks. Adapt individual techniques to the chosen project's version, bundle local dependencies for offline rendering, and integrate lifecycle instead of pasting a competing app. For shared scenes, threejs-agent may provide a model/geometry factory while open-3d-agent owns the scene, or vice versa; record the exact boundary before either writes code. When img2threejs is selected, consume its approved deterministic model factory; do not rebuild it independently. Anime.js remains the default for landing-page words and DOM elements.
@@ -76,7 +76,7 @@ The starter pins Three.js r169 and includes CDN imports, a frame loop and record
 
 ## Capture boundary
 
-For an existing HyperFrames, Remotion or motionmaxxing film, frame-capture provides review evidence only; final delivery stays with the approved renderer. For an explicitly requested recording of a web-only build, the coordinator may select `frame-capture` as the sole capture backend in `renderer-decision.md` and state; skip the three film renderers. Use the upstream virtual clock/ready hooks, check repeated captures, expected dimensions/FPS/duration and `ffprobe`, and verify any separately added local audio against that clock. This exception does not make frame-capture the default film renderer. Web-only builds without a recording keep `video_renderer: null`.
+For a HyperFrames, Remotion or motionmaxxing final film, frame-capture may produce assigned intermediate footage as well as review evidence; final delivery stays with the approved final owner. Freeze all captured-asset timing/format/alpha/audio contracts in `production-plan.json`. Capturing an integrated page must complete before its consuming film assembly. Read [normal motion orchestration](normal-motion-orchestration.md). For an explicitly requested recording of a web-only build, the coordinator may select `frame-capture` as the sole capture backend in `renderer-decision.md` and state; skip the three film renderers. Use the upstream virtual clock/ready hooks, check repeated captures, expected dimensions/FPS/duration and `ffprobe`, and verify any separately added local audio against that clock. This exception does not make frame-capture the default film renderer. Web-only builds without a recording keep `video_renderer: null`.
 
 ## Deliverables
 

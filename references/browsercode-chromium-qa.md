@@ -29,5 +29,5 @@
    - Verify palette tokens, typography, hero beat, camera motion, and anti-slop exclusions.
 4. **Plan compliance check ("Did the agents follow the plan?"):**
    - Compare the workspace artifacts against `plan.md` and `orchestrator.json`.
-   - Confirm that every scheduled agent in Waves 1 through 4 wrote its required deliverable file and respected renderer exclusivity and the free-only policy.
+   - Confirm that every scheduled agent in Waves 1 through 4 wrote its required deliverable file and respected one final owner per deliverable, assigned intermediate-asset contracts and the free-only policy.
    - Record the verification results in `audit.md` under `## Chromium & BrowserCode Plan Verification`.

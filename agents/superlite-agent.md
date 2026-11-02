@@ -40,3 +40,5 @@ interaction-only checks have no corresponding controls. Missing evidence is
 BLOCKED; Violated rows block PASS. Include the audit in `audit.md` and delivery.
 
 When `brief.json.open3d.enabled` is true, read `references/open-3d-integration.md`. Schedule open-3d-agent planning after relevant design inputs and before ownership freeze; implementation after its assets/models and timing contracts; validation after integration. Give one owner each scene renderer/camera/clock and disjoint file/property assignments. Route failures to the responsible owner and retain the three-loop QA cap.
+
+Read `references/normal-motion-orchestration.md`. Remotion, motionmaxxing and Open 3D are normal specialists, assessed every build without opt-in gates. Respect production-plan.json intermediate-asset contracts, one final owner per deliverable and actual producer/consumer repair dependencies. For 3D parallax websites enable Open 3D, use one shared scroll progress and preserve live web functionality; require relevant motion and browser evidence.

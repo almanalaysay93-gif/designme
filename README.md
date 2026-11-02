@@ -2,7 +2,7 @@
 
 One skill that spawns a griller/planner, a visual-style director, parallel creative and engineering agents, an optional procedural 3D reconstruction agent (`img2threejs-agent`), a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop with live Chromium and BrowserCode verification.
 
-> **Scope:** HyperFrames is the default renderer. The local `remotion-agent` is optional and runs only when a project explicitly requests React/Remotion. `motionmaxxing-agent` is optional and runs only when a project explicitly requests a measured-motion HTML film from [Tejashmakwana/motionmaxxing](https://github.com/Tejashmakwana/motionmaxxing). `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. `img2threejs-agent` is optional and runs only when a project provides a 2D reference image to reconstruct as a procedural Three.js `THREE.Group` model in code from [img2threejs/img2threejs](https://github.com/img2threejs/img2threejs). Blotato and Remotion references are used for prompt patterns only. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits. `opus5-videos-agent` is optional and only researches prompts from [yihui-dev/awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos). motionmaxxing must not call ElevenLabs. `qa-anti-slop-agent` inspects live output in local Chromium (`chromium-1248`) and [leaningtech/browsercode](https://github.com/leaningtech/browsercode).
+> **Scope:** HyperFrames is the default renderer. Remotion, motionmaxxing and Open 3D are normal specialists that contribute useful components, supporting footage, motion guidance and integrated review alongside HyperFrames. `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. `img2threejs-agent` is optional and runs only when a project provides a 2D reference image to reconstruct as a procedural Three.js `THREE.Group` model in code from [img2threejs/img2threejs](https://github.com/img2threejs/img2threejs). Blotato supplies prompt references; Remotion supplies both references and useful local supporting sequences. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits. `opus5-videos-agent` is optional and only researches prompts from [yihui-dev/awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos). motionmaxxing must not call ElevenLabs. `qa-anti-slop-agent` inspects live output in local Chromium (`chromium-1248`) and [leaningtech/browsercode](https://github.com/leaningtech/browsercode).
 
 ## Invoke
 
@@ -16,14 +16,12 @@ During the first grilling session, `planner-griller` must select a visual langua
 
 | Optional agent | Use it when | Default recommendation |
 |---|---|---|
-| `remotion-agent` | The brief explicitly requires a React/Remotion video deliverable or Remotion-specific composition | Skip it and use HyperFrames |
 | `hairline-agent` | The brief requires an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual | Skip it unless the interaction needs it |
-| `motionmaxxing-agent` | The brief explicitly requires a motionmaxxing film: brand-from-URL launch, sting, kinetic type, social ad, or a slop-cut upgrade through its G0–G5 gates | Skip it and use HyperFrames. Never run it beside another video renderer |
 | `opus5-videos-agent` | The brief explicitly wants a starting prompt from the Opus 5.5 code-video catalog | Skip it. It researches prompts only and does not render |
 | `ui-ux-pro-max-agent` | UI, landing page, dashboard, product demo, forms, navigation, charts, mobile UI, or UX/accessibility review | Skip it for pure non-UI films |
 | `img2threejs-agent` | The brief supplies a 2D reference image of an object, product, prop, or character and requires a procedural code-only Three.js `THREE.Group` reconstruction | Skip it when no custom 3D reconstruction from a reference photo is needed |
 
-The recommendation is stored in `brief.json.optionalAgents`. Optional agents are never silently activated. A user request can approve an agent even when it is not strictly necessary, with the tradeoff recorded. Exactly one video renderer runs: HyperFrames, Remotion, or motionmaxxing.
+The recommendation is stored in `brief.json.optionalAgents`. Optional agents are never silently activated. A user request can approve an agent even when it is not strictly necessary, with the tradeoff recorded. There is one final owner per deliverable, normally HyperFrames for films; normal specialists may produce intermediate assets under the production contract.
 
 ## Procedural 3D reconstruction (`img2threejs-agent`)
 
@@ -66,7 +64,7 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 - `remotion-dev/remotion` + `remotion-dev/skills` → `remotion-agent`: explicit local React-to-video builds with frame-accurate compositions, captions, audio, and still-frame QA.
 - `iart-ai/motion-skills` → routed pack library: short-form, data, explainer, web, kinetic typography, WebGL, Manim, map, ad, ecommerce, and generative-illustration workflows.
 - `lucasmarkes/hairline` → `hairline-agent`: optional accessible interactive line figures and pointer-responsive web visuals, validated in a browser.
-- `Tejashmakwana/motionmaxxing` → `motionmaxxing-agent`: optional measured-motion HTML film. Brand-owned idea, world, seek-safe runtime, local Chrome/ffmpeg render, and G0–G5 gates. See [`references/motionmaxxing.md`](references/motionmaxxing.md).
+- `Tejashmakwana/motionmaxxing` → `motionmaxxing-agent`: normal brand-specific motion/depth/pacing planning and integrated craft review; an explicit standalone film can still use its runtime and G0–G5 gates. See [`references/motionmaxxing.md`](references/motionmaxxing.md).
 - `yihui-dev/awesome-opus5-5-videos` → `opus5-videos-agent`: optional MIT prompt catalog. Picks a few code-authored video prompts, credits the creators, and rewrites the craft for this brand. See [`references/opus5-videos.md`](references/opus5-videos.md).
 - `img2threejs/img2threejs` → `img2threejs-agent`: optional Apache-2.0 procedural image-to-Three.js reconstruction agent. See [`references/img2threejs.md`](references/img2threejs.md).
 - `leaningtech/browsercode` + local Chromium → `qa-anti-slop-agent` and `browser-agent`: live Chromium and BrowserCode verification of design fidelity and plan execution. See [`references/browsercode-chromium-qa.md`](references/browsercode-chromium-qa.md).
@@ -78,7 +76,7 @@ All 26 agents are restricted to free, local, open-source, or already-installed t
 ## Structure
 
 - `SKILL.md` — `/designme` contract, install gate, dependency waves, optional-agent gate, and output contract
-- `agents/` — creative direction, motion engineering, visual-style direction, UI/UX Pro Max intelligence, optional Remotion/Hairline/motionmaxxing/Opus-prompt/img2threejs agents, craft review, and QA agents
+- `agents/` — creative direction, motion engineering, visual-style direction, UI/UX Pro Max intelligence, normal Remotion/motionmaxxing/Open 3D specialists and optional Hairline/Opus-prompt/img2threejs agents, craft review, and QA agents
 - `references/` — grilling questions, prompt sources, iart motion-pack routing, motionmaxxing contract, Opus 5.5 prompt catalog, img2threejs integration, BrowserCode + Chromium QA verification, visual-style library, UI/UX Pro Max integration, Superlite adapter, UX laws, QA rubric, asset pipeline, missing checklist, and orchestration state
 - `manifest.json` — selected source repositories and agent responsibilities
 
@@ -140,3 +138,11 @@ The coordinator assigns one scene owner alongside `threejs-agent` and preserves 
 See [integration, install, ownership and repair contract](references/open-3d-integration.md) and [agent instructions](agents/open-3d-agent.md).
 
 Full-library use is tracked in `open-3d-capabilities.json`: all eight skills get use/skip/blocked decisions and used skills get tasks, outputs, checks and execution evidence. Asset planning/logs and local repair tools are included. Enabled animated/3D web builds require site-check, with targeted motion recordings when stills cannot verify the behavior.
+
+## Normal production loop, especially 3D parallax websites
+
+Remotion, motionmaxxing and Open 3D are assessed on every build and dispatched when relevant without separate opt-in gates. Remotion creates useful supporting sequences, Open 3D supplies live scenes/media/captured footage, and motionmaxxing contributes motion direction and reviews the integrated result. HyperFrames assembles final films from verified local assets. Record a no-work reason rather than manufacturing unnecessary output.
+
+For a **3D parallax website**, enable the dedicated profile: Open 3D owns scene layers, motionmaxxing guides depth/camera/scroll pacing, Anime.js animates assigned text/UI, and one normalized scroll progress drives the consumers. Remotion assesses useful pre-rendered sequences. The website stays live and interactive, with mobile, reduced-motion, readable CTA and performance checks. A companion film uses captured scene footage inside HyperFrames only when requested.
+
+See [normal specialist routing, intermediate-asset contract and 3D parallax profile](references/normal-motion-orchestration.md).

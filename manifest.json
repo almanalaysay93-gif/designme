@@ -73,7 +73,7 @@
     {
       "repo": "remotion-dev/remotion + remotion-dev/skills",
       "agent": "remotion-agent",
-      "role": "Explicit React-to-video compositions, frame timing, captions, audio, and local Remotion rendering"
+      "role": "Normal React sequence/supporting-clip producer for HyperFrames or websites; explicit standalone final mode"
     },
     {
       "repo": "lucasmarkes/hairline",
@@ -83,7 +83,7 @@
     {
       "repo": "Tejashmakwana/motionmaxxing",
       "agent": "motionmaxxing-agent",
-      "role": "Optional measured-motion HTML film: brand-owned idea, world, seek-safe runtime, local Chrome/ffmpeg render, and G0\u2013G5 gates"
+      "role": "Normal motion/depth/camera planning and integrated craft review alongside HyperFrames; explicit standalone final mode"
     },
     {
       "repo": "yihui-dev/awesome-opus5-5-videos",
@@ -121,7 +121,7 @@
   "orchestration": {
     "subagent_count": 26,
     "free_only": true,
-    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, Hairline, motionmaxxing, img2threejs, and the Opus 5.5 prompt catalog run locally and only when explicitly requested. motionmaxxing must not call ElevenLabs or any paid voice/music API. img2threejs must use only local generic/character profiles and never call Tripo, Hyper3D, CharacterGen, or paid plugins. QA uses local Chromium and leaningtech/browsercode without paid BrowserPod API keys. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
+    "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, motionmaxxing and Open 3D are normal locally executed specialists; Hairline, img2threejs and the Opus prompt catalog retain their optional gates. motionmaxxing must not call ElevenLabs or any paid voice/music API. img2threejs must use only local generic/character profiles and never call Tripo, Hyper3D, CharacterGen, or paid plugins. QA uses local Chromium and leaningtech/browsercode without paid BrowserPod API keys. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
     "agents": [
       {
         "agent": "planner-griller",
@@ -145,9 +145,7 @@
       }
     ],
     "conditional_agents": [
-      "remotion-agent",
       "hairline-agent",
-      "motionmaxxing-agent",
       "opus5-videos-agent",
       "ui-ux-pro-max-agent",
       "img2threejs-agent"
@@ -157,17 +155,9 @@
       "requires_user_approval": true,
       "default": "skip-unless-needed",
       "agents": {
-        "remotion-agent": {
-          "use_when": "The brief explicitly requests a React/Remotion video deliverable or Remotion-specific composition.",
-          "default_recommendation": "skip; use HyperFrames by default."
-        },
         "hairline-agent": {
           "use_when": "The brief requests an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual.",
           "default_recommendation": "skip unless the interaction requires it."
-        },
-        "motionmaxxing-agent": {
-          "use_when": "The brief explicitly requests a motionmaxxing film: a brand-from-URL launch film, sting, kinetic-type piece, social ad, or an upgrade of an existing slop cut built with its measured-motion HTML runtime and G0\u2013G5 gates.",
-          "default_recommendation": "skip; use HyperFrames by default. Never run it beside HyperFrames or Remotion."
         },
         "opus5-videos-agent": {
           "use_when": "The brief explicitly wants a starting prompt from the Opus 5.5 code-authored video catalog.",
@@ -258,7 +248,22 @@
       "capability_matrix": "open-3d-capabilities.json",
       "asset_plan": "open-3d-assets.md when assets are involved",
       "verification": "site-check for enabled animated/3D web builds; targeted frame-capture for behaviors requiring motion evidence",
-      "completion": "Every used capability has completed task/output/check evidence; required blocked rows prevent PASS"
+      "completion": "Every used capability has completed task/output/check evidence; required blocked rows prevent PASS",
+      "normal_assessment": true
+    },
+    "normal_specialists": {
+      "agents": [
+        "remotion-agent",
+        "motionmaxxing-agent",
+        "open-3d-agent"
+      ],
+      "contract": "references/normal-motion-orchestration.md",
+      "default_final_renderer": "hyperframes",
+      "website_final_renderer": null,
+      "asset_contract": "production-plan.json",
+      "dispatch": "Assess every build and dispatch relevant work without opt-in; record no-work reasons",
+      "parallax_profile": "3d-parallax",
+      "final_ownership": "One final owner per deliverable; assigned intermediate asset renders allowed"
     }
   },
   "reference_sources": {
