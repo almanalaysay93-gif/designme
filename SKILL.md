@@ -42,12 +42,12 @@ Designme is the sole coordinator. Superlite replaces the Superpowers engineering
 role; never enable both plugins together. The bundled adapter needs no plugin
 installation or paid model routing.
 
-Always ensure the official Anime.js repository is downloaded during Designme installation, including static or non-Anime.js builds. Run `bash scripts/install-animejs.sh` from this skill directory; the default checkout is `~/.agents/tools/animejs`. Do not mark installation complete if the download/verification fails. Record its path and commit in `motion-skills-installed.md`. Then check whether the remaining dependencies are installed and install the selected skills:
+Check for Anime.js first: if `~/.agents/tools/animejs` (or `$DESIGNME_ANIMEJS_REPO_DIR`) is already a Git checkout of `juliangarnier/anime` and `git -C <dir> rev-parse --verify HEAD` succeeds, it is installed — do not download or install it again. Only when it is missing, run `bash scripts/install-animejs.sh` from this skill directory to download it, including for static or non-Anime.js builds. Do not mark installation complete if the download/verification fails. Record its path and commit in `motion-skills-installed.md`. Then check whether the remaining dependencies are installed and install the selected skills:
 
 ```bash
-# Required: download official Anime.js source when installing Designme.
-# Run from the designme repository root. Reuses a verified existing checkout.
-bash scripts/install-animejs.sh
+# Anime.js: skip when ~/.agents/tools/animejs is already a verified checkout.
+# Only if missing, run from the designme repository root:
+[ -d ~/.agents/tools/animejs/.git ] || bash scripts/install-animejs.sh
 npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
 npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
 npx skills add remotion-dev/skills -g  # official prompt/reference guidance; local Remotion only
