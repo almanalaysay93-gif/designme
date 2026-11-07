@@ -172,3 +172,11 @@
 - [ ] Max two reviewer attempts; a second FAIL has an actual user brief-fix/scoped-risk decision, never an automatic third attempt or relabeled PASS
 - [ ] Tokens/components/sections/copy/states/motion/reduced mappings/breakpoint behavior agree across context/spec/plan/tasks and downstream implementation
 - [ ] T001–T018 and US-1–US-4 trace every spec item to phases/tasks without invented design; T016 QA PASS precedes T017 export and T018 is the same exporter's own lock
+
+## Practical product-design principles
+
+- [ ] Every DP01–DP20 in [the principle catalog](product-design-principles.md) has a concrete applicability/evidence/decision record and five-file Speckit traceability; justified N/A remains explicit
+- [ ] The actual integrated product/proof and headline are truthful/specific, primary feature/CTA hierarchy is clear, and badges/labels/embellishments serve a real purpose
+- [ ] Typography/mono use, spacing groups, coherent icons, optical alignment, nested token-derived radii, contrast and responsive headline wraps were inspected at the declared viewports
+- [ ] Relevant numerical UI uses verified tabular figures; real loading/error and purposeful feedback states retain accessibility, stable layout and reduced-motion variants
+- [ ] DP source/spec/task mappings are reflected in actual acceptance evidence; vague lists or code presence alone do not count as verified design

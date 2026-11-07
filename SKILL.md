@@ -94,7 +94,7 @@ Read [parallax background orchestration](references/parallax-background-integrat
 
 ### Wave 1 — planner-griller — ALWAYS FIRST — BLOCKING
 
-Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, the visual-style gate, the optional-agent gate, and motion-skill pack selection.
+Spawn `planner-griller` with `references/grilling-questions.md` and [the 20 product-design principles](references/product-design-principles.md). Capture every DP01–DP20 applicability/source/decision/acceptance record in `brief.json.designPrinciples` and resolve missing product-specific choices; the principles themselves are already supplied requirements. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, the visual-style gate, the optional-agent gate, and motion-skill pack selection.
 
 The griller must produce an explicit recommendation for every optional agent:
 
@@ -116,6 +116,8 @@ Show the thesis, renderer choice, optional-agent recommendations, and brief to t
 ### Wave 1.5 — speckit-theme-builder → speckit-theme-reviewer
 
 After the approved planner brief, run `speckit-theme-builder` ([contract](agents/speckit-theme-builder.md)), then `speckit-theme-reviewer` ([contract](agents/speckit-theme-reviewer.md)). This is mandatory theme/design specification work, **not backend/database/business implementation**. It runs before Wave 2, using the approved grill/previous spec, a real repo scan, actual screenshots and moodboard; it must not depend on unfinished downstream design-agent outputs.
+
+The builder must turn DP01–DP20 into concrete audit/rules/specification/implementation/task acceptance across all five Markdown files under `references/product-design-principles.md`; the reviewer checks the full source/spec/task mapping. Do not treat a pasted list as applied design.
 
 The builder produces the generated project's `/speckit-theme-design/project_context.md`, `constitution.md`, `spec.md`, `plan.md`, `tasks.md` and lock checklist with one version/brief/source identity. The files cover evidence/locked direction, non-negotiable constitution, complete token/section/component/state/motion/responsive design, implementation phases A–E and exactly T001–T018 / US-1–US-4. A missing decision is a concrete OPEN QUESTION in **unlocked** project_context.md and an immediate STOP, never a guessed default or a placeholder in a falsely locked file.
 

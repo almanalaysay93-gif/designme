@@ -145,3 +145,7 @@ To synchronize the repository's About after the source file is reviewed, an auth
 ```bash
 gh api --method PATCH repos/almanalaysay93-gif/designme --input .github/repository-about.json --jq '{description: .description, url: .html_url}'
 ```
+
+## Twenty practical product-design principles in the plan
+
+The planner incorporates [DP01–DP20](references/product-design-principles.md) into the five Speckit files: clean meaningful content, coherent design tokens/type/icons, real product proof and feature/CTA hierarchy, approved accent color, spacing/derived radii, readable wrapping/contrast/optical alignment, tabular numeric UI, real loading states and useful reduced-safe feedback. Each principle needs a concrete source-backed decision or justified N/A, spec/plan/task acceptance and reviewer coverage. Missing product-specific values/assets remain OPEN QUESTION; no fake screenshots, claims or arbitrary design defaults are introduced.

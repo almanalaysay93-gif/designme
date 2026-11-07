@@ -106,6 +106,19 @@ for path in [ROOT / 'README.md', ROOT / 'SKILL.md', *(ROOT / 'references').glob(
         for stale in [r'Wave 1 (?:research|browser-agent|gathers references)', r'Within Wave 4, assemble', r'all three normal specialists', r'optional \d+(?:st|nd|rd|th) agent']:
             require(not re.search(stale, text), f'{path.relative_to(ROOT)}: stale scheduling text {stale}')
 
+principles = orch.get('product_design_principles', {})
+expected_dp = [f'DP{number:02}' for number in range(1, 21)]
+require(principles.get('ids') == expected_dp, 'All 20 ordered design principles must be registered')
+require(principles.get('documents') == ['project_context.md', 'constitution.md', 'spec.md', 'plan.md', 'tasks.md'], 'Design principles must target all five Speckit files')
+principle_path = ROOT / principles.get('reference', 'missing-principle-reference')
+require(principle_path.is_file(), 'Design principle reference is missing')
+if principle_path.is_file():
+    principle_text = principle_path.read_text()
+    require(re.findall(r'^\| (DP\d{2}) \|', principle_text, re.M) == expected_dp, 'Principle catalog must include exactly DP01-DP20 in order')
+for role in ['planner-griller', 'speckit-theme-builder', 'speckit-theme-reviewer']:
+    require('references/product-design-principles.md' in (ROOT / 'agents' / f'{role}.md').read_text(), f'{role} lacks the design principle handoff')
+require('brief.json.designPrinciples' in skill, 'SKILL planner does not capture the principle decisions')
+
 rubric = (ROOT / 'references/qa-rubric.md').read_text()
 for token in ['motion-a11y.md', 'perf-budget.json', 'perf-report.md', 'token-handoff-exporter']:
     require(token in rubric, f'QA rubric omits {token}')
