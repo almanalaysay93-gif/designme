@@ -16,7 +16,7 @@ These are starting recommendations, not templates. The approved site goal, refer
 
 ## Reference-image routing
 
-Wave 1 research/browser roles inspect supplied images and cite actual visual observations in `background-references.md`: subject, scale/perspective, lighting, materials/palette, composition and text-safe region; propose a depth map/layer sketch conceptually without claiming measured depth. Keep image provenance/path and mark inferred occluded regions. Do not destructively edit the source or fabricate a successful background-removal/depth model run.
+Wave 2 prerequisite research/browser roles inspect supplied images and cite actual visual observations in `background-references.md`: subject, scale/perspective, lighting, materials/palette, composition and text-safe region; propose a depth map/layer sketch conceptually without claiming measured depth. Keep image provenance/path and mark inferred occluded regions. Do not destructively edit the source or fabricate a successful background-removal/depth model run.
 
 - A mood/reference image can guide procedural layers without reconstruction.
 - Existing artwork with separable subjects can become local cutouts/planes with approved masks and conservative hidden-region treatment; label 2.5D technique honestly. Missing masks/assets require real local production or a documented fallback.
@@ -76,10 +76,10 @@ A background-only canvas defaults to parallax-background-agent as owner. In a sh
 
 ## Lifecycle in Designme
 
-1. Briefing infers website type/goal and records background enablement/reference paths. Wave 1 researchers inspect references and supply background-references.md before the plan.
+1. Briefing infers website type/goal and records background enablement/reference paths. Wave 2 prerequisite researchers inspect references and supply background-references.md before the plan.
 2. Wave 2 background design consumes research/style/motion direction, coordinates motionmaxxing guidance, proposes source assets and any reconstruction. Freeze production/animation ownership after planning and reconstruction handoff. Do not create a cycle: background requirements precede img2threejs; finished models precede scene implementation.
 3. Wave 3 implements assigned background modules after asset/model dependencies. Supporting HyperFrames/Remotion clip tasks may run before web assembly; a capture of the website itself waits until page integration.
-4. Wave 4 integrates the functional website, resumes the background owner for validation, runs Open 3D site-check/targeted motion capture and motionmaxxing/craft review. If requested, source captures then feed companion-film assembly.
+4. Wave 3 integrates the functional website/draft; Wave 4 resumes the background owner for validation and runs Open 3D site-check/targeted motion capture and motionmaxxing/craft review. If requested, source captures then feed companion-film assembly.
 5. Engineering/final QA findings identify actual layer/provider/scene owners and evidence; repair only affected tasks, rerun producer/consumer checks and review the integrated result inside the existing three-loop cap.
 
 ## Acceptance

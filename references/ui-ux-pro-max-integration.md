@@ -6,7 +6,7 @@ The source is MIT-licensed and provides local, searchable design intelligence. T
 
 ## Use in designme
 
-`ui-ux-pro-max-agent` is an optional 23rd agent. Recommend it during grilling for any UI-containing work: landing pages, dashboards, product demos, interactive web visuals, mobile app UI, forms, navigation, charts, or accessibility/UX reviews.
+`ui-ux-pro-max-agent` is the local UI/UX design-intelligence specialist in the 30-agent catalog. Recommend it during grilling for any UI-containing work: landing pages, dashboards, product demos, interactive web visuals, mobile app UI, forms, navigation, charts, or accessibility/UX reviews.
 
 It complements the other designme agents:
 

@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines goal-led multilayer parallax backgrounds, Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, and Agent Desktop + render QA in one orchestrated command.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines goal-led multilayer parallax backgrounds, Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, Agent Desktop + render QA, mandatory motion accessibility/performance gates, and last-after-QA versioned /buildme handoffs across 30 agents.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -25,7 +25,7 @@ One command for brand-led, code-authored motion and interactive web visuals. Hyp
 - **Optional capabilities:** discuss Hairline, img2threejs, the Opus 5.5 video-prompt catalog, and motion-skill pack selection during grilling, recommend what is needed, and activate only the user-approved choices.
 - **Opus prompt research:** when approved, `opus5-videos-agent` reads a few matching prompts from the MIT catalog, credits the creators, and rewrites the craft for this brand. It never renders and never replaces the video renderer.
 - **Measured motion:** motionmaxxing contributes brand-specific pacing, camera/depth guidance and integrated review alongside HyperFrames; standalone final mode is reserved for an explicit motionmaxxing deliverable.
-- **QA:** run anti-slop, determinism, readability, audio, accessibility, UX laws, and final-frame checks with Agent Desktop UI and local render verification and targeted feedback loops.
+- **Quality and handoff:** motion-a11y verifies every reduced variant; render-perf-budget proves fallback, Web Vitals and payloads; final QA checks the exact integrated revision through Agent Desktop and local measurements; token-handoff-exporter runs last to create versioned /buildme-ready artifacts.
 
 ## Invocation Contract
 

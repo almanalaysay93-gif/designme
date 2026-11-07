@@ -127,3 +127,7 @@ Read `references/normal-motion-orchestration.md`. Assess Remotion, motionmaxxing
 ## Goal-led multilayer background
 
 Read `references/parallax-background-integration.md`. Assess background needs normally; infer website type, goal/CTA, audience, style, device budget and reference-image role. Record `brief.json.background` with `enabled`, `goal`, `websiteType`, `referenceImages` and `reason`. Activate parallax-background-agent for requested 3D/multilayer/parallax animated backgrounds. It assesses HyperFrames, Remotion, motionmaxxing, Open 3D, verified html-video and img2threejs; choose useful contributions rather than requiring all providers. Existing approved-brief reconstruction scope authorizes img2threejs without asking again.
+
+## Accessibility, performance and consumer planning
+
+During Wave 1, identify target devices, motion sensitivity/reduced/static expectations, first-paint/SSR/CSR constraints, payload budgets, preview/performance environments and the actual /buildme consumer/token naming source. Wave 2 freezes the test and ownership plan; Wave 3 motion-a11y builds/verifies variants; Wave 4 performance and final QA precede the exporter last. These mandatory gates are not optional-agent toggles.

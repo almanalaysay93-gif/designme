@@ -81,6 +81,7 @@ The named waves are dependency groups, not permission to run every listed role
 simultaneously. Within Wave 2, freeze engineering contracts after style, doctrine
 and shot direction. Within Wave 3, finish the shared beat/frame map before GSAP, Anime.js
 and Three.js implementation. Anime.js additionally waits for animated-word research
-and the coordinator-owned animation target/property map. Within Wave 4, assemble the selected renderer's draft
-before motion-craft review. Fresh engineering review follows integration/craft,
-then the anti-slop QA gate and final render verification.
+and the coordinator-owned animation target/property map. Within Wave 3, assemble the selected renderer's draft after its producers and
+verify normal/reduced motion. Wave 4 refines the Genjutsu thesis, completes retained
+craft/site/engineering reviews, then runs performance and final QA. Final render
+verification finishes before token-handoff-exporter runs last on the tested revision.
