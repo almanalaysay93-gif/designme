@@ -32,3 +32,7 @@ This is the current required coverage checklist, not a history of defects claime
 - Actual /buildme token/snapshot/consumer names must match; do not invent a universal token schema or require manual code/token reconstruction. Missing consumer contracts and unexecuted required import evidence fail export.
 - Validate file closure, named imports, SSR/client lifecycle, reduced mapping, immutable version history and checksums before atomically publishing the latest release. Failed staging never replaces a valid handoff.
 - Behavior-changing packaging returns to the affected owner/gates and restarts export last; a stale QA stamp cannot approve changed behavior.
+
+## Speckit input lock before design implementation
+
+Between the approved Wave 1 brief and Wave 2, require the five-file theme/design baseline and read-only reviewer result. Missing decisions stop as explicit OPEN QUESTION entries. First FAIL returns exact fixes to the builder; second FAIL requires user action under the separate two-attempt cap. Wave 2 must consume the reviewed/versioned decisions rather than invent a second design. Any risk acceptance remains scoped and never waives missing values or the existing final accessibility/performance/QA gates.

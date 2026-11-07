@@ -9,10 +9,16 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
   "coordinator": "designme",
   "tasks": [],
   "engineering_review": "pending",
-  "subagent_count": 30,
+  "subagent_count": 32,
   "waves": {
     "wave1": {
       "planner-griller": "pending"
+    },
+    "wave1_5": {
+      "speckit-theme-builder": "blocked-until-approved-brief",
+      "speckit-theme-reviewer": "blocked-until-complete-builder-baseline",
+      "review_attempts": 0,
+      "max_review_attempts": 2
     },
     "wave2": {
       "design-dna-agent": "pending",
@@ -186,6 +192,18 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
     "manifest": null,
     "consumer_contract": null,
     "source_revision": null
+  },
+  "speckit": {
+    "status": "blocked-until-approved-brief",
+    "directory": null,
+    "version": null,
+    "brief_version": null,
+    "baseline_hashes": {},
+    "review_report": null,
+    "review_verdict": null,
+    "open_questions": [],
+    "risk_acceptance": null,
+    "wave2_ready": false
   }
 }
 ```
@@ -207,3 +225,5 @@ Track background research → layer/reconstruction plan → assigned model/asset
 Agent Desktop capability/status fields describe observed native UI access, not binary installation alone. Required unavailable session/permission/input checks remain BLOCKED; record separate headless measurements and exact tools without substituting them for missing desktop evidence.
 
 The current core wave order is defined in SKILL.md and manifest.json.wave_order. Retained specialists run as dependency tasks in each wave's supporting_tasks; supporting_agent_status tracks their existing contracts. Wave 4 core gates are serial: Genjutsu thesis → performance → final QA → exporter last. Accessibility/performance/QA reports and handoff must match the same tested source revision; source changes invalidate affected statuses. No exporter task is ready while any required gate fails or evidence is missing.
+
+Wave 1.5 is a mandatory theme-only lock/review gate between approved planner input and Wave 2. Track review_attempts separately from the later three-loop implementation repair cap: max two reviewer attempts, second FAIL requires user brief-fix or explicit risk decision. A reset requires a newly versioned user-updated input. Actual PASS or a scoped executable risk authorization can resolve readiness; never invent missing answers, relabel review FAIL, or dispatch Wave 2 while wave2_ready is false. Root execution plans remain distinct from speckit-theme-design/plan.md.

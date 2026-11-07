@@ -124,7 +124,7 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 30,
+    "subagent_count": 32,
     "free_only": true,
     "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, motionmaxxing and Open 3D are normal locally executed specialists; Hairline, img2threejs and the Opus prompt catalog retain their optional gates. motionmaxxing must not call ElevenLabs or any paid voice/music API. img2threejs must use only local generic/character profiles and never call Tripo, Hyper3D, CharacterGen, or paid plugins. QA uses Agent Desktop for native UI verification and local browser/render tools for measurements; BrowserCode is only an explicitly requested optional preview target, with no paid BrowserPod keys. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
     "agents": [
@@ -162,6 +162,16 @@
         "agent": "token-handoff-exporter",
         "repo": "designme/internal",
         "role": "Last-after-QA versioned import-ready token/motion/scene handoff exporter with verified buildme naming"
+      },
+      {
+        "agent": "speckit-theme-builder",
+        "repo": "designme/internal",
+        "role": "Approved-grill/repo/reference-derived five-file theme/design-only specification and lock checklist; stop on missing values"
+      },
+      {
+        "agent": "speckit-theme-reviewer",
+        "repo": "designme/internal",
+        "role": "Read-only completeness/consistency/constitution/traceability review before Wave 2; exact fixes and two-attempt user escalation"
       }
     ],
     "conditional_agents": [
@@ -354,6 +364,10 @@
       "wave1": [
         "planner-griller"
       ],
+      "wave1_5": [
+        "speckit-theme-builder",
+        "speckit-theme-reviewer"
+      ],
       "wave2": [
         "design-dna-agent",
         "motion-design-agent"
@@ -404,6 +418,47 @@
         "after": "final QA PASS on unchanged tested revision",
         "runs_last": true,
         "manifest": "handoff/handoff-manifest.json"
+      },
+      "speckit": {
+        "agents": [
+          "speckit-theme-builder",
+          "speckit-theme-reviewer"
+        ],
+        "wave": "1.5",
+        "report": "speckit-review.md",
+        "before": "wave2",
+        "max_review_attempts": 2
+      }
+    },
+    "speckit_gate": {
+      "wave": "1.5",
+      "builder": "speckit-theme-builder",
+      "reviewer": "speckit-theme-reviewer",
+      "scope": "theme/design only; no backend/database/business implementation",
+      "directory": "speckit-theme-design/",
+      "required_files": [
+        "project_context.md",
+        "constitution.md",
+        "spec.md",
+        "plan.md",
+        "tasks.md"
+      ],
+      "review": "speckit-review.md",
+      "builder_checklist": "speckit-lock-checklist.md",
+      "max_review_attempts": 2,
+      "ready_for_wave2": "All-pass matching version/hashes or explicit scoped executable user risk acceptance; no invented/missing values",
+      "second_fail": "Ask user: fix brief or approve with risk; no automatic third attempt",
+      "missing_value": "OPEN QUESTION in unlocked project_context.md and STOP",
+      "tasks": {
+        "first": "T001",
+        "last": "T018",
+        "stories": [
+          "US-1",
+          "US-2",
+          "US-3",
+          "US-4"
+        ],
+        "export_order": "T016 final QA PASS -> T017 export -> T018 exporter-owned final verification/lock"
       }
     }
   },
@@ -448,7 +503,7 @@
     "agent_desktop_contract": "references/agent-desktop-integration.md",
     "browsercode_role": "Optional preview compatibility only when explicitly required by the deliverable"
   },
-  "description": "Free-only 30-agent design and motion studio for websites and video: 3D parallax, Anime.js/GSAP, HyperFrames, Remotion, motionmaxxing, Open 3D, image-to-3D, Agent Desktop QA, motion accessibility, performance budgets and versioned /buildme handoffs.",
+  "description": "Free-only 32-agent design and motion studio for websites and video: 3D parallax, Anime.js/GSAP, HyperFrames, Remotion, motionmaxxing, Open 3D, image-to-3D, Agent Desktop QA, motion accessibility, Speckit theme locks, performance budgets and versioned /buildme handoffs.",
   "documentation": {
     "readme": "README.md",
     "schedule": "SKILL.md",

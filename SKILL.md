@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines goal-led multilayer parallax backgrounds, Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, Agent Desktop + render QA, mandatory motion accessibility/performance gates, and last-after-QA versioned /buildme handoffs across 30 agents.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines goal-led multilayer parallax backgrounds, Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, Agent Desktop + render QA, mandatory motion accessibility/performance gates, and last-after-QA versioned /buildme handoffs across 32 agents with a strict Speckit theme/design lock gate.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -113,14 +113,28 @@ The griller must produce an explicit recommendation for every optional agent:
 
 Show the thesis, renderer choice, optional-agent recommendations, and brief to the user. Do not proceed until the user approves them.
 
+### Wave 1.5 — speckit-theme-builder → speckit-theme-reviewer
+
+After the approved planner brief, run `speckit-theme-builder` ([contract](agents/speckit-theme-builder.md)), then `speckit-theme-reviewer` ([contract](agents/speckit-theme-reviewer.md)). This is mandatory theme/design specification work, **not backend/database/business implementation**. It runs before Wave 2, using the approved grill/previous spec, a real repo scan, actual screenshots and moodboard; it must not depend on unfinished downstream design-agent outputs.
+
+The builder produces the generated project's `/speckit-theme-design/project_context.md`, `constitution.md`, `spec.md`, `plan.md`, `tasks.md` and lock checklist with one version/brief/source identity. The files cover evidence/locked direction, non-negotiable constitution, complete token/section/component/state/motion/responsive design, implementation phases A–E and exactly T001–T018 / US-1–US-4. A missing decision is a concrete OPEN QUESTION in **unlocked** project_context.md and an immediate STOP, never a guessed default or a placeholder in a falsely locked file.
+
+The reviewer is read-only with respect to the five files. It writes `speckit-review.md` with PASS/FAIL per file/check and exact file/line fixes; only an all-pass baseline receives **PASS to Wave 2**. Version/hash-match all inputs and reviewed files. No implementation or Wave 2 design dispatch occurs before the gate resolves.
+
+**Maximum two reviewer attempts total:** attempt 1 FAIL → builder repairs only its owned spec files from the issue table → attempt 2 review. On the second FAIL, pause and ask the user **“Fix brief or approve with risk?”**, showing the remaining issues. Do not run a third attempt or assume approval. A brief fix starts a newly versioned cycle; explicit risk acceptance records exact issue IDs, consequences and baseline hashes, keeps the review FAIL and never fabricates missing values. Only an executable scoped user authorization can permit downstream work; unanswered values still require an answer or revised scope. Existing accessibility/performance/final-QA gates are not waived.
+
+T001–T018 are documented future implementation tasks, not work to execute in this wave. T016 includes final QA PASS, T017 is final token/motion export, and T018 is that same exporter's own package verification/version/hash lock. No extra build/review agent follows a successful export. Any behavior-changing defect returns to the affected build/gates and restarts export last.
+
 ### Wave 2 — design-dna, motion-design
 
-The four-wave order in this SKILL.md is authoritative for scheduling. Existing agent files remain unchanged; older wave labels in provider/reference instructions describe dependencies to map into this order, not permission to reorder these gates. Dispatch all core roles as required above, retaining existing optional-agent approvals and supporting specialist responsibilities. Use real host delegation limits and dependency tasks, not blanket parallel dispatch.
+The four-wave order plus Wave 1.5 lock/review gate in this SKILL.md is authoritative for scheduling. Existing agent files remain unchanged; older wave labels in provider/reference instructions describe dependencies to map into this order, not permission to reorder these gates. Dispatch all core roles as required above, retaining existing optional-agent approvals and supporting specialist responsibilities. Use real host delegation limits and dependency tasks, not blanket parallel dispatch.
 
-- `design-dna-agent` extracts the actual reference-based design system and tokens.
-- `motion-design-agent` consumes Design DNA/research and writes timing, easing, weight, choreography and normal/reduced intent; do not finalize the doctrine before the reference/token inputs exist.
+- `design-dna-agent` extracts/materializes the reviewed locked reference-based design system and tokens. Use `/speckit-theme-design/` as the approved baseline; do not silently replace its values.
+- `motion-design-agent` consumes the reviewed Speckit baseline plus Design DNA/research and materializes its specified timing, easing, weight, choreography and normal/reduced intent; do not finalize the doctrine before the reference/token inputs exist.
 
 Supporting tasks retained in this wave: `memory-agent`, `find-skills-agent`, `browser-agent`, `prompt-reference-agent`, approved `opus5-videos-agent`, `visual-style-agent`, approved `ui-ux-pro-max-agent`, `launch-director-agent`, `superlite-agent`, and planning contributions from `parallax-background-agent`, `open-3d-agent`, `remotion-agent` and `motionmaxxing-agent`. Finish prerequisite reference inspection before dependent design extraction. When approved, `img2threejs-agent` reconstructs the specified object only after background/model requirements exist; return its gated factory before scene implementation.
+
+Reviewed Speckit files are downstream constraints, not suggestions. New or contradictory design choices return to the builder/reviewer gate with updated input/version rather than being invented by plan/tasks/implementation. The root execution `plan.md` is distinct from `/speckit-theme-design/plan.md`.
 
 The coordinator freezes `plan.md`, `animation-plan.json`, `production-plan.json`, animation IDs and file/scene/property ownership after planning. Record provisional performance/payload budgets, first-paint/poster and CSR/SSR constraints, token-contract source and reduced mappings so the new gates have explicit acceptance criteria. Preserve an approved planner thesis before code; do not defer all creative intent until the final Genjutsu pass.
 
@@ -175,6 +189,9 @@ Add `--audio` only when the mix is local or user-provided. Do not call ElevenLab
 For video deliverables, compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence. If UI/UX Pro Max is selected, include `uiux-design-system.md`, `uiux-audit.md`, local search queries, responsive/keyboard/focus evidence, and reduced-motion checks. If `img2threejs-agent` is selected, include `.img2threejs/state.json`, `sculpt-spec.json`, `img2threejs-passes/`, and `img2threejs-report.md` in the QA evidence. If motionmaxxing owns an explicit standalone film, `film/NOTE.md` must quote G0–G5 and a fail is not a pass; contribution mode instead requires `motionmaxxing-plan.md` and applicable `motionmaxxing-review.md`. If the Opus catalog was selected, `opus-prompt-brief.md` must credit its sources and the film must not be a shot-for-shot clone.
 
 ## Output Contract
+
+- `/speckit-theme-design/project_context.md`, `constitution.md`, `spec.md`, `plan.md`, `tasks.md`, versioned lock checklist and `speckit-review.md`; all-pass reviewed baseline or a recorded user risk decision that never supplies invented/missing values
+
 
 - `motion-a11y.md` with PASS/FAIL per check and `gsap-timeline-reduced.js`
 - `perf-budget.json` with lcp_estimate, cls_estimate, total_js_kb, glb_kb, lottie_kb and fallback_file (plus INP, units, budgets and evidence); `perf-report.md` PASS/FAIL

@@ -28,9 +28,10 @@ about = read_json('.github/repository-about.json')
 roles = {path.stem for path in (ROOT / 'agents').glob('*.md')}
 orch = manifest.get('orchestration', {})
 require(len(roles) == orch.get('subagent_count'), 'Agent files and manifest count differ')
-require(len(roles) == 30, 'Current supported catalog must retain all 30 agents')
+require(len(roles) == 32, 'Current supported catalog must retain all 32 agents')
 expected = {
     'wave1': ['planner-griller'],
+    'wave1_5': ['speckit-theme-builder', 'speckit-theme-reviewer'],
     'wave2': ['design-dna-agent', 'motion-design-agent'],
     'wave3': ['gsap-agent', 'threejs-agent', 'hyperframes-agent', 'motion-a11y-agent'],
     'wave4': ['genjutsu-agent', 'render-perf-budget-agent', 'qa-anti-slop-agent', 'token-handoff-exporter'],
@@ -52,12 +53,12 @@ readme = (ROOT / 'README.md').read_text()
 skill = (ROOT / 'SKILL.md').read_text()
 require(set(re.findall(r'\]\(agents/([\w-]+)\.md\)', readme)) == roles, 'README catalog omits or invents agents')
 require(f'**{len(roles)}-agent' in readme, 'README overview count is stale')
-require(re.findall(r'^### Wave (\d) ', skill, re.M) == ['1', '2', '3', '4'], 'SKILL must declare the four ordered waves once')
+require(re.findall(r'^### Wave (\d+(?:\.5)?) ', skill, re.M) == ['1', '1.5', '2', '3', '4'], 'SKILL must declare the four ordered waves plus the 1.5 gate once')
 for name in core:
     require(f'`{name}`' in skill, f'SKILL does not dispatch {name}')
 require('LAST and only after final QA PASS' in skill, 'SKILL exporter QA/last gate is missing')
 require(orch.get('handoff_gate', {}).get('runs_last') is True, 'Manifest handoff must run last')
-for gate in ['motion_accessibility', 'performance', 'final_qa', 'handoff']:
+for gate in ['speckit', 'motion_accessibility', 'performance', 'final_qa', 'handoff']:
     require(gate in orch.get('quality_gates', {}), f'Manifest lacks {gate} gate')
 
 # Validate complete JSON examples in authoritative scheduling/state documents.
@@ -72,12 +73,21 @@ for relative in ['SKILL.md', 'references/orchestrator-state.md', 'references/nor
             errors.append(f'{relative}: invalid JSON example: {error}')
 require(state.get('subagent_count') == len(roles), 'State agent count is stale')
 for wave, names in expected.items():
-    require([name for name in state.get('waves', {}).get(wave, {}) if name != 'supporting_tasks'] == names, f'State {wave} ordering differs')
+    require([name for name in state.get('waves', {}).get(wave, {}) if name not in {'supporting_tasks', 'review_attempts', 'max_review_attempts'}] == names, f'State {wave} ordering differs')
 require(core | set(state.get('supporting_agent_status', {})) == roles, 'State loses core/supporting roles')
 require(state.get('waves', {}).get('wave4', {}).get('token-handoff-exporter') == 'blocked-until-final-qa-pass', 'State exporter readiness gate missing')
 for key in ['motion_a11y', 'performance', 'handoff']:
     require(key in state, f'State lacks {key} evidence')
 require(state.get('qa_verification', {}).get('interaction_backend') == 'agent-desktop', 'State interaction backend is stale')
+
+sg = orch.get('speckit_gate', {})
+require(sg.get('max_review_attempts') == 2, 'Speckit reviewer cap must be two attempts')
+require(sg.get('required_files') == ['project_context.md', 'constitution.md', 'spec.md', 'plan.md', 'tasks.md'], 'Speckit five-file contract differs')
+require(state.get('waves', {}).get('wave1_5', {}).get('max_review_attempts') == 2, 'State Speckit review cap is stale')
+require(state.get('waves', {}).get('wave1_5', {}).get('review_attempts') == 0, 'State example must not invent completed review attempts')
+require(state.get('speckit', {}).get('wave2_ready') is False, 'State must not mark Wave 2 ready before Speckit review')
+require('OPEN QUESTION' in skill and 'Fix brief or approve with risk?' in skill, 'SKILL Speckit stop/escalation contract is missing')
+
 
 summary = about.get('description', '')
 require(bool(summary) and len(summary) <= 350 and '\n' not in summary, 'GitHub About needs one nonempty description of at most 350 characters')
@@ -104,5 +114,5 @@ if errors:
     for error in errors:
         print(f'FAIL: {error}', file=sys.stderr)
     sys.exit(1)
-print(f'PASS: {len(roles)} roles, four waves, state, gates, README catalog, local links and About metadata')
+print(f'PASS: {len(roles)} roles, four waves plus the Speckit gate, state, gates, README catalog, local links and About metadata')
 print('Runtime accessibility/performance/desktop/import evidence is checked by the generated-build agents, not this validator.')
