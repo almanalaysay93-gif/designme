@@ -460,6 +460,46 @@
         ],
         "export_order": "T016 final QA PASS -> T017 export -> T018 exporter-owned final verification/lock"
       }
+    },
+    "product_design_principles": {
+      "reference": "references/product-design-principles.md",
+      "version": "1.0.0",
+      "ids": [
+        "DP01",
+        "DP02",
+        "DP03",
+        "DP04",
+        "DP05",
+        "DP06",
+        "DP07",
+        "DP08",
+        "DP09",
+        "DP10",
+        "DP11",
+        "DP12",
+        "DP13",
+        "DP14",
+        "DP15",
+        "DP16",
+        "DP17",
+        "DP18",
+        "DP19",
+        "DP20"
+      ],
+      "planner": "planner-griller",
+      "brief_field": "brief.json.designPrinciples",
+      "builder": "speckit-theme-builder",
+      "reviewer": "speckit-theme-reviewer",
+      "documents": [
+        "project_context.md",
+        "constitution.md",
+        "spec.md",
+        "plan.md",
+        "tasks.md"
+      ],
+      "required": "Actual applicability/evidence/approved decision and acceptance for every ID; concrete five-file/spec/task mappings",
+      "missing_choice": "OPEN QUESTION and STOP; never invent values/assets/claims",
+      "task_policy": "Map to existing T001\u2013T018, preserving US-1\u2013US-4 and final QA/export order"
     }
   },
   "reference_sources": {
@@ -501,7 +541,8 @@
     "html_video_contract": "references/html-video-integration.md",
     "agent_desktop_repo": "https://github.com/vercel-labs/agent-desktop",
     "agent_desktop_contract": "references/agent-desktop-integration.md",
-    "browsercode_role": "Optional preview compatibility only when explicitly required by the deliverable"
+    "browsercode_role": "Optional preview compatibility only when explicitly required by the deliverable",
+    "product_design_principles": "references/product-design-principles.md"
   },
   "description": "Free-only 32-agent design and motion studio for websites and video: 3D parallax, Anime.js/GSAP, HyperFrames, Remotion, motionmaxxing, Open 3D, image-to-3D, Agent Desktop QA, motion accessibility, Speckit theme locks, performance budgets and versioned /buildme handoffs.",
   "documentation": {

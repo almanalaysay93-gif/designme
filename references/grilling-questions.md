@@ -131,3 +131,7 @@ Read `references/parallax-background-integration.md`. Assess background needs no
 ## Accessibility, performance and consumer planning
 
 During Wave 1, identify target devices, motion sensitivity/reduced/static expectations, first-paint/SSR/CSR constraints, payload budgets, preview/performance environments and the actual /buildme consumer/token naming source. Wave 2 freezes the test and ownership plan; Wave 3 motion-a11y builds/verifies variants; Wave 4 performance and final QA precede the exporter last. These mandatory gates are not optional-agent toggles.
+
+## Practical product-design principles
+
+Read [DP01–DP20](product-design-principles.md) and have planner-griller capture every principle's applicability, evidence, approved decision and acceptance in brief.json.designPrinciples. Ask only unresolved product-specific questions; the 20 principles themselves are supplied requirements. They must become concrete audits/rules/specifications/implementation mappings/acceptance checks across all five Speckit Markdown files, not a detached inspiration list. Missing answers stop the Speckit lock; existing task/story and review limits remain unchanged.
