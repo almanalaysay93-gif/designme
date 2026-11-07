@@ -164,3 +164,11 @@
 - [ ] Every required /handoff/ file/module/asset, version and hash exists; normal/reduced motion and resize/dispose interfaces match the approved build
 - [ ] Target-aware import checks prove actual token-name/dependency compatibility without manual code/token recreation
 - [ ] Packaging does not silently change tested behavior; a failed/stale export is not published as the latest valid release
+
+## Speckit theme/design baseline
+
+- [ ] Wave 1.5 produced all five theme-only files and lock checklist from approved grill/spec values, real repo facts and actual screenshot/moodboard evidence; no invented values or backend/database/business implementation
+- [ ] Read-only speckit-review.md covers every file/check, source/version/hashes and exact file/line fixes; no unresolved missing value was guessed
+- [ ] Max two reviewer attempts; a second FAIL has an actual user brief-fix/scoped-risk decision, never an automatic third attempt or relabeled PASS
+- [ ] Tokens/components/sections/copy/states/motion/reduced mappings/breakpoint behavior agree across context/spec/plan/tasks and downstream implementation
+- [ ] T001–T018 and US-1–US-4 trace every spec item to phases/tasks without invented design; T016 QA PASS precedes T017 export and T018 is the same exporter's own lock

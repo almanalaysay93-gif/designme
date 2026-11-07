@@ -1,6 +1,6 @@
 # Designme
 
-Free-only **30-agent design and motion studio** for websites, 3D parallax backgrounds and locally rendered video. Invoke `/designme` to turn a brief and real references into a deliberate visual system, editable motion, verified output and a versioned `/buildme` handoff.
+Free-only **32-agent design and motion studio** for websites, 3D parallax backgrounds and locally rendered video. Invoke `/designme` to turn a brief and real references into a deliberate visual system, editable motion, verified output and a versioned `/buildme` handoff.
 
 This repository contains orchestration instructions, agent contracts, references and installation/validation helpers. It does not ship a prebuilt website or a promise that any particular host has passed runtime checks. [SKILL.md](SKILL.md) defines dispatch and acceptance; [manifest.json](manifest.json) records roles, providers, core wave order and gates.
 
@@ -17,6 +17,7 @@ Other briefs can request launch films, explainers, interactive figures, product 
 | Wave | Core agents, in order | Required handoff |
 | --- | --- | --- |
 | 1 | planner-griller | Approved goal, thesis, references, constraints and optional decisions |
+| 1.5 | speckit-theme-builder → speckit-theme-reviewer | Five locked theme/design files, exact read-only review, max two attempts then user decision |
 | 2 | design-dna → motion-design | Tokens, visual language, researched motion and frozen dependency/ownership plans |
 | 3 | gsap, threejs, hyperframes, motion-a11y | Integrated site/film draft, complete reduced variants and accessibility evidence |
 | 4 | genjutsu thesis → render-perf-budget → qa-anti-slop → token-handoff-exporter | Refined thesis, passing performance/accessibility and final QA, then complete versioned export |
@@ -84,13 +85,21 @@ The skill folder/frontmatter name is `designme`; compatible harnesses can load t
 
 All agents use free, local, open-source or already-installed capabilities. Paid generation, cloud rendering, soundtrack/model APIs, billing and credit-consuming paths remain disabled. Engine/license eligibility still needs verification; an open-source instruction package does not grant a third-party commercial engine license. Superlite is the single execution adapter, not a second coordinator; never enable it with Superpowers.
 
+## Speckit theme/design lock before Wave 2
+
+[Speckit Theme Builder](agents/speckit-theme-builder.md) converts approved grill/spec decisions, actual repo facts, real screenshots and moodboard into `/speckit-theme-design/` project_context.md, constitution.md, spec.md, plan.md and tasks.md plus a lock checklist. Theme/design only: no backend/database/business implementation. Missing values become concrete OPEN QUESTION entries in unlocked context and stop work; they are never guessed.
+
+[Speckit Theme Reviewer](agents/speckit-theme-reviewer.md) does not edit those files. It checks sources, completeness, consistency, constitution, component states, reduced mappings and exact T001–T018 / US-1–US-4 traceability, then writes speckit-review.md with file/line fixes and PASS/FAIL. Two review attempts total; second FAIL pauses for **fix brief or approve with risk**. Explicit risk acceptance is scoped/versioned and never supplies missing values or erases later quality gates. T018 remains the last exporter's own package lock, preserving last-after-QA export order.
+
 ## Agent catalog
 
-All 30 agent contracts are retained. Core wave membership comes from SKILL.md/manifest.json; other roles run as their supporting dependencies and reviews.
+All 32 agent contracts are retained. Core wave membership comes from SKILL.md/manifest.json; other roles run as their supporting dependencies and reviews.
 
 | Agent | Responsibility |
 | --- | --- |
 | [planner-griller](agents/planner-griller.md) | Approved brief, goal, thesis and optional-agent decisions |
+| [speckit-theme-builder](agents/speckit-theme-builder.md) | Five-file evidence-based theme/design specification and lock checklist |
+| [speckit-theme-reviewer](agents/speckit-theme-reviewer.md) | Strict read-only review and two-attempt escalation before Wave 2 |
 | [design-dna-agent](agents/design-dna-agent.md) | Reference-based design tokens and visual DNA |
 | [motion-design-agent](agents/motion-design-agent.md) | Timing, easing, choreography and motion doctrine |
 | [gsap-agent](agents/gsap-agent.md) | Assigned GSAP timelines and specialist choreography |
@@ -124,12 +133,12 @@ All 30 agent contracts are retained. Core wave membership comes from SKILL.md/ma
 ## Repository maintenance
 
 - `SKILL.md` owns scheduling and gates; `manifest.json` and state/workflow references must agree.
-- `agents/` contains the 30 contracts. Preserve existing agents unless an edit is explicitly requested.
+- `agents/` contains the 32 contracts. Preserve existing agents unless an edit is explicitly requested.
 - `references/` connects provider details, research, ownership, UX, QA and handoff requirements.
 - `scripts/` contains safe install helpers and the standard-library repository consistency checker.
 - [`.github/repository-about.json`](.github/repository-about.json) is the tracked source for GitHub's About description; it is metadata, not another skill.
 
-Run `python3 scripts/validate-repo.py` before publishing documentation changes. The validator checks role coverage, wave/state consistency, required gate/export fields, the full catalog, local Markdown file links and About metadata. It does not claim to run a website or pass runtime accessibility/performance tests.
+Run `python3 scripts/validate-repo.py` before publishing documentation changes. The validator checks role coverage, Wave 1.5 readiness/retry limits, wave/state consistency, required gate/export fields, the full catalog, local Markdown file links and About metadata. It does not claim to run a website or pass runtime accessibility/performance tests.
 
 To synchronize the repository's About after the source file is reviewed, an authorized maintainer can run:
 
