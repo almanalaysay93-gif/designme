@@ -379,6 +379,32 @@
       "consumer": "buildme token-snapshotter plus actual target token/snapshot/import contract",
       "failure": "Missing required file, naming mismatch, stale evidence or incomplete executable import check",
       "versioning": "Immutable versioned releases with dependency/file/evidence hashes"
+    },
+    "quality_gates": {
+      "motion_accessibility": {
+        "agent": "motion-a11y-agent",
+        "wave": 3,
+        "report": "motion-a11y.md",
+        "reduced_module": "gsap-timeline-reduced.js"
+      },
+      "performance": {
+        "agent": "render-perf-budget-agent",
+        "wave": 4,
+        "report": "perf-report.md",
+        "budget": "perf-budget.json"
+      },
+      "final_qa": {
+        "agent": "qa-anti-slop-agent",
+        "wave": 4,
+        "report": "audit.md"
+      },
+      "handoff": {
+        "agent": "token-handoff-exporter",
+        "wave": 4,
+        "after": "final QA PASS on unchanged tested revision",
+        "runs_last": true,
+        "manifest": "handoff/handoff-manifest.json"
+      }
     }
   },
   "reference_sources": {
@@ -421,5 +447,14 @@
     "agent_desktop_repo": "https://github.com/vercel-labs/agent-desktop",
     "agent_desktop_contract": "references/agent-desktop-integration.md",
     "browsercode_role": "Optional preview compatibility only when explicitly required by the deliverable"
+  },
+  "description": "Free-only 30-agent design and motion studio for websites and video: 3D parallax, Anime.js/GSAP, HyperFrames, Remotion, motionmaxxing, Open 3D, image-to-3D, Agent Desktop QA, motion accessibility, performance budgets and versioned /buildme handoffs.",
+  "documentation": {
+    "readme": "README.md",
+    "schedule": "SKILL.md",
+    "workflow": "references/workflow.md",
+    "state": "references/orchestrator-state.md",
+    "about": ".github/repository-about.json",
+    "validator": "scripts/validate-repo.py"
   }
 }

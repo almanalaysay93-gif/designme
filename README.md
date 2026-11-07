@@ -1,167 +1,138 @@
-# /designme — invoke with /designme
+# Designme
 
-One skill that spawns a griller/planner, a visual-style director, parallel creative and engineering agents, an optional procedural 3D reconstruction agent (`img2threejs-agent`), a direction pass, a beat-sync pass, a motion-craft review, and a final anti-slop QA loop with Agent Desktop UI and local render verification.
+Free-only **30-agent design and motion studio** for websites, 3D parallax backgrounds and locally rendered video. Invoke `/designme` to turn a brief and real references into a deliberate visual system, editable motion, verified output and a versioned `/buildme` handoff.
 
-> **Scope:** HyperFrames is the default renderer. Remotion, motionmaxxing and Open 3D are normal specialists that contribute useful components, supporting footage, motion guidance and integrated review alongside HyperFrames. `hairline-agent` is optional and runs only for interactive figures or pointer-responsive web visuals. `img2threejs-agent` is optional and runs only when a project provides a 2D reference image to reconstruct as a procedural Three.js `THREE.Group` model in code from [img2threejs/img2threejs](https://github.com/img2threejs/img2threejs). Blotato supplies prompt references; Remotion supplies both references and useful local supporting sequences. All agents follow a free-only policy with no paid APIs, cloud rendering, publishing, scheduling, or credits. `opus5-videos-agent` is optional and only researches prompts from [yihui-dev/awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos). motionmaxxing must not call ElevenLabs. `qa-anti-slop-agent` uses [Agent Desktop](https://github.com/vercel-labs/agent-desktop) for live UI verification and local render/measurement tools for technical evidence.
+This repository contains orchestration instructions, agent contracts, references and installation/validation helpers. It does not ship a prebuilt website or a promise that any particular host has passed runtime checks. [SKILL.md](SKILL.md) defines dispatch and acceptance; [manifest.json](manifest.json) records roles, providers, core wave order and gates.
 
-## Invoke
+## Start
 
 ```text
-/designme premium 9:16 launch reel, Linear + Stripe refs, heavy physical feel, no AI purple slop
+/designme a product landing page with restrained 3D parallax, layered reference-image depth, readable demo CTA and mobile reduced-motion fallback
 ```
 
-## Optional-agent grilling gate
+Other briefs can request launch films, explainers, interactive figures, product breakdowns or standalone renderer projects. Website work keeps the live site as its primary deliverable; video is added when requested. The approved brief determines scope, references, optional choices and constraints.
 
-During the first grilling session, `planner-griller` must select a visual language from the 20-style library, then recommend whether each optional agent and iart-ai motion-skill pack is needed and ask for approval:
+## Four-wave production loop
 
-| Optional agent | Use it when | Default recommendation |
-|---|---|---|
-| `hairline-agent` | The brief requires an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual | Ask the user; state whether the brief matches the trigger. Never assume skip |
-| `opus5-videos-agent` | The brief explicitly wants a starting prompt from the Opus 5.5 code-video catalog | Ask the user. It researches prompts only and does not render |
-| `ui-ux-pro-max-agent` | UI, landing page, dashboard, product demo, forms, navigation, charts, mobile UI, or UX/accessibility review | Run for any interface. Ask the user only for pure non-UI films |
-| `img2threejs-agent` | The brief supplies a 2D reference image of an object, product, prop, or character and requires a procedural code-only Three.js `THREE.Group` reconstruction | Ask the user whether a reference-image reconstruction is wanted. Never assume skip |
+| Wave | Core agents, in order | Required handoff |
+| --- | --- | --- |
+| 1 | planner-griller | Approved goal, thesis, references, constraints and optional decisions |
+| 2 | design-dna → motion-design | Tokens, visual language, researched motion and frozen dependency/ownership plans |
+| 3 | gsap, threejs, hyperframes, motion-a11y | Integrated site/film draft, complete reduced variants and accessibility evidence |
+| 4 | genjutsu thesis → render-perf-budget → qa-anti-slop → token-handoff-exporter | Refined thesis, passing performance/accessibility and final QA, then complete versioned export |
 
-Full dispatch rule: every core agent in this file runs on every invocation. Only the optional agents above are gated, and each gate is resolved by asking the user, never by assumption. A skip needs the user's answer, recorded in `brief.json.optionalAgents`.
+All existing specialists retain supporting tasks under those waves. Research precedes dependent design extraction; canonical timing and models/assets precede scene/clip assembly. Core roles must produce their required output or a concrete BLOCKED result, subject only to the explicit owns-nothing/web-only exceptions in SKILL.md. Existing optional approvals remain in force; already-authorized choices do not need repeated permission. See [workflow](references/workflow.md) and [state contract](references/orchestrator-state.md).
 
-The recommendation is stored in `brief.json.optionalAgents`. Optional agents are never silently activated. A user request can approve an agent even when it is not strictly necessary, with the tradeoff recorded. There is one final owner per deliverable, normally HyperFrames for films; normal specialists may produce intermediate assets under the production contract.
+The final exporter runs **last, only after QA PASS for the exact tested revision**. Source changes invalidate affected gate evidence. Repairs go to the actual owner and rerun affected producer/consumer checks inside the existing three-loop cap; unresolved defects are never waived into PASS.
 
-## Procedural 3D reconstruction (`img2threejs-agent`)
+## Website and motion capabilities
 
-`img2threejs-agent` adds [img2threejs/img2threejs](https://github.com/img2threejs/img2threejs) (Apache-2.0, v2.0.0) as an optional Wave 2 agent. It gates reconstruction through `forge/state.py` and `forge/next.py` across 8 passes (`blockout` to `optimization`), verifies each pass in local Chromium, and hands a deterministic `create<ObjectName>Model(spec, options)` `THREE.Group` factory to `threejs-agent` in Wave 3.
+| Capability | How it participates |
+| --- | --- |
+| Anime.js and GSAP | Anime.js defaults to landing-page text/elements; GSAP handles assigned specialist timelines. Each target/property has one owner. Animated-word research selects treatments that fit actual copy and brand. |
+| Three.js and multilayer parallax | A dedicated background specialist chooses live 3D, procedural layers, honest image-based 2.5D or useful media layers from the website goal, reference image and device budget. One scene/camera/clock and scroll-progress owner prevents conflicts. |
+| Open 3D Skills | All eight skills are available and assessed for enabled work; each records use/skip/blocked and real execution evidence. Scenes, exploded views, scroll film, alpha media, cursor rigs, asset planning, site-check and capture compose when useful. |
+| HyperFrames | Default final-film assembler, consuming verified local layers and supporting clips. |
+| Remotion and motionmaxxing | Normal specialists: Remotion produces useful React sequences/clips; motionmaxxing plans depth/camera/pacing and reviews the integrated result. Explicit standalone final output remains supported. |
+| html-video | Verified `nexu-io/html-video` templates/local asset provider. Inspect installed engines and output timing/alpha; real-time capture is not assumed frame-exact. No paid audio/model generation or competing studio-agent loop. |
+| Reference images and img2threejs | Inspect actual pixels before claiming fidelity. Use images as style references or layered artwork; approved useful objects/characters can become deterministic model factories with staged reconstruction evidence. Hidden-angle approximations stay explicit. |
+| Visual style and UI/UX | Choose one primary style from the 20-style library, with at most one supporting style. Local UI/UX Pro Max and the mandatory 14-law audit support interface work under the current briefing rules. |
+| Hairline and prompt catalogs | Approved interactive figures and Opus code-video prompt research remain available without changing the selected final owner. |
 
-See [`references/img2threejs.md`](references/img2threejs.md).
+One final owner per deliverable permits multiple assigned intermediate assets. Captures of a website wait for a ready integrated page; their consuming film waits for verified footage. Media/frame/alpha/color/audio contracts live in `production-plan.json`. See [normal production](references/normal-motion-orchestration.md), [backgrounds](references/parallax-background-integration.md), [Open 3D](references/open-3d-integration.md), [Anime.js](references/animejs-integration.md) and [html-video](references/html-video-integration.md).
 
-## Agent Desktop and render QA
+## Evidence and release gates
 
-`browser-agent` and final QA use `vercel-labs/agent-desktop` for task-scoped app/window snapshots, native accessibility ref actions, UI observations and visual evidence. This replaces the former interactive browser tool while preserving role names and report handoffs. Actual OS/session permissions and capability checks are required; a headless container is not assumed to have an accessible desktop.
+- **Motion accessibility:** every animation has a reduced variant. Reduced mode has no parallax/infinite loop or autoplay longer than 5 seconds. Temporal contrast, flashing, keyboard/focus/modal behavior, live regions and decorative semantics have PASS/FAIL evidence in `motion-a11y.md`; `gsap-timeline-reduced.js` supplies the approved reduced interface.
+- **Render/performance:** `perf-budget.json` and `perf-report.md` document CSR/SSR, real poster/static first paint, JS/GLB/Lottie sizes and limits. LCP < 2.5s, CLS < 0.1 and INP < 200ms use honest measured/estimated provenance. Missing numbers/fallbacks or unresolved budgets prevent PASS; cuts require actual remeasurement.
+- **Native UI plus technical checks:** Agent Desktop operates the task's app/window through fresh qualified accessibility refs. Playwright/Chromium and Open 3D tools separately measure exact viewports/DOM/console/network/performance and deterministic frames. Missing required native session/permission evidence is BLOCKED; a headless screenshot is not proof of a successful desktop interaction.
+- **Final QA and handoff:** actual integrated visuals, motion, accessibility, performance, UX, audio and determinism evidence must pass before versioned export. Existing source files remain editable and target imports are executable-checked.
 
-Playwright/Chromium and Open 3D checks retain exact viewport/DOM/console/network/performance and deterministic rendering responsibilities. Agent Desktop is not a DOM evaluator or video engine. Missing required native interaction evidence is reported as BLOCKED. BrowserCode is only an optional requested preview target.
+Read the [QA rubric](references/qa-rubric.md), [Agent Desktop contract](references/agent-desktop-integration.md), [UX audit workflow](references/ux-laws-workflow.md) and [completion checklist](references/missing-checklist.md). Decorative 3D cannot obscure headings/CTAs or intercept input; mobile/touch/reduced-motion/static fallbacks remain required.
 
-See [installation, interaction loop, platform requirements and evidence contract](references/agent-desktop-integration.md).
+## Versioned /buildme handoff
 
-## UI/UX Pro Max design intelligence
+After final QA PASS, the exporter creates the generated project's `/handoff/` root with:
 
-`ui-ux-pro-max-agent` adds the MIT-licensed [UI/UX Pro Max skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) as an optional local design-intelligence layer. It searches styles, palettes, typography, UX rules, charts, icons, GSAP presets, and stack guidance, then writes `uiux-design-system.md` and `uiux-audit.md`. It is selected during grilling for interface-containing projects and skipped for pure non-UI films.
+- `tokens.json`: colors, typography, spacing, radii, shadows and breakpoints; no implicit Inter.
+- `motion-spec.json`: animation IDs, durations/units, easings/springs, ScrollTrigger ranges and every reduced mapping.
+- `gsap-timeline.js`, `gsap-timeline-reduced.js`, `threejs-scene.js`: deterministic importable modules with the verified lifecycle, including scene resize/dispose.
+- `handoff.md`, `handoff-manifest.json`, a target-aware import helper and all referenced assets/dependencies, with immutable releases under `versions/<export-version>/`.
 
-See [`references/ui-ux-pro-max-integration.md`](references/ui-ux-pro-max-integration.md).
-
-## 20-style visual language library
-
-Designme now includes a style library for: neon glow, particle swarm, pixel art, glitch, glassmorphism, liquid morph, holographic foil, clay 3D, kinetic typography, vaporwave grid, halftone dots, Bauhaus shapes, ASCII art, paper cutout, flow fields, dithering, risograph print, metaballs, topographic lines, and ray-marched fractals. During grilling, choose one primary and at most one supporting style. `visual-style-agent` writes `style-spec.md` with the material system, palette, motion grammar, hero beat, build sample, renderer handoff, and anti-slop checks.
-
-Read [`references/visual-style-library.md`](references/visual-style-library.md) for the full recipes and code patterns.
-
-## iart-ai motion-skill packs
-
-The reel points to [`iart-ai/motion-skills`](https://github.com/iart-ai/motion-skills), a free MIT library of 51 skills across 15 packs. Designme routes the smallest compatible pack set to existing agents instead of blindly running every pack. The selected packs are recorded in `brief.json.motionSkillPacks`, installed only after approval, and verified through the normal render/screenshot/probe QA loop.
-
-See [`references/motion-skills-packs.md`](references/motion-skills-packs.md) for the complete pack matrix and agent ownership.
-
-## What was added
-
-The update keeps **HyperFrames as the default renderer** and adds compatible production skills from the supplied list. Remotion is available through its dedicated conditional agent when explicitly requested:
-
-- `AbubakrChan/product-launch-motion` → `launch-director-agent`: competing directions, launch-film story, word-locked reveals, motivated camera language, look, and finishing.
-- `Sunwood-ai-lab/hyperframes-motion-reel-skill` → `beat-sync-agent`: BPM/frame grids, morphing transitions, deterministic timelines, and code-generated score planning.
-- `whaleyxbt/claude-motion` → `motion-craft-agent`: contact-sheet self-review, frame-level checks, web-sim guidance, and deterministic code-authored sound.
-- `Blotato-Inc/blotato-skills` + `remotion-dev/skills` → `prompt-reference-agent`: free prompt patterns for brand intake, hooks, grading, repurposing, React/video composition, captions, and future projects.
-- `remotion-dev/remotion` + `remotion-dev/skills` → `remotion-agent`: explicit local React-to-video builds with frame-accurate compositions, captions, audio, and still-frame QA.
-- `iart-ai/motion-skills` → routed pack library: short-form, data, explainer, web, kinetic typography, WebGL, Manim, map, ad, ecommerce, and generative-illustration workflows.
-- `lucasmarkes/hairline` → `hairline-agent`: optional accessible interactive line figures and pointer-responsive web visuals, validated in a browser.
-- `Tejashmakwana/motionmaxxing` → `motionmaxxing-agent`: normal brand-specific motion/depth/pacing planning and integrated craft review; an explicit standalone film can still use its runtime and G0–G5 gates. See [`references/motionmaxxing.md`](references/motionmaxxing.md).
-- `yihui-dev/awesome-opus5-5-videos` → `opus5-videos-agent`: optional MIT prompt catalog. Picks a few code-authored video prompts, credits the creators, and rewrites the craft for this brand. See [`references/opus5-videos.md`](references/opus5-videos.md).
-- `img2threejs/img2threejs` → `img2threejs-agent`: optional Apache-2.0 procedural image-to-Three.js reconstruction agent. See [`references/img2threejs.md`](references/img2threejs.md).
-- `vercel-labs/agent-desktop` → browser-agent and QA: native UI interaction and scoped reference/visual evidence; separate local Playwright/site-check tools supply exact browser/render measurements.
-
-## Free-only rule
-
-All 30 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
-
-## Structure
-
-- `SKILL.md` — `/designme` contract, install gate, dependency waves, optional-agent gate, and output contract
-- `agents/` — creative direction, motion engineering, visual-style direction, UI/UX Pro Max intelligence, normal Remotion/motionmaxxing/Open 3D specialists and optional Hairline/Opus-prompt/img2threejs agents, craft review, and QA agents
-- `references/` — grilling questions, prompt sources, iart motion-pack routing, motionmaxxing contract, Opus 5.5 prompt catalog, img2threejs integration, Agent Desktop + render QA verification, visual-style library, UI/UX Pro Max integration, Superlite adapter, UX laws, QA rubric, asset pipeline, missing checklist, and orchestration state
-- `manifest.json` — selected source repositories and agent responsibilities
+The exporter reads the real `/buildme` token-snapshotter plus the target's design/token/snapshot/import files. The inspected consumer has no universal token-key schema: names must match the actual target. Missing consumer contracts, files, dependency closure, versions or executable import evidence fail export. No manual code/token reconstruction is an acceptable handoff. See [token-handoff-exporter](agents/token-handoff-exporter.md).
 
 ## Install
 
+Clone/download this repository, then follow the complete [install gate](SKILL.md#0--install-gate). Helpers reuse verified installations; never overwrite an unrelated checkout or treat an installed binary as a passing runtime check.
+
 ```bash
-# Required: download official Anime.js source when installing Designme.
-# Run from the designme repository root. Reuses a verified existing checkout.
+git clone https://github.com/almanalaysay93-gif/designme.git
+cd designme
+# Only missing/unverified source needs inspection; the helper reuses valid checkouts.
 bash scripts/install-animejs.sh
-npx skills add CloudAI-X/threejs-skills greensock/gsap-skills zanwei/design-dna LottieFiles/motion-design-skill https://genjutsu.athevon.dev heygen-com/hyperframes -g
-npx skills add whaleyxbt/claude-motion AbubakrChan/product-launch-motion Sunwood-ai-labs/hyperframes-motion-reel-skill -g
-npx skills add remotion-dev/skills lucasmarkes/hairline Tejashmakwana/motionmaxxing -g
-git clone https://github.com/img2threejs/img2threejs.git ~/.agents/skills/img2threejs
-# Optional UI/UX Pro Max local skill (MIT, bundled data + Python search)
-npm install -g ui-ux-pro-max-cli && uipro init --ai claude --global
-# Opus prompt catalog is cloned by opus5-videos-agent when approved; see references/opus5-videos.md
-# Add only the iart-ai packs approved during grilling; see references/motion-skills-packs.md
 bash scripts/install-agent-desktop.sh
 npx skills add https://github.com/vercel-labs/agent-desktop --skill agent-desktop -g
-npx skills add thedotmack/claude-mem -g
-# Superlite adapter is bundled; optional native plugin: references/superlite-integration.md
-npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
-npx skills add vercel-labs/skills --skill find-skills -g
-# taste: install from Leonxlnx/taste-skill (folder taste-skill). gsd is not used.
-cp -r ./designme ~/.claude/skills/designme
+# Install the remaining selected providers/packs from SKILL.md's install gate.
+# When html-video is assigned:
+# bash scripts/install-html-video.sh
+# Install this complete instruction package for Claude Code, preserving all subfolders:
+mkdir -p ~/.claude/skills/designme
+cp -R SKILL.md agents references scripts manifest.json ~/.claude/skills/designme/
 ```
 
-Claude Code will now show `/designme` in the slash menu.
+The skill folder/frontmatter name is `designme`; compatible harnesses can load the same package using their supported skill installation mechanism. Check existing versions first and do not erase unrelated customizations. Native desktop work needs actual supported OS/session permissions; local rendering needs the selected browser/Node/Python/FFmpeg dependencies. Record exact versions, sources and checks in `motion-skills-installed.md`; optional local providers install only under their current task contract.
 
-## Superlite execution
+All agents use free, local, open-source or already-installed capabilities. Paid generation, cloud rendering, soundtrack/model APIs, billing and credit-consuming paths remain disabled. Engine/license eligibility still needs verification; an open-source instruction package does not grant a third-party commercial engine license. Superlite is the single execution adapter, not a second coordinator; never enable it with Superpowers.
 
-This skill now uses a bundled [Superlite execution adapter](references/superlite-integration.md) for
-dependency-aware tasks, single-owner file contracts, targeted repairs and fresh
-final review. Its specialty workflow and quality gates remain in charge. No native
-plugin or model service is required. The reference includes optional native-plugin
-setup and host limitations. Never enable Superlite alongside Superpowers.
+## Agent catalog
 
-## Mandatory UX laws
+All 30 agent contracts are retained. Core wave membership comes from SKILL.md/manifest.json; other roles run as their supporting dependencies and reviews.
 
-The bundled [14-law UX reference](references/ux-laws.md) now applies to planning,
-implementation and post-build review. Plans map the laws to actual flows; every
-build or significant change produces `UX_LAWS_AUDIT.md` with evidence, fixes and
-re-audit results. Completion requires no violations and documented reasons for
-any justified Partial results. See [the audit workflow](references/ux-laws-workflow.md).
+| Agent | Responsibility |
+| --- | --- |
+| [planner-griller](agents/planner-griller.md) | Approved brief, goal, thesis and optional-agent decisions |
+| [design-dna-agent](agents/design-dna-agent.md) | Reference-based design tokens and visual DNA |
+| [motion-design-agent](agents/motion-design-agent.md) | Timing, easing, choreography and motion doctrine |
+| [gsap-agent](agents/gsap-agent.md) | Assigned GSAP timelines and specialist choreography |
+| [threejs-agent](agents/threejs-agent.md) | Assigned 3D scenes, geometry, particles and model integration |
+| [hyperframes-agent](agents/hyperframes-agent.md) | Default final-film composition and local rendering |
+| [motion-a11y-agent](agents/motion-a11y-agent.md) | Every-animation reduced variants, temporal contrast and focus gate |
+| [genjutsu-agent](agents/genjutsu-agent.md) | Refined thesis and anti-slop review before final gates |
+| [render-perf-budget-agent](agents/render-perf-budget-agent.md) | First-paint fallback, Web Vitals and JS/GLB/Lottie budget gate |
+| [qa-anti-slop-agent](agents/qa-anti-slop-agent.md) | Final integrated design, motion, UX and evidence review |
+| [token-handoff-exporter](agents/token-handoff-exporter.md) | Last-after-QA versioned /buildme exports and import validation |
+| [animejs-agent](agents/animejs-agent.md) | Default landing-page text, staggered elements and SVG/UI motion |
+| [beat-sync-agent](agents/beat-sync-agent.md) | Canonical beat/frame map and audio cue timing |
+| [browser-agent](agents/browser-agent.md) | Agent Desktop reference/UI evidence and separate browser measurements |
+| [find-skills-agent](agents/find-skills-agent.md) | Verified compatible skills and installed-source records |
+| [hairline-agent](agents/hairline-agent.md) | Approved accessible interactive line figures |
+| [img2threejs-agent](agents/img2threejs-agent.md) | Approved reference-object/character procedural reconstruction |
+| [launch-director-agent](agents/launch-director-agent.md) | Creative directions, story, shot and camera planning |
+| [memory-agent](agents/memory-agent.md) | Prior taste and session context |
+| [motion-craft-agent](agents/motion-craft-agent.md) | Contact sheets, frame/safe-area/audio review and repairs |
+| [motionmaxxing-agent](agents/motionmaxxing-agent.md) | Brand/depth/camera/pacing guidance and integrated craft review |
+| [open-3d-agent](agents/open-3d-agent.md) | Eight-skill assessment, 3D/media modules, site-check and capture |
+| [opus5-videos-agent](agents/opus5-videos-agent.md) | Approved code-video prompt catalog research |
+| [parallax-background-agent](agents/parallax-background-agent.md) | Goal/reference-led multilayer animated background construction |
+| [prompt-reference-agent](agents/prompt-reference-agent.md) | Build-fit animated-word/background research and prompt references |
+| [remotion-agent](agents/remotion-agent.md) | Assigned React sequences/supporting clips and explicit standalone output |
+| [superlite-agent](agents/superlite-agent.md) | Dependency/file ownership planning and engineering review |
+| [taste-gsd-agent](agents/taste-gsd-agent.md) | Aesthetic critique and execution feedback |
+| [ui-ux-pro-max-agent](agents/ui-ux-pro-max-agent.md) | Local UI/UX design-system and stack intelligence |
+| [visual-style-agent](agents/visual-style-agent.md) | One primary visual language and optional supporting style |
 
-## Anime.js for landing pages and animated words
+## Repository maintenance
 
-Anime.js is the default for animated landing-page text, staggered elements, SVG accents, and ordinary UI motion. The existing `prompt-reference-agent` researches 3–5 relevant animated-word examples, cites sources, and shortlists treatments that fit the build's copy, brand, audience, and pacing. `motion-design-agent` uses those references before `animejs-agent` implements the selected treatment.
+- `SKILL.md` owns scheduling and gates; `manifest.json` and state/workflow references must agree.
+- `agents/` contains the 30 contracts. Preserve existing agents unless an edit is explicitly requested.
+- `references/` connects provider details, research, ownership, UX, QA and handoff requirements.
+- `scripts/` contains safe install helpers and the standard-library repository consistency checker.
+- [`.github/repository-about.json`](.github/repository-about.json) is the tracked source for GitHub's About description; it is metadata, not another skill.
 
-The coordinator records engine choice in `brief.json.animation` and target/property ownership in `animation-plan.json`, preventing Anime.js/GSAP conflicts. Static briefs and explicit stack choices take precedence. The Designme installer downloads the official Anime.js repository to `~/.agents/tools/animejs` using `scripts/install-animejs.sh`. Existing official checkouts are verified and reused. Install `animejs@4` only in the target build and pin its lockfile; no additional external skill is required. QA verifies mobile wrapping, semantic readable text, keyboard access, reduced motion, cleanup, and deterministic video seeking where applicable. Web-only landing pages do not require video rendering.
+Run `python3 scripts/validate-repo.py` before publishing documentation changes. The validator checks role coverage, wave/state consistency, required gate/export fields, the full catalog, local Markdown file links and About metadata. It does not claim to run a website or pass runtime accessibility/performance tests.
 
-See [Anime.js integration and research contract](references/animejs-integration.md) and the [Anime.js specialist](agents/animejs-agent.md).
+To synchronize the repository's About after the source file is reviewed, an authorized maintainer can run:
 
-## Open 3D specialist in the loop
-
-`open-3d-agent` integrates selected [Open 3D Skills](https://github.com/Moh4696/open-3d-skills): procedural scenes, exploded product views, scroll films, transparent media, cursor rigs and browser/performance checks. It plans in Wave 2, implements assigned modules in Wave 3 and validates the integrated draft in Wave 4. Craft/QA findings return to the responsible agent and are rechecked within the existing three-loop repair cap.
-
-The coordinator assigns one scene owner alongside `threejs-agent` and preserves Anime.js for landing-page text/UI. All eight upstream skills are made available and assessed; the agent executes every relevant capability, with explicit reasons for skips and required local dependencies installed as needed; paid generation remains disabled and media comes from supplied/local assets. Capture stays within the existing final-renderer decision.
-
-See [integration, install, ownership and repair contract](references/open-3d-integration.md) and [agent instructions](agents/open-3d-agent.md).
-
-Full-library use is tracked in `open-3d-capabilities.json`: all eight skills get use/skip/blocked decisions and used skills get tasks, outputs, checks and execution evidence. Asset planning/logs and local repair tools are included. Enabled animated/3D web builds require site-check, with targeted motion recordings when stills cannot verify the behavior.
-
-## Normal production loop, especially 3D parallax websites
-
-Remotion, motionmaxxing and Open 3D are assessed on every build and dispatched when relevant without separate opt-in gates. Remotion creates useful supporting sequences, Open 3D supplies live scenes/media/captured footage, and motionmaxxing contributes motion direction and reviews the integrated result. HyperFrames assembles final films from verified local assets. Record a no-work reason rather than manufacturing unnecessary output.
-
-For a **3D parallax website**, enable the dedicated profile: parallax-background-agent builds background layers with Open 3D techniques and an explicit scene owner; motionmaxxing guides depth/camera/scroll pacing, Anime.js animates assigned text/UI, and one normalized scroll progress drives the consumers. Remotion assesses useful pre-rendered sequences. The website stays live and interactive, with mobile, reduced-motion, readable CTA and performance checks. A companion film uses captured scene footage inside HyperFrames only when requested.
-
-See [normal specialist routing, intermediate-asset contract and 3D parallax profile](references/normal-motion-orchestration.md).
-
-## Goal-led animated backgrounds
-
-`parallax-background-agent` designs and builds multilayer 3D/parallax animated website backgrounds based on website type, primary goal/CTA, brand, reference images and device budgets. It researches/inspects references, plans depth/layers and provider handoffs, implements owned background modules, validates the integrated site and receives targeted repairs through the normal loop.
-
-It assesses HyperFrames, Remotion, motionmaxxing, Open 3D, html-video and img2threejs. Live scenes, image-based 2.5D layers, procedural animation and justified footage can be combined while preserving one scene/progress owner, readable CTAs and mobile/reduced-motion/static fallbacks. img2threejs is used when an approved reference object needs procedural reconstruction; a single image is not treated as a complete 3D environment. The corrected [nexu-io/html-video](https://github.com/nexu-io/html-video) source supplies goal-fit HTML templates and local supporting footage; see [its local install/render contract](references/html-video-integration.md) for engine discovery and frame-accuracy limitations. Paid audio/model generation stays disabled.
-
-See [background architecture, provider decisions, reference routing and verification](references/parallax-background-integration.md).
-
-## Motion accessibility, performance and /buildme handoff
-
-The core schedule is now: Wave 1 planner-griller; Wave 2 design-dna and motion-design; Wave 3 gsap, threejs, hyperframes and motion-a11y; Wave 4 genjutsu thesis, render-perf-budget, final QA and token-handoff-exporter, in that order. Existing agents remain intact and retain supporting tasks under SKILL.md's dependency rules.
-
-The three new contracts are [motion accessibility](agents/motion-a11y-agent.md), [render/performance budgets](agents/render-perf-budget-agent.md) and [versioned token/motion handoff](agents/token-handoff-exporter.md). The exporter runs last, only after QA PASS on the tested revision, and validates actual /buildme token names, complete files/assets, versions and executable import compatibility before publishing /handoff/.
+```bash
+gh api --method PATCH repos/almanalaysay93-gif/designme --input .github/repository-about.json --jq '{description: .description, url: .html_url}'
+```

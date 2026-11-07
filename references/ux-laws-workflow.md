@@ -46,3 +46,5 @@ rendered output where available, alongside code. For every law record exactly
 The audit is required regardless of optional UX tooling. Link it from the existing
 quality report and delivery summary. No deployment, publishing or external messages
 are authorized by this workflow.
+
+The four-wave schedule finishes integrated accessibility and performance evidence before final QA. Motion checks are owned by motion-a11y-agent, payload/Web Vitals checks by render-perf-budget-agent, and the unchanged tested revision is packaged by token-handoff-exporter only after QA PASS. Link the same evidence/revision from UX_LAWS_AUDIT.md and the handoff manifest; an export is not a substitute for the audit.

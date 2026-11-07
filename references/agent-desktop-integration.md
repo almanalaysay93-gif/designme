@@ -43,7 +43,7 @@ Keep snapshots/screenshots/traces scoped to the task app and store raw desktop a
 
 ## Evidence and measurement boundary
 
-Wave 1 browser-agent navigates reference pages and inspects supplied images through Agent Desktop, with actual screenshot/motion observations and a browser-report.md handoff before dependent Design DNA/background planning. Approximate visual color/font guesses must be labeled estimates; exact computed tokens come from a separately recorded local DOM/Playwright measurement when available.
+Wave 2 supporting browser-agent research navigates reference pages and inspects supplied images through Agent Desktop, with actual screenshot/motion observations and a browser-report.md handoff before dependent Design DNA/background planning. Approximate visual color/font guesses must be labeled estimates; exact computed tokens come from a separately recorded local DOM/Playwright measurement when available.
 
 For integrated QA, use Agent Desktop to observe and exercise accessible navigation, controls, forms, scroll and local preview/player UI; inspect screenshots and verify before/after states. Use a local test-only submission target or stop before a consequential production submission unless the user authorized it. Exact viewport size (including mobile emulation), console/network failures, document overflow, computed styles, renderer counters, reduced-motion media emulation and deterministic captures use the existing Playwright/site-check/render scripts. Resizing an OS window alone does not prove a CSS viewport size. Report which backend produced each artifact; never invent DOM/evaluate/device-emulation commands for Agent Desktop.
 
@@ -51,6 +51,6 @@ Validate desktop/tablet/phone, keyboard/CTA access, reduced-motion/fallbacks and
 
 ## Orchestration and repair
 
-Keep browser-agent in Wave 1 for references and resume it with QA after integration. State records `interaction_backend: agent-desktop`, `desktop_status`, target app/window, permission/capability status, desktop evidence, separate measurement evidence and limitations. Only the coordinator writes shared state. The final QA agent compares live output and specialist artifacts against brief/design/plan, then dispatches reproducible findings to actual owners and rechecks integrated fixes within the existing three-loop cap.
+Keep browser-agent as a Wave 2 reference prerequisite and resume it with QA after integration. State records `interaction_backend: agent-desktop`, `desktop_status`, target app/window, permission/capability status, desktop evidence, separate measurement evidence and limitations. Only the coordinator writes shared state. The final QA agent compares live output and specialist artifacts against brief/design/plan, then dispatches reproducible findings to actual owners and rechecks integrated fixes within the existing three-loop cap.
 
 browser-report.md and audit.md identify installed version, app/window scope, actual interactions/observations, screenshot/motion artifacts, exact measurement tools, blocked prerequisites and plan compliance. A missing desktop/session check cannot be laundered into PASS by an unrelated screenshot or source review.

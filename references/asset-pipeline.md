@@ -1,14 +1,15 @@
-# Asset Pipeline — What You Were Missing
+# Local asset preparation and delivery
 
-Before hyperframes-agent renders, it must:
+Prepare actual assets before Wave 3 scene/clip consumers assemble them. [SKILL.md](../SKILL.md) defines scheduling; [normal production](normal-motion-orchestration.md) defines intermediate-asset metadata; [render-perf-budget-agent](../agents/render-perf-budget-agent.md) validates the integrated production build before final QA.
 
-1. Fonts: extract from design-dna, check license, download woff2, self-host, never use Inter as default unless brief says. Use frontend-design rule.
-2. Images: optimize to webp, max 200kb each, add loading="lazy"
-3. GLB: Draco compress, max 2MB, texture 1k max, use KTX2
-4. Lottie: JSON minify, remove unused layers
-5. Captions: if narration, add data-hf-caption, test readability (contrast 4.5:1)
-6. Audio: 48kHz, no drift, seekable via HyperFrames timeline
-7. Determinism check: render twice, compare hash, must match
-8. A11y: prefers-reduced-motion fallback (static frame), captions, no auto-play audio without mute
+1. **Inventory and budgets:** write assets/manifest.json with local source/output paths, owner, license/provenance, raw/transfer bytes, initial/lazy classification, decode cost and consumer dependencies. Explicit payload limits come from the approved plan; unknown sizes are not zero. The performance report must show numbers and implemented/retested cuts for exceeded budgets.
+2. **Fonts:** use the approved Design DNA/typeface, self-host licensed assets, include stable fallback metrics and preload only critical used faces with matching type/crossorigin/font-face. Do not introduce Inter unless explicitly requested or duplicate font downloads through mismatched preloads.
+3. **Images and posters:** optimize actual dimensions and appropriate formats while preserving legibility/alpha. Render a real static/poster fallback for first paint/loading/error/reduced mode and verify it is wired. Lazy load below-fold images/media; do not accidentally lazy load the LCP asset. Record the actual byte/decode/mobile costs.
+4. **GLB/textures:** use Draco where present and supported, optimize texture dimensions/formats including KTX2 where suitable, and include decoder/GPU-memory overhead. Verify the resulting geometry/materials and runtime compatibility; a smaller file with broken decoding is not optimized output. Document an explicit replacement/cut plan for unsupported assets.
+5. **Lottie:** minify JSON and remove unused payloads/layers, then check real appearance, timing and reduced variants. Record per-file before/after sizes; do not infer transfer size from an npm package name.
+6. **Clips and transparency:** freeze duration/frame count/FPS, dimensions, color, alpha/background, source/provider version and audio policy in production-plan.json. Inspect first/last/peak/join frames and seek readiness. MP4 does not imply alpha; html-video real-time recording does not establish frame-exact timing. Keep local dependencies and consumer fallbacks explicit.
+7. **Captions/audio:** captions match actual word timings and remain readable during motion. Use local/supplied audio, 48 kHz, shared canonical timing and one master mix policy to avoid double playback. Verify drift, loudness/peaks and no unintended autoplay audio.
+8. **Motion accessibility:** every asset-driven animation participates in motion-a11y.md and the reduced mapping; encoded video needs an actual static/reduced companion. Hidden media/RAF loops stop, semantics/focus remain usable, and contrast/flashes have temporal evidence.
+9. **Acceptance and export:** production measurements, actual visual/interaction checks and film determinism/ffprobe evidence finish before final QA PASS. token-handoff-exporter then packages all transitively referenced assets/fonts/modules with versions, hashes, attribution and verified consumer imports, last. Failed or stale packages never replace the latest valid handoff.
 
-Output: assets/manifest.json
+Output: assets/manifest.json plus actual optimized assets and executable validation evidence. Link these from perf-budget.json, perf-report.md, motion-a11y.md, audit.md and the final handoff manifest. Missing required tools/assets/evidence remain FAIL/BLOCKED, never a claimed PASS.

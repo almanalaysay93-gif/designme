@@ -68,10 +68,10 @@ The starter pins Three.js r169 and includes CDN imports, a frame loop and record
 
 ## Dependency and repair loop
 
-1. Briefing identifies `open3d.enabled`, selected skills and scope; Wave 1 research/find-skills gathers references and prerequisites.
+1. Briefing identifies `open3d.enabled`, selected skills and scope; Wave 2 prerequisite research/find-skills gathers references and prerequisites.
 2. In Wave 2, open-3d-agent writes its plan after relevant design inputs. The coordinator/superlite-agent freezes file, scene, clock, target/property ownership and dependencies before Wave 3. If assets/models are not ready, block their consumers only.
 3. In Wave 3, the specialist implements assigned modules. For video, wait for the canonical beat map and use the selected renderer's deterministic clock; for web, use the declared scroll/interaction clock. No duplicate RAF loops for the same scene.
-4. After coordinator integration in Wave 4, resume the same specialist for site-check/validation and evidence handoff to motion-craft and QA. UI/code ownership remains disjoint; the coordinator owns shared state, dependency manifests and integration entry points.
+4. After Wave 3 draft integration, resume the same specialist in Wave 4 for site-check/validation before the performance/QA gates and evidence handoff to motion-craft and QA. UI/code ownership remains disjoint; the coordinator owns shared state, dependency manifests and integration entry points.
 5. Final QA reviews plan compliance, visible design, loading, mobile/reduced motion, resource disposal, measured budgets and actual evidence. Findings identify owner, file/selector or timestamp, reproduction, expected behavior and evidence. Dispatch only that owner, rerun affected checks, then re-audit; retain the existing three-loop cap and engineering review before final PASS.
 
 ## Capture boundary

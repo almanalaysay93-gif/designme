@@ -131,7 +131,7 @@
 
 ## Normal specialist and asset handoffs
 
-- [ ] production-plan.json matches the approved deliverable; all three normal specialists have dispatched work or concrete no-work reasons, with no obsolete opt-in gate
+- [ ] production-plan.json matches the approved deliverable; all normal production specialists have dispatched work or concrete no-work reasons, with no obsolete opt-in gate
 - [ ] Assigned supporting clips have verified frame count/FPS/dimensions/alpha/color/audio, editable source and readiness evidence
 - [ ] HyperFrames consumes the correct local assets; first/last/join frames and backward/forward seeks are correct, with no double audio or duplicate final renders
 - [ ] motionmaxxing planning/review evidence applies to the real output; film-only gates are N/A for ordinary website navigation and reading holds
@@ -148,3 +148,19 @@
 - [ ] Desktop/tablet/phone/short-viewport, fast/reverse scroll, pointer/touch, resize, reduced-motion initial/change, no-WebGL/context-loss/static fallback, loading and cleanup checks have real evidence
 - [ ] Hardware-performance/media budgets are measured honestly; background-validation.md and targeted motion captures identify limitations and required blocked checks
 - [ ] Repairs rerun the affected provider/model/layer and integrated consumer checks within the existing three-loop cap
+
+## Motion accessibility and performance gates
+
+- [ ] Wave 3 motion-a11y.md has PASS/FAIL evidence for every animation in normal/reduced mode and a working gsap-timeline-reduced.js
+- [ ] No missing reduced variant, >3 flashes/second, lost focus, reduced parallax/infinite loop/autoplay >5 seconds, motion-time contrast or required keyboard/modal/live-region/decorative-semantics failure remains
+- [ ] Wave 4 perf-budget.json and perf-report.md include CSR/SSR, wired real fallback, bundle/GLB/Lottie numbers and explicit byte/measurement units
+- [ ] LCP <2.5s, CLS <0.1 and INP <200ms have honest measured/estimated evidence; missing numbers/fallbacks or unresolved exceeded budgets prevent PASS even when cuts are planned
+- [ ] Actual /buildme consumer token/snapshot/import naming is identified before export, with no implicit Inter or guessed universal schema
+- [ ] Accessibility, performance, UX and final QA identify the same tested source revision; later source changes invalidate affected passes
+
+## Exporter follows final QA, last
+
+- [ ] token-handoff-exporter is blocked until final QA PASS and complete final-render/functional evidence
+- [ ] Every required /handoff/ file/module/asset, version and hash exists; normal/reduced motion and resize/dispose interfaces match the approved build
+- [ ] Target-aware import checks prove actual token-name/dependency compatibility without manual code/token recreation
+- [ ] Packaging does not silently change tested behavior; a failed/stale export is not published as the latest valid release
