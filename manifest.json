@@ -124,7 +124,7 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 27,
+    "subagent_count": 30,
     "free_only": true,
     "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, motionmaxxing and Open 3D are normal locally executed specialists; Hairline, img2threejs and the Opus prompt catalog retain their optional gates. motionmaxxing must not call ElevenLabs or any paid voice/music API. img2threejs must use only local generic/character profiles and never call Tripo, Hyper3D, CharacterGen, or paid plugins. QA uses Agent Desktop for native UI verification and local browser/render tools for measurements; BrowserCode is only an explicitly requested optional preview target, with no paid BrowserPod keys. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
     "agents": [
@@ -147,6 +147,21 @@
         "agent": "ui-ux-pro-max-agent",
         "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
         "role": "Optional local searchable UI/UX intelligence: styles, palettes, typography, UX rules, charts, icons, GSAP, stacks, and audits"
+      },
+      {
+        "agent": "motion-a11y-agent",
+        "repo": "designme/internal",
+        "role": "Normal/reduced variant implementation and temporal contrast, flash, keyboard/focus and semantic motion accessibility gate"
+      },
+      {
+        "agent": "render-perf-budget-agent",
+        "repo": "designme/internal",
+        "role": "Measured CSR/SSR, static fallback, Web Vitals and JS/GLB/Lottie performance budget gate"
+      },
+      {
+        "agent": "token-handoff-exporter",
+        "repo": "designme/internal",
+        "role": "Last-after-QA versioned import-ready token/motion/scene handoff exporter with verified buildme naming"
       }
     ],
     "conditional_agents": [
@@ -334,6 +349,36 @@
       "physical_input": "Explicit user authorization; never automatic fallback",
       "measurements": "Existing local Playwright/site-check/frame-capture/render tools",
       "missing_required_desktop_checks": "BLOCKED"
+    },
+    "wave_order": {
+      "wave1": [
+        "planner-griller"
+      ],
+      "wave2": [
+        "design-dna-agent",
+        "motion-design-agent"
+      ],
+      "wave3": [
+        "gsap-agent",
+        "threejs-agent",
+        "hyperframes-agent",
+        "motion-a11y-agent"
+      ],
+      "wave4": [
+        "genjutsu-agent",
+        "render-perf-budget-agent",
+        "qa-anti-slop-agent",
+        "token-handoff-exporter"
+      ]
+    },
+    "handoff_gate": {
+      "agent": "token-handoff-exporter",
+      "after": "qa-anti-slop-agent PASS on unchanged revision plus passing motion-a11y and performance gates",
+      "runs_last": true,
+      "root": "/handoff/ under generated project",
+      "consumer": "buildme token-snapshotter plus actual target token/snapshot/import contract",
+      "failure": "Missing required file, naming mismatch, stale evidence or incomplete executable import check",
+      "versioning": "Immutable versioned releases with dependency/file/evidence hashes"
     }
   },
   "reference_sources": {

@@ -72,7 +72,7 @@ npx skills add vercel-labs/skills --skill find-skills -g
 
 Read [normal motion orchestration](references/normal-motion-orchestration.md). Remotion, motionmaxxing and Open 3D are normal specialists assessed and dispatched when relevant without separate opt-in gates. HyperFrames owns final film assembly by default; Remotion/Open 3D may render assigned intermediate assets. motionmaxxing normally plans and reviews in contribution mode. One final owner per deliverable, with explicit standalone renderer overrides. Hairline retains its existing optional-agent gate.
 
-Activate `opus5-videos-agent` only when the user wants a starting prompt from the Opus 5.5 video catalog. It runs in Wave 1, writes `opus-prompt-brief.md`, and is not a video renderer. Read `references/opus5-videos.md`. Activate `ui-ux-pro-max-agent` for UI-containing work when approved; skip it for pure non-UI films. It runs in Wave 2 and writes `uiux-design-system.md` and `uiux-audit.md`. Activate `img2threejs-agent` only when approved for a 2D reference object or character image that must be reconstructed into a procedural Three.js `THREE.Group` factory in code. It runs in Wave 2 and hands `create<ObjectName>Model` to `threejs-agent` in Wave 3. Read `references/img2threejs.md`.
+Activate `opus5-videos-agent` only when the user wants a starting prompt from the Opus 5.5 video catalog. It runs as an approved Wave 2 research prerequisite, writes `opus-prompt-brief.md`, and is not a video renderer. Read `references/opus5-videos.md`. Activate `ui-ux-pro-max-agent` for UI-containing work when approved; skip it for pure non-UI films. It runs in Wave 2 and writes `uiux-design-system.md` and `uiux-audit.md`. Activate `img2threejs-agent` only when approved for a 2D reference object or character image that must be reconstructed into a procedural Three.js `THREE.Group` factory in code. It runs in Wave 2 and hands `create<ObjectName>Model` to `threejs-agent` in Wave 3. Read `references/img2threejs.md`.
 
 ## Free-Only Execution Policy
 
@@ -92,7 +92,7 @@ Read [Open 3D integration](references/open-3d-integration.md). For relevant 3D/s
 
 Read [parallax background orchestration](references/parallax-background-integration.md). `parallax-background-agent` is a normal specialist, automatically active for requested 3D/multilayer/parallax animated backgrounds. It selects techniques from website type, primary goal and actually inspected reference images, assesses all six providers, builds assigned layers, and participates in integrated QA/repairs. Use the verified `nexu-io/html-video` provider through `references/html-video-integration.md`; inspect actual engine/runtime availability and preserve frame-accuracy and free-only requirements.
 
-### 1 — The Griller (1 agent) — ALWAYS FIRST — BLOCKING
+### Wave 1 — planner-griller — ALWAYS FIRST — BLOCKING
 
 Spawn `planner-griller` with `references/grilling-questions.md`. It must cover goal, audience, references, anti-slop list, duration, aspect, resolution, story arc, audio/voice needs, stack, constraints, success metric, verification needs, the visual-style gate, the optional-agent gate, and motion-skill pack selection.
 
@@ -113,71 +113,46 @@ The griller must produce an explicit recommendation for every optional agent:
 
 Show the thesis, renderer choice, optional-agent recommendations, and brief to the user. Do not proceed until the user approves them.
 
-### 2 — Parallel Spawn — dependency-aware
+### Wave 2 — design-dna, motion-design
 
-The wave lists are dependency groups, not blanket parallel dispatch. Follow the
-Superlite adapter: Wave 2 planning waits for design outputs, Wave 3 implementation
-waits for animation ownership and, for video, the canonical beat map, and Wave 4 craft review waits for a renderer draft.
+The four-wave order in this SKILL.md is authoritative for scheduling. Existing agent files remain unchanged; older wave labels in provider/reference instructions describe dependencies to map into this order, not permission to reorder these gates. Dispatch all core roles as required above, retaining existing optional-agent approvals and supporting specialist responsibilities. Use real host delegation limits and dependency tasks, not blanket parallel dispatch.
 
-**Wave 1 (no dependencies):**
+- `design-dna-agent` extracts the actual reference-based design system and tokens.
+- `motion-design-agent` consumes Design DNA/research and writes timing, easing, weight, choreography and normal/reduced intent; do not finalize the doctrine before the reference/token inputs exist.
 
-- `design-dna-agent` — extracts tokens from references.
-- `memory-agent` — loads past taste and prior constraints.
-- `find-skills-agent` — discovers only missing, compatible skills.
-- `browser-agent` — uses Agent Desktop to inspect actual task-scoped reference pages/images and UI; records separate local DOM/render measurements in browser-report.md before dependent design planning. Read `references/agent-desktop-integration.md`.
-- `prompt-reference-agent` — researches goal-fit background/depth treatments and inspects supplied images into `background-references.md` when needed; also researches 3–5 build-fit animated-word examples for landing pages/text-motion builds and writes `word-animation-references.md`; also curates free Blotato/Remotion prompt patterns.
-- `opus5-videos-agent` — runs only if approved. Picks a few catalog prompts and writes `opus-prompt-brief.md` before direction. Otherwise mark skipped.
-- `find-skills-agent` — routes approved iart-ai motion-skill packs to the owning agents and records local installs.
+Supporting tasks retained in this wave: `memory-agent`, `find-skills-agent`, `browser-agent`, `prompt-reference-agent`, approved `opus5-videos-agent`, `visual-style-agent`, approved `ui-ux-pro-max-agent`, `launch-director-agent`, `superlite-agent`, and planning contributions from `parallax-background-agent`, `open-3d-agent`, `remotion-agent` and `motionmaxxing-agent`. Finish prerequisite reference inspection before dependent design extraction. When approved, `img2threejs-agent` reconstructs the specified object only after background/model requirements exist; return its gated factory before scene implementation.
 
-**Wave 2 (needs brief and Wave 1 context):**
+The coordinator freezes `plan.md`, `animation-plan.json`, `production-plan.json`, animation IDs and file/scene/property ownership after planning. Record provisional performance/payload budgets, first-paint/poster and CSR/SSR constraints, token-contract source and reduced mappings so the new gates have explicit acceptance criteria. Preserve an approved planner thesis before code; do not defer all creative intent until the final Genjutsu pass.
 
-- `visual-style-agent` — converts the selected visual style into a buildable style specification and sample recipe.
-- `ui-ux-pro-max-agent` — runs only when approved for UI/UX work; creates a local searchable design system and UI audit.
-- `img2threejs-agent` — runs only when approved for a 2D reference image; runs the staged sculpting pipeline (`blockout` to `optimization`) gated by `forge/state.py` and `forge/next.py` and outputs a deterministic `create<ObjectName>Model` `THREE.Group` factory.
-- `motion-design-agent` — consumes `word-animation-references.md`, selects brand-fit text treatments, and writes timing, easing, weight, and choreography doctrine. The coordinator freezes target/property ownership in `animation-plan.json`.
-- `launch-director-agent` — writes three visual directions, kills two, and creates the story/shot/camera/look plan.
-- `parallax-background-agent` — writes goal/reference/provider/layer architecture and a reconstruction brief when needed; waits for research/style, then coordinates motionmaxxing and specialist handoffs before ownership freeze.
-- `open-3d-agent` — when selected, consumes design inputs and writes `open-3d-plan.md` with chosen upstream skills, scene/file ownership, dependencies and acceptance budgets.
-- `remotion-agent` — assesses useful React components/supporting clips and returns its plan or no-work reason.
-- `motionmaxxing-agent` — contributes brand-specific pacing/camera/depth guidance before plan freeze.
-- `superlite-agent` — writes the execution plan and tests, incorporating the Open 3D plan before contracts freeze.
+### Wave 3 — gsap, threejs, hyperframes, motion-a11y
 
-**Wave 3 (needs Wave 2 outputs):**
+- `gsap-agent` builds assigned seekable choreography under the existing engine/property ownership map. It retains the allowed owns-nothing handling when Anime.js owns all targets.
+- `threejs-agent` builds assigned hero/scene/model work with one scene/camera/clock owner, consuming verified img2threejs factories where applicable.
+- `hyperframes-agent` integrates verified supporting clips, local sequences and layers into the final-film draft by default. Build the draft only after its producer dependencies; for web-only work retain the functional website and record the existing no-final-film exception. Explicit alternative final owners remain supported.
+- `motion-a11y-agent` ([contract](agents/motion-a11y-agent.md)) creates a reduced-motion variant for every animation, writes `gsap-timeline-reduced.js`, checks temporal WCAG AA contrast, flash frequency, keyboard/focus, modal exit/restore, live regions and decorative semantics, then writes `motion-a11y.md` with PASS/FAIL evidence. It can plan beside owners but must inspect the integrated draft before Wave 4. Missing variants, more than 3 flashes/second or lost focus fail the gate.
 
-- `remotion-agent` — builds and validates assigned intermediate clips/sequences against frozen production contracts.
-- `beat-sync-agent` — creates the shared BPM/frame beat map, transition schedule, and audio cue plan.
-- `parallax-background-agent` — builds assigned background layers/modules/media adapters after model/asset and ownership dependencies; shares one progress source and scene owner.
-- `animejs-agent` — implements assigned landing-page/text/element motion after research, design and engine ownership are frozen; writes `animejs-plan.md`, `animejs-motion.js`, and `animejs-validation.md`. Read `references/animejs-integration.md`.
-- `gsap-agent` — implements only its assigned seekable choreography targets; skip when Anime.js owns all motion. If motionmaxxing or Remotion owns the renderer, contribute doctrine and timing notes only; do not build a second HyperFrames timeline.
-- `open-3d-agent` — resumes after ownership/dependency freeze, implements only assigned scene/media/interaction modules, and preserves one renderer/clock per scene.
-- `threejs-agent` — implements only the necessary hero 3D or generative layer, inside the approved renderer, and mounts `create<ObjectName>Model` when `img2threejs-agent` is active.
-- `genjutsu-agent` — writes thesis and anti-slop MASTER.md.
-- `taste-gsd-agent` — performs the aesthetic gate and execution critique.
+Supporting tasks retained here: `beat-sync-agent` finishes canonical video timing before producers; `animejs-agent` builds assigned text/UI; `parallax-background-agent` and `open-3d-agent` implement their owned layers/scene/media; `remotion-agent` supplies assigned clips/sequences; approved `hairline-agent` builds its figure. A capture of a website waits for page integration, then completes before its consuming film assembly. No duplicate final films or competing animation properties.
 
-**Wave 4 (needs all design and engineering outputs):**
+Genjutsu's existing thesis-before-render prerequisite is satisfied by the approved planner thesis handed into implementation; Wave 4 is its refinement/anti-slop review on the integrated result. Drafts do not constitute final approval. Do not rename or rewrite existing specialist agents to implement this schedule.
 
-For web-only landing pages, the coordinator integrates the web build, retains specialist assessment/contribution/review tasks, and skips only unnecessary video-render tasks, final MP4 rendering and video-only artifacts. Motion-craft and QA inspect the live page.
+### Wave 4 — genjutsu thesis, render-perf-budget, qa-anti-slop, token-handoff-exporter
 
-- `hyperframes-agent` — consumes verified supporting clips, local sequences and scene layers; assembles the final-film draft by default. Skip only for a web-only deliverable or explicit alternate final owner, never merely because another specialist contributes.
-- `remotion-agent` — supports clip integration/repairs; only owns final rendering for an explicit standalone deliverable.
-- `motionmaxxing-agent` — reviews the integrated draft in contribution mode; writes `motionmaxxing-review.md` and returns findings to actual owners. Only owns final rendering for an explicit standalone deliverable.
-- `hairline-agent` — runs only if `brief.json.optionalAgents.hairline-agent.requested` is true or the user explicitly approved it; otherwise mark skipped.
-- `parallax-background-agent` — validates the integrated site, writes `background-validation.md`, and receives layer/provider repairs within the existing three-loop cap.
-- `open-3d-agent` — resumes after integration for selected site-check/browser validation, writes `open-3d-validation.md`, and hands evidence/findings to craft review and QA.
-- `motion-craft-agent` — reviews intermediate-asset joins and integrated frames, consumes motionmaxxing findings, checks safe areas and audio, and routes repairs to actual owners.
+These core gates run in this **serial order**:
 
-Read `references/normal-motion-orchestration.md`; freeze `production-plan.json` before implementation, and use its `3d-parallax` profile for 3D parallax websites. Captures of integrated pages precede final-film asset consumption.
+1. `genjutsu-agent` refines and checks the approved interaction thesis against the integrated work; writes `thesis.md`, `slop-blacklist.md` and `MASTER.md` when applicable. Return creative defects to the actual owner before acceptance.
+2. `render-perf-budget-agent` ([contract](agents/render-perf-budget-agent.md)) proves rendering/first paint, fallback and real JS/GLB/Lottie payloads in `perf-budget.json` and `perf-report.md`. Record CSR/SSR impact, LCP < 2.5s, CLS < 0.1 and INP < 200ms with honest estimate/measurement provenance. No fallback, missing bundle numbers or an exceeded budget without cuts fails; unresolved over-budget work still cannot PASS just because it has a cut plan.
+3. `qa-anti-slop-agent` performs the final integrated gate and issues PASS only on the exact tested revision after motion-a11y and performance PASS. Consume both new reports, reduced source, existing UX_LAWS_AUDIT.md, specialist artifacts, actual Agent Desktop UI checks and separate local render/measurement evidence under `references/agent-desktop-integration.md`. Missing required execution is BLOCKED, not a claimed PASS.
+4. `token-handoff-exporter` ([contract](agents/token-handoff-exporter.md)) runs **LAST and only after final QA PASS**. Export versioned import-ready `/handoff/` tokens, motion specification, normal/reduced timeline, resize/dispose scene module and target-aware /buildme instructions plus validation manifest/import helper. Every required file, actual consumer token naming, dependency and version must validate; otherwise fail export. Do not start another build/review agent after a successful export.
 
-Pass `brief.json`, the approved `motionSkillPacks`, and the relevant output paths to every agent. Never write animation code in the orchestrator; delegate it.
+Before gate 2, retain integrated `motionmaxxing-agent` review, `motion-craft-agent` frame/audio checks, `taste-gsd-agent` aesthetic critique, resumed background/Open 3D/browser validation, and a fresh findings-only engineering review. Route all source changes to their existing owners. Repeat the affected accessibility/performance/visual checks after each repair; a later source change invalidates earlier gate evidence.
 
-Run a fresh findings-only engineering review after integration and craft review;
-route fixes to their owners and record evidence before the final QA gate.
+Every existing specialist keeps its file contract and actual implementation/validation responsibilities. Only the coordinator writes shared state and entry points. Pass `brief.json`, approved packs, canonical timing, production/animation ownership and relevant paths to each task. Normal role no-work cases and approved optional skips remain recorded under their existing rules; the new accessibility/performance/export gates may never silently disappear.
 
-### 3 — QA Anti-Slop Loop — ALWAYS LAST
+### Gate repair loop and final handoff
 
-Spawn `qa-anti-slop-agent` after composition and craft review. It reads `references/qa-rubric.md`, `references/agent-desktop-integration.md` and `references/missing-checklist.md`. Use Agent Desktop for actual UI/ref/visual verification and the existing local Playwright/site-check/render paths for exact measurements and deterministic evidence. Verify both design fit and every scheduled agent's plan compliance; report missing required desktop/session/permission checks as BLOCKED.
+Re-spawn only the responsible owner for FAIL/SLOP findings and rerun affected producer/consumer checks within the existing maximum of three repair loops. The coordinator tracks evidence/revision and unresolved blockers in `audit.md`. Final QA PASS is required before the exporter starts; it is the last review gate, not the last agent. Never export or publish an incomplete handoff as valid.
 
-If `FAIL` or `SLOP`, write `feedback.md` naming the exact agent, file, line or timestamp, and fix. Re-spawn only that agent. Allow at most 3 loops. On the third failure, escalate with `audit.md` and the concrete risk.
+For video deliverables, final render, contact-sheet/audio/determinism and ffprobe checks below must finish as part of QA evidence before export. If a final render or export adapter reveals a defect or modifies behavior, invalidate the affected PASS, repair and rerun the necessary gates, then restart the exporter last. Websites retain actual mobile/desktop/interaction evidence rather than fabricated video artifacts.
 
 If `PASS` and HyperFrames is the renderer, render the final MP4 and verify:
 
@@ -200,6 +175,11 @@ Add `--audio` only when the mix is local or user-provided. Do not call ElevenLab
 For video deliverables, compare two final renders by hash. If voice or music is present, verify captions, peak timing, loudness, and no drift. If Hairline is selected, include its browser/look validation in the QA evidence. If UI/UX Pro Max is selected, include `uiux-design-system.md`, `uiux-audit.md`, local search queries, responsive/keyboard/focus evidence, and reduced-motion checks. If `img2threejs-agent` is selected, include `.img2threejs/state.json`, `sculpt-spec.json`, `img2threejs-passes/`, and `img2threejs-report.md` in the QA evidence. If motionmaxxing owns an explicit standalone film, `film/NOTE.md` must quote G0–G5 and a fail is not a pass; contribution mode instead requires `motionmaxxing-plan.md` and applicable `motionmaxxing-review.md`. If the Opus catalog was selected, `opus-prompt-brief.md` must credit its sources and the film must not be a shot-for-shot clone.
 
 ## Output Contract
+
+- `motion-a11y.md` with PASS/FAIL per check and `gsap-timeline-reduced.js`
+- `perf-budget.json` with lcp_estimate, cls_estimate, total_js_kb, glb_kb, lottie_kb and fallback_file (plus INP, units, budgets and evidence); `perf-report.md` PASS/FAIL
+- `/handoff/tokens.json`, `/handoff/motion-spec.json`, `/handoff/gsap-timeline.js`, `/handoff/gsap-timeline-reduced.js`, `/handoff/threejs-scene.js`, `/handoff/handoff.md`, version/QA-hash manifest, target-aware import helper and referenced assets; immutable versioned releases, only after final QA PASS
+
 
 - `background-plan.json`, `background-design.md`, assigned `background/` modules/assets, `background-references.md` and `background-validation.md` when backgrounds apply
 

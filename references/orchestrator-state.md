@@ -9,50 +9,29 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
   "coordinator": "designme",
   "tasks": [],
   "engineering_review": "pending",
-  "subagent_count": 27,
+  "subagent_count": 30,
   "waves": {
     "wave1": {
-      "design-dna-agent": "pending",
-      "memory-agent": "pending",
-      "browser-agent": "pending",
-      "find-skills-agent": "pending",
-      "prompt-reference-agent": "pending",
-      "opus5-videos-agent": "skipped-unless-approved"
+      "planner-griller": "pending"
     },
     "wave2": {
-      "remotion-agent": "pending-assessment",
-      "motionmaxxing-agent": "pending-assessment",
-      "open-3d-agent": "pending-if-assigned",
-      "visual-style-agent": "pending",
-      "ui-ux-pro-max-agent": "skipped-unless-approved",
-      "img2threejs-agent": "skipped-unless-approved",
+      "design-dna-agent": "pending",
       "motion-design-agent": "pending",
-      "launch-director-agent": "pending",
-      "superlite-agent": "pending",
-      "parallax-background-agent": "pending-assessment"
+      "supporting_tasks": []
     },
     "wave3": {
-      "remotion-agent": "pending-assessment",
-      "open-3d-agent": "pending-if-assigned",
-      "animejs-agent": "pending-if-assigned",
-      "beat-sync-agent": "pending",
       "gsap-agent": "pending",
       "threejs-agent": "pending",
-      "genjutsu-agent": "pending",
-      "taste-gsd-agent": "pending",
-      "parallax-background-agent": "pending-assessment"
+      "hyperframes-agent": "pending",
+      "motion-a11y-agent": "pending",
+      "supporting_tasks": []
     },
     "wave4": {
-      "open-3d-agent": "pending-if-assigned",
-      "hyperframes-agent": "pending",
-      "remotion-agent": "pending-assessment",
-      "hairline-agent": "skipped-unless-approved",
-      "motionmaxxing-agent": "pending-assessment",
-      "motion-craft-agent": "pending",
-      "parallax-background-agent": "pending-assessment"
-    },
-    "qa": {
-      "qa-anti-slop-agent": "pending"
+      "genjutsu-agent": "pending",
+      "render-perf-budget-agent": "pending",
+      "qa-anti-slop-agent": "pending",
+      "token-handoff-exporter": "blocked-until-final-qa-pass",
+      "supporting_tasks": []
     }
   },
   "visual_style": {
@@ -166,6 +145,47 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
     "plan": null,
     "validation": null,
     "htmlVideoAvailability": "source-verified"
+  },
+  "supporting_agent_status": {
+    "memory-agent": "pending",
+    "browser-agent": "pending",
+    "find-skills-agent": "pending",
+    "prompt-reference-agent": "pending",
+    "opus5-videos-agent": "skipped-unless-approved",
+    "remotion-agent": "pending-assessment",
+    "motionmaxxing-agent": "pending-assessment",
+    "open-3d-agent": "pending-if-assigned",
+    "visual-style-agent": "pending",
+    "ui-ux-pro-max-agent": "skipped-unless-approved",
+    "img2threejs-agent": "skipped-unless-approved",
+    "launch-director-agent": "pending",
+    "superlite-agent": "pending",
+    "parallax-background-agent": "pending-assessment",
+    "animejs-agent": "pending-if-assigned",
+    "beat-sync-agent": "pending",
+    "taste-gsd-agent": "pending",
+    "hairline-agent": "skipped-unless-approved",
+    "motion-craft-agent": "pending"
+  },
+  "motion_a11y": {
+    "status": "pending",
+    "report": null,
+    "reduced_timeline": null,
+    "source_revision": null
+  },
+  "performance": {
+    "status": "pending",
+    "budget": null,
+    "report": null,
+    "source_revision": null
+  },
+  "handoff": {
+    "status": "blocked-until-final-qa-pass",
+    "version": null,
+    "path": null,
+    "manifest": null,
+    "consumer_contract": null,
+    "source_revision": null
   }
 }
 ```
@@ -185,3 +205,5 @@ Normal specialist tasks follow `references/normal-motion-orchestration.md`; lega
 Track background research → layer/reconstruction plan → assigned model/assets → background implementation → integration → validation/repairs as dependency tasks. Keep provider availability/evidence in background-plan.json and state; missing providers are never recorded as executed.
 
 Agent Desktop capability/status fields describe observed native UI access, not binary installation alone. Required unavailable session/permission/input checks remain BLOCKED; record separate headless measurements and exact tools without substituting them for missing desktop evidence.
+
+The current core wave order is defined in SKILL.md and manifest.json.wave_order. Retained specialists run as dependency tasks in each wave's supporting_tasks; supporting_agent_status tracks their existing contracts. Wave 4 core gates are serial: Genjutsu thesis → performance → final QA → exporter last. Accessibility/performance/QA reports and handoff must match the same tested source revision; source changes invalidate affected statuses. No exporter task is ready while any required gate fails or evidence is missing.

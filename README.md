@@ -75,7 +75,7 @@ The update keeps **HyperFrames as the default renderer** and adds compatible pro
 
 ## Free-only rule
 
-All 27 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
+All 30 agents are restricted to free, local, open-source, or already-installed tooling. They must not call paid APIs, paid tiers, metered SaaS, premium models, paid voice or asset services, subscriptions, trials, billing, or credit-consuming services. If a capability is not available for free, the agent must stop that part and offer a local or deterministic alternative. The motionmaxxing skill's ElevenLabs voice path is off, and `img2threejs-agent` paid/external neural mesh adapters are off.
 
 ## Structure
 
@@ -159,3 +159,9 @@ See [normal specialist routing, intermediate-asset contract and 3D parallax prof
 It assesses HyperFrames, Remotion, motionmaxxing, Open 3D, html-video and img2threejs. Live scenes, image-based 2.5D layers, procedural animation and justified footage can be combined while preserving one scene/progress owner, readable CTAs and mobile/reduced-motion/static fallbacks. img2threejs is used when an approved reference object needs procedural reconstruction; a single image is not treated as a complete 3D environment. The corrected [nexu-io/html-video](https://github.com/nexu-io/html-video) source supplies goal-fit HTML templates and local supporting footage; see [its local install/render contract](references/html-video-integration.md) for engine discovery and frame-accuracy limitations. Paid audio/model generation stays disabled.
 
 See [background architecture, provider decisions, reference routing and verification](references/parallax-background-integration.md).
+
+## Motion accessibility, performance and /buildme handoff
+
+The core schedule is now: Wave 1 planner-griller; Wave 2 design-dna and motion-design; Wave 3 gsap, threejs, hyperframes and motion-a11y; Wave 4 genjutsu thesis, render-perf-budget, final QA and token-handoff-exporter, in that order. Existing agents remain intact and retain supporting tasks under SKILL.md's dependency rules.
+
+The three new contracts are [motion accessibility](agents/motion-a11y-agent.md), [render/performance budgets](agents/render-perf-budget-agent.md) and [versioned token/motion handoff](agents/token-handoff-exporter.md). The exporter runs last, only after QA PASS on the tested revision, and validates actual /buildme token names, complete files/assets, versions and executable import compatibility before publishing /handoff/.
