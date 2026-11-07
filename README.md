@@ -16,10 +16,12 @@ During the first grilling session, `planner-griller` must select a visual langua
 
 | Optional agent | Use it when | Default recommendation |
 |---|---|---|
-| `hairline-agent` | The brief requires an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual | Skip it unless the interaction needs it |
-| `opus5-videos-agent` | The brief explicitly wants a starting prompt from the Opus 5.5 code-video catalog | Skip it. It researches prompts only and does not render |
-| `ui-ux-pro-max-agent` | UI, landing page, dashboard, product demo, forms, navigation, charts, mobile UI, or UX/accessibility review | Skip it for pure non-UI films |
-| `img2threejs-agent` | The brief supplies a 2D reference image of an object, product, prop, or character and requires a procedural code-only Three.js `THREE.Group` reconstruction | Skip it when no custom 3D reconstruction from a reference photo is needed |
+| `hairline-agent` | The brief requires an interactive line figure, pointer-responsive diagram, technical illustration, or self-contained Hairline visual | Ask the user; state whether the brief matches the trigger. Never assume skip |
+| `opus5-videos-agent` | The brief explicitly wants a starting prompt from the Opus 5.5 code-video catalog | Ask the user. It researches prompts only and does not render |
+| `ui-ux-pro-max-agent` | UI, landing page, dashboard, product demo, forms, navigation, charts, mobile UI, or UX/accessibility review | Run for any interface. Ask the user only for pure non-UI films |
+| `img2threejs-agent` | The brief supplies a 2D reference image of an object, product, prop, or character and requires a procedural code-only Three.js `THREE.Group` reconstruction | Ask the user whether a reference-image reconstruction is wanted. Never assume skip |
+
+Full dispatch rule: every core agent in this file runs on every invocation. Only the optional agents above are gated, and each gate is resolved by asking the user, never by assumption. A skip needs the user's answer, recorded in `brief.json.optionalAgents`.
 
 The recommendation is stored in `brief.json.optionalAgents`. Optional agents are never silently activated. A user request can approve an agent even when it is not strictly necessary, with the tradeoff recorded. There is one final owner per deliverable, normally HyperFrames for films; normal specialists may produce intermediate assets under the production contract.
 

@@ -33,6 +33,8 @@ Claude Code sees `/designme` because the skill folder is named `designme` and fr
 
 ## Mandatory Orchestration (DO NOT SKIP)
 
+Every invocation dispatches every core agent and workflow stage this file defines, through the Agent tool, in the waves it specifies. Do not decide on your own that an agent, stage, or review is unnecessary. Each one ends with its output file or a BLOCKED entry naming the missing dependency and its fix. Optional agents (Hairline, Opus prompt research, img2threejs) are resolved by asking the user during grilling, never by assumption. "Skip" is allowed only where this file says a stage owns nothing or is web-only, and it must be recorded with the reason.
+
 ### 0 — Install Gate
 
 Read the [Superlite execution adapter](references/superlite-integration.md).
