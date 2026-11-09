@@ -1,6 +1,6 @@
 # Designme
 
-Free-only **32-agent design and motion studio** for websites, 3D parallax backgrounds and locally rendered video. Invoke `/designme` to turn a brief and real references into a deliberate visual system, editable motion, verified output and a versioned `/buildme` handoff.
+Free-only **31-agent design and motion studio** for websites, 3D parallax backgrounds and locally rendered video. Invoke `/designme` to turn a brief and real references into a deliberate visual system, editable motion, verified output and a versioned `/buildme` handoff.
 
 This repository contains orchestration instructions, agent contracts, references and installation/validation helpers. It does not ship a prebuilt website or a promise that any particular host has passed runtime checks. [SKILL.md](SKILL.md) defines dispatch and acceptance; [manifest.json](manifest.json) records roles, providers, core wave order and gates.
 
@@ -93,7 +93,7 @@ All agents use free, local, open-source or already-installed capabilities. Paid 
 
 ## Agent catalog
 
-All 32 agent contracts are retained. Core wave membership comes from SKILL.md/manifest.json; other roles run as their supporting dependencies and reviews.
+All 31 agent contracts are retained. Core wave membership comes from SKILL.md/manifest.json; other roles run as their supporting dependencies and reviews.
 
 | Agent | Responsibility |
 | --- | --- |
@@ -117,7 +117,6 @@ All 32 agent contracts are retained. Core wave membership comes from SKILL.md/ma
 | [hairline-agent](agents/hairline-agent.md) | Approved accessible interactive line figures |
 | [img2threejs-agent](agents/img2threejs-agent.md) | Approved reference-object/character procedural reconstruction |
 | [launch-director-agent](agents/launch-director-agent.md) | Creative directions, story, shot and camera planning |
-| [memory-agent](agents/memory-agent.md) | Prior taste and session context |
 | [motion-craft-agent](agents/motion-craft-agent.md) | Contact sheets, frame/safe-area/audio review and repairs |
 | [motionmaxxing-agent](agents/motionmaxxing-agent.md) | Brand/depth/camera/pacing guidance and integrated craft review |
 | [open-3d-agent](agents/open-3d-agent.md) | Eight-skill assessment, 3D/media modules, site-check and capture |
@@ -133,7 +132,7 @@ All 32 agent contracts are retained. Core wave membership comes from SKILL.md/ma
 ## Repository maintenance
 
 - `SKILL.md` owns scheduling and gates; `manifest.json` and state/workflow references must agree.
-- `agents/` contains the 32 contracts. Preserve existing agents unless an edit is explicitly requested.
+- `agents/` contains the 31 contracts. Preserve existing agents unless an edit is explicitly requested.
 - `references/` connects provider details, research, ownership, UX, QA and handoff requirements.
 - `scripts/` contains safe install helpers and the standard-library repository consistency checker.
 - [`.github/repository-about.json`](.github/repository-about.json) is the tracked source for GitHub's About description; it is metadata, not another skill.

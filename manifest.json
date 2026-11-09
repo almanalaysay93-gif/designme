@@ -108,11 +108,6 @@
       "role": "Discover/install best skills via skills.sh, verify by installs/stars"
     },
     {
-      "repo": "thedotmack/claude-mem",
-      "agent": "memory-agent",
-      "role": "Persistent memory across sessions, compress + re-inject context"
-    },
-    {
       "repo": "vercel-labs/agent-desktop",
       "agent": "browser-agent",
       "role": "Task-scoped native app/window UI interaction and reference/visual verification through Agent Desktop; separate local browser tools provide DOM/render measurements"
@@ -124,7 +119,7 @@
     }
   ],
   "orchestration": {
-    "subagent_count": 32,
+    "subagent_count": 31,
     "free_only": true,
     "policy": "Free, local, open-source, and already-installed tools only. iart-ai motion packs are MIT/open-source and installed only when approved. Remotion, motionmaxxing and Open 3D are normal locally executed specialists; Hairline, img2threejs and the Opus prompt catalog retain their optional gates. motionmaxxing must not call ElevenLabs or any paid voice/music API. img2threejs must use only local generic/character profiles and never call Tripo, Hyper3D, CharacterGen, or paid plugins. QA uses Agent Desktop for native UI verification and local browser/render tools for measurements; BrowserCode is only an explicitly requested optional preview target, with no paid BrowserPod keys. No paid APIs, metered SaaS, premium models, subscriptions, trials, billing, cloud rendering, publishing, scheduling, generation providers, or credits. The visual-style-agent uses only local procedural/CSS/SVG/Canvas/Three.js/WebGL/FFmpeg techniques and user-provided assets. UI/UX Pro Max uses only its MIT local data/search scripts and open/local assets; no paid design APIs or hosted services.",
     "agents": [
@@ -544,7 +539,7 @@
     "browsercode_role": "Optional preview compatibility only when explicitly required by the deliverable",
     "product_design_principles": "references/product-design-principles.md"
   },
-  "description": "Free-only 32-agent design and motion studio for websites and video: 3D parallax, Anime.js/GSAP, HyperFrames, Remotion, motionmaxxing, Open 3D, image-to-3D, Agent Desktop QA, motion accessibility, Speckit theme locks, performance budgets and versioned /buildme handoffs.",
+  "description": "Free-only 31-agent design and motion studio for websites and video: 3D parallax, Anime.js/GSAP, HyperFrames, Remotion, motionmaxxing, Open 3D, image-to-3D, Agent Desktop QA, motion accessibility, Speckit theme locks, performance budgets and versioned /buildme handoffs.",
   "documentation": {
     "readme": "README.md",
     "schedule": "SKILL.md",

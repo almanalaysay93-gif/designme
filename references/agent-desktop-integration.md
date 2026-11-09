@@ -39,7 +39,7 @@ A required desktop check without the session/permission/capability is BLOCKED wi
 5. Ref actions use semantic accessibility calls by default. The official skill permits global `--headed` physical pointer/focus/keyboard input only with explicit user authorization. Do not escalate to it automatically after a semantic failure. If a required hover/drag/parallax-pointer check needs unsupported physical input, record the blocked capability and use independent programmatic test evidence for that behavior where available; do not label it an Agent Desktop check.
 6. Browser/canvas accessibility trees may omit decorative 3D geometry. Inspect actual app screenshots and targeted motion captures alongside the tree; a complete accessibility snapshot does not establish correct WebGL appearance, pointer parallax, animation smoothness or color contrast.
 
-Keep snapshots/screenshots/traces scoped to the task app and store raw desktop artifacts locally. They may contain private desktop content; do not commit/upload them as public repository evidence. The optional JEV helper uses a model provider and is not enabled by this free/local integration. Do not collect clipboard/notifications or operate other apps unless the task actually requires them.
+Keep snapshots/screenshots/traces scoped to the task app and store raw desktop artifacts locally. They may contain private desktop content; do not commit/upload them as public repository evidence. Do not collect clipboard/notifications or operate other apps unless the task actually requires them.
 
 ## Evidence and measurement boundary
 

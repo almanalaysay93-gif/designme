@@ -13,7 +13,7 @@ Read [the execution adapter](../references/superlite-integration.md). Use only t
 host's existing authorized tools and model. Designme's free/local policy applies;
 do not provision APIs, paid services, models or rendering providers.
 
-Inputs: approved brief.json, memory, design-dna.json, style-spec.md,
+Inputs: approved brief.json, design-dna.json, style-spec.md,
 motion-doctrine.md and shot-plan.md. Wait for the relevant Wave 2 design outputs
 before freezing implementation contracts. The Designme orchestrator owns dispatch.
 

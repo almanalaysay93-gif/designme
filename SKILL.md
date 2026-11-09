@@ -1,6 +1,6 @@
 ---
 name: designme
-description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines goal-led multilayer parallax backgrounds, Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, Agent Desktop + render QA, mandatory motion accessibility/performance gates, and last-after-QA versioned /buildme handoffs across 32 agents with a strict Speckit theme/design lock gate.
+description: Premium anti-AI-slop design and motion studio. Invoke with /designme for high-craft web animation, launch films, showreels, interactive figures, procedural 3D object reconstructions, and deterministic HTML video. Combines goal-led multilayer parallax backgrounds, Three.js, Open 3D Skills, img2threejs, GSAP, Anime.js, Design DNA, motion principles, Genjutsu, HyperFrames, launch direction, beat sync, code-generated sound, frame review, Hairline, Remotion, motionmaxxing, an Opus 5.5 video-prompt researcher, a 20-style visual language library, UI/UX Pro Max design intelligence, Superlite execution, 14 UX laws, Agent Desktop + render QA, mandatory motion accessibility/performance gates, and last-after-QA versioned /buildme handoffs across 31 agents with a strict Speckit theme/design lock gate.
 allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -63,7 +63,6 @@ npx skills add Tejashmakwana/motionmaxxing -g  # normal craft planning/review; f
 # Install only the approved iart-ai packs selected during grilling; see references/motion-skills-packs.md
 bash scripts/install-agent-desktop.sh
 npx skills add https://github.com/vercel-labs/agent-desktop --skill agent-desktop -g
-npx skills add thedotmack/claude-mem -g
 # Superlite adapter is bundled; optional native plugin: references/superlite-integration.md
 npx skills add https://github.com/anthropics/skills --skill frontend-design --skill skill-creator --skill mcp-builder --skill webapp-testing -g
 npx skills add vercel-labs/skills --skill find-skills -g
@@ -134,7 +133,7 @@ The four-wave order plus Wave 1.5 lock/review gate in this SKILL.md is authorita
 - `design-dna-agent` extracts/materializes the reviewed locked reference-based design system and tokens. Use `/speckit-theme-design/` as the approved baseline; do not silently replace its values.
 - `motion-design-agent` consumes the reviewed Speckit baseline plus Design DNA/research and materializes its specified timing, easing, weight, choreography and normal/reduced intent; do not finalize the doctrine before the reference/token inputs exist.
 
-Supporting tasks retained in this wave: `memory-agent`, `find-skills-agent`, `browser-agent`, `prompt-reference-agent`, approved `opus5-videos-agent`, `visual-style-agent`, approved `ui-ux-pro-max-agent`, `launch-director-agent`, `superlite-agent`, and planning contributions from `parallax-background-agent`, `open-3d-agent`, `remotion-agent` and `motionmaxxing-agent`. Finish prerequisite reference inspection before dependent design extraction. When approved, `img2threejs-agent` reconstructs the specified object only after background/model requirements exist; return its gated factory before scene implementation.
+Supporting tasks retained in this wave: `find-skills-agent`, `browser-agent`, `prompt-reference-agent`, approved `opus5-videos-agent`, `visual-style-agent`, approved `ui-ux-pro-max-agent`, `launch-director-agent`, `superlite-agent`, and planning contributions from `parallax-background-agent`, `open-3d-agent`, `remotion-agent` and `motionmaxxing-agent`. Finish prerequisite reference inspection before dependent design extraction. When approved, `img2threejs-agent` reconstructs the specified object only after background/model requirements exist; return its gated factory before scene implementation.
 
 Reviewed Speckit files are downstream constraints, not suggestions. New or contradictory design choices return to the builder/reviewer gate with updated input/version rather than being invented by plan/tasks/implementation. The root execution `plan.md` is distinct from `/speckit-theme-design/plan.md`.
 

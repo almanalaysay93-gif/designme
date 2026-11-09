@@ -28,7 +28,7 @@ about = read_json('.github/repository-about.json')
 roles = {path.stem for path in (ROOT / 'agents').glob('*.md')}
 orch = manifest.get('orchestration', {})
 require(len(roles) == orch.get('subagent_count'), 'Agent files and manifest count differ')
-require(len(roles) == 32, 'Current supported catalog must retain all 32 agents')
+require(len(roles) == 31, 'Current supported catalog must retain all 31 agents')
 expected = {
     'wave1': ['planner-griller'],
     'wave1_5': ['speckit-theme-builder', 'speckit-theme-reviewer'],

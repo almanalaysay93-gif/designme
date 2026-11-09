@@ -9,7 +9,7 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
   "coordinator": "designme",
   "tasks": [],
   "engineering_review": "pending",
-  "subagent_count": 32,
+  "subagent_count": 31,
   "waves": {
     "wave1": {
       "planner-griller": "pending"
@@ -153,7 +153,6 @@ File: `orchestrator.json` (written and updated by the coordinator from specialis
     "htmlVideoAvailability": "source-verified"
   },
   "supporting_agent_status": {
-    "memory-agent": "pending",
     "browser-agent": "pending",
     "find-skills-agent": "pending",
     "prompt-reference-agent": "pending",
