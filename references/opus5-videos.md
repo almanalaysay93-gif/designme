@@ -12,7 +12,7 @@ Prompt files also live in `prompts/<slug>.md`. The JSON prompt is enough when it
 
 Select `opus5-videos-agent` when the user explicitly wants a starting prompt from this catalog, or names Opus 5.5 videos, Skillry remakes, or this repo.
 
-Otherwise skip it. `prompt-reference-agent` still covers Blotato and Remotion patterns.
+Otherwise skip it. `prompt-reference-agent` still covers Remotion patterns.
 
 This agent does not own the film. The production contract assigns one final owner per deliverable (HyperFrames by default), while Remotion/Open 3D may produce supporting clips and motionmaxxing may contribute craft review.
 

@@ -83,7 +83,7 @@ cp -R SKILL.md agents references scripts manifest.json ~/.claude/skills/designme
 
 The skill folder/frontmatter name is `designme`; compatible harnesses can load the same package using their supported skill installation mechanism. Check existing versions first and do not erase unrelated customizations. Native desktop work needs actual supported OS/session permissions; local rendering needs the selected browser/Node/Python/FFmpeg dependencies. Record exact versions, sources and checks in `motion-skills-installed.md`; optional local providers install only under their current task contract.
 
-All agents use free, local, open-source or already-installed capabilities. Paid generation, cloud rendering, soundtrack/model APIs, billing and credit-consuming paths remain disabled. Engine/license eligibility still needs verification; an open-source instruction package does not grant a third-party commercial engine license. Superlite is the single execution adapter, not a second coordinator; never enable it with Superpowers.
+All agents use free, local, open-source or already-installed capabilities. Paid generation, cloud rendering, soundtrack/model APIs, billing and credit-consuming paths remain disabled. Superlite is the single execution adapter, not a second coordinator; never enable it with Superpowers.
 
 ## Speckit theme/design lock before Wave 2
 

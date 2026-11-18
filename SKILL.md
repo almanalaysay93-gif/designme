@@ -10,7 +10,7 @@ Invoke: `/designme <brief>` — e.g. `/designme premium 9:16 launch reel, Linear
 
 ## What This Is
 
-One command for brand-led, code-authored motion and interactive web visuals. HyperFrames remains the default video renderer, Remotion is a normal local React sequence/clip specialist, motionmaxxing is a normal motion-direction and craft-review specialist, Hairline is an optional interactive-figure engine, and img2threejs is an optional procedural image-to-3D reconstruction engine. Blotato and Remotion are also used as free prompt/reference sources for future projects. It adds only complementary production disciplines:
+One command for brand-led, code-authored motion and interactive web visuals. HyperFrames remains the default video renderer, Remotion is a normal local React sequence/clip specialist, motionmaxxing is a normal motion-direction and craft-review specialist, Hairline is an optional interactive-figure engine, and img2threejs is an optional procedural image-to-3D reconstruction engine. Remotion is also used as a free prompt/reference source for future projects. It adds only complementary production disciplines:
 
 - **Design DNA + motion principles:** extract a visual system and a motion doctrine before code.
 - **Direction:** develop competing creative directions, a one-claim story arc, camera language, and shot plan.

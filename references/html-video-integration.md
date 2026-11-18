@@ -25,7 +25,7 @@ node packages/cli/dist/bin.js list-engines
 node packages/cli/dist/bin.js search-templates --intent "subtle product background" --top 3
 ```
 
-Read the installed source/CLI help first; record lockfile and commands. Use isolated local dependencies and respect any engine license eligibility under Designme's free-only policy. Do not request paid-service keys or use an agent backend. Missing required prerequisites block assigned tasks; availability in background-plan.json progresses from `source-verified` to `installed` to `render-verified` only with evidence.
+Read the installed source/CLI help first; record lockfile and commands. Use isolated local dependencies and follow Designme's free-only policy. Do not request paid-service keys or use an agent backend. Missing required prerequisites block assigned tasks; availability in background-plan.json progresses from `source-verified` to `installed` to `render-verified` only with evidence.
 
 CLI `project-create`, `project-add-asset`, `project-set-template`, `project-set-vars`, `project-preview` and `project-render` are implemented in the inspected source. Derive their exact inputs/output project IDs from current help/JSON output; never guess IDs or template variable names. A direct local EngineAdapter call may be appropriate after reading current types. For fixed-duration assets, use actual `RenderConfig.durationMode: explicit` where supported and verify resulting duration; do not rely on automatic extension. Never call studio generation/audio endpoints in this integration.
 

@@ -20,7 +20,7 @@ Recommend skipping `img2threejs-agent` when the project has no 3D hero object, u
 - Use only the built-in `generic` and `character` profiles.
 - Do not install or call paid plugins from `@img2threejs/img2`.
 - Do not call Tripo, Hyper3D, CharacterGen, or any external neural mesh service.
-- Use local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`) via Playwright for pass screenshot captures.
+- Use local Chromium (`Playwright Chromium (`chromium.executablePath()`, build 1248, installed by `npx playwright install chromium`)`) via Playwright for pass screenshot captures.
 
 ## QA checks
 

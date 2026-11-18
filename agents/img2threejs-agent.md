@@ -47,7 +47,7 @@ Read `references/img2threejs.md` and `~/.agents/skills/img2threejs/SKILL.md`.
    - `lighting`
    - `interaction`
    - `optimization`
-6. Render and verify each pass in local Chromium (`~/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`) against the reference image.
+6. Render and verify each pass in local Chromium (`Playwright Chromium (`chromium.executablePath()`, build 1248, installed by `npx playwright install chromium`)`) against the reference image.
 7. Export a deterministic `create<ObjectName>Model(spec, options)` factory that returns a `THREE.Group` with seeded procedural noise and named pivots for `threejs-agent`.
 
 ## Rules

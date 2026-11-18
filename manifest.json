@@ -63,7 +63,7 @@
     {
       "repo": "AThevon/genjutsu",
       "agent": "genjutsu-agent",
-      "role": "Thesis before code, anti-AI-slop audit, cast/paint/bunshin"
+      "role": "Thesis before code, anti-AI-slop audit, cast/paint"
     },
     {
       "repo": "heygen-com/hyperframes",
@@ -71,9 +71,9 @@
       "role": "HTML+CSS+JS => deterministic 4K MP4, final renderer"
     },
     {
-      "repo": "Blotato-Inc/blotato-skills + remotion-dev/skills",
+      "repo": "remotion-dev/skills",
       "agent": "prompt-reference-agent",
-      "role": "Free prompt references for brand intake, hooks, grading, repurposing, React/video composition, captions, and future project briefs; animated-word reference research with cited, brand-fit treatments for landing pages and text-motion builds"
+      "role": "Free prompt references for React/video composition, captions, and future project briefs; animated-word reference research with cited, brand-fit treatments for landing pages and text-motion builds"
     },
     {
       "repo": "remotion-dev/remotion + remotion-dev/skills",
@@ -498,7 +498,6 @@
     }
   },
   "reference_sources": {
-    "blotato_repo": "https://github.com/Blotato-Inc/blotato-skills",
     "remotion_repo": "https://github.com/remotion-dev/remotion",
     "remotion_skills": "https://github.com/remotion-dev/skills",
     "remotion_docs": "https://www.remotion.dev/docs",
