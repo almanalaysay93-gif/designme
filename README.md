@@ -1,6 +1,6 @@
 # Designme
 
-Free-only **31-agent design and motion studio** for websites, 3D parallax backgrounds and locally rendered video. Invoke `/designme` to turn a brief and real references into a deliberate visual system, editable motion, verified output and a versioned `/buildme` handoff.
+Free-only **32-agent design and motion studio** for websites, 3D parallax backgrounds and locally rendered video. Invoke `/designme` to turn a brief and real references into a deliberate visual system, editable motion, verified output and a versioned `/buildme` handoff.
 
 This repository contains orchestration instructions, agent contracts, references and installation/validation helpers. It does not ship a prebuilt website or a promise that any particular host has passed runtime checks. [SKILL.md](SKILL.md) defines dispatch and acceptance; [manifest.json](manifest.json) records roles, providers, core wave order and gates.
 
@@ -93,7 +93,7 @@ All agents use free, local, open-source or already-installed capabilities. Paid 
 
 ## Agent catalog
 
-All 31 agent contracts are retained. Core wave membership comes from SKILL.md/manifest.json; other roles run as their supporting dependencies and reviews.
+All 32 agent contracts are retained. Core wave membership comes from SKILL.md/manifest.json; other roles run as their supporting dependencies and reviews.
 
 | Agent | Responsibility |
 | --- | --- |
@@ -104,6 +104,7 @@ All 31 agent contracts are retained. Core wave membership comes from SKILL.md/ma
 | [motion-design-agent](agents/motion-design-agent.md) | Timing, easing, choreography and motion doctrine |
 | [gsap-agent](agents/gsap-agent.md) | Assigned GSAP timelines and specialist choreography |
 | [threejs-agent](agents/threejs-agent.md) | Assigned 3D scenes, geometry, particles and model integration |
+| [particle-fx-agent](agents/particle-fx-agent.md) | Particle systems only (rain, galaxy, morph, overlays) at phone frame rates |
 | [hyperframes-agent](agents/hyperframes-agent.md) | Default final-film composition and local rendering |
 | [motion-a11y-agent](agents/motion-a11y-agent.md) | Every-animation reduced variants, temporal contrast and focus gate |
 | [genjutsu-agent](agents/genjutsu-agent.md) | Refined thesis and anti-slop review before final gates |
@@ -132,7 +133,7 @@ All 31 agent contracts are retained. Core wave membership comes from SKILL.md/ma
 ## Repository maintenance
 
 - `SKILL.md` owns scheduling and gates; `manifest.json` and state/workflow references must agree.
-- `agents/` contains the 31 contracts. Preserve existing agents unless an edit is explicitly requested.
+- `agents/` contains the 32 contracts. Preserve existing agents unless an edit is explicitly requested.
 - `references/` connects provider details, research, ownership, UX, QA and handoff requirements.
 - `scripts/` contains safe install helpers and the standard-library repository consistency checker.
 - [`.github/repository-about.json`](.github/repository-about.json) is the tracked source for GitHub's About description; it is metadata, not another skill.
